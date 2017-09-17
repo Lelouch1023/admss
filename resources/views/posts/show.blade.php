@@ -10,7 +10,7 @@
 	<hr>
 		@if(!Auth::guest())
 			@if(Auth::user()->id == $post->user_id)
-				<a href="/post/{{ $post->id }}/edit" class="btn btn-default">Edit</a>
+				<a href="/post/{{ $post->id }}/edit" class="btn btn-default">Edit test</a>
 			@endif
 		@endif
 @endsection
