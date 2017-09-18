@@ -13,6 +13,8 @@
 
 	This is the about tab
 	DAMIIE GREGORIO
+	<hr>
+	DAM
 </p>
 
 //Testing
