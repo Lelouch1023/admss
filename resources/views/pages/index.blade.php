@@ -8,6 +8,7 @@
 			<ul class="list-group">
 				<li class="list-group-item">{{ $char }}</li>
 			</ul>
+			
 		@endforeach
 	@endif
 </p>

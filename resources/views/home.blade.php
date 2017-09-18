@@ -31,6 +31,8 @@
                     @else
                         <h5>No posts to yet. <a href='/post/create' class='btn btn-primary'>Create</a> one!.</h5>
                    @endif
+        <div class='notification' id='notifclass'></div>
+        <button id='notif_butt'>Increment Notif</button> 
                 </div>
             </div>
         </div>
