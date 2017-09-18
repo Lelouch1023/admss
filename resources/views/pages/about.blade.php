@@ -12,6 +12,7 @@
 	@endif --}}
 
 	This is the about tab
+	DAMIIE GREGORIO
 </p>
 
 //Testing
