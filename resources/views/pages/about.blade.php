@@ -13,4 +13,8 @@
 
 	This is the about tab
 </p>
+
+//Testing
+{{Form::submit('Testing', ['class' => 'btn btn-primary'])}}
+
 @endsection
