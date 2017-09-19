@@ -30,7 +30,7 @@
                           </li>
                         @else
                             
-                            <li><a href="/post/create" class="btn btn-default">Create Post</a></li>
+                            <li><a href="/post/create" class="btn btn-default"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -52,7 +52,7 @@
                             </li>
                         @endguest
                     </ul>
-                        
                 </div>
             </div>
         </nav>
+        <nav></nav>

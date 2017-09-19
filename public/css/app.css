@@ -5445,6 +5445,7 @@ tbody.collapse.in {
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
     color: #fff;
+        margin-top: 5px;
   }
 }
 
@@ -5483,7 +5484,7 @@ tbody.collapse.in {
 }
 
 .navbar-nav {
-  margin: 7px -15px;
+  /*margin: 7px -15px;*/
 }
 
 .navbar-nav > li > a {
@@ -7116,11 +7117,13 @@ button.list-group-item-danger.active:focus {
 
 .panel-default {
   border-color: #d3e0e9;
+  margin-top: 10px;
+  background-color: #fff;
 }
 
 .panel-default > .panel-heading {
-  color: #333333;
-  background-color: #fff;
+  color: #fff;
+  background-color: #bd2031;
   border-color: #d3e0e9;
 }
 
