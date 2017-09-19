@@ -35,6 +35,16 @@
             }
 
            /**/
+#top-bar{
+    padding: 5px 0px;
+}
+#top-bar a{
+    font-family: Roboto;
+    color: #767676;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
 .home-header{
     background-color: #222;
     color: #fff;
@@ -42,32 +52,28 @@
     display: inline-block;
     background: url('../images/home-header.png') no-repeat;
     background-size: 100%;
+    padding: 10px 0px;
+    /*border-bottom: 5px solid #efefef;*/
 }
 
 .home-logo{
-    float: left;
-    padding: 7px 40px 5px 40px;
+    text-align: center;
+    /*padding: 10px 0px;*/
 }
 .home-logo img{
-    width: 70%;
+    width: 18%;
 }
 .home-name{
-    float: left;
-    text-align: center;
-    padding: 20px 0px;
+    padding: 10px 0 0 0;
 }
 .home-name p{
-    text-align: center;
     line-height: 1.1;
     font-size: 15px;
     font-family: Roboto;
 }
 .home-login-reg{
-    float: left;
     text-align: center;
-    margin: 10px 0px;
-    
-    /*padding: 27px 35px;*/
+    margin: 15px 0px;
 }
 .home-login-reg button{
     display: inline-block;
@@ -78,6 +84,7 @@
     font-size: 13px;
     width: 28%;
     cursor: pointer;
+    margin: 0px;
 }
 .home-login-reg .login-btn a{
     text-decoration: none;
@@ -109,27 +116,32 @@
     color: #000;
 }
 .image-slider{
-    width: 80%;
+    width:100%;
     text-align: center;
     margin: auto;
+    display: -webkit-box
+}
+.image-slider img{
+    width: 100%;
 }
 .divider{
     margin: 5px 0px;
-    width: 100%;
+    width: 99%;
 }
 .accreditation-details{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    display: -webkit-box;
 }
 .accre-title img{
-    width: 35%;
+    /*width: 35%;*/
     float: left;
 }
 .accre-details{
     background: url('../images/accre-details.png') no-repeat;
     background-size: 100%;
     background-color: #222;
-    width: 65%;
+    /*width: 65%;*/
     float: left;
     padding: 30px;
 }
