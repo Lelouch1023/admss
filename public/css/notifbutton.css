@@ -13,7 +13,7 @@
 
 /*Customed CSS*/
 
-@font-face {
+/*@font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto.ttf');
     src: local('☺'), url('../fonts/Roboto.ttf') format('truetype');
@@ -159,7 +159,7 @@
   outline: 0;
     background-color: rgba(34, 34, 34, 0.6);
 }
-
+*/
 button {
     display: block;
     padding: 1em 2em;
