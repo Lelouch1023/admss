@@ -60,11 +60,14 @@
     text-align: center;
     /*padding: 10px 0px;*/
 }
+.home-logo:hover{
+    background: transparent;
+}
 .home-logo img{
     width: 18%;
 }
 .home-name{
-    padding: 10px 0 0 0;
+    /*padding: 10px 0 0 0;*/
 }
 .home-name p{
     line-height: 1.1;

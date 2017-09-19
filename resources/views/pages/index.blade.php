@@ -20,35 +20,47 @@
 	    	<div id="top-bar">
 	    		<div class="container">
 		            <img src="{{ URL::to('/images/phgov.png') }}">
-		            <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a>
+		            <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a> 
 	    		</div>
 	    	</div>
 	    	<!-- END OF TOP BAR -->
 	    	<!-- NAVIGATION -->
-    		<div class="col-sm-12 home-header">
+    		<nav class="col-sm-12 navbar home-header home-name ">
     			<div class="container">
-	    			<div class="col-md-4 col-sm-4 col-xs-6 home-name">
-		                <p>ACCREDITATION <br />DOCUMENT MANAGEMENT <br /> SYSTEM</p>
+                	<div class="col-md-4 navbar-header">
+                	<!-- Collapsed Hamburger -->
+	                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+	                        <span class="sr-only">Toggle Navigation</span>
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                    </button>
+	                    <!-- ADMS BRANDING -->
+	                        <a class="navbar-brand" href="{{ url('/') }}">
+	                            <p>ACCREDITATION <br />DOCUMENT MANAGEMENT <br /> SYSTEM</p>
+	                        </a>
+                    </div>
+
+                	<div class="col-md-8 collapse navbar-collapse " id="app-navbar-collapse">
+	                    <ul class="nav navbar-nav">
+			              <li class="col-md-6 home-logo"><img src="{{ URL::to('/images/logo.png') }}">
+		            	  </li>
+			              @if (Route::has('login'))
+	                      <li class="col-md-6 home-login-reg">
+	                      @auth
+			                <button class="">
+			                    <a href="{{ url('/home') }}">Home</a>
+			                </button>
+			               @else
+			                <button class="login-btn"><a href="{{ route('login') }}">Login</a></button>
+			                <button class="reg-btn"><a href="{{ route('register') }}">Register</a></button>
+			               @endauth
+			               </li>
+	                    </ul>
 		            </div>
-		        	<div class="col-md-4 col-sm-4 col-xs-6 home-logo">
-	                	<a href="{{ url('/home') }}"><img src="{{ URL::to('/images/logo.png') }}"></a>
-	            	</div>
-	            	<!-- LOGIN PHP -->
-		              @if (Route::has('login'))
-		                <div class="col-md-4 col-sm-4 col-xs-12 home-login-reg">
-		                    @auth
-		                        <button class="">
-		                            <a href="{{ url('/home') }}">Home</a>
-		                        </button>
-		                    @else
-		                        <button class="login-btn"><a href="{{ route('login') }}">Login</a></button>
-		                        <button class="reg-btn"><a href="{{ route('register') }}">Register</a></button>
-		                    @endauth
-		                </div>
-	            	@endif
-	            	<!-- END OF LOGIN PHP -->
+	            		@endif
         		</div>
-    		</div>
+    		</nav>
     		<!-- END OF NAVIGATION -->
     	</section>
         
