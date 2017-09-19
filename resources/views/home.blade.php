@@ -6,7 +6,8 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard 
-                  <div class="notification" id="notifclass"></div></div>
+                  <button class="notification" id="notifclass"></button>
+                </div>
                 <div class="panel-body">
                    <h3><strong>Your blog posts.</strong></h3>
                    <hr>

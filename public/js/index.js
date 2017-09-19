@@ -1,4 +1,4 @@
-var el = document.getElementById('notifclass');
+var el = document.getElementById('notifclass');	
 
 document.getElementById('notif_butt').addEventListener('click', function(){
     var count = Number(el.getAttribute('data-count')) || 0;

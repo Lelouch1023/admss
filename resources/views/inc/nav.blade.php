@@ -1,43 +1,42 @@
-
-
-
-
-     <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+            <div id="top-bar">
+                <div class="container">
+                    <img src="{{ URL::to('/images/phgov.png') }}">
+                    <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a>
                 </div>
+<<<<<<< HEAD
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse"> 
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
-                    <ul class="nav navbar-nav">
-                      <li><a href="/home">TUP</a></li>
-                      <li><a href="/services">Services</a></li>
-                      <li><a href="/about">About</a></li>
-                      <li><a href="/post">Blogs</a></li>
-                    </ul>
+=======
+            </div>
+            <nav class="col-sm-12 navbar home-header home-name ">
+                <div class="container">
+                    <div class="col-md-4 navbar-header">
+                    <!-- Collapsed Hamburger -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- ADMS BRANDING -->
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                                <p>ACCREDITATION <br />DOCUMENT MANAGEMENT <br /> SYSTEM</p>
+                            </a>
+                    </div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                <div class="col-md-8 collapse navbar-collapse " id="app-navbar-collapse">
+>>>>>>> b7b4281b55d11743fe342d16c539911e47a7174b
+                    <ul class="nav navbar-nav">
+                        <li class="col-md-6 home-logo"><img src="{{ URL::to('/images/logo.png') }}"></li>
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                          <li class="col-md-6 home-login-reg">
+                            <button class="login-btn"><a href="{{ route('login') }}">Login</a></button>
+                            <button class="reg-btn"><a href="{{ route('register') }}">Register</a></button>
+                          </li>
                         @else
 
                             <li><a href="/post/create" class="btn btn-default">Create Post</a></li>
@@ -62,6 +61,7 @@
                             </li>
                         @endguest
                     </ul>
+                        
                 </div>
             </div>
         </nav>
