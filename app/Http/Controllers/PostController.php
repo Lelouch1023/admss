@@ -79,7 +79,12 @@ class PostController extends Controller
         $post->title = $request->input('title');    
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
-        $post->cover_image = $filenametoStore;
+       if ($request->hasFile('cover_image')) {
+            if ($post->cover_image != 'noimage.jpg') {
+                Storage::delete('public/cover_images/'.$post->cover_image);
+            }
+            $post->cover_image = $filenameToStore;
+        }
         $post->save();  
     
 

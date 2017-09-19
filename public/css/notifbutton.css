@@ -1,165 +1,6 @@
 /* Page Styles */
-/*
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-*/
-
-/*Customed CSS*/
-
-/*@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto.ttf');
-    src: local('☺'), url('../fonts/Roboto.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
-*{
-    margin: 0px;
-    padding: 0px;
-}
- html, body {
-                background-color: #efefef;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                margin: 0;
-            }
-
-           /**/
-.home-header{
-    background-color: #222;
-    color: #fff;
-    width: 100%;
-    display: inline-block;
-    background: url('../images/home-header.png') no-repeat;
-    background-size: 100%;
-}
-
-.home-logo{
-    float: left;
-    padding: 7px 40px 5px 40px;
-}
-.home-logo img{
-    width: 70%;
-}
-.home-name{
-    float: left;
-    text-align: center;
-    padding: 20px 0px;
-}
-.home-name p{
-    text-align: center;
-    line-height: 1.1;
-    font-size: 15px;
-    font-family: Roboto;
-}
-.home-login-reg{
-    float: left;
-    text-align: center;
-    margin: 10px 0px;
-    
-    /*padding: 27px 35px;*/
-}
-.home-login-reg button{
-    display: inline-block;
-    white-space: nowrap;
-    vertical-align: middle;
-    border: 1px solid transparent;
-    padding: 5px 0px;
-    font-size: 13px;
-    width: 28%;
-    cursor: pointer;
-}
-.home-login-reg .login-btn a{
-    text-decoration: none;
-    font-family: Roboto;
-    text-transform: uppercase;
-    color: #fff;
-}
-.home-login-reg .login-btn{
-    background-color: rgba(195, 54, 69,0.8);
-}
-.home-login-reg .login-btn:hover{
-    background-color: #6c000a;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-.home-login-reg .reg-btn{
-    background-color: rgba(239, 239, 239,0.8);
-}
-
-.home-login-reg .reg-btn:hover{
-    letter-spacing: 1px;
-    transition: 0.5s;
-    background-color: #efefef;
-}
-.home-login-reg .reg-btn a{
-    text-decoration: none;
-    font-family: Roboto;
-    text-transform: uppercase;
-    color: #000;
-}
-.image-slider{
-    width: 80%;
-    text-align: center;
-    margin: auto;
-}
-.divider{
-    margin: 5px 0px;
-    width: 100%;
-}
-.accreditation-details{
-    width: 80%;
-    margin: auto;
-}
-.accre-title img{
-    width: 35%;
-    float: left;
-}
-.accre-details{
-    background: url('../images/accre-details.png') no-repeat;
-    background-size: 100%;
-    background-color: #222;
-    width: 65%;
-    float: left;
-    padding: 30px;
-}
-.accre-details p{
-    color: #fff;
-    font-family: Geosanslight;
-}
-
-/*LOGIN MODAL*/
-
-.log-modal{
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-    background-color: rgba(34, 34, 34, 0.6);
-}
-*/
 button {
     display: block;
     padding: 1em 2em;
@@ -169,7 +10,7 @@ button {
     color: #fff;
     background-color: #3498db;
     border: 1px solid #1f74ac;
-    /*border-radius: 0.3em;*/
+    border-radius: 0.3em;
     margin-top: 4em;
     cursor: pointer;
 }
@@ -186,8 +27,10 @@ button:hover {
     padding: 0.6em;
     background: #3498db;
     border-radius: 0.2em;
+    margin: 1px 7px;
     font-size: 1.3em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    ;
 }
 
 .notification::before, 
@@ -234,6 +77,8 @@ button:hover {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+
+    margin: 0px 0px 0px 10px
 }
 
 @-webkit-keyframes ring {

@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
+                <div class="panel-heading">Dashboard 
+                  <div class="notification" id="notifclass"></div></div>
                 <div class="panel-body">
                    <h3><strong>Your blog posts.</strong></h3>
                    <hr>
@@ -30,9 +30,8 @@
                        </table>
                     @else
                         <h5>No posts to yet. <a href='/post/create' class='btn btn-primary'>Create</a> one!.</h5>
-                   @endif
-        <div class='notification' id='notifclass'></div>
-        <button id='notif_butt'>Increment Notificationsssssssssssss</button> 
+                   @endif   
+                <button id='notif_butt'>Increment Notificationsssssssssssss</button> 
                 </div>
             </div>
         </div>
