@@ -5697,13 +5697,17 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #fff;
+  line-height: 1.1;
+  font-size: 17px;
+  font-family: Roboto;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #f5d02a;
   background-color: transparent;
+  transition: 0.5s;
 }
 
 .navbar-default .navbar-text {

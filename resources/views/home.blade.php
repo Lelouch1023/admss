@@ -7,6 +7,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Hello this is dashboard</div>
 
+                <div class="panel-heading">Dashboard 
+                  <button class="notification" id="notifclass"></button>
+                </div>
                 <div class="panel-body">
                    <h3><strong>Your blog posts.</strong></h3>
                    <hr>
@@ -30,9 +33,8 @@
                        </table>
                     @else
                         <h5>No posts to yet. <a href='/post/create' class='btn btn-primary'>Create</a> one!.</h5>
-                   @endif
-        <div class='notification' id='notifclass'></div>
-        <button id='notif_butt'>Increment Notificationsssssssssssss</button> 
+                   @endif   
+                <button id='notif_butt'>Increment Notificationsssssssssssss</button> 
                 </div>
             </div>
         </div>
