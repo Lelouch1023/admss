@@ -182,3 +182,19 @@
   outline: 0;
     background-color: rgba(34, 34, 34, 0.6);
 }
+.login-btn{
+    background-color: #bd2031;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    border-radius: 0px;
+    width: 17%;
+    font-size: 13px;
+}
+.login-btn:hover{
+    transition: 0.5s;
+    letter-spacing: 2px;
+    background-color: #f5d02a;
+    color: #fff;
+}

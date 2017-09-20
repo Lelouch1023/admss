@@ -30,10 +30,10 @@
                   <ul class="col-md-8 nav navbar-nav">
                     <li class="col-md-6 home-logo active"><img src="{{ URL::to('/images/logo.png') }}"></li>
 
-                       <!--  @guest
+                        @guest
                           <li class="col-md-6 home-login-reg">
-                            <button class="login-btn"><a href="{{ route('login') }}">Login</a></button>
-                            <button class="reg-btn"><a href="{{ route('register') }}">Register</a></button>
+                            <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
+                            <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
                           </li>
                         @else
                             
@@ -59,7 +59,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endguest -->
+                        @endguest
                     </ul>
                 </div>
             </div>

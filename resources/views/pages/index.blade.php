@@ -55,8 +55,8 @@
 			                    <a href="{{ url('/home') }}">Home</a>
 			                </button>
 			               @else
-			                <button class="login-btn"><a href="{{ route('login') }}">Login</a></button>
-			                <button class="reg-btn"><a href="{{ route('register') }}">Register</a></button>
+			                <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
+			                <button class="reg-btn" type="submit" ><a href="{{ route('register') }}">Register</a></button>
 			               @endauth
 			        </li>
 	            		@endif
