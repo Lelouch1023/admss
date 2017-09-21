@@ -60,7 +60,7 @@
     display: inline-block;
     background: url('../images/home-header.png') no-repeat;
     background-size: 100%;
-    padding: 10px 0px;
+    padding: 5px 0px;
     /*border-bottom: 5px solid #efefef;*/
 }
 
@@ -73,6 +73,7 @@
 }
 .home-logo img{
     width: 18%;
+    padding-top: 2px;
 }
 .home-name{
     /*padding: 10px 0 0 0;*/
@@ -214,10 +215,19 @@
     padding: 20px 0px;
 }
 .user-navbar{
-    padding: 10px 0px;
+    padding: 5px 0px;
+}
+.content{
+        height: -webkit-fill-available;
 }
 /*footer css*/
 
 .footer{
     background-color: #222;
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   font-family: sans-serif;
+   color: #f5d02a
 }

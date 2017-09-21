@@ -2,13 +2,13 @@
 	<div class="col-md-12 footer">
 		<div class="container">
 			<div class="col-md-4">
-				sada
+				© 2003-2015. Technological University of the Philippines. All rights reserved
 			</div>
 			<div class="col-md-4">
-				sada
+				
 			</div>
 			<div class="col-md-4">
-				sada
+				
 			</div>
 		</div>
 	</div>
