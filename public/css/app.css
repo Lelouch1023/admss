@@ -3303,6 +3303,7 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+      font-family: sans-serif;
 }
 
 input[type="search"] {
@@ -3492,6 +3493,7 @@ input[type="search"] {
   margin-bottom: 0;
   font-weight: normal;
   cursor: pointer;
+      font-family: sans-serif;
 }
 
 .radio input[type="radio"],
@@ -3940,6 +3942,7 @@ select[multiple].input-lg,
     text-align: right;
     margin-bottom: 0;
     padding-top: 7px;
+        padding-right: 5px;
   }
 }
 
@@ -4417,6 +4420,8 @@ fieldset[disabled] .btn-danger.focus {
   color: #3097D1;
   font-weight: normal;
   border-radius: 0;
+  font-family: sans-serif;
+
 }
 
 .btn-link,
@@ -5445,6 +5450,7 @@ tbody.collapse.in {
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
     color: #fff;
+        margin-top: 5px;
   }
 }
 
@@ -5483,7 +5489,7 @@ tbody.collapse.in {
 }
 
 .navbar-nav {
-  margin: 7px -15px;
+  /*margin: 7px -15px;*/
 }
 
 .navbar-nav > li > a {
@@ -5696,13 +5702,17 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #fff;
+  line-height: 1.1;
+  font-size: 17px;
+  font-family: Roboto;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #f5d02a;
   background-color: transparent;
+  transition: 0.5s;
 }
 
 .navbar-default .navbar-text {
@@ -6296,7 +6306,7 @@ a.badge:focus {
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 88px;
+    padding-top: 18px;
     padding-bottom: 48px;
   }
 
@@ -7116,11 +7126,13 @@ button.list-group-item-danger.active:focus {
 
 .panel-default {
   border-color: #d3e0e9;
+  margin-top: 10px;
+  background-color: #fff;
 }
 
 .panel-default > .panel-heading {
-  color: #333333;
-  background-color: #fff;
+  color: #fff;
+  background-color: #bd2031;
   border-color: #d3e0e9;
 }
 
@@ -8353,3 +8365,129 @@ button.close {
   }
 }
 
+
+/*CUSTOM*/
+/*.top-bar{
+    padding: 5px 0px;
+}
+.top-bar a{
+    font-family: Roboto;
+    color: #767676;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.top-bar .right-top-link{
+    text-align: right;
+    font-weight: thin;
+}
+.top-bar .right-top-link a:after{
+    content: " |";
+    letter-spacing: 1px;
+}
+.home-header{
+    background-color: #222;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    background: url('../images/home-header.png') no-repeat;
+    background-size: 100%;
+    padding: 10px 0px;
+    /*border-bottom: 5px solid #efefef;*/
+}
+
+.home-logo{
+    text-align: center;
+    /*padding: 10px 0px;*/
+}
+.home-logo:hover{
+    background: transparent;
+}
+.home-logo img{
+    width: 18%;
+}
+.home-name{
+    /*padding: 10px 0 0 0;*/
+}
+.home-name p{
+    line-height: 1.1;
+    font-size: 15px;
+    font-family: Roboto;
+}
+.home-login-reg{
+    text-align: right;
+    margin: 15px 0px;
+}
+.home-login-reg button{
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 5px 0px;
+    font-size: 13px;
+    width: 28%;
+    cursor: pointer;
+    margin: 0px;
+}
+.home-login-reg .login-btn a{
+    text-decoration: none;
+    font-family: Roboto;
+    text-transform: uppercase;
+    color: #fff;
+}
+.home-login-reg .login-btn{
+    background-color: #bd2031;
+}
+.home-login-reg .login-btn:hover{
+    background-color: #f5d02a;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.home-login-reg .reg-btn{
+    background-color: rgba(239, 239, 239,0.8);
+}
+
+.home-login-reg .reg-btn:hover{
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background-color: #f5d02a;
+}
+.home-login-reg .reg-btn a{
+    text-decoration: none;
+    font-family: Roboto;
+    text-transform: uppercase;
+    color: #000;
+}
+.image-slider{
+    width:100%;
+    text-align: center;
+    margin: auto;
+    display: -webkit-box
+}
+.image-slider img{
+    width: 100%;
+}
+.divider{
+    margin: 5px 0px;
+    width: 99%;
+}
+.accreditation-details{
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+}
+.accre-title img{
+    /*width: 35%;*/
+    float: left;
+}
+.accre-details{
+    background: url('../images/accre-details.png') no-repeat;
+    background-size: 100%;
+    background-color: #222;
+    /*width: 65%;*/
+    float: left;
+    padding: 30px;
+}
+.accre-details p{
+    color: #fff;
+    font-family: Geosanslight;
+}*/

@@ -1,7 +1,7 @@
 /* Page Styles */
 
 
-button {
+.notification button {
     display: block;
     padding: 1em 2em;
     outline: none;
@@ -15,7 +15,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.notification button:hover {
     background-color: #2487c9;
 }
 

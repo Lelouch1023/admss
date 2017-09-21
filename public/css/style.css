@@ -35,14 +35,22 @@
             }
 
            /**/
-#top-bar{
+.top-bar{
     padding: 5px 0px;
 }
-#top-bar a{
+.top-bar a{
     font-family: Roboto;
     color: #767676;
     text-transform: uppercase;
     font-size: 12px;
+}
+.top-bar .right-top-link{
+    text-align: right;
+    font-weight: thin;
+}
+.top-bar .right-top-link a:after{
+    content: " |";
+    letter-spacing: 1px;
 }
 
 .home-header{
@@ -75,7 +83,7 @@
     font-family: Roboto;
 }
 .home-login-reg{
-    text-align: center;
+    text-align: right;
     margin: 15px 0px;
 }
 .home-login-reg button{
@@ -96,10 +104,10 @@
     color: #fff;
 }
 .home-login-reg .login-btn{
-    background-color: rgba(195, 54, 69,0.8);
+    background-color: #bd2031;
 }
 .home-login-reg .login-btn:hover{
-    background-color: #6c000a;
+    background-color: #f5d02a;
     letter-spacing: 1px;
     transition: 0.5s;
 }
@@ -110,7 +118,7 @@
 .home-login-reg .reg-btn:hover{
     letter-spacing: 1px;
     transition: 0.5s;
-    background-color: #efefef;
+    background-color: #f5d02a;
 }
 .home-login-reg .reg-btn a{
     text-decoration: none;
@@ -174,141 +182,41 @@
   outline: 0;
     background-color: rgba(34, 34, 34, 0.6);
 }
-
-button {
-    display: block;
-    padding: 1em 2em;
-    outline: none;
-    font-weight: 600;
-    border: none;
+.login-btn, .reg-btn{
+    background-color: #bd2031;
     color: #fff;
-    background-color: #3498db;
-    border: 1px solid #1f74ac;
-    /*border-radius: 0.3em;*/
-    margin-top: 4em;
-    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    border-radius: 0px;
+    font-size: 13px;
 }
-
-button:hover {
-    background-color: #2487c9;
-}
-
-/* Notifications */
-
-.notification {
-    display: inline-block;
-    position: relative;
-    padding: 0.6em;
-    background: #3498db;
-    border-radius: 0.2em;
-    font-size: 1.3em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.notification::before, 
-.notification::after {
+.reg-btn:hover,
+.login-btn:hover{
+    transition: 0.5s;
+    letter-spacing: 2px;
+    background-color: #f5d02a;
     color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-
-.notification::before {
-    display: block;
-    content: "\f0f3";
-    font-family: "FontAwesome";
-    transform-origin: top center;
+.login-btn{
+    width: 20%; 
 }
-
-.notification::after {
-    font-family: Arial;
-    font-size: 0.7em;
-    font-weight: 700;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    padding: 5px 8px;
-    line-height: 100%;
-    border: 2px #fff solid;
-    border-radius: 60px;
-    background: #3498db;
-    opacity: 0;
-    content: attr(data-count);
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    transition: transform, opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
+.reg-btn{
+    width: 27%;
 }
-
-.notification.notify::before {
-    -webkit-animation: ring 1.5s ease;
-    animation: ring 1.5s ease;
+/*dashboard*/
+.upload-btn span{
+    font-size: 22px;
+    color: #f5d02a;
 }
-
-.notification.show-count::after {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+.name-drpdwn{
+    text-align: right;
 }
-
-@-webkit-keyframes ring {
-    0% {
-        -webkit-transform: rotate(35deg);
-    }
-    12.5% {
-        -webkit-transform: rotate(-30deg);
-    }
-    25% {
-        -webkit-transform: rotate(25deg);
-    }
-    37.5% {
-        -webkit-transform: rotate(-20deg);
-    }
-    50% {
-        -webkit-transform: rotate(15deg);
-    }
-    62.5% {
-        -webkit-transform: rotate(-10deg);
-    }
-    75% {
-        -webkit-transform: rotate(5deg);
-    }
-    100% {
-        -webkit-transform: rotate(0deg);
-    }
+.user-navbar{
+    padding: 10px 0px;
 }
+/*footer css*/
 
-@keyframes ring {
-    0% {
-        -webkit-transform: rotate(35deg);
-        transform: rotate(35deg);
-    }
-    12.5% {
-        -webkit-transform: rotate(-30deg);
-        transform: rotate(-30deg);
-    }
-    25% {
-        -webkit-transform: rotate(25deg);
-        transform: rotate(25deg);
-    }
-    37.5% {
-        -webkit-transform: rotate(-20deg);
-        transform: rotate(-20deg);
-    }
-    50% {
-        -webkit-transform: rotate(15deg);
-        transform: rotate(15deg);
-    }
-    62.5% {
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    75% {
-        -webkit-transform: rotate(5deg);
-        transform: rotate(5deg);
-    }
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+.footer{
+    background-color: #222;
 }
