@@ -235,3 +235,50 @@
    font-family: sans-serif;
    color: #f5d02a
 }
+
+.footer-info{
+    background-color: #111;
+    height: 340px;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+}
+.footer-info a:hover{
+    color: #f5d02a;
+    transition: 0.5s;
+}
+
+.footer-info .tup-abt {
+    padding: 5px 0px;
+}
+.footer-info .tup-abt p{
+    font-size: 12px;
+    /*text-align: left;*/
+}
+.footer-info .tup-abt img{
+    padding: 10px 0 20px 0;
+    width: 18%;
+}
+.footer-info .footer-nav {
+    padding: 0px 15px;
+}
+
+.footer-info .footer-nav ul{
+    list-style: none;
+    text-align: left;
+}
+.footer-info .footer-abt-us{
+    padding: 0px 15px;
+}
+
+.footer-info .footer-abt-us ul{
+    list-style: none;
+    text-align: left;
+}
+.footer-info .footer-area-nav{
+    padding: 0px 15px;
+}
+.footer-info .footer-area-nav ul{
+    list-style: none;
+    text-align: left;
+}
