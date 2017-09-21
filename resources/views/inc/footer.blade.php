@@ -1,14 +1,13 @@
 <footer>
 	<div class="col-md-12 footer">
 		<div class="container">
-			<div class="col-md-4">
-				© 2003-2015. Technological University of the Philippines. All rights reserved
+			<div class="col-md-6">
+				© 2017-2018. 
+				All rights reserved
 			</div>
-			<div class="col-md-4">
-				
-			</div>
-			<div class="col-md-4">
-				
+			
+			<div class="col-md-6 navbar-right">
+				Technological University of the Philippines. 
 			</div>
 		</div>
 	</div>

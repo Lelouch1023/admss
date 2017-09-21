@@ -217,6 +217,10 @@
 .user-navbar{
     padding: 5px 0px;
 }
+.menu-categories{
+    background-color: #bd2031;
+}
+
 .content{
         height: -webkit-fill-available;
 }
