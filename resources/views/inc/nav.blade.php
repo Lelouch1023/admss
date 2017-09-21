@@ -37,9 +37,9 @@
                           </li>
                         @else
                             <div class="col-md-6 user-navbar navbar-right">
-                                <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
+                                <li class="col-md-4"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
                                 <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span><br>Notifications</a></li>
-                                <li class="col-md-6 dropdown name-drpdwn">
+                                <li class="col-md-5 dropdown name-drpdwn">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>

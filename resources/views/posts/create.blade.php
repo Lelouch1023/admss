@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<!-- 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 	  Launch demo modal
-	</button>
+	</button> -->
 
 <!-- Modal -->
 <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,15 +28,46 @@
  -->
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Upload a file</div>
+                <div class="panel-body">
+                <div class="form-group">
+                	<label>Select document type</label>
+				<!-- Selection for document type -->
+					<select class="form-control" id="">
+						<option>Memorandum</option>
+					    <option>Office Orders</option>
+					    <option>TUP Orders</option>
+					    <option>Certicates</option>
+						<option>Researches</option>
+						<option>Grade Sheets</option>
+					</select>
+                </div>
+                <div class="form-group">
+                <!-- Php code for connection of data -->
+				{!! Form::open(['action' => 'PostController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+				<!--/comment -->
+                <label>Select a file</label>
+                	{{ Form::file('cover_image') }}
+                </div>
+	            {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
+				{!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+               
 
 
 
 
 
 
-
-
-	<h1>create.</h1>
+<!-- THIS Is THE OLD FORM FOR UPLOAD -->
+<!-- 	<h1>create.</h1>
 	<h3>
 	{!! Form::open(['action' => 'PostController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
@@ -52,5 +83,5 @@
 	    	{{ Form::file('cover_image') }}
 	    </div>
 	    {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
-	{!! Form::close() !!}	
+	{!! Form::close() !!} -->	
 @endsection
