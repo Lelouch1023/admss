@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<a href="/post" class="btn btn-default">Back</a>
+{{-- <a href="/post" class="btn btn-default">Back</a>
 <h2>{{ $post->title }}</h2>
 <img style="width:100%" src="../storage/cover_images/{{$post->cover_image}}">
 <br><br>
@@ -12,5 +12,5 @@
 			@if(Auth::user()->id == $post->user_id)
 				<a href="/post/{{ $post->id }}/edit" class="btn btn-default">Edit test</a>
 			@endif
-		@endif
+		@endif --}}
 @endsection

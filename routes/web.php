@@ -20,7 +20,7 @@ Route::get('/hello/{name}', function($name){
 	return 'I am '.$name;
 });
 
-Route::resource('post', 'PostController');
+Route::resource('post', 'UploadController');
 
 Auth::routes();
 

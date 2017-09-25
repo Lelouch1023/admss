@@ -7,7 +7,7 @@
                     <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a>
                     </div>
                     <div class="col-md-6 right-top-link">
-                    <a href="#" title="">Home</a>
+                    <a href="/home" title="">Home</a>
                     <a href="#" title="">Contact</a>
                     <a href="#" title="">About</a>
                     </div> 
@@ -65,8 +65,8 @@
             <div class="nav navbar menu-categories">
                 <div class="container">
                      <ul class="nav nav-tabs">
-                        <li class=""><a data-toggle="tab" href="#home">My Uploads</a></li>
-                        <li><a data-toggle="tab" href="#menu1">All Files</a></li>
+                        <li class=""><a data-toggle="tab" href="home">My Uploads</a></li>
+                        <li><a data-toggle="tab" href="/home">All Files</a></li>
                         <li><a data-toggle="tab" href="#menu2">Areas</a></li>
                         <li><a data-toggle="tab" href="#menu3">Bin</a></li>
                       </ul>
