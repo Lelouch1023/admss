@@ -61,15 +61,66 @@
                             </div> <!--User Navbar -->
                     </ul>
                 </div>
+
+
             </div>
-            <div class="nav navbar menu-categories">
+            </div>
+
+
+
+
+            <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ ('uploads')}}">My Uploads</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Areas <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Area 1: Vision, Mission, Goals and Objectives</a></li>
+                    <li><a href="#">Area 2: The Faculty</a></li>
+                    <li><a href="#">Area 3: Curriculum and Instruction</a></li>
+                    <li><a href="#">Area 4: Support to Students</a></li>
+                    <li><a href="#">Area 5: Research</a></li>
+                    <li><a href="#">Area 6: Extension and Community Involvement</a></li>
+                    <li><a href="#">Area 7: Library</a></li>
+                    <li><a href="#">Area 8</a></li>
+                    <li><a href="#">Area 9: Physical Plant and Facilities</a></li>
+                    <li><a href="#">Area 10: Laboratories</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">My Area</a></li>
+                <li><a href="#">Bin</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+
+
+            <!-- <div class="nav navbar menu-categories ">
                 <div class="container">
                      <ul class="nav nav-tabs">
-                        <li class=""><a data-toggle="tab" href="home">My Uploads</a></li>
+                        <li class=""><a data-toggle="tab" href="pages/my_uploads">My Uploads</a></li>
                         <li><a data-toggle="tab" href="/home">All Files</a></li>
                         <li><a data-toggle="tab" href="#menu2">Areas</a></li>
                         <li><a data-toggle="tab" href="#menu3">Bin</a></li>
-                      </ul>
+                      </ul> -->
 
                       <!-- <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
@@ -89,9 +140,9 @@
                           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         </div>
                         </div> -->
-                </div>
+              <!--   </div> -->
                         @endguest
 
-            </div>
+            <!-- </div> -->
         </nav>
         

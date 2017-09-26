@@ -153,4 +153,6 @@ class UploadController extends Controller
         $file = DB::table('files')->get();
         return view('home', compact(file));
     }
+
+    
 }
