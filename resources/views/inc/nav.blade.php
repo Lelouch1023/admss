@@ -9,7 +9,7 @@
                     <div class="col-md-6 right-top-link">
                     <a href="/home" title="">Home</a>
                     <a href="#" title="">Contact</a>
-                    <a href="#" title="">About</a>
+                    <a href="/about" title="">About</a>
                     </div> 
                 </div>
             </div>
@@ -67,9 +67,7 @@
             </div>
 
 
-
-
-            <nav class="navbar navbar-inverse">
+          <nav class="navbar nav-menu navbar-inverse">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -81,24 +79,24 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ ('uploads')}}">My Uploads</a></li>
+                <li><a href="{{ ('uploads')}}">My Uploads</a></li>
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Areas <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Area 1: Vision, Mission, Goals and Objectives</a></li>
-                    <li><a href="#">Area 2: The Faculty</a></li>
-                    <li><a href="#">Area 3: Curriculum and Instruction</a></li>
-                    <li><a href="#">Area 4: Support to Students</a></li>
-                    <li><a href="#">Area 5: Research</a></li>
-                    <li><a href="#">Area 6: Extension and Community Involvement</a></li>
-                    <li><a href="#">Area 7: Library</a></li>
-                    <li><a href="#">Area 8</a></li>
-                    <li><a href="#">Area 9: Physical Plant and Facilities</a></li>
-                    <li><a href="#">Area 10: Laboratories</a></li>
+                    <li><a href="" title="Area 1">Vision, Mission, Goals and Objectives</a></li>
+                    <li><a href="" title="Area 2">The Faculty</a></li>
+                    <li><a href="" title="Area 3">Curriculum and Instruction</a></li>
+                    <li><a href="" title="Area 4">Support to Students</a></li>
+                    <li><a href="" title="Area 5">Research</a></li>
+                    <li><a href="" title="Area 6">Extension and Community Involvement</a></li>
+                    <li><a href="" title="Area 7">Library</a></li>
+                    <li><a href="" title="Area 8">Physical Plant and Facilities</a></li>
+                    <li><a href="" title="Area 9">Laboratories</a></li>
+                    <li><a href="" title="Area 10">Administration</a></li>
                   </ul>
                 </li>
-                <li><a href="#">My Area</a></li>
-                <li><a href="#">Bin</a></li>
+                <li><a href="{{'assignedArea'}}">My Area</a></li>
+                <li><a href="{{'bin'}}">Bin</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

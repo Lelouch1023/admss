@@ -127,6 +127,9 @@
     text-transform: uppercase;
     color: #000;
 }
+.nav-menu{
+    margin-top: -5px;
+}
 .image-slider{
     width:100%;
     text-align: center;
