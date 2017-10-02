@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-
+		
 @section('content')
 <div class="container">
 	<div class="row">
@@ -8,7 +8,7 @@
 		  <div class="panel-heading">Area 1: Vision, Mission, Goals and Objectives</div>
 		  <div class="panel-body">
 		  	<table class="table table-hover">
-			    <thead>
+			    <thead>	
 			      <tr>
 			        <th>File Name</th>
 			        <th>Date Uploaded</th>
