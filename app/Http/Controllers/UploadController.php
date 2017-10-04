@@ -25,9 +25,9 @@ class UploadController extends Controller
 
     public function index()
     {
-        // $files = File::orderBy('created_at', 'desc')->paginate(10); 
+        $files = File::orderBy('created_at', 'desc')->paginate(10); 
 
-        // return view('home')->with('files', $files);
+        return view('home')->with('files', $files);
     }
 
     /**
@@ -115,7 +115,8 @@ class UploadController extends Controller
     {
         $file = File::find($id);
         //
-        return view('posts.show')->with('posts', $file);
+        $files = File::orderBy('created_at', 'desc')->paginate(1);
+        return view('posts.show')->with('posts', $files);
     }
 
     /**
@@ -160,5 +161,19 @@ class UploadController extends Controller
         return view('home', compact(file));
     }
 
-    
+    public function uploads($id){
+
+        $files = File::find($id);
+
+        return view('pages.my_uploads')->with('posts', $files);
+    }
+    public function assignedArea(){
+
+        return view('pages.my_area');
+    }
+    public function bin(){
+
+        return view('pages.bin');
+    }
 }
+    

@@ -14,7 +14,9 @@
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
-Route::get('/uploads', 'PagesController@uploads');
+Route::get('/uploads', 'UploadController@uploads');
+Route::get('/assignedArea', 'UploadController@assignedArea');
+Route::get('/bin', 'UploadController@bin');
 
 Route::resource('post', 'UploadController');
 

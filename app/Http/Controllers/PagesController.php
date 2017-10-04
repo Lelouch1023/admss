@@ -33,8 +33,6 @@ class PagesController extends Controller
 
     	return view('pages.about')->with('title', $title);
     }
-    public function uploads(){
-        return view('pages.my_uploads');
-    }
+    
 }
 
