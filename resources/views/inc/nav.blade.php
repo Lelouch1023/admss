@@ -36,7 +36,7 @@
                             <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
                           </li>
                         @else
-<<<<<<< HEAD
+
                             <div class="col-md-6 user-navbar navbar-right">
                                 <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
 
@@ -64,12 +64,7 @@
                                 </li><!--notifications-->
 
                                 <li class="col-md-3 dropdown name-drpdwn">
-=======
-                            <div class="col-xs-6 user-navbar navbar-right">
-                                <li class="col-xs-4"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
-                                <li class="col-xs-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span><br>Notifications</a></li>
-                                <li class="col-xs-5 dropdown name-drpdwn">
->>>>>>> 043f4b25c1f41293d63c0555a4f78d697068dda8
+
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
