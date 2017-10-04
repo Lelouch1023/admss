@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\File;
+use App\File; 
 
 use App\Http\Controllers\Controller;
 

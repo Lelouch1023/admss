@@ -46,20 +46,16 @@
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="col-md-8 nav navbar-nav">
+			    <ul class="col-md-8 nav navbar-nav">
 			        <li class="col-md-6 home-logo active"><img src="{{ URL::to('/images/logo.png') }}"></li>
-			        	@if (Route::has('login'))
+			        	
 			        <li class="col-md-6 home-login-reg">
-	                      @auth
-			                <button class="">
-			                    <a href="{{ url('/home') }}">Home</a>
-			                </button>
-			               @else
+	                     
 			                <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
 			                <button class="reg-btn" type="submit" ><a href="{{ route('register') }}">Register</a></button>
-			               @endauth
+			              
 			        </li>
-	            		@endif
+	           	</ul>
 
 			        <!-- <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

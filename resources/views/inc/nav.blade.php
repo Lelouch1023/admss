@@ -37,9 +37,32 @@
                           </li>
                         @else
                             <div class="col-md-6 user-navbar navbar-right">
-                                <li class="col-md-4"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
-                                <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span><br>Notifications</a></li>
-                                <li class="col-md-5 dropdown name-drpdwn">
+                                <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
+
+                                <li class="col-md-5 dropdown name-drpdwn" id="markasread" onclick="markNotificationAsRead('{{ count(auth()->user()->unreadNotifications)}}')">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span>Notifications
+                                    @if( count(auth()->user()->unreadNotifications) !== 0)
+                                      <span id="notifCount" class="badge">{{ count(auth()->user()->unreadNotifications)}}</span>
+                                    @endif
+                                    </a>
+                                    <!-- Dropdown menu content -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                        @if(count(auth()->user()->unreadNotifications) == 0)
+                                          <i style="color: #000; text-align: center; ">No unread notifications</i>
+                                        @else
+                                          @foreach(auth()->user()->unreadNotifications as $notification)
+                                            @include('notif.'.snake_case(class_basename($notification->type)))
+                                            
+
+                                          @endforeach
+                                        @endif
+                                        </li>
+                                    </ul>
+                                </li><!--notifications-->
+
+                                <li class="col-md-3 dropdown name-drpdwn">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
