@@ -51,7 +51,7 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
-            'file' => 'max:1999|mimes:doc,docx,pdf'
+            'file' => 'max:1999|mimes:doc,docx,pdf|required'
 
         ]);
 
@@ -95,7 +95,7 @@ class UploadController extends Controller
         
 
 
-        return redirect('/home')->with('success', 'Post Created!');
+        return redirect('/home')->with('success', 'File Uploaded!');
 
     }
 

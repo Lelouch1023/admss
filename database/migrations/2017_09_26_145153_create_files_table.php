@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImageToPost extends Migration
+class CreateFilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,15 @@ class AddImageToPost extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function($table){
-            $table->string('cover_image');
+        Schema::create('files', function (Blueprint $table) {
+
+            $table->increments('id');
+            $table->string('name');
+            $table->string('size');
+            $table->integer('user_id');
+            $table->timestamps();
+            
+
         });
     }
 
@@ -25,9 +32,6 @@ class AddImageToPost extends Migration
      */
     public function down()
     {
-         Schema::table('posts', function($table){
-
-            $table->dropColumn('cover_image');
-        });
+        Schema::dropIfExists('files');
     }
 }
