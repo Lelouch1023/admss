@@ -12,7 +12,18 @@
 */
 
 /*Customed CSS*/
-
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/helvetica-neue-bold-59cfa8c11a55f.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto.ttf');
@@ -20,7 +31,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 
 {
     margin: 0px;
@@ -34,9 +44,15 @@
                 margin: 0;
             }
 
-           /**/
+/*forms*/
+.login-form, .reg-form{
+    margin-top: 128px;
+}
+
+
 .top-bar{
     padding: 5px 0px;
+    background-color: #fff;
 }
 .top-bar a{
     font-family: Roboto;
@@ -52,18 +68,23 @@
     content: " |";
     letter-spacing: 1px;
 }
-
-.home-header{
+.navbar-expand-lg {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.navigation-menu{
     background-color: #222;
     color: #fff;
     width: 100%;
     display: inline-block;
     background: url('../images/home-header.png') no-repeat;
     background-size: 100%;
-    padding: 5px 0px;
-    /*border-bottom: 5px solid #efefef;*/
+    padding: 8px 0px;
 }
-
 .home-logo{
     text-align: center;
     /*padding: 10px 0px;*/
@@ -72,7 +93,7 @@
     background: transparent;
 }
 .home-logo img{
-    width: 18%;
+    width: 15%;
     padding-top: 2px;
 }
 .home-name{
@@ -127,6 +148,64 @@
     text-transform: uppercase;
     color: #000;
 }
+.nav-menu{
+    margin-top: 128px;
+}
+
+/*website banner*/
+.web-banner{
+    width: 100%;
+    display: block;
+    margin-top: 110px;
+}
+.web-banner img{
+    width: 100%;
+}
+
+/*home-infos*/
+.abt-tup{
+    width: 100%;
+    display: block;
+    padding: 50px 0;
+    /*background-image: url('images/');*/
+}
+.tup-title {
+    font-family: Montserrat;
+    text-align: center;
+    padding: 0 10px;
+}
+.tup-title h2{
+    font-size: 60px;
+    color: #222;
+    line-height: 0.9;
+    letter-spacing: -3px;
+}
+.desc{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.44);
+}
+.desc:hover{
+    cursor: pointer;
+    transition: 1s;
+    background-color: #222;
+    color: #fff;
+}
+.desc p{
+    font-family: Roboto;
+    font-size: 13px;
+}
+.desc a{
+    color: #bd2031;
+}
+.abt-cos{
+    width: 100%;
+    display: block;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+
+
 .image-slider{
     width:100%;
     text-align: center;
@@ -161,7 +240,25 @@
     color: #fff;
     font-family: Geosanslight;
 }
-
+/***ABOUT***/
+.history{
+    text-align: center;
+}
+.history img{
+    width: 20%;
+}
+.history h2{
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #000;
+}
+.history h3{
+    padding: 0px;
+    margin: 0px;    
+}
 /*LOGIN MODAL*/
 
 .log-modal{
@@ -205,7 +302,7 @@
 .reg-btn{
     width: 27%;
 }
-/*dashboard*/
+/****************dashboard*************/
 .upload-btn span{
     font-size: 22px;
     color: #f5d02a;
@@ -224,7 +321,8 @@
 .content{
         height: -webkit-fill-available;
 }
-/*footer css*/
+
+/*************footer css**************/
 
 .footer{
     background-color: #222;
@@ -238,7 +336,7 @@
 
 .footer-info{
     background-color: #111;
-    height: 340px;
+    height: 400px;
     color: #fff;
     font-family: sans-serif;
     text-align: center;
