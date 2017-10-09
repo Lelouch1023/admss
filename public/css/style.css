@@ -127,9 +127,9 @@
     text-transform: uppercase;
     color: #000;
 }
-<<<<<<< HEAD
+
 .nav-menu{
-    margin-top: 113px;
+    margin-top: 5px;
 }
 
 /*website banner*/
@@ -202,8 +202,6 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     width: 25%;
 }
 
-=======
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
 .image-slider{
     width:100%;
     text-align: center;
@@ -282,7 +280,7 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
-<<<<<<< HEAD
+
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -294,11 +292,10 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 
 .upload span{
-    color: #f5d02a;
-=======
-/*dashboard*/
+    color: #f5d02a;/*dashboard*/
+  }
 .upload-btn span{
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
+
     font-size: 22px;
 }
 .notif-drpdwn span{

@@ -33,16 +33,12 @@
 
 @include('inc.footer')
     <!-- Scripts -->
-<<<<<<< HEAD
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/notif.js"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
     
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
-=======
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
+
 </body>
 </html>

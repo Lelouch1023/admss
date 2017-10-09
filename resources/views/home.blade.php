@@ -8,7 +8,6 @@
                 <div class="panel-heading">Hello this is dashboard</div>
 
                 <div class="panel-heading">Dashboard 
-                  <button class="notification" id="notifclass"></button>
                 </div>
                 <div class="panel-body">
                    <h3><strong>All files.</strong></h3>
@@ -60,8 +59,7 @@
                        </table>
                     @else
                         <h5>No posts to yet. <a href='/post/create' class='btn btn-primary'>Create</a> one!.</h5>
-                   @endif    --}}
-                <button id='notif_butt'>Increment Notificationsssssssssssss</button> 
+                   @endif    --}} 
                 </div>
             </div>
         </div>
