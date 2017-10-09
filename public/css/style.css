@@ -182,13 +182,18 @@
 }
 .desc{
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.44);
+    background-color: #222;
+    color: #fff;
+
 }
 .desc:hover{
     cursor: pointer;
     transition: 1s;
-    background-color: #222;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.44);
+    color: #000;
+    -webkit-box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 .desc p{
     font-family: Roboto;
@@ -203,8 +208,19 @@
     padding: 50px 0;
     background-color: #fff;
 }
-
-
+.cos-title{
+    text-align: center;
+    font-family: Montserrat;
+}
+.cos-title h2{
+    font-size: 70px;
+    color: #222;
+    line-height: 0.9;
+    letter-spacing: -3px;   
+}
+.cos-title img{
+    width: 25%;
+}
 
 .image-slider{
     width:100%;
@@ -379,4 +395,88 @@
 .footer-info .footer-area-nav ul{
     list-style: none;
     text-align: left;
+}
+
+/*accordion*/
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #FFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 42px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link { border-bottom: 0; }
+
+.accordion li i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 12px;
+  left: auto;
+  font-size: 16px;
+}
+
+.accordion li.open .link { color: #b63b4d; }
+
+.accordion li.open i { color: #b63b4d; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+
+.submenu {
+  display: none;
+  background: #444359;
+  font-size: 14px;
+}
+
+.submenu li { border-bottom: 1px solid #4b4a5e; }
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  background: #b63b4d;
+  color: #FFF;
 }

@@ -24,18 +24,17 @@
 <body>
 
 @include('inc.nav')
-<div class="jumbotron"> 
     <div id="app">
         <div class="container">
             @include('inc.messages')
             @yield('content')
         </div>
     </div>
-</div>
 
 @include('inc.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
+    
 </body>
 </html>

@@ -54,8 +54,9 @@
 	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
 					</p>
 	    			</div>
-	    			<div class="col-xs-6 tup-title">
-    				<h2>COLLEGE OF SCIENCE</h2>
+	    			<div class="col-xs-6 cos-title">
+	                	<img title="College of Science" src="{{ URL::to('/images/cos.jpg') }}">
+	    				<h2>COLLEGE OF SCIENCE</h2>
 	    			</div>
 	    		</div>
     		</div>
@@ -63,9 +64,52 @@
     	<section id="accreditation">
     		<div class="col-xs-12">
     			<div class="container">
-    		 	kikoih
-    			</div>	
-    		</div>
+    		 	<div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+			        Collapsible Group 1</a>
+			      </h4>
+			    </div>
+			    <div id="collapse1" class="panel-collapse collapse in">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+			        Collapsible Group 2</a>
+			      </h4>
+			    </div>
+			    <div id="collapse2" class="panel-collapse collapse">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+			        Collapsible Group 3</a>
+			      </h4>
+			    </div>
+			    <div id="collapse3" class="panel-collapse collapse">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			</div>
+			</div>	
+		</div>
     	</section>
     	<!-- END OF CONTENT SECTION -->
 	@include('inc.footer')

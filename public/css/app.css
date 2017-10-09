@@ -5433,7 +5433,7 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 10px 15px;
+  padding: 0px 15px;
   font-size: 18px;
   line-height: 22px;
   height: 50px;
@@ -5700,7 +5700,7 @@ tbody.collapse.in {
 }
 
 .navbar-default {
-  background-color: #fff;
+  background-color: transparent;
   border-color: #d3e0e9;
 }
 
@@ -6309,7 +6309,7 @@ a.badge:focus {
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 18px;
+    padding-top: 170px;
     padding-bottom: 48px;
   }
 
