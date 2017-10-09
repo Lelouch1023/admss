@@ -49,13 +49,9 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-<<<<<<< HEAD
 
-            'file' => 'max:1999|mimes:doc,docx,pdf|required'
-=======
             'tag' => 'required',
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
->>>>>>> 42d2d3a179f0e2a35294f5a5d7dd020dbe4e0ea7
 
         ]);
 
