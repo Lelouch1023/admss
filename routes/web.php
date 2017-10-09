@@ -18,13 +18,12 @@ Route::get('/uploads', 'UploadController@uploads');
 Route::get('/assignedArea', 'UploadController@assignedArea');
 Route::get('/bin', 'UploadController@bin');
 
-Route::get('/hello/{name}', function($name){
-
-	return 'I am '.$name;
-});
-
 Route::resource('post', 'UploadController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/markAsRead', function(){
+
+	auth()->user()->unreadNotifications->markAsRead();
+});

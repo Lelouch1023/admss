@@ -36,95 +36,39 @@
                             <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
                           </li>
                         @else
-                            <div class="col-xs-6 user-navbar navbar-right">
-                                <li class="col-xs-4"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></a></li>
-                                <li class="col-xs-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span></a></li>
-                                <li class="col-xs-5 dropdown name-drpdwn">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                    <!-- Dropdown menu content -->
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </div> <!--User Navbar -->
+                  <ul class="nav navbar-nav navbar-right col-xs-4">
+              <div id="custom-search-input">
+                  <div class="input-group ">
+                    <input type="text" class="search-query form-control" placeholder="Search" />
+                      <span class="input-group-btn">
+                      <button class="btn btn-danger" type="button">
+                      <span class=" glyphicon glyphicon-search"></span>
+                      </button>
+                      </span>
+                  </div>
+              </div>
+              </ul> 
                     </ul>
                 </div>
-
-
+              </div>
             </div>
-            </div>
-
-
-          
-
-            <!-- </div> -->
         </nav>
         <nav class="navbar nav-menu navbar-inverse">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#categories">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
               </button>
               <a class="navbar-brand" href="#"></a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
+            <div class=" collapse navbar-collapse" id="categories">
+              <ul class="nav navbar-nav col-md-8">
                 <li><a href="{{ ('uploads')}}">My Uploads</a></li>
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Areas <span class="caret"></span></a>
-                  <ul id="accordion" class="accordion">
-  <li>
-    <div class="link"><i class="fa fa-database"></i>Web Design<i class="fa fa-chevron-down"></i></div>
-    <ul class="submenu">
-      <li><a href="#">Photoshop</a></li>
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="link"><i class="fa fa-code"></i>Coding<i class="fa fa-chevron-down"></i></div>
-    <ul class="submenu">
-      <li><a href="#">Javascript</a></li>
-      <li><a href="#">jQuery</a></li>
-      <li><a href="#">Ruby</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="link"><i class="fa fa-mobile"></i>Devices<i class="fa fa-chevron-down"></i></div>
-    <ul class="submenu">
-      <li><a href="#">Tablet</a></li>
-      <li><a href="#">Mobile</a></li>
-      <li><a href="#">Desktop</a></li>
-    </ul>
-  </li>
-  <li>
-    <div class="link"><i class="fa fa-globe"></i>Global<i class="fa fa-chevron-down"></i></div>
-    <ul class="submenu">
-      <li><a href="#">Google</a></li>
-      <li><a href="#">Bing</a></li>
-      <li><a href="#">Yahoo</a></li>
-    </ul>
-  </li>
-</ul>
-                  <!-- <ul class="dropdown-menu panel-group" id="accordion">
-                    <li>
-                    
-                    </li>
-                        
+                  <ul class="dropdown-menu panel-group" id="accordion">
                     <li><a href="" title="Area 2">The Faculty</a></li>
                     <li><a href="" title="Area 3">Curriculum and Instruction</a></li>
                     <li><a href="" title="Area 4">Support to Students</a></li>
@@ -134,15 +78,72 @@
                     <li><a href="" title="Area 8">Physical Plant and Facilities</a></li>
                     <li><a href="" title="Area 9">Laboratories</a></li>
                     <li><a href="" title="Area 10">Administration</a></li>
-                  </ul> -->
+                  </ul>
                 </li>
                 <li><a href="{{'assignedArea'}}">My Area</a></li>
                 <li><a href="{{'bin'}}">Bin</a></li>
               </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+              <ul class="nav navbar-nav navbar-right col-xs-4">
+                <div class="col-xs-6 user-navbar">
+                            <li class="dropdown name-drpdwn">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span>
+                                    <span class="caret"></span>
+                              </a>
+                                    <!-- Dropdown menu content -->
+                             <ul class="dropdown-menu" role="menu">
+                              <li><a href="">{{ Auth::user()->name }}</a></li>
+                              <li>
+                                  <a href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                                     Logout
+                                  </a>
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                  </form>
+                              </li>
+                             </ul>
+                            </li>
+                            <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead('{{ count(auth()->user()->unreadNotifications)}}')">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span>
+                                    @if( count(auth()->user()->unreadNotifications) !== 0)
+                                <span id="notifCount" class="badge">{{ count(auth()->user()->unreadNotifications)}}</span>
+                                    @endif
+                                </a>
+                                    <!-- Dropdown menu content -->
+                                <ul class="dropdown-menu" role="menu">
+                                  <li>
+                                    @if(count(auth()->user()->unreadNotifications) == 0)
+                                    <i style="color: #000; text-align: center; ">No unread notifications</i>
+                                        @else
+                                          @foreach(auth()->user()->unreadNotifications as $notification)
+                                            @include('notif.'.snake_case(class_basename($notification->type)))
+                                          @endforeach
+                                        @endif
+                                  </li>
+                                </ul>
+                            </li><!--notifications-->
+                            <li class="upload">
+                              <a href="/post/create" class="btn upload-btn">
+                              <span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span>
+                              </a>
+                            </li>
+                        </div>
               </ul>
+              <!-- <ul class="nav navbar-nav navbar-right col-xs-3">
+              <div id="custom-search-input">
+                  <div class="input-group ">
+                    <input type="text" class="search-query form-control" placeholder="Search" />
+                      <span class="input-group-btn">
+                      <button class="btn btn-danger" type="button">
+                      <span class=" glyphicon glyphicon-search"></span>
+                      </button>
+                      </span>
+                  </div>
+              </div>
+              </ul> -->
             </div>
           </div>
         </nav>

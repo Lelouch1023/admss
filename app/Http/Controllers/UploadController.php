@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Notifications\FileTagged;
 use App\Http\Requests;
-
 use \Input as Input;
-
 use App\File;
-
+use App\Tag;
+use App\User;
 use DB;
 
 class UploadController extends Controller
@@ -51,7 +50,9 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
-            'file' => 'max:1999|mimes:doc,docx,pdf'
+            'file' => 'max:1999|mimes:doc,docx,pdf|required'
+            'tag' => 'required'
+            'file' => 'required|max:1999|mimes:doc,docx,pdf'
 
         ]);
 
@@ -76,26 +77,33 @@ class UploadController extends Controller
             $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
 
         $file = new File;
-
         $file->user_id = auth()->user()->id;
-
         $file->name = $fileNameToStore;
-
         $file->size = $filesize;
-
         $file->save();
         
+        $tags = new Tag;
+        $tags->filename = $fileNameToStore;
+        $tags->tag = $request->input('tag');
+        $tags->user = auth()->user()->id;
+        $tags->save();
 
-        } else {
-            $fileNameToStore = 'nofile.doc';
-        }
+        $users = User::all();
+
+       // var_dump($user);
+            foreach($users as $user){
+                if($user->area_handled == $request->input('tag')){
+                    $user->notify(new FileTagged($fileNameToStore));
+                }
+            }
+        } 
 
         
 
         
 
 
-        return redirect('/home')->with('success', 'Post Created!');
+        return redirect('/home')->with('success', 'File Uploaded!');
 
     }
 

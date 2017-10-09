@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserToPost extends Migration
+class AddAreaHandle extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddUserToPost extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function($table){
-            $table->integer('user_id')->after('id');
+         Schema::table('users', function($table){
+            $table->integer('area_handled')->after('remember_token');
         });
     }
 
@@ -25,8 +25,7 @@ class AddUserToPost extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function($table){
-
+         Schema::table('posts', function($table){
             $table->dropColumn('user_id');
         });
     }

@@ -55,8 +55,12 @@
           <div class="form-group">
                 <label>Select a file</label>
                 	{{ Form::file('file') }}
-                </div>
-	            {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
+          </div>
+          <div class="form-group"> 
+            {{ Form::label('tag', 'Add Tag') }}
+            {{ Form::text('tag', '', ['class' => 'form-control', 'placeholder' => 'Tags']) }}  
+        </div>
+	       {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
 				{!! Form::close() !!}
             </div>
         </div>

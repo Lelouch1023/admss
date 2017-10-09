@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+@extends('layouts.app')
+=======
 @extends('layouts.app')		
+>>>>>>> 42d2d3a179f0e2a35294f5a5d7dd020dbe4e0ea7
 
 
 @section('content')

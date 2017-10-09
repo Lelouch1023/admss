@@ -149,7 +149,7 @@
     color: #000;
 }
 .nav-menu{
-    margin-top: 128px;
+    margin-top: 113px;
 }
 
 /*website banner*/
@@ -319,20 +319,85 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     width: 27%;
 }
 /****************dashboard*************/
-.upload-btn span{
-    font-size: 22px;
-    color: #f5d02a;
+.upload{
+  text-align: right;
+  float: right;
+  /*border: 1px solid #fff;*/
+  border-radius: 5px;
+  font-family: Roboto;
+
 }
+
+.upload span{
+    color: #f5d02a;
+    font-size: 22px;
+}
+.notif-drpdwn span{
+    color: #f5d02a;
+    font-size: 21px;
+
+}
+.notif-drpdwn{
+  color: #f5d02a;
+    padding: 8px 11px;
+    float: right;
+    /*border: 1px solid #fff;*/
+    border-radius: 5px;
+}
+
 .name-drpdwn{
     text-align: right;
-    padding: 20px 0px;
+    padding: 4px 6px;
+    float: right;
+}
+.name-drpdwn span{
+  color: #f5d02a;
+font-size: 18px;
+    padding-top: 4px;
 }
 .user-navbar{
     padding: 5px 0px;
+    float: right;
 }
 .menu-categories{
     background-color: #bd2031;
 }
+
+#custom-search-input{
+   margin: 8px 0px;
+}
+#custom-search-input .search-query{
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    margin-bottom: 0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    background-color: transparent;
+}
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#f5d02a;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+
+
 
 .content{
         height: -webkit-fill-available;
