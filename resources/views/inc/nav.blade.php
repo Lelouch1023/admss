@@ -36,7 +36,6 @@
                             <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
                           </li>
                         @else
-<<<<<<< HEAD
                   <ul class="nav navbar-nav navbar-right col-xs-4">
               <div id="custom-search-input">
                   <div class="input-group ">
@@ -54,7 +53,7 @@
               </div>
             </div>
         </nav>
-        <nav class="navbar nav-menu navbar-inverse">
+        <nav class="navbar nav-menu navbar-inverse menu-categories">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#categories">
@@ -86,11 +85,11 @@
               </ul>
               <ul class="nav navbar-nav navbar-right col-xs-4">
                 <div class="col-xs-6 user-navbar">
-                            <li class="dropdown name-drpdwn">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <span class="glyphicon glyphicon-user"></span>
-                                    <span class="caret"></span>
-                              </a>
+                  <li class="dropdown name-drpdwn">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="caret"></span>
+                    </a>
                                     <!-- Dropdown menu content -->
                              <ul class="dropdown-menu" role="menu">
                               <li><a href="">{{ Auth::user()->name }}</a></li>
@@ -133,81 +132,8 @@
                             </li>
                         </div>
               </ul>
-              <!-- <ul class="nav navbar-nav navbar-right col-xs-3">
-              <div id="custom-search-input">
-                  <div class="input-group ">
-                    <input type="text" class="search-query form-control" placeholder="Search" />
-                      <span class="input-group-btn">
-                      <button class="btn btn-danger" type="button">
-                      <span class=" glyphicon glyphicon-search"></span>
-                      </button>
-                      </span>
-                  </div>
-              </div>
-              </ul> -->
             </div>
           </div>
         </nav>
         @endguest
-
-=======
-                            <div class="col-md-6 user-navbar navbar-right">
-                                <li class="col-md-4"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span><br>Upload a file</a></li>
-                                <li class="col-md-3"><a href="/post/create" class="btn upload-btn"><span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span><br>Notifications</a></li>
-                                <li class="col-md-5 dropdown name-drpdwn">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                    <!-- Dropdown menu content -->
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </div> <!--User Navbar -->
-                    </ul>
-                </div>
-            </div>
-            <div class="nav navbar menu-categories">
-                <div class="container">
-                     <ul class="nav nav-tabs">
-                        <li class=""><a data-toggle="tab" href="home">My Uploads</a></li>
-                        <li><a data-toggle="tab" href="/home">All Files</a></li>
-                        <li><a data-toggle="tab" href="#menu2">Areas</a></li>
-                        <li><a data-toggle="tab" href="#menu3">Bin</a></li>
-                      </ul>
-
-                      <!-- <div class="tab-content">
-                        <div id="home" class="tab-pane fade in active">
-                          <h3>HOME</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div id="menu1" class="tab-pane fade">
-                          <h3>Menu 1</h3>
-                          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div id="menu2" class="tab-pane fade">
-                          <h3>Menu 2</h3>
-                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                        </div>
-                        <div id="menu3" class="tab-pane fade">
-                          <h3>Menu 3</h3>
-                          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        </div>
-                        </div> -->
-                </div>
-                        @endguest
-
-            </div>
-        </nav>
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
-        
+                           

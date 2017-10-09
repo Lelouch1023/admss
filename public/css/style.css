@@ -202,8 +202,6 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     width: 25%;
 }
 
-=======
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
 .image-slider{
     width:100%;
     text-align: center;
@@ -282,7 +280,6 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
-<<<<<<< HEAD
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -295,10 +292,9 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 
 .upload span{
     color: #f5d02a;
-=======
+  }
 /*dashboard*/
 .upload-btn span{
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     font-size: 22px;
 }
 .notif-drpdwn span{
@@ -329,17 +325,21 @@ font-size: 18px;
     float: right;
 }
 .menu-categories{
-    background-color: #bd2031;
+    background-color: #222222;
+    margin-top: -5px;
+    font-family: Roboto;
+    color: #fff;
 }
 
 #custom-search-input{
-   margin: 8px 0px;
+   margin: 18px 0px;
 }
 #custom-search-input .search-query{
-    padding-right: 3px;
-    padding-right: 4px \9;
-    padding-left: 3px;
-    padding-left: 4px \9;
+  color: #efefef;
+    padding-right: 30px;
+    padding-right: 40px \9;
+    padding-left: 9px;
+    padding-left: 9px \9;
     margin-bottom: 0;
     -webkit-border-radius: 2em;
     -moz-border-radius: 2em;

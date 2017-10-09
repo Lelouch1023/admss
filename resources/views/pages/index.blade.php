@@ -134,23 +134,11 @@
 	            		@endif
         		</div>
     		</nav> -->
-<<<<<<< HEAD
     		</div>
-=======
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     	</section>
         
         <!-- CONTENT -->
     	<section id="content">
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
 						On September 15, 1995, the University Board of Regents authorized to split the College of Arts and Sciences into the College of Science and the College of Liberal Arts. The new College of Science was structured to include graduate programs in Mathematics, Chemistry, Physics, and General Science. The college also offers five (5) baccalaureate programs, namely: Bachelor of Science in Computer Science, Bachelor of Science in Information Technology, Bachelor of Science in Information Systems, Bachelor of Science in Environmental Science and Bachelor of Applied Science Major in Laboratory Technology.<br>
 	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
 					</p>
@@ -211,7 +199,6 @@
 			</div>
 			</div>	
 		</div>
-=======
     		<div class="col-xs-12">
     			<div class="image-slider">
 	              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -264,12 +251,11 @@
 	            	</div>
 		        </div>
     		</div>
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     	</section>
     	<!-- END OF CONTENT SECTION -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+	<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
      
