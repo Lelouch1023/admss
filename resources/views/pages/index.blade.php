@@ -182,13 +182,17 @@
 		              <div class="accre-title">
 		                <img class="col-xs-4" src="images/typo-accre.png">
 		                <div class=" col-xs-8 accre-details">
+
 		                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting
 		                    industry. Lorem Ipsum has been the industry's standard dummy 
 		                    ever since the1500s, when an unknown  printer took a galley of  
 		                    and scrambled it to make a type specimen book. It has survived 
 		                    only five centuries, but also the leap  into electronic typesettg, 
 		                    remaining essentially unchanged.It was popularised in the 1960h 
-		                    the relea software like Aldus PageMaker including versions of</p>
+		                    the relea software like Aldus PageMaker including versions of
+		                  </p>
+
+
 		                </div> 
 		              </div>
 	            	</div>

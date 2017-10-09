@@ -12,6 +12,7 @@
                 </div>
                 <div class="panel-body">
                    <h3><strong>All files.</strong></h3>
+                   
                    <hr>
                    {{-- @if(count($files) > 0)
                        <table class="table table-striped">
