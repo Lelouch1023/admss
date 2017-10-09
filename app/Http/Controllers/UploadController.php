@@ -51,18 +51,10 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
-<<<<<<< HEAD
+
             'tag' => 'required',
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
-=======
-<<<<<<< HEAD
-            'file' => 'max:1999|mimes:doc,docx,pdf|required'
-            'tag' => 'required'
-            'file' => 'required|max:1999|mimes:doc,docx,pdf'
-=======
-            'file' => 'max:1999|mimes:doc,docx,pdf'
->>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
->>>>>>> 6a61f7a57833644ce3f0f846db0ca191da1b8f49
+
 
         ]);
 
