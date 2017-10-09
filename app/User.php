@@ -30,8 +30,4 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany('App\File');
     }
-
-    public function tags(){
-        return $this->hasMany('App\Tag');
-    }
 }

@@ -1427,8 +1427,8 @@ a {
 
 a:hover,
 a:focus {
-  color: #216a94;
-  text-decoration: underline;
+  color: #fff;
+  /*text-decoration: underline;*/
 }
 
 a:focus {
@@ -3023,11 +3023,8 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 22px;
-  font-family: Roboto;
 }
-.table a {
-  color: #000;
-}
+
 .table > thead > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > th,
@@ -5116,7 +5113,7 @@ tbody.collapse.in {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #222;
   border-color: #3097D1;
 }
 
@@ -5433,7 +5430,7 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 10px 15px;
+  padding: 0px 15px;
   font-size: 18px;
   line-height: 22px;
   height: 50px;
@@ -5700,7 +5697,7 @@ tbody.collapse.in {
 }
 
 .navbar-default {
-  background-color: #fff;
+  background-color: transparent;
   border-color: #d3e0e9;
 }
 
@@ -6309,7 +6306,7 @@ a.badge:focus {
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 18px;
+    padding-top: 170px;
     padding-bottom: 48px;
   }
 

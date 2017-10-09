@@ -11,35 +11,25 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{!! asset('css/app.css') !!}" media="all" rel="stylesheet" type="text/css" />
         <link href="{!! asset('css/style.css') !!}" media="all" rel="stylesheet" type="text/css" />
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-		<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
-    	<script src="js/bootstrap.js"></script>
-     
+
        
     </head>
     <body>
-    	@include('inc.nav')
-	    	
-        <!-- CONTENT -->
-    	<section id="banner">
-    		<div class="col-xs-12 web-banner">
-                <img title="banner" src="{{ URL::to('/images/slide1.jpg') }}">
-    		</div>
-    	</section>
-    	<section id="abt-tup">
-    		<div class="col-xs-12 abt-tup">
-    			<div class="container">
-    				<div class="col-xs-6 tup-title">
-    				<h2>TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES</h2>
+    	<section id="header">
+    		<!-- TOP BAR -->
+	    	<nav class="navbar navbar-default ">
+	    	<div class="top-bar">
+	    		<div class="container">
+	    			<div class="col-md-6">
+		            <img src="{{ URL::to('/images/phgov.png') }}">
+		            <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a>
 	    			</div>
-	    			<div class="col-xs-6 desc">
-	    				<p>The Technological University of the Philippines was first established as the Manila Trade School in 1901 upon the enactment of Act No. 74 by the United States Philippine Commission for the instruction of the Filipinos on useful trades. Originally housed near Ateneo de Manila in Intramuros, MTS transferred to the Exposicion Regional de Filipinos in Calle Padre Faura. Six years later, the MTS transferred to the City Shops in Calle Arroceros. Industrial courses which included carpentry, English, telegraphy, machine shop work, furniture making, wood carving, boat building, plumbing, blacksmithing, mechanical and architectural drawing were offered on the primary school level during this period because pupils at that time were already adults. They were studying certain trades which they intended to follow after leaving school. <br>
-	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
-					</p>
-	    			</div>
+		            <div class="col-md-6 right-top-link">
+		            <a href="#" title="">Home</a>
+		            <a href="#" title="">Contact</a>
+		            <a href="#" title="">About</a>
+		            </div> 
 	    		</div>
-<<<<<<< HEAD
 	    	</div>
 	    	  <div class="home-header">
 			  <div class="container">
@@ -56,16 +46,20 @@
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="col-md-8 nav navbar-nav">
+			      <ul class="col-md-8 nav navbar-nav">
 			        <li class="col-md-6 home-logo active"><img src="{{ URL::to('/images/logo.png') }}"></li>
-			        	
+			        	@if (Route::has('login'))
 			        <li class="col-md-6 home-login-reg">
-	                     
+	                      @auth
+			                <button class="">
+			                    <a href="{{ url('/home') }}">Home</a>
+			                </button>
+			               @else
 			                <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
 			                <button class="reg-btn" type="submit" ><a href="{{ route('register') }}">Register</a></button>
-			              
+			               @endauth
 			        </li>
-	           	</ul>
+	            		@endif
 
 			        <!-- <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -140,25 +134,30 @@
 	            		@endif
         		</div>
     		</nav> -->
-=======
+<<<<<<< HEAD
     		</div>
->>>>>>> 043f4b25c1f41293d63c0555a4f78d697068dda8
+=======
+>>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     	</section>
+        
+        <!-- CONTENT -->
+    	<section id="content">
 
-    	<section id="abt-cos">
-    		<div class="col-xs-12 abt-cos">
-    			<div class="container">
-	    			<div class="col-xs-6 desc">
-	    				<p>By virtue of Presidential Decree No. 1518, the Philippine College of Arts and Trades (PCAT) was converted into the Technological University of the Philippines (TUP) on June 11, 1976. The conversion to a university status brought about comprehensive changes in the organizational set-up. To carry out its tasks, the University had to change its one-college structure to a system composed of six colleges, one of which is the College of Arts and Sciences (CAS). The CAS was created in 1979 with its four departments, namely: the Languages, the Social and Behavioral Sciences, the Mathematics and Physical Sciences, and the Physical Education.
 
-						In 1991, the College was mandated to perform dual roles: as a service college and as a science college. On July 24, 1995, the TUP Board of Regents through Referendum No. 13, s. 1995 approved the devolution of some Master Programs of the Graduate School to the mother colleges. Since then, the granting of the degrees in the Master of Arts in Teaching with specializations in Mathematics, Physics, Chemistry, and General Science has become the responsibility of the College of Arts and Sciences.
 
+
+
+
+
+
+<<<<<<< HEAD
 						On September 15, 1995, the University Board of Regents authorized to split the College of Arts and Sciences into the College of Science and the College of Liberal Arts. The new College of Science was structured to include graduate programs in Mathematics, Chemistry, Physics, and General Science. The college also offers five (5) baccalaureate programs, namely: Bachelor of Science in Computer Science, Bachelor of Science in Information Technology, Bachelor of Science in Information Systems, Bachelor of Science in Environmental Science and Bachelor of Applied Science Major in Laboratory Technology.<br>
 	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
 					</p>
 	    			</div>
-	    			<div class="col-xs-6 tup-title">
-    				<h2>COLLEGE OF SCIENCE</h2>
+	    			<div class="col-xs-6 cos-title">
+	                	<img title="College of Science" src="{{ URL::to('/images/cos.jpg') }}">
+	    				<h2>COLLEGE OF SCIENCE</h2>
 	    			</div>
 	    		</div>
     		</div>
@@ -166,11 +165,113 @@
     	<section id="accreditation">
     		<div class="col-xs-12">
     			<div class="container">
-    		 	kikoih
-    			</div>	
+    		 	<div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+			        Collapsible Group 1</a>
+			      </h4>
+			    </div>
+			    <div id="collapse1" class="panel-collapse collapse in">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+			        Collapsible Group 2</a>
+			      </h4>
+			    </div>
+			    <div id="collapse2" class="panel-collapse collapse">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+			        Collapsible Group 3</a>
+			      </h4>
+			    </div>
+			    <div id="collapse3" class="panel-collapse collapse">
+			      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			      commodo consequat.</div>
+			    </div>
+			  </div>
+			</div>
+			</div>	
+		</div>
+=======
+    		<div class="col-xs-12">
+    			<div class="image-slider">
+	              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	                <ol class="carousel-indicators">
+	                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	                </ol>
+	                <div class="carousel-inner" role="listbox">
+	                  <div class="carousel-item active">
+	                    <img class="d-block img-fluid" src="images/slide1.jpg" alt="First slide">
+	                  </div>
+	                  <!-- <div class="carousel-item">
+	                    <img class="d-block img-fluid" src="images/slide2.jpg" alt="Second slide">
+	                  </div>
+	                  <div class="carousel-item">
+	                    <img class="d-block img-fluid" src="images/slide1.jpg" alt="Third slide">
+	                  </div> -->
+	                </div>
+	                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                  <span class="sr-only">Previous</span>
+	                </a>
+	                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                  <span class="sr-only">Next</span>
+	                </a>
+	              </div>
+	            </div>
+
+	            <div class="container">
+	              	<img class="divider" src="images/divider.png">
+	              	<div class="col-xs-12 accreditation-details">
+		              <div class="accre-title">
+		                <img class="col-xs-4" src="images/typo-accre.png">
+		                <div class=" col-xs-8 accre-details">
+
+		                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+		                    industry. Lorem Ipsum has been the industry's standard dummy 
+		                    ever since the1500s, when an unknown  printer took a galley of  
+		                    and scrambled it to make a type specimen book. It has survived 
+		                    only five centuries, but also the leap  into electronic typesettg, 
+		                    remaining essentially unchanged.It was popularised in the 1960h 
+		                    the relea software like Aldus PageMaker including versions of
+		                  </p>
+
+
+		                </div> 
+		              </div>
+	            	</div>
+		        </div>
     		</div>
+>>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     	</section>
     	<!-- END OF CONTENT SECTION -->
-	@include('inc.footer')
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+     
     </body>
 </html>

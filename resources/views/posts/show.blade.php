@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -48,4 +49,18 @@
         </div>
     </div>
 </div>
+=======
+{{-- <a href="/post" class="btn btn-default">Back</a>
+<h2>{{ $post->title }}</h2>
+<img style="width:100%" src="../storage/cover_images/{{$post->cover_image}}">
+<br><br>
+	<small>Written on {{ $post->created_at }} by {{ $post->user->name }}</small>
+	<h5>{{ $post->body }}</h5>
+	<hr>
+		@if(!Auth::guest())
+			@if(Auth::user()->id == $post->user_id)
+				<a href="/post/{{ $post->id }}/edit" class="btn btn-default">Edit test</a>
+			@endif
+		@endif --}}
+>>>>>>> 6a61f7a57833644ce3f0f846db0ca191da1b8f49
 @endsection
