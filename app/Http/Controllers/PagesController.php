@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\File; 
+use App\File;
 
 use App\Http\Controllers\Controller;
 
@@ -33,6 +33,5 @@ class PagesController extends Controller
 
     	return view('pages.about')->with('title', $title);
     }
-    
 }
 

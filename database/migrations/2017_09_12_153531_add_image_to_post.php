@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAreasTable extends Migration
+class AddImageToPost extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateAreasTable extends Migration
      */
     public function up()
     {
-        Schema::create('areas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('posts', function($table){
+            $table->string('cover_image');
         });
     }
 
@@ -27,6 +25,9 @@ class CreateAreasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('areas');
+         Schema::table('posts', function($table){
+
+            $table->dropColumn('cover_image');
+        });
     }
 }

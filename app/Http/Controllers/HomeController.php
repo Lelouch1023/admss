@@ -35,7 +35,7 @@ class HomeController extends Controller
         // $user_id = auth()->user()->id;
         // $user = User::find($user_id);
 
-        $files = File::orderBy('created_at', 'desc')->paginate(1);
+        $files = File::orderBy('created_at', 'desc')->paginate(10);
         return view('home')->with('files', $files);
     }
 }

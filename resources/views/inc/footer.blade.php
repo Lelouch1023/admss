@@ -50,10 +50,14 @@
 	</div>
 	<div class="col-md-12 footer">
 		<div class="container">
-				<center>Technological University of the Philippines. 
+			<div class="col-md-6">
 				© 2017-2018. 
 				All rights reserved
-				</center>
+			</div>
+			
+			<div class="col-md-6 navbar-right">
+				Technological University of the Philippines. 
+			</div>
 		</div>
 	</div>
 </footer>

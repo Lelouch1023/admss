@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Notifications\FileTagged;
+
 use App\Http\Requests;
+
 use \Input as Input;
+
 use App\File;
-use App\Tag;
-use App\User;
+
 use DB;
 
 class UploadController extends Controller
@@ -25,9 +26,9 @@ class UploadController extends Controller
 
     public function index()
     {
-        $files = File::orderBy('created_at', 'desc')->paginate(10); 
+        // $files = File::orderBy('created_at', 'desc')->paginate(10); 
 
-        return view('home')->with('files', $files);
+        // return view('home')->with('files', $files);
     }
 
     /**
@@ -50,9 +51,13 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
+<<<<<<< HEAD
             'file' => 'max:1999|mimes:doc,docx,pdf|required'
             'tag' => 'required'
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
+=======
+            'file' => 'max:1999|mimes:doc,docx,pdf'
+>>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
 
         ]);
 
@@ -77,33 +82,26 @@ class UploadController extends Controller
             $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
 
         $file = new File;
+
         $file->user_id = auth()->user()->id;
+
         $file->name = $fileNameToStore;
+
         $file->size = $filesize;
+
         $file->save();
         
-        $tags = new Tag;
-        $tags->filename = $fileNameToStore;
-        $tags->tag = $request->input('tag');
-        $tags->user = auth()->user()->id;
-        $tags->save();
 
-        $users = User::all();
-
-       // var_dump($user);
-            foreach($users as $user){
-                if($user->area_handled == $request->input('tag')){
-                    $user->notify(new FileTagged($fileNameToStore));
-                }
-            }
-        } 
+        } else {
+            $fileNameToStore = 'nofile.doc';
+        }
 
         
 
         
 
 
-        return redirect('/home')->with('success', 'File Uploaded!');
+        return redirect('/home')->with('success', 'Post Created!');
 
     }
 
@@ -117,8 +115,7 @@ class UploadController extends Controller
     {
         $file = File::find($id);
         //
-        $files = File::orderBy('created_at', 'desc')->paginate(1);
-        return view('posts.show')->with('posts', $files);
+        return view('posts.show')->with('posts', $file);
     }
 
     /**
@@ -162,20 +159,4 @@ class UploadController extends Controller
         $file = DB::table('files')->get();
         return view('home', compact(file));
     }
-
-    public function uploads($id){
-
-        $files = File::find($id);
-
-        return view('pages.my_uploads')->with('posts', $files);
-    }
-    public function assignedArea(){
-
-        return view('pages.my_area');
-    }
-    public function bin(){
-
-        return view('pages.bin');
-    }
 }
-    

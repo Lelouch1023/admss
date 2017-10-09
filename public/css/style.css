@@ -12,18 +12,7 @@
 */
 
 /*Customed CSS*/
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica';
-    src: url('../fonts/helvetica-neue-bold-59cfa8c11a55f.ttf');
-    font-weight: bold;
-    font-style: normal;
-}
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto.ttf');
@@ -31,6 +20,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 
 {
     margin: 0px;
@@ -44,15 +34,9 @@
                 margin: 0;
             }
 
-/*forms*/
-.login-form, .reg-form{
-    margin-top: 128px;
-}
-
-
+           /**/
 .top-bar{
     padding: 5px 0px;
-    background-color: #fff;
 }
 .top-bar a{
     font-family: Roboto;
@@ -68,23 +52,18 @@
     content: " |";
     letter-spacing: 1px;
 }
-.navbar-expand-lg {
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-.navigation-menu{
+
+.home-header{
     background-color: #222;
     color: #fff;
     width: 100%;
     display: inline-block;
     background: url('../images/home-header.png') no-repeat;
     background-size: 100%;
-    padding: 8px 0px;
+    padding: 5px 0px;
+    /*border-bottom: 5px solid #efefef;*/
 }
+
 .home-logo{
     text-align: center;
     /*padding: 10px 0px;*/
@@ -93,7 +72,7 @@
     background: transparent;
 }
 .home-logo img{
-    width: 15%;
+    width: 18%;
     padding-top: 2px;
 }
 .home-name{
@@ -148,6 +127,7 @@
     text-transform: uppercase;
     color: #000;
 }
+<<<<<<< HEAD
 .nav-menu{
     margin-top: 113px;
 }
@@ -222,6 +202,8 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     width: 25%;
 }
 
+=======
+>>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
 .image-slider{
     width:100%;
     text-align: center;
@@ -256,25 +238,7 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     color: #fff;
     font-family: Geosanslight;
 }
-/***ABOUT***/
-.history{
-    text-align: center;
-}
-.history img{
-    width: 20%;
-}
-.history h2{
-    padding: 0px;
-    margin: 0px;
-    font-family: Helvetica;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    color: #000;
-}
-.history h3{
-    padding: 0px;
-    margin: 0px;    
-}
+
 /*LOGIN MODAL*/
 
 .log-modal{
@@ -318,6 +282,7 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
+<<<<<<< HEAD
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -330,6 +295,10 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 
 .upload span{
     color: #f5d02a;
+=======
+/*dashboard*/
+.upload-btn span{
+>>>>>>> c18200f44816790065f31db1af8b6e7a952ca77b
     font-size: 22px;
 }
 .notif-drpdwn span{
@@ -402,8 +371,7 @@ font-size: 18px;
 .content{
         height: -webkit-fill-available;
 }
-
-/*************footer css**************/
+/*footer css*/
 
 .footer{
     background-color: #222;
@@ -417,7 +385,7 @@ font-size: 18px;
 
 .footer-info{
     background-color: #111;
-    height: 400px;
+    height: 340px;
     color: #fff;
     font-family: sans-serif;
     text-align: center;
