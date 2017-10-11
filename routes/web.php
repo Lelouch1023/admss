@@ -24,4 +24,11 @@ Route::resource('post', 'UploadController');
 
 Auth::routes();
 
+
+Route::get('/markAsRead', function(){
+	auth()->user()->unreadNotifications->markAsRead();
+
+});
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/search', 'UploadController@search');
+Route::get('/result', 'UploadController@result')->name('result');

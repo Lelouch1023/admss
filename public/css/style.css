@@ -329,6 +329,9 @@ font-size: 18px;
     background-color: #bd2031;
 }
 
+#searchItem{
+  color: #fff; /*makes the text inside search bar readable*/
+}
 #custom-search-input{
    margin: 8px 0px;
 }

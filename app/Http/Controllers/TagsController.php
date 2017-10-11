@@ -41,6 +41,7 @@ class TagsController extends Controller
         $tags->user = auth()->user()->id;
         $tags->save();
 
+        $tag = $request->input('tags');
         $users = User::all();
 
        // var_dump($user);

@@ -40,8 +40,10 @@
                   <ul class="nav navbar-nav navbar-right col-xs-4">
               <div id="custom-search-input">
                   <div class="input-group ">
-                    <input type="text" class="search-query form-control" placeholder="Search" />
-                      <span class="input-group-btn">
+                    {!!  Form::open(['route' => 'result', 'method' => 'GET', 'id'=> 'searchForm'])!!}
+                    <input type="text" class="search-query form-control" placeholder="Search" id="searchItem" name="searchItem"/>
+                    {{ Form::close() }}
+                    <span class="input-group-btn">
                       <button class="btn btn-danger" type="button">
                       <span class=" glyphicon glyphicon-search"></span>
                       </button>
@@ -118,11 +120,11 @@
                                   <li>
                                     @if(count(auth()->user()->unreadNotifications) == 0)
                                     <i style="color: #000; text-align: center; ">No unread notifications</i>
-                                        @else
-                                          @foreach(auth()->user()->unreadNotifications as $notification)
-                                            @include('notif.'.snake_case(class_basename($notification->type)))
-                                          @endforeach
-                                        @endif
+                                    @else
+                                      @foreach(auth()->user()->unreadNotifications as $notification)
+                                         @include('notif.'.snake_case(class_basename($notification->type)))
+                                      @endforeach
+                                    @endif
                                   </li>
                                 </ul>
                             </li><!--notifications-->
