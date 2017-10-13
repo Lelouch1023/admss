@@ -41,12 +41,5 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
-<<<<<<< HEAD
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
-=======
-
-    
->>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
 </body>
 </html>

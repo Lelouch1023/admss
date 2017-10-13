@@ -172,7 +172,7 @@ class UploadController extends Controller
         //return $files;
 
         if(count($files) == 0){
-            $searchResult = ['No such file.'];
+            $searchResult = ['No results.'];
         }
         else{
             foreach($files as $file){
