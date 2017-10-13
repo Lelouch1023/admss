@@ -127,9 +127,9 @@
     text-transform: uppercase;
     color: #000;
 }
-<<<<<<< HEAD
+
 .nav-menu{
-    margin-top: 113px;
+    margin-top: 5px;
 }
 
 /*website banner*/
@@ -280,6 +280,10 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -291,10 +295,17 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 
 .upload span{
+<<<<<<< HEAD
     color: #f5d02a;
   }
 /*dashboard*/
 .upload-btn span{
+=======
+    color: #f5d02a;/*dashboard*/
+  }
+.upload-btn span{
+
+>>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
     font-size: 22px;
 }
 .notif-drpdwn span{
@@ -331,6 +342,9 @@ font-size: 18px;
     color: #fff;
 }
 
+#searchItem{
+  color: #fff; /*makes the text inside search bar readable*/
+}
 #custom-search-input{
    margin: 18px 0px;
 }

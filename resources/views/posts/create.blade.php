@@ -52,11 +52,16 @@
                 <!-- Php code for connection of data -->
 				{!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 				<!--/comment -->
-          <div class="form-group">
+            
+            <div class="form-group">
+                <label>Add a tag</label>
+                  {{ Form::text('tags', '', ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
                 <label>Select a file</label>
-                	{{ Form::file('file') }}
-                </div>
-	            {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
+                  {{ Form::file('file') }}
+            </div>
+	          {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
 				{!! Form::close() !!}
             </div>
         </div>

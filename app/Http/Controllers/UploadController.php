@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use \Input as Input;
-
+use App\Notifications\FileTagged;
 use App\File;
-
+use App\User;
 use DB;
 
 class UploadController extends Controller
@@ -51,10 +51,17 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
+<<<<<<< HEAD
             'file' => 'max:1999|mimes:doc,docx,pdf|required'
             'tag' => 'required'
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
             'file' => 'max:1999|mimes:doc,docx,pdf'
+=======
+
+            'tags' => 'required',
+            'file' => 'required|max:1999|mimes:doc,docx,pdf'
+
+>>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
 
         ]);
 
@@ -89,8 +96,17 @@ class UploadController extends Controller
         $file->save();
         
 
-        } else {
-            $fileNameToStore = 'nofile.doc';
+        }
+        $tag = $request->input('tags');
+        $users = User::all();
+
+       // var_dump($user);
+        foreach($users as $user){
+            if($user->area_handled == $request->input('tags')){
+            //     //$user = User::where('area_handled', $request->input('tag'))->first();
+             // Notification::send($user, new FileTagged(auth()->user()->tags()));
+                $user->notify(new FileTagged($fileNameToStore));
+            }
         }
 
         
@@ -155,5 +171,34 @@ class UploadController extends Controller
 
         $file = DB::table('files')->get();
         return view('home', compact(file));
+    }
+
+    public function search(Request $request){
+
+        $term = $request->term;
+        $files = File::where('name', 'LIKE', '%'.$term.'%')->get();
+        //return $files;
+
+        if(count($files) == 0){
+            $searchResult = ['No such file.'];
+        }
+        else{
+            foreach($files as $file){
+                $searchResult[] = $file->name;            }
+        }
+
+        return $searchResult;
+
+    }
+
+    public function result(Request $request){
+
+        $term = Input::get('searchItem', '');
+        $files = File::where('name', 'LIKE', '%'.$term.'%')->paginate(10);
+
+        return view('pages.searchResult')->with('files', $files);
+        //return $files;
+
+        
     }
 }

@@ -15,7 +15,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/notifbutton.css') }}" rel="stylesheet">
-    
+    <link href="js/jquery-ui.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
@@ -23,7 +23,7 @@
 </head>
 <body>
 
-@include('inc.nav')
+ @include('inc.nav') 
     <div id="app">
         <div class="container">
             @include('inc.messages')
@@ -38,8 +38,15 @@
     <script type="text/javascript" src="js/notif.js"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
     
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
+<<<<<<< HEAD
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
+=======
+
+    
+>>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
 </body>
 </html>
