@@ -3023,6 +3023,7 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 22px;
+
 }
 
 .table > thead > tr > th,
@@ -3035,11 +3036,13 @@ th {
   line-height: 1.6;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  color: #000;
 }
 
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
+
 }
 
 .table > caption + thead > tr:first-child > th,

@@ -379,6 +379,11 @@ font-size: 18px;
 .content{
         height: -webkit-fill-available;
 }
+/*table*/
+.actions-btn a,span{
+  color: #000;
+}
+
 /*footer css*/
 
 .footer{
@@ -521,3 +526,6 @@ font-size: 18px;
   background: #b63b4d;
   color: #FFF;
 }
+
+/*views*/
+.actions-
