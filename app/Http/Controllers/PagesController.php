@@ -35,16 +35,17 @@ class PagesController extends Controller
 
         return view('pages.about')->with('title', $title);
     }
-    public function assignedArea(){
-        $title = "ADMS | My Area";
-
-        return view('pages.my_area')->with('title', $title);
-    }
 
     public function area(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area1')->with('files', $files);
+        return view('pages.my_uploads')->with('files', $files);
+    }
+
+    public function assignedArea(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.assignedArea')->with('files', $files);
     }
 }
 

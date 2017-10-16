@@ -66,7 +66,7 @@
     </div>
     <div class=" collapse navbar-collapse" id="categories">
       <ul class="nav navbar-nav col-md-8">
-        <li><a href="{{ ('uloads')}}">My Uploads</a></li>
+        <li><a href="{{ ('uploads')}}">My Uploads</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Areas <span class="caret"></span></a>
           <ul class="dropdown-menu panel-group" id="accordion">

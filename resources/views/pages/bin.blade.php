@@ -16,8 +16,13 @@
 			      </tr>
 			    </thead>
 			    <tbody>
+			    @if(count($files) >0)
+			     @foreach ($files as $file)
 			      <tr>
-			   		<td><a href="">TUP Memorandum</a></td>
+			   		<td>
+						<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   				<span class="actions-btn text">{{$file->name}}</span>
+			   			</button>
 			   		<td>Date</td>
 			   		<td>
 			   			
