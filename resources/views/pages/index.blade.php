@@ -16,9 +16,10 @@
     <body>
     	 @include('inc.nav')
         <!-- CONTENT -->
-        
+        <div class="col-xs-12">
+            
     	<section id="banner">
-    		<div class="col-xs-12 web-banner">
+    		<div class=" web-banner">
                 <img title="banner" src="{{ URL::to('/images/slide1.jpg') }}">
     		</div>
     	</section>
@@ -55,6 +56,8 @@
 	    		</div>
     		</div>
     	</section>
+        </div>
+
     	<!-- END OF CONTENT SECTION -->
 	@include('inc.footer')
     	

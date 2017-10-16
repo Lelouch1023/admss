@@ -28,11 +28,8 @@ class PagesController extends Controller
 
     	return view('pages.services')->with('title', $title);
     }
-    // public function about(){
-    // 	$title = "About";
 
-    // 	return view('pages.about')->with('title', $title);
-    // }
+
     public function about(){
         $title = "About";
 
@@ -42,6 +39,12 @@ class PagesController extends Controller
         $title = "ADMS | My Area";
 
         return view('pages.my_area')->with('title', $title);
+    }
+
+    public function area(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.areas.area1')->with('files', $files);
     }
 }
 

@@ -17,10 +17,10 @@
 			    </thead>
 			    <tbody>
 			      <tr>
-			   		<td><a href="">afaafs</a></td>
+			   		<td><a href="" class="actions-btn">afaafs</a></td>
 			   		<td>Date</td>
 			   		<td>
-			   			<a class="col-md-2" href="" download=""><span class="glyphicon glyphicon-download">
+			   			<a class="col-md-2 actions-btn" href="" download=""><span class="glyphicon glyphicon-download">
 			   			</span> Download</a>
 			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-upload"></span> Revise</a>
 			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-eye-open"></span> View</a>
@@ -32,7 +32,7 @@
 
 			   		</td>
 			   		<td>
-			   			asda
+			   			<a href=""><span class="glyphicon glyphicon-unchecked"></span> </a>
 			   		</td>
 			      </tr>
 			    </tbody>
