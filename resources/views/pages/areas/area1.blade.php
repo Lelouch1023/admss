@@ -20,7 +20,7 @@
 			    <tbody>
 			    	@if(count($files) >0)
 			     @foreach ($files as $file)
-			      <tr >
+			      <tr>
 			   		<td class="actions-btn"><a href="">{{$file->name}}</a></td>
 			   		<td></td>
 			   		<td>{{$file->created_at}}</td>

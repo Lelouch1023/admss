@@ -69,7 +69,8 @@
         <li><a href="{{ ('uploads')}}">My Uploads</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Areas <span class="caret"></span></a>
-          <ul class="dropdown-menu panel-group" id="accordion">
+          <ul class="dropdown-menu panel-group">
+            <li><a href="" title="Area 1">Vision, Mission, Goals and Obejectives</a></li>
             <li><a href="" title="Area 2">The Faculty</a></li>
             <li><a href="" title="Area 3">Curriculum and Instruction</a></li>
             <li><a href="" title="Area 4">Support to Students</a></li>

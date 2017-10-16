@@ -36,7 +36,7 @@ class PagesController extends Controller
         return view('pages.about')->with('title', $title);
     }
 
-    public function area(){ 
+    public function uploads(){ 
         $files = DB::table('files')->paginate(5);
 
         return view('pages.my_uploads')->with('files', $files);
@@ -46,6 +46,11 @@ class PagesController extends Controller
         $files = DB::table('files')->paginate(5);
 
         return view('pages.assignedArea')->with('files', $files);
+    }
+    public function bin(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.bin')->with('files', $files);
     }
 }
 

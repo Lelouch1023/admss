@@ -20,22 +20,28 @@
 			     @foreach ($files as $file)
 			      <tr>
 			   		<td>
-						<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="actions-btn text">{{$file->name}}</span>
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   			<span class="actions-btn text">{{$file->name}}</span>
 			   			</button>
-			   		<td>Date</td>
+			   		</td>
+			   		<td>{{$file->created_at}}</td>
 			   		<td>
-			   			
-			   			<a class="col-md-3" href="">
-			   				<span class="glyphicon glyphicon-transfer"></span> Restore
-			   			</a>
-			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-trash"></span> Delete</a>
-			   			
+			   			<button type="button" class="col-md-3 actions-btn btn btn-link">
+			   			<span class="glyphicon glyphicon-transfer"></span>
+			   			<span class="actions-btn text"> Restore</span>
+			   			</button>
 			   		</td>
 			   		<td>
-			   			<a href=""><span class="glyphicon glyphicon-unchecked"></span> </a>
+			   			<label class="form-check-label">
+					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+					 	</label>
 			   		</td>
 			      </tr>
+			       @endforeach
+           			{{$files->links()}}
+			    @else 
+			   		<p>No Uploads</p>
+            	@endif
 			    </tbody>
 			</table>
 		  </div>

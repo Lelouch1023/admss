@@ -525,3 +525,10 @@ font-size: 18px;
   color: #000;
   font-family: Roboto;
 }
+.accrdn ul{
+  list-style: none;
+  color: #000;
+}
+.accrdn a{
+  color: #000;
+}
