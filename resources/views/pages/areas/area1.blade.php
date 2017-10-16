@@ -38,14 +38,10 @@
 			   				<span class="actions-btn text">View</span>
 			   			</button>
 			   			{{-- MODAL QR --}}
-<<<<<<< HEAD
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#qrmodal">
+
+			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
 			   				<span class="glyphicon glyphicon-qrcode" ></span>
 			   				<span class="actions-btn text">Scan</span>
-=======
-			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
-			   				<span class="glyphicon glyphicon-qrcode" ></span> Scan
->>>>>>> 74263173507afac4ee753f2bdfe77abe1b29a022
 			   			</button>
 						<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
@@ -73,14 +69,10 @@
 			   			</button>
 			   		</td>
 			   		<td>
-<<<<<<< HEAD
 			   		<label class="form-check-label">
 					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
 					  </label>
-			   			<!-- <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"> -->
-=======
-			   			Checkbox
->>>>>>> 74263173507afac4ee753f2bdfe77abe1b29a022
+
 			   		</td>
 			      </tr>
 			      @endforeach
