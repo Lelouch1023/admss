@@ -23,13 +23,22 @@
 			   		<td class="actions-btn"><a href="">{{$file->name}}</a></td>
 			   		<td>{{$file->created_at}}</td>
 			   		<td>
-			   			<a class="col-md-2 actions-btn" href="" download=""><span class="glyphicon glyphicon-download">
-			   			</span> Download</a>
-			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-upload"></span> Revise</a>
-			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-eye-open"></span> View</a>
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   				<span class="glyphicon glyphicon-download"></span>
+			   				<span class="actions-btn text">Download</span>
+			   			</button>
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   				<span class="glyphicon glyphicon-upload"></span>
+			   				<span class="actions-btn text">Revise</span>
+			   			</button>
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   				<span class="glyphicon glyphicon-eye-open"></span>
+			   				<span class="actions-btn text">View</span>
+			   			</button>
 			   			{{-- MODAL QR --}}
-			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#qrmodal">
-			   				<span class="glyphicon glyphicon-qrcode" ></span> Scan
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#qrmodal">
+			   				<span class="glyphicon glyphicon-qrcode" ></span>
+			   				<span class="actions-btn text">Scan</span>
 			   			</button>
 						<div class="modal fade" id="qrmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
@@ -51,12 +60,16 @@
 						    </div>
 						  </div>
 						</div><!--modal qr-->
-			   			<a class="col-md-2" href=""><span class="glyphicon glyphicon-trash"></span> Delete</a>
-			   			
-	
+						<button type="button" class="col-md-2 actions-btn btn btn-link">
+			   				<span class="glyphicon glyphicon-trash"></span>
+			   				<span class="actions-btn text">Delete</span>
+			   			</button>
 			   		</td>
 			   		<td>
-			   			<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}">
+			   		<label class="form-check-label">
+					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+					  </label>
+			   			<!-- <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"> -->
 			   		</td>
 			      </tr>
 			      @endforeach

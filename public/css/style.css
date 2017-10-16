@@ -520,3 +520,8 @@ font-size: 18px;
   background: #b63b4d;
   color: #FFF;
 }
+
+.actions-btn a,span{
+  color: #000;
+  font-family: Roboto;
+}

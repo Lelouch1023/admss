@@ -32,6 +32,11 @@
 
 			   		</td>
 			   		<td>
+			   		<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+					  </label>
+					</div>
 			   			<a href=""><span class="glyphicon glyphicon-unchecked"></span> </a>
 			   		</td>
 			      </tr>

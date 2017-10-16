@@ -3036,7 +3036,6 @@ th {
   line-height: 1.6;
   vertical-align: top;
   border-top: 1px solid #ddd;
-  color: #000;
 }
 
 .table > thead > tr > th {
@@ -7518,7 +7517,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
