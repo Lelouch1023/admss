@@ -280,10 +280,6 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -295,19 +291,14 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 
 .upload span{
-<<<<<<< HEAD
     color: #f5d02a;
   }
 /*dashboard*/
 .upload-btn span{
-=======
     color: #f5d02a;/*dashboard*/
-  }
-.upload-btn span{
-
->>>>>>> f2f2fb856eeb5d140afbb0e30a9ef719be4e0910
     font-size: 22px;
-}
+  }
+
 .notif-drpdwn span{
     color: #f5d02a;
     font-size: 21px;
