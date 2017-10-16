@@ -10,76 +10,96 @@
 		  	<table class="table table-hover">
 			    <thead>	
 			      <tr>
-			        <th>File Name</th>
-			        <th>Date Uploaded</th>
-			        <th>Actions</th>
-			        <th>Select</th>
+			        <th>Sub Areas</th>
 			      </tr>
 			    </thead>
 			    <tbody>
-			    	@if(count($files) >0)
-			     @foreach ($files as $file)
-			      <tr >
-			   		<td class="actions-btn"><a href="">{{$file->name}}</a></td>
-			   		<td>{{$file->created_at}}</td>
+			    <tr>
 			   		<td>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-download"></span>
-			   				<span class="actions-btn text">Download</span>
-			   			</button>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-upload"></span>
-			   				<span class="actions-btn text">Revise</span>
-			   			</button>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-eye-open"></span>
-			   				<span class="actions-btn text">View</span>
-			   			</button>
-			   			{{-- MODAL QR --}}
+			   		<div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+					    <div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Statement of Vision, Mission, Goals and Objectives
+							</a>
+						</h4>
+						</div>
+						<div id="collapse2" class="panel-collapse collapse">
+						  <div class="panel-body">
+		  					<table class="table table-hover">
+		  					 <thead>	
+							  <tr>
+							   <th>System — Inputs and Process</th>
+							  </tr>
+							 </thead>
+							 <tbody>
+							  <tr>
+								<td>
+								<ol class="accrdn">
+						      		<li data-toggle="collapse" href="#sub-parameter"><a href="">Statement of Vision, Mission, Goals and Objectives</a>
+						      		</li>
+						      		<ol id="sub-parameter" class="panel-collapse collapse">
+						      			<li><a href=""> The institution has a system of determining its Vision and Mission</a></li>
+						      			<li>The institution</li>
+						      		</ol>
+						      		<li data-toggle="collapse" href="#sub-parameter2"><a href=""> Dissemination and Acceptability</a></li>
+						      		<ol id="sub-parameter2" class="panel-collapse collapse">
+						      			<li>The institution</li>
+						      			<li>The institution</li>
+						      		</ol>
+						      	</ol>
+							    </td>
+							  </tr>
+							 </tbody>
+		  					</table>
+		  				</div>
+		  			  </div>
+		  			 </div>	
+		  			</div>
 
-			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
-			   				<span class="glyphicon glyphicon-qrcode" ></span>
-			   				<span class="actions-btn text">Scan</span>
-			   			</button>
-						<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
-						      </div>
-						      <div class="modal-body">
-						        <center>{{-- {!! QrCode::size(250)->generate($file->name) !!} --}}<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						        
-						      </div>
-						    </div>
-						  </div>
-						</div><!--modal qr-->
-						<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-trash"></span>
-			   				<span class="actions-btn text">Delete</span>
-			   			</button>
-			   		</td>
-			   		<td>
-			   		<label class="form-check-label">
-					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-					  </label>
-
-			   		</td>
-			      </tr>
-			      @endforeach
-           			{{$files->links()}}
-			    @else 
-            		<p>No Uploads</p>
-            	@endif
+		  			<div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+					    <div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Statement of Vision, Mission, Goals and Objectives
+							</a>
+						</h4>
+						</div>
+						<div id="collapse2" class="panel-collapse collapse">
+						  <div class="panel-body">
+		  					<table class="table table-hover">
+		  					 <thead>	
+							  <tr>
+							   <th>Parameters</th>
+							  </tr>
+							 </thead>
+							 <tbody>
+							  <tr>
+								<td>
+								<ul class="accrdn">
+						      		<li data-toggle="collapse" href="#sub-parameter"><a href="">Statement of Vision, Mission, Goals and Objectives</a>
+						      		</li>
+						      		<ol id="sub-parameter" class="panel-collapse collapse">
+						      			<li><a href=""> The institution</a></li>
+						      			<li>The institution</li>
+						      		</ol>
+						      		<li data-toggle="collapse" href="#sub-parameter2"><a href=""> Dissemination and Acceptability</a></li>
+						      		<ol id="sub-parameter2" class="panel-collapse collapse">
+						      			<li>The institution</li>
+						      			<li>The institution</li>
+						      		</ol>
+						      	</ul>
+							    </td>
+							  </tr>
+							 </tbody>
+		  					</table>
+		  				</div>
+		  			  </div>
+		  			 </div>	
+		  			</div>
+		  			</td>
+			     </tr>
 			    </tbody>
-			    
 			</table>
 		  </div>
 		</div>

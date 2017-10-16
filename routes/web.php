@@ -14,8 +14,9 @@
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
-Route::get('/uploads', 'PagesController@area');
+Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
+Route::get('/bin', 'PagesController@bin');
 
 Route::get('/hello/{name}', function($name){
 
