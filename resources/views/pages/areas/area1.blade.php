@@ -11,6 +11,7 @@
 			    <thead>	
 			      <tr>
 			        <th>File Name</th>
+			        <th>Uploaded by</th>
 			        <th>Date Uploaded</th>
 			        <th>Actions</th>
 			        <th>Select</th>
@@ -21,6 +22,7 @@
 			     @foreach ($files as $file)
 			      <tr >
 			   		<td class="actions-btn"><a href="">{{$file->name}}</a></td>
+			   		<td></td>
 			   		<td>{{$file->created_at}}</td>
 			   		<td>
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
@@ -36,11 +38,16 @@
 			   				<span class="actions-btn text">View</span>
 			   			</button>
 			   			{{-- MODAL QR --}}
+<<<<<<< HEAD
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#qrmodal">
 			   				<span class="glyphicon glyphicon-qrcode" ></span>
 			   				<span class="actions-btn text">Scan</span>
+=======
+			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
+			   				<span class="glyphicon glyphicon-qrcode" ></span> Scan
+>>>>>>> 74263173507afac4ee753f2bdfe77abe1b29a022
 			   			</button>
-						<div class="modal fade" id="qrmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
 						    <div class="modal-content">
 						      <div class="modal-header">
@@ -51,7 +58,7 @@
 						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
 						      </div>
 						      <div class="modal-body">
-						        <center>{{-- <img src="data:image/png;base64, --}} {!! QrCode::size(250)->generate($file->name) !!}</center>
+						        <center>{{-- {!! QrCode::size(250)->generate($file->name) !!} --}}<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -66,10 +73,14 @@
 			   			</button>
 			   		</td>
 			   		<td>
+<<<<<<< HEAD
 			   		<label class="form-check-label">
 					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
 					  </label>
 			   			<!-- <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"> -->
+=======
+			   			Checkbox
+>>>>>>> 74263173507afac4ee753f2bdfe77abe1b29a022
 			   		</td>
 			      </tr>
 			      @endforeach
