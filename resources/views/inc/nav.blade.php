@@ -38,7 +38,9 @@
       <ul class="nav navbar-nav navbar-right col-xs-4">
         <div id="custom-search-input">
           <div class="input-group ">
-            <input type="text" class="search-query form-control" placeholder="Search" />
+            {!!  Form::open(['route' => 'result', 'method' => 'GET', 'id'=> 'searchForm'])!!}
+                    <input type="text" class="search-query form-control" placeholder="Search" id="searchItem" name="searchItem"/>
+            {{ Form::close() }}
             <span class="input-group-btn">
             <button class="btn btn-danger" type="button">
               <span class=" glyphicon glyphicon-search"></span>

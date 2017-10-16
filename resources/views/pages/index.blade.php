@@ -56,9 +56,6 @@
     	</section>
     	<!-- END OF CONTENT SECTION -->
 	@include('inc.footer')
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-		<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
-    	<script src="js/bootstrap.js"></script>
+    	
     </body>
 </html>

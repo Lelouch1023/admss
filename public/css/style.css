@@ -280,6 +280,10 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .reg-btn{
     width: 27%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ec35beb6232f6c84d351060d1e0e90e957a8fce
 /****************dashboard*************/
 .upload{
   text-align: right;
@@ -291,6 +295,7 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 
 .upload span{
+<<<<<<< HEAD
     color: #f5d02a;
   }
 /*dashboard*/
@@ -299,6 +304,18 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     font-size: 22px;
   }
 
+=======
+
+    color: #f5d02a;
+  }
+/*dashboard*/
+
+.upload-btn span{
+
+    color: #f5d02a;/*dashboard*/
+    font-size: 22px;
+}
+>>>>>>> 5ec35beb6232f6c84d351060d1e0e90e957a8fce
 .notif-drpdwn span{
     color: #f5d02a;
     font-size: 21px;
