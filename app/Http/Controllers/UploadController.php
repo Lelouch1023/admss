@@ -51,11 +51,6 @@ class UploadController extends Controller
     {
         $this->validate($request,[
 
-            'file' => 'max:1999|mimes:doc,docx,pdf|required'
-            'tag' => 'required'
-            'file' => 'required|max:1999|mimes:doc,docx,pdf'
-            'file' => 'max:1999|mimes:doc,docx,pdf'
-
             'tags' => 'required',
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
 
@@ -177,7 +172,7 @@ class UploadController extends Controller
         //return $files;
 
         if(count($files) == 0){
-            $searchResult = ['No such file.'];
+            $searchResult = ['No results.'];
         }
         else{
             foreach($files as $file){

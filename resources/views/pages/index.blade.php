@@ -16,6 +16,7 @@
     <body>
     	 @include('inc.nav')
         <!-- CONTENT -->
+        
     	<section id="banner">
     		<div class="col-xs-12 web-banner">
                 <img title="banner" src="{{ URL::to('/images/slide1.jpg') }}">

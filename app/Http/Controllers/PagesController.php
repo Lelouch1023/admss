@@ -28,10 +28,20 @@ class PagesController extends Controller
 
     	return view('pages.services')->with('title', $title);
     }
-    public function about(){
-    	$title = "About";
+    // public function about(){
+    // 	$title = "About";
 
-    	return view('pages.about')->with('title', $title);
+    // 	return view('pages.about')->with('title', $title);
+    // }
+    public function about(){
+        $title = "About";
+
+        return view('pages.about')->with('title', $title);
+    }
+    public function assignedArea(){
+        $title = "ADMS | My Area";
+
+        return view('pages.my_area')->with('title', $title);
     }
 }
 
