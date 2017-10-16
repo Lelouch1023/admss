@@ -25,10 +25,12 @@
 			   		<td></td>
 			   		<td>{{$file->created_at}}</td>
 			   		<td>
+			   			<a href="storage/uploads/{{$file->name}}" download="{{$file->name}}">
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
 			   				<span class="glyphicon glyphicon-download"></span>
 			   				<span class="actions-btn text">Download</span>
 			   			</button>
+			   			</a>
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
 			   				<span class="glyphicon glyphicon-upload"></span>
 			   				<span class="actions-btn text">Revise</span>
