@@ -37,7 +37,8 @@ class PagesController extends Controller
     }
 
     public function uploads(){ 
-        $files = File::orderBy('created_at', 'desc')->paginate(10);
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
 
         return view('pages.my_uploads')->with('files', $files);
     }
@@ -48,8 +49,8 @@ class PagesController extends Controller
         return view('pages.assignedArea')->with('files', $files);
     }
     public function bin(){ 
-        $files = DB::table('files')->paginate(10);
-
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(10);
         return view('pages.bin')->with('files', $files);
     }
 }

@@ -6,6 +6,8 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">Deleted Files</div>
 		  <div class="panel-body">
+
+		 @if(count($files) >0)
 		  	<table class="table table-hover">
 			    <thead>
 			      <tr>
@@ -16,7 +18,6 @@
 			      </tr>
 			    </thead>
 			    <tbody>
-			    @if(count($files) >0)
 			     @foreach ($files as $file)
 			      <tr>
 			   		<td>
@@ -26,10 +27,38 @@
 			   		</td>
 			   		<td>{{$file->created_at}}</td>
 			   		<td>
-			   			<button type="button" class="col-md-3 actions-btn btn btn-link">
+			   			<button type="button" class="col-md-3 actions-btn btn btn-link" onclick="location.href='/restore/{{ $file->id }}'">
 			   			<span class="glyphicon glyphicon-transfer"></span>
 			   			<span class="actions-btn text"> Restore</span>
 			   			</button>
+
+			   			<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#{{ $file->id }}modal">
+			   				<span class="glyphicon glyphicon-trash"></span>
+			   				<span class="actions-btn text">Delete</span>
+
+			   			</button>
+			   			<!--delete modal-->
+			   			<div class="modal fade" id="{{ $file->id }}modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <center>Are you sure you want to permanently delete <strong>{{ $file->name }}?</strong></center>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        
+						        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.href = '/destroy/{{ $file->id }}';">Delete</button>
+						        
+						      </div>
+						    </div>
+						  </div>
+						</div>
 			   		</td>
 			   		<td>
 			   			<label class="form-check-label">
@@ -40,7 +69,7 @@
 			       @endforeach
            			{{$files->links()}}
 			    @else 
-			   		<p>No Uploads</p>
+			   		<center><p>No Deleted Files</p></center>
             	@endif
 			    </tbody>
 			</table>

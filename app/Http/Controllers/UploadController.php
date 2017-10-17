@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\Storage;
 use \Input as Input;
 use App\Notifications\FileTagged;
 use App\File;
 use App\User;
+use Carbon\Carbon;
 use DB;
 
 class UploadController extends Controller
@@ -154,11 +155,20 @@ class UploadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
+
         $file = File::find($id);
-        $file->delete();
-        return redirect('home')->with('success', 'File Deleted');
+
+        if(auth()->user()->id !== $file->user_id){
+            return redirect('/home')->with('error', 'Unauthorized Page');
+        }else{
+        $file->isDeleted = 1;
+        $file->deleted_at = Carbon::now();
+        $file->save();
+
+        return redirect('/uploads')->with('success', 'File Deleted');
+        }
     }
 
     public function download(){
@@ -200,5 +210,33 @@ class UploadController extends Controller
          $files = File::find($id)->get();
 
          return view('posts.view')->with('files', $files);
+    }
+
+    public function restore($id){
+
+        $files = File::find($id);
+
+        if(auth()->user()->id !== $files->user_id){
+            return redirect('/home')->with('error', 'Unauthorized Page');
+        }else{
+            $files->isDeleted = 0;
+            $files->save();
+
+            return redirect('/uploads')->with('success', 'Restored successfully!');
+        }
+    }
+
+    public function destroy($id){
+
+        $files = File::find($id);
+
+        if(auth()->user()->id !== $files->user_id){
+            return redirect('/home')->with('error', 'Unauthorized Page');
+        }else{
+            
+            Storage::delete('public/uploads/'.$files->name);
+            $files->delete();
+            return redirect('/bin')->with('success', 'Permanently deleted successfully!');
+        }
     }
 }

@@ -37,3 +37,6 @@ Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
 Route::get('/uploads/view/{id}', 'UploadController@view');
+Route::get('/delete/{id}', 'UploadController@delete');
+Route::get('/restore/{id}', 'UploadController@restore');
+Route::get('/destroy/{id}', 'UploadController@destroy');

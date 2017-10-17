@@ -28,8 +28,9 @@
                                       <th> </th>
                                     @endif --}}
 
-            @if(count($files)>0)
-        @foreach($files as $file)
+         @if(count($files)>0)
+           @foreach($files as $file)
+             @if($file->isDeleted == 0)
             <div class="well">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
@@ -48,7 +49,8 @@
                 
                 
             </div>
-        @endforeach
+            @endif
+            @endforeach
         {{ $files->links() }}
         @else 
             <p>No Uploads</p>

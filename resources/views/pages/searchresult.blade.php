@@ -5,6 +5,7 @@
 
 	@if(count($files)>0)
 		@foreach($files as $file)
+			@if($file->isDeleted == 0)
 			<div class="well">
 				<div class="row">
 					<div class="col-md-4 col-sm-4">
@@ -20,6 +21,7 @@
 				
 				
 			</div>
+			@endif
 		@endforeach
 		{{ $files->render() }}
 	@else
