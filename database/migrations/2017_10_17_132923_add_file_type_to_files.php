@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAreaHandledToUser extends Migration
+class AddFileTypeToFiles extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddAreaHandledToUser extends Migration
      */
     public function up()
     {
-        Schema::table('users', function($table){
-            $table->integer('area_handled')->after('remember_token');
+        Schema::table('files', function($table){
+            $table->string('file_type')->after('size');
         });
     }
 
@@ -25,9 +25,9 @@ class AddAreaHandledToUser extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table){
+         Schema::table('files', function($table){
 
-            $table->dropColumn('area_handled');
+            $table->dropColumn('file_type');
         });
     }
 }

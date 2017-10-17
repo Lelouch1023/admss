@@ -532,3 +532,8 @@ font-size: 18px;
 .accrdn a{
   color: #000;
 }
+
+.pdf{ /*for PDF iframe*/
+width:100%;
+min-height:650px;
+}

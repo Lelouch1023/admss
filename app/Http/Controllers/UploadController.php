@@ -85,6 +85,8 @@ class UploadController extends Controller
 
         $file->size = $filesize;
 
+        $file->file_type = $extension;
+
         $file->save();
         
 
@@ -192,5 +194,11 @@ class UploadController extends Controller
         //return $files;
 
         
+    }
+
+    public function view($id){
+         $files = File::find($id)->get();
+
+         return view('posts.view')->with('files', $files);
     }
 }

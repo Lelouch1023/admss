@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAreaHandledToUser extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddAreaHandledToUser extends Migration
      */
     public function up()
     {
-        Schema::table('users', function($table){
-            $table->integer('area_handled')->after('remember_token');
+        Schema::create('tags', function (Blueprint $table) {
+            $table->increments('tag_id');
+            $table->string('filename');
+            $table->integer('tag');           
+            $table->integer('user');
+            $table->timestamps();
         });
     }
 
@@ -25,9 +29,6 @@ class AddAreaHandledToUser extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table){
-
-            $table->dropColumn('area_handled');
-        });
+        Schema::dropIfExists('tags');
     }
 }

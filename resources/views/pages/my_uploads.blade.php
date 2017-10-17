@@ -33,10 +33,13 @@
 			   				<span class="glyphicon glyphicon-upload"></span>
 			   				<span class="actions-btn text">Revise</span>
 			   			</button>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-eye-open"></span>
-			   				<span class="actions-btn text">View</span>
-			   			</button>
+			   			
+			   			<a href="/uploads/view/{{ $file->id }}" target="_blank">
+				   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+				   				<span class="glyphicon glyphicon-eye-open"></span>
+				   				<span class="actions-btn text">View</span>
+				   			</button>
+			   			</a>
 			   			{{-- MODAL QR --}}
 
 			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
@@ -54,7 +57,7 @@
 						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
 						      </div>
 						      <div class="modal-body">
-						        <center>{{-- {!! QrCode::size(250)->generate($file->name) !!} --}}<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
+						        <center><img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
