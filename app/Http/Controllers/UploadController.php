@@ -133,7 +133,11 @@ class UploadController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $files = File::find($id);
+        return view('posts.edit')->with('files', $files);
+
+         
     }
 
     /**
@@ -145,7 +149,66 @@ class UploadController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $this->validate($request,[
+
+            // 'tags' => 'required',
+            'file' => 'required|max:1999|mimes:doc,docx,pdf'
+
+
+        ]);
+
+        // Handle File Upload
+        if ($request->hasFile('file')) {
+
+            //Get file name with extension
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //Get the Ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+
+            $filesize = $request->file('file')->getClientSize();
+
+            //Filename to store 
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+            //upload the file
+            $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
+
+        $file = File::find($id);
+
+        $file->user_id = auth()->user()->id;
+
+        $file->name = $fileNameToStore;
+
+        $file->size = $filesize;
+
+        $file->file_type = $extension;
+
+        $file->save();
+        
+
+        
+       //  $tag = $request->input('tags');
+       //  $users = User::all();
+
+       // // var_dump($user);
+       //  foreach($users as $user){
+       //      if($user->area_handled == $request->input('tags')){
+       //      //     //$user = User::where('area_handled', $request->input('tag'))->first();
+       //       // Notification::send($user, new FileTagged(auth()->user()->tags()));
+       //          $user->notify(new FileTagged($fileNameToStore));
+       //      }
+         }
+
+        
+
+        
+
+
+        return redirect('/home')->with('success', 'File Updated!');
     }
 
     /**

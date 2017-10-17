@@ -36,4 +36,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
+
 Route::get('/uploads/view/{id}', 'UploadController@view');
+
+Route::get('/uploads/edit/{id}', 'UploadController@edit');
+
+// Route::get('/uploads/edit/{id}', 'UploadController@update');
