@@ -31,11 +31,12 @@
 			   				<span class="actions-btn text">Download</span>
 			   			</button>
 			   			</a>
+			   			<a href="/uploads/edit/{{$file->id}}">
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
 			   				<span class="glyphicon glyphicon-upload"></span>
 			   				<span class="actions-btn text">Revise</span>
 			   			</button>
-			   			
+			   			</a>
 			   			<a href="/uploads/view/{{ $file->id }}" target="_blank">
 				   			<button type="button" class="col-md-2 actions-btn btn btn-link">
 				   				<span class="glyphicon glyphicon-eye-open"></span>
