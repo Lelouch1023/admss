@@ -25,7 +25,7 @@ class AddAreaHandledToUser extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function($table){
+        Schema::table('users', function($table){
 
             $table->dropColumn('area_handled');
         });

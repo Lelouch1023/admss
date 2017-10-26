@@ -533,6 +533,7 @@ font-size: 18px;
 .accrdn a{
   color: #000;
 }
+<<<<<<< HEAD
 .area-panel{
   margin-bottom: 0;
     border-radius: 4px;
@@ -559,4 +560,10 @@ font-size: 18px;
     color: #fff;
     background-color: #111;
     padding: 10px;
+=======
+
+.pdf{ /*for PDF iframe*/
+width:100%;
+min-height:650px;
+>>>>>>> 53399b39d9f22b6a17f91a4dc111f0d33a1005f9
 }

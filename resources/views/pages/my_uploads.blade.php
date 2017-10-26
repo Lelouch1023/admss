@@ -7,6 +7,8 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">Uploaded Files</div>
 		  <div class="panel-body">
+
+			@if(count($files) >0)
 		  	<table class="table table-hover">
 			    <thead>	
 			      <tr>
@@ -17,8 +19,8 @@
 			      </tr>
 			    </thead>
 			    <tbody>
-			    	@if(count($files) >0)
-			     @foreach ($files as $file)
+
+			     @foreach ($files as $file)	
 			      <tr >
 			   		<td class="actions-btn"><a href="">{{$file->name}}</a></td>
 			   		<td>{{$file->created_at}}</td>
@@ -29,14 +31,18 @@
 			   				<span class="actions-btn text">Download</span>
 			   			</button>
 			   			</a>
+			   			<a href="/uploads/edit/{{$file->id}}">
 			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
 			   				<span class="glyphicon glyphicon-upload"></span>
 			   				<span class="actions-btn text">Revise</span>
 			   			</button>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   				<span class="glyphicon glyphicon-eye-open"></span>
-			   				<span class="actions-btn text">View</span>
-			   			</button>
+			   			</a>
+			   			<a href="/uploads/view/{{ $file->id }}" target="_blank">
+				   			<button type="button" class="col-md-2 actions-btn btn btn-link">
+				   				<span class="glyphicon glyphicon-eye-open"></span>
+				   				<span class="actions-btn text">View</span>
+				   			</button>
+			   			</a>
 			   			{{-- MODAL QR --}}
 
 			   			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$file->id}}">
@@ -54,7 +60,7 @@
 						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
 						      </div>
 						      <div class="modal-body">
-						        <center>{{-- {!! QrCode::size(250)->generate($file->name) !!} --}}<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
+						        <center><img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -62,12 +68,36 @@
 						      </div>
 						    </div>
 						  </div>
-						</div><!--modal qr-->
-						<button type="button" class="col-md-2 actions-btn btn btn-link">
+						</div><!--modal qr closing-->
+						<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#{{ $file->id }}delete">
 			   				<span class="glyphicon glyphicon-trash"></span>
 			   				<span class="actions-btn text">Delete</span>
 
 			   			</button>
+			   				<!--modal for delete-->
+			   			<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <center>Are you sure you want to delete <strong>{{ $file->name }}</strong>?</center>
+						        <br><br>
+						        <h6 style="color: red; padding: 15px"><i>Note: Deleted items go to bin</i></h6>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        
+						        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.href = '/delete/{{ $file->id }}';">Delete</button>
+						        
+						      </div>
+						    </div>
+						  </div>
+						</div><!--delete modal closing-->
 			   		</td>
 			   		<td>
 			   		<label class="form-check-label">
@@ -76,11 +106,13 @@
 
 			   		</td>
 			      </tr>
+			     
 			      @endforeach
            			{{$files->links()}}
-			    @else 
-            		<p>No Uploads</p>
-            	@endif
+           	@else
+			      	<center><p>No uploads.</p></center>
+			      
+           	@endif
 			    </tbody>
 			    
 			</table>
