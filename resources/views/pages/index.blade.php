@@ -16,7 +16,7 @@
     <body>
     	 @include('inc.nav')
         <!-- CONTENT -->
-        <div class="col-xs-12">
+        <div class="page-content">
             
     	<section id="banner">
     		<div class=" web-banner">

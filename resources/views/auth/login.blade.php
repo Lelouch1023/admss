@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="col-xs-12">
 <div class="login-form">
 <div class="container">
     <div class="row">
@@ -66,6 +67,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 @endsection

@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row">
 		<div class="panel panel-default">
-		  <div class="panel-heading">*****INSERT ASSIGNED AREA******</div>
+		  <div class="panel-heading">Area 1: Vision, Mission, Goals and Objectives</div>
 		  <div class="panel-body">
 		  	<table class="table table-hover">
 			    <thead>	
