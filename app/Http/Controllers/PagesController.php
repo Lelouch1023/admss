@@ -53,5 +53,10 @@ class PagesController extends Controller
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(10);
         return view('pages.bin')->with('files', $files);
     }
+    public function area2(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.areas.area2')->with('files', $files);
+    }
 }
 

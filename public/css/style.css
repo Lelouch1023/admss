@@ -377,6 +377,7 @@ font-size: 18px;
 
 .content{
         height: -webkit-fill-available;
+        width: 100%;
 }
 /*footer css*/
 
@@ -532,8 +533,37 @@ font-size: 18px;
 .accrdn a{
   color: #000;
 }
+<<<<<<< HEAD
+.area-panel{
+  margin-bottom: 0;
+    border-radius: 4px;
+}
+.area-panel-title {
+    padding: 8px;
+    font-size: 16px;
+    color: inherit;
+}
+
+ .area-panel-heading{
+    color: #fff;
+    background-color: #111;
+    /*border-color: #d3e0e9;*/
+}
+.area-panel-default > .area-panel-heading:hover{
+  background-color: rgb(245, 208, 42);
+  transition: 0.6s;
+}
+.page-content{
+      min-height: -webkit-fill-available;
+}
+.assigned-area-panel-heading {
+    color: #fff;
+    background-color: #111;
+    padding: 10px;
+=======
 
 .pdf{ /*for PDF iframe*/
 width:100%;
 min-height:650px;
+>>>>>>> 53399b39d9f22b6a17f91a4dc111f0d33a1005f9
 }

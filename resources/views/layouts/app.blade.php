@@ -25,9 +25,11 @@
 
  @include('inc.nav') 
     <div id="app">
-        <div class="container">
-            @include('inc.messages')
-            @yield('content')
+        <div class="page-content">
+            <div class="container">
+                @include('inc.messages')
+                @yield('content')
+            </div>
         </div>
     </div>
 
