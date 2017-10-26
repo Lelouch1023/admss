@@ -52,5 +52,10 @@ class PagesController extends Controller
 
         return view('pages.bin')->with('files', $files);
     }
+    public function area2(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.areas.area2')->with('files', $files);
+    }
 }
 
