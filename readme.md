@@ -1,53 +1,61 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>TUP - Accreditation Document Management System</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{!! asset('css/app.css') !!}" media="all" rel="stylesheet" type="text/css" />
+        <link href="{!! asset('css/style.css') !!}" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    	 @include('inc.nav')
+        <!-- CONTENT -->
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+        <div class="content">
+    	<section id="banner">
+    		<div class="web-banner">
+                <img title="banner" src="{{ URL::to('/images/slide1.jpg') }}">
+    		</div>
+    	</section>
+    	<section id="abt-tup">
+    		<div class="col-xs-12 abt-tup">
+    			<div class="container">
+    				<div class="col-xs-6 tup-title">
+    				<h2>TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES</h2>
+	    			</div>
+	    			<div class="col-xs-6 desc">
+	    				<p>The Technological University of the Philippines was first established as the Manila Trade School in 1901 upon the enactment of Act No. 74 by the United States Philippine Commission for the instruction of the Filipinos on useful trades. Originally housed near Ateneo de Manila in Intramuros, MTS transferred to the Exposicion Regional de Filipinos in Calle Padre Faura. Six years later, the MTS transferred to the City Shops in Calle Arroceros. Industrial courses which included carpentry, English, telegraphy, machine shop work, furniture making, wood carving, boat building, plumbing, blacksmithing, mechanical and architectural drawing were offered on the primary school level during this period because pupils at that time were already adults. They were studying certain trades which they intended to follow after leaving school. <br>
+	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
+					</p>
+	    			</div>
+	    		</div>
+    		</div>
+    	</section>
 
-## About Laravel
+    	<section id="abt-cos">
+    		<div class="col-xs-12 abt-cos">
+    			<div class="container">
+	    			<div class="col-xs-6 desc">
+	    				<p>By virtue of Presidential Decree No. 1518, the Philippine College of Arts and Trades (PCAT) was converted into the Technological University of the Philippines (TUP) on June 11, 1976. The conversion to a university status brought about comprehensive changes in the organizational set-up. To carry out its tasks, the University had to change its one-college structure to a system composed of six colleges, one of which is the College of Arts and Sciences (CAS). The CAS was created in 1979 with its four departments, namely: the Languages, the Social and Behavioral Sciences, the Mathematics and Physical Sciences, and the Physical Education.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+						In 1991, the College was mandated to perform dual roles: as a service college and as a science college. On July 24, 1995, the TUP Board of Regents through Referendum No. 13, s. 1995 approved the devolution of some Master Programs of the Graduate School to the mother colleges. Since then, the granting of the degrees in the Master of Arts in Teaching with specializations in Mathematics, Physics, Chemistry, and General Science has become the responsibility of the College of Arts and Sciences.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+						On September 15, 1995, the University Board of Regents authorized to split the College of Arts and Sciences into the College of Science and the College of Liberal Arts. The new College of Science was structured to include graduate programs in Mathematics, Chemistry, Physics, and General Science. The college also offers five (5) baccalaureate programs, namely: Bachelor of Science in Computer Science, Bachelor of Science in Information Technology, Bachelor of Science in Information Systems, Bachelor of Science in Environmental Science and Bachelor of Applied Science Major in Laboratory Technology.<br>
+	    				&copy; <a href="http://www.tup.edu.ph" title="Technological University of the Philippines">tup.edu.ph</a>.
+					</p>
+	    			</div>
+	    			<div class="col-xs-6 tup-title">
+    				<h2>COLLEGE OF SCIENCE</h2>
+	    			</div>
+	    		</div>
+    		</div>
+    	</section>
+        </div>
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+    	<!-- END OF CONTENT SECTION -->
+	@include('inc.footer')
+    	
+    </body>
+</html>
