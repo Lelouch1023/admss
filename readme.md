@@ -6,9 +6,9 @@
 
 <p>A thesis project by:
 
-Flores, Joshua F.
-Vergara, Emmanuel S.
-Gregorio, Damaris T.
+Flores, Joshua F.<br>
+Vergara, Emmanuel S.<br>
+Gregorio, Damaris T.<br>
 Del Carmen, Ian N.
 
 Proposed Features:
