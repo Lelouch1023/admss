@@ -27,9 +27,9 @@
       <a class="navbar-brand" href="{{ route('home') }}" title="Accreditation Document Management System">ACCREDITATION<br>DOCUMENT MANAGEMENT<br>SYSTEM</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         @guest
       <ul class="col-md-8 nav navbar-nav">
         <li class="col-md-6 home-logo active"><img src="{{ URL::to('/images/logo.png') }}"></li>
-         @guest
         <li class="col-md-6 home-login-reg">
           <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
           <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
@@ -37,6 +37,10 @@
         </ul>
         </div>
         </div>
+      </ul>
+  </div>
+</div>
+</div>
          @else
       <ul class="nav navbar-nav navbar-right col-xs-4">
         <div id="custom-search-input">

@@ -12,6 +12,7 @@
     <body>
     	 @include('inc.nav')
         <!-- CONTENT -->
+
         <div class="content">
     	<section id="banner">
     		<div class="web-banner">

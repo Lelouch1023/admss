@@ -5,7 +5,9 @@
 <div class="container">
 	<div class="row">
 		<div class="panel panel-default">
+
 		  <div class="assigned-area-panel-heading">*****INSERT ASSIGNED AREA******</div>
+
 		  <div class="panel-body">
 		  	<table class="table table-hover">
 			    <thead>	
