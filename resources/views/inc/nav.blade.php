@@ -34,6 +34,9 @@
           <button class="login-btn" type="submit"><a href="{{ route('login') }}">Login</a></button>
           <button class="reg-btn" type="submit"><a href="{{ route('register') }}">Register</a></button>
         </li>
+        </ul>
+        </div>
+        </div>
          @else
       <ul class="nav navbar-nav navbar-right col-xs-4">
         <div id="custom-search-input">
