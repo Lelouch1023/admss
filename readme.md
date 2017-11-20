@@ -1,6 +1,10 @@
-TUP ADMS 
+<html>
+  <head>
+  </head>
+  <body>
+    <center><b>TUP ADMS</b></center> 
 
-A thesis project by:
+<p>A thesis project by:
 
 Flores, Joshua F.
 Vergara, Emmanuel S.
@@ -11,3 +15,5 @@ Proposed Features:
 - Can upload a file using an OCR Scanner
 - Can quick download files using the QR Scanner
 - Automatic tagging of documents withint their specific Areas on Accreditation
+</p>
+</body>
