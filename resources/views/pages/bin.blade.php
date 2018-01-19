@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-	<div class="row">
-		<div class="panel panel-default">
-		  <div class="panel-heading">Deleted Files</div>
+<div class="col-md-9 col-xs-12">
+	<div class="panel panel-bin">
+	  <div class="panel-heading">Deleted Files</div>
 		  <div class="panel-body">
 
 		 @if(count($files) >0)
@@ -74,7 +73,6 @@
 			    </tbody>
 			</table>
 		  </div>
-		</div>
 	</div>
 </div>
 @endsection

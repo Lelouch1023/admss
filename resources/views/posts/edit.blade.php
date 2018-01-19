@@ -5,8 +5,8 @@
 
 <div class="container content">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+        <div class="col-md-9 col-xs-12">
+            <div class="panel upload-panel">
                 <div class="panel-heading">Upload a file</div>
                 <div class="panel-body">
                 	<h3>{{$files->name}}</h3>

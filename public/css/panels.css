@@ -1,0 +1,75 @@
+/*CSS PANELS*/
+
+.area-panel{
+    min-height: -webkit-fill-available;
+    background-color: transparent;
+    margin-top: 20px;
+    -webkit-box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+    box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+}
+.area-panel .area-panel-heading{
+	color: #fff;
+    background-color: #bf2626;
+    padding: 10px;
+}
+.area-panel .area-panel-heading a:hover{
+	color: #f5d02a;
+	text-decoration: underline;
+}
+
+.area-panel .area-panel-heading .active {
+	color: #f5d02a;
+
+}
+.parameter-panel{
+	border-color: #d3e0e9;
+    /* margin-top: 10px; */
+    background-color: #1b1b1b;
+    color: #000;
+    padding: 8px
+}
+.area-panel table{
+	border-radius: 5px;
+}
+
+.area-panel li >a{
+    /*text-transform: capitalize;*/
+}
+.area-panel li>a:hover{
+	color: #b11e1e;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.area-panel span{
+    font-size: 10px;
+}
+.area-panel .panel-heading{
+        background: #ffffff;
+    color: #000;
+}
+.area-panel .panel-heading:hover{
+    background: #1b1b1b;
+    color: #fff;
+    transition: 0.3s;
+}
+.area-panel .panel-heading:active{
+    background-color: #fff;
+    color: #000;
+}
+.upload-modal {
+    color: #000;
+    text-align: left;
+}
+.panel-bin{
+    min-height: -webkit-fill-available;
+    background-color: transparent;
+    margin-top: 20px;
+    -webkit-box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+    box-shadow: 29px 22px 73px -20px rgba(0,0,0,0.75);
+}
+.panel-bin .panel-heading{
+        background: #1b1b1b;
+    color: #fff;
+}
