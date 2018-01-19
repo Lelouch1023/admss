@@ -58,11 +58,7 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-
-            'tags' => 'required',
             'file' => 'required|max:1999|mimes:doc,docx,pdf'
-
-
         ]);
 
         //Handle File Upload
@@ -91,14 +87,14 @@ class UploadController extends Controller
 
         $file->name = $fileNameToStore;
 
-        $file->size = $filesize;
-
         $file->file_type = $extension;
+
+        //echo $file->name;
+        $this->extract($file->name);
 
         // $file->save();
 
-        printf($path);
-        
+                
 
         }
 
@@ -187,7 +183,7 @@ class UploadController extends Controller
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
             //upload the file
-            $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
+            //$path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
 
         $file = File::find($id);
 
@@ -195,12 +191,13 @@ class UploadController extends Controller
 
         $file->name = $fileNameToStore;
 
-        $file->size = $filesize;
-
         $file->file_type = $extension;
 
         $file->save();
         
+       
+
+
 
         
        //  $tag = $request->input('tags');
@@ -215,12 +212,7 @@ class UploadController extends Controller
        //      }
          }
 
-        
-
-        
-
-
-        return redirect('/home')->with('success', 'File Updated!');
+        //return redirect('/home')->with('success', 'File Updated!');
     }
 
     /**
@@ -314,13 +306,14 @@ class UploadController extends Controller
         }
     }
 
-    public function extract(){
+    public function extract($filename){
         //public\storage\uploads\python3handson_1508307603.pdf
-        $pdfFilePath = public_path() . '\storage\uploads\RUSH-SCAN_hardbound.pdf'; //RUSH-SCAN_hardbound
+        $pdfFilePath = public_path() . "\storage\uploads\\" . $filename; //RUSH-SCAN_hardbound
         $PDFParser = new Parser();
 
-        // // Create an instance of the PDF with the parseFile method of the parser
-        // // this method expects as first argument the path to the PDF file
+
+        // Create an instance of the PDF with the parseFile method of the parser
+        // this method expects as first argument the path to the PDF file
          
         $pdf = $PDFParser->parseFile($pdfFilePath);
          
@@ -373,8 +366,8 @@ class UploadController extends Controller
          usort($res, function($a, $b) {
              return count($a) <=> count($b);
         });
-        dd(array_reverse($res));
-
+       dd(array_reverse($res));
+        // dd($cnt6);
          //check if the keywords has less or more than 100 words.
         // if(count($cnt4) > 100){
         //     for($i=0; $i<=100; $i++){

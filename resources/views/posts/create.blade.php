@@ -29,10 +29,6 @@
 				<!--/comment -->
             
             <div class="form-group">
-                <label>Add a tag</label>
-                  {{ Form::text('tags', '', ['class' => 'form-control']) }}
-            </div>
-            <div class="form-group">
                 <label>Select a file</label>
                   {{ Form::file('file') }}
             </div>
