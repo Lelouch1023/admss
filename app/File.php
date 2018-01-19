@@ -13,7 +13,7 @@ class File extends Model
     //Timestamps
     public $timestamps = true;
 	
-	public function user(){
-		return $this->belongsTo('App\User');
+	public function tag(){
+		return $this->belongsToMany('App\Tag');
 	}     
 }

@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
 	//Table name
-    protected $table = 'tags';
+    protected $table = 'tag';
 
     //Primary Key
     public $primaryKey = 'tag_id';
 
-    public function user(){
-    	return $this->belongsTo('App\User');
+    public function file(){
+    	return $this->hasMany('App\File');
     }
 }

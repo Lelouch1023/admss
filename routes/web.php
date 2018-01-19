@@ -19,10 +19,6 @@ Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
 Route::get('/area2', 'PagesController@area2');
 
-Route::get('/hello/{name}', function($name){
-
-	return 'I am '.$name;
-});
 
 Route::resource('post', 'UploadController');
 
@@ -38,9 +34,12 @@ Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
 
+Route::get('/upload', 'UploadController@create');
+
 Route::get('/uploads/view/{id}', 'UploadController@view');
 Route::get('/delete/{id}', 'UploadController@delete');
 Route::get('/restore/{id}', 'UploadController@restore');
 Route::get('/destroy/{id}', 'UploadController@destroy');
 Route::get('/uploads/edit/{id}', 'UploadController@edit');
-
+Route::get('/test', 'UploadController@test');
+Route::get('/test2', 'UploadController@test2');

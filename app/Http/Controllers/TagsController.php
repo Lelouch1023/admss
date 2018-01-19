@@ -10,6 +10,9 @@ use App\User;
 
 class TagsController extends Controller
 {
+	public function __construct(){
+		$this->middleware('auth');
+	}
 	public function index(){
 
 		return view('pages.tag');
@@ -79,5 +82,9 @@ class TagsController extends Controller
 	// 	Tag::insert($data);
 		
 	// }
+
+	tagFile($extractedKeyword){
+		
+	}
 }
 
