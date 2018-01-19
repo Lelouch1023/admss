@@ -1,17 +1,22 @@
-		
+
 @extends('layouts.app')
 		
 @section('content')
+
 <div class="container">
 	<div class="col-md-9 col-xs-12">
+		<div class="panel area-panel">
+		  <div class="area-panel-heading">
+		  	<a href="{{ route('area1') }}">Area 1</a> >
+		  	<a href="{{ route('area1') }}">Parameter A: System Input and Processes</a> >
+		  	<a href="#" class="active">S.1</a>
+		  </div>
+		</div>
 		<div class="categories">
-			<div class="category-title">
-				<label>My Uploads</label>
-			</div>
 			<!-- Category contents -->
 			<div class="category-content">
 			<!-- PHP code for data loop -->
-			@if(count($files) > 0)
+			@if(count($files) >0)
 				<table class="table table-hover">
 					<thead>
 						<tr class="category-content">
@@ -19,9 +24,8 @@
 							<th class="col-xs-4">Action</th>
 						</tr>
 					</thead>
-			     		@foreach ($files as $file)	
-
 					<tr class="file">
+			     		@foreach ($files as $file)	
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="">{{$file->name}}</a>
@@ -99,4 +103,7 @@
 		
 	</div>
 </div>
+		<!--  -->
+	
+
 @endsection

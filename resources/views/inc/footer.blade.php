@@ -1,5 +1,5 @@
 <footer>
-	<div class="col-md-12 footer-info">
+	<div class="col-xs-12 footer-info">
 		<div class="container">
 			<div class="col-md-3 tup-abt">
 				<img src="{{ URL::to('/images/logo.png') }}">
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-12 footer">
+	<!-- <div class="col-md-12 footer">
 		<div class="container">
 			<div class="col-md-6">
 				© 2017-2018. 
@@ -59,5 +59,5 @@
 				Technological University of the Philippines. 
 			</div>
 		</div>
-	</div>
+	</div> -->
 </footer>
