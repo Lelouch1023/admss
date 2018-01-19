@@ -63,9 +63,9 @@
              </div>
              @endguest
         </div>
-    	<!-- END OF CONTENT SECTION -->
+      <!-- END OF CONTENT SECTION -->
 
-	@include('inc.footer')
-    	
+  @include('inc.footer')
+      
     </body>
 </html>
