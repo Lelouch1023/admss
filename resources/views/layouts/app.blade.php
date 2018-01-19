@@ -14,7 +14,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/new-style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/notifbutton.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/panels.css') }}" rel="stylesheet">
     <link href="js/jquery-ui.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -27,19 +29,24 @@
     <div id="app">
         <div class="page-content">
             <div class="container">
+                @include('inc.sidebar')
                 @include('inc.messages')
                 @yield('content')
+
             </div>
         </div>
     </div>
 
 @include('inc.footer')
+
+
+
+
     <!-- Scripts -->
-    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/notif.js"></script>
-    <script src="{{ URL::asset('js/app.js') }}"></script>
-    
+    <script type="text/javascript" src="js/app.js"></script>
+
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>

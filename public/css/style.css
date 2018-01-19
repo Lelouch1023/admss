@@ -27,11 +27,15 @@
     padding: 0px;
 }
  html, body {
-                background-color: #efefef;
+                /*background-color: #efefef;*/
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto', sans-serif;
                 font-weight: 100;
                 margin: 0;
+                background-image: url('../images/main_bg.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
             }
 
            /**/
@@ -291,11 +295,14 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 
 .upload span{
-
     color: #f5d02a;
   }
 /*dashboard*/
-
+.upload-btn{
+      background: transparent;
+    border: none;
+    margin: 5px 0;
+}
 .upload-btn span{
 
     color: #f5d02a;/*dashboard*/
@@ -306,6 +313,10 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
     font-size: 21px;
 
 }
+.notif-badge{
+  font-size: 18px;
+}
+
 .notif-drpdwn{
   color: #f5d02a;
     padding: 8px 11px;
@@ -321,11 +332,11 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 }
 .name-drpdwn span{
   color: #f5d02a;
-font-size: 18px;
-    padding-top: 4px;
+  font-size: 20px;
+  padding-top: 4px;
 }
 .user-navbar{
-    padding: 5px 0px;
+    padding: 15px 0px 5px 0;
     float: right;
 }
 .menu-categories{
@@ -339,10 +350,10 @@ font-size: 18px;
   color: #fff; /*makes the text inside search bar readable*/
 }
 #custom-search-input{
-   margin: 18px 0px;
+   margin: 13px 0px;
 }
 #custom-search-input .search-query{
-  color: #efefef;
+    color: #efefef;
     padding-right: 30px;
     padding-right: 40px \9;
     padding-left: 9px;
@@ -393,7 +404,6 @@ font-size: 18px;
 
 .footer-info{
     background-color: #111;
-    height: 340px;
     color: #fff;
     font-family: sans-serif;
     text-align: center;
@@ -532,38 +542,4 @@ font-size: 18px;
 }
 .accrdn a{
   color: #000;
-}
-<<<<<<< HEAD
-.area-panel{
-  margin-bottom: 0;
-    border-radius: 4px;
-}
-.area-panel-title {
-    padding: 8px;
-    font-size: 16px;
-    color: inherit;
-}
-
- .area-panel-heading{
-    color: #fff;
-    background-color: #111;
-    /*border-color: #d3e0e9;*/
-}
-.area-panel-default > .area-panel-heading:hover{
-  background-color: rgb(245, 208, 42);
-  transition: 0.6s;
-}
-.page-content{
-      min-height: -webkit-fill-available;
-}
-.assigned-area-panel-heading {
-    color: #fff;
-    background-color: #111;
-    padding: 10px;
-=======
-
-.pdf{ /*for PDF iframe*/
-width:100%;
-min-height:650px;
->>>>>>> 53399b39d9f22b6a17f91a4dc111f0d33a1005f9
 }

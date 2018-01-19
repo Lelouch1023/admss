@@ -1,0 +1,205 @@
+#banner{
+	background-color: #fff;
+	height: -webkit-fill-available;
+	background-image: url('../images/indexbg.jpg');
+	background-size: 100%;
+}
+
+/*NAVIGATION*/
+.navbar-index{
+	background-color: #fff;
+}
+.navbar-logo{
+	text-align: center;
+	color: #fff;
+    line-height: 1.1;
+    font-size: 17px;
+    font-family: Roboto;
+}
+.navbar-logo img{
+	width: 50px;
+	margin: 5px 0;
+}
+
+/*SITE BANNER */
+.site-title{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: Helvetica;
+    margin-top: 130px;
+}
+
+/*BUTTON SECTION*/
+.btn-section{
+	width: 100%;
+}
+.btn-section button{
+	border: none;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background: #F5D02B;
+    text-transform: uppercase;
+}
+.btn-section button:hover{
+    background: #1b1b1b;
+    transition: 0.3s;
+    -webkit-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
+	box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
+}
+.login-btn-sec{
+    text-align: right;
+    padding: 10px;
+}
+.reg-btn-sec{
+	padding: 10px;
+}
+
+/*COS LOGO*/
+.cos-logo{
+	text-align: center;
+    margin-bottom: 65px;
+}
+.cos-logo img{
+	width: 15%;
+}
+
+/*SIDE BAR MENU*/
+.sidebar{
+    background-color: transparent;
+    margin: 20px 5px;
+    border-radius: 7px;
+    -webkit-box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
+-moz-box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
+box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
+}
+.sidebar span{
+	color: #fff;
+}
+.sidebar-menu{
+	background-color: #f3cf2b;
+	text-align: center;
+	color: #fff;
+}
+.sidebar-submenu a{
+	color: #fff;
+}
+.sidebar-submenu a:hover{
+	color: #f5d02a;
+	text-decoration: underline;
+	transition: 0.5s;
+}
+.sidebar-submenu td{
+	/*border-top: 1px solid #1b1b1b !important;*/
+}
+.profile-sidebar{
+	padding: 15px 0;
+	text-align: center;
+}
+
+.profile-userpic img{
+	width: 40%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+.profile-usertitle{
+    text-transform: capitalize;
+    margin: 0px;
+    text-align: center;
+}
+.profile-usermenu{
+	background-color: #3e3d3d;
+    margin: 10px 0;
+}
+.profile-userbuttons{
+	text-align: center;
+}
+
+/*Content categories*/
+.categories{
+    height: -webkit-fill-available;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2px;
+    border-radius: 7px;
+    -webkit-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+}
+.category-title{
+	border-bottom: 1px solid #1b1b1b;
+	padding: 5px;
+}
+.category-content{
+
+}
+.category-content th{
+	text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.category-fname{
+	    background-color: #1b1b1b;
+    color: #fff;
+}
+.filename{
+
+}
+.file{
+	/*background-color: #efefef;*/
+    padding: 5px 15px;
+}
+.file a:hover{
+	color: #bd2031;
+	text-decoration: underline;
+}
+.file img {
+	width: 9%;
+	float: left;
+}
+.file a{
+	font-weight: bold;
+	color: #000;
+}
+.file p{
+	margin:	-6px 0 0px 36px;
+}
+.file-action{
+	text-align: center;
+}
+.action{
+    padding: 12px 15px;
+	text-align: center;
+}
+.action span{
+	font-size: 16px;
+	color: #bd2031;
+}
+.action button{
+	background: transparent;
+	border: none;
+	padding: 2px;
+}
+.qr-modal img{
+	float: none;
+    width: 21%;
+}
+/*CSS PANEL*/
+.upload-panel{
+    border-color: #d3e0e9;
+    margin-top: 10px;
+    background-color: #fff;
+}
+.upload-panel .panel-heading{
+	background-color: #bd2031;
+	color: #fff;
+}
+
+.area-panel .panel-title span{
+	color: #1b1b1b; float: right; font-size: 15px;
+}
+.area-panel .panel-title span:hover{
+	color: #F5D02B; 
+}
