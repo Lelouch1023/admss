@@ -7,16 +7,17 @@
 	<div class="col-md-9 col-xs-12">
 		<div class="panel area-panel">
 		  <div class="area-panel-heading">
-		  	<a href="{{ route('area1') }}">Area 1</a> >
-		  	<a href="{{ route('area1') }}">Parameter A: System Input and Processes</a> >
+		  	
+		  	<a href="{{ route('area1') }}">Area 1</a> /
+		  	<a href="{{ route('area1') }}">Parameter A: System Input and Processes</a> /
 		  	<a href="#" class="active">S.1</a>
 		  </div>
-		</div>
 		<div class="categories">
+			<!-- Category contents -->
 			<!-- Category contents -->
 			<div class="category-content">
 			<!-- PHP code for data loop -->
-			@if(count($files) >0)
+			@if(count($files) > 0)
 				<table class="table table-hover">
 					<thead>
 						<tr class="category-content">
@@ -24,12 +25,17 @@
 							<th class="col-xs-4">Action</th>
 						</tr>
 					</thead>
-					<tr class="file">
 			     		@foreach ($files as $file)	
+
+					<tr class="file">
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="">{{$file->name}}</a>
-							<p>{{$file->created_at}}</p><td class="col-xs-4 action">
+							<p>{{$file->created_at}}</p>
+							<!-- PHP Insert tags -->
+							<p><strong>tags:</strong> <i>keywords, keywords</i> </p>							<!-- /Insert tags -->
+							<td class="col-xs-4 action">
+							
 							<button type="button">
 			   				  <a href="/uploads/view/{{ $file->id }}" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>
 			   				</button>
@@ -98,8 +104,8 @@
 			      
            	@endif
 				</table>
-			</div>	
-		</div>
+			</div>
+			<!-- /Category content -->
 		
 	</div>
 </div>
