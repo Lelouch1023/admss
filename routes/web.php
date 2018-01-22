@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
@@ -18,16 +18,16 @@ Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
 Route::get('/pending', 'PagesController@pending');
-
-
+ 
+ 
 //Route::resource('post', 'UploadController');
-
+ 
 Auth::routes();
-
-
+ 
+ 
 Route::get('/markAsRead', function(){
-	auth()->user()->unreadNotifications->markAsRead();
-
+    auth()->user()->unreadNotifications->markAsRead();
+ 
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pending', 'PagesController@index')->name('pending');
@@ -43,7 +43,7 @@ Route::get('/destroy/{id}', 'UploadController@destroy');
 Route::get('/uploads/edit/{id}', 'UploadController@edit');
 Route::get('/test', 'UploadController@test');
 Route::get('/test2', 'UploadController@test2');
-
+ 
 Route::get('/area1/{id}', 'PagesController@viewarea');
 Route::get('/area2/{id}', 'PagesController@viewarea');
 Route::get('/area3/{id}', 'PagesController@viewarea');
@@ -54,7 +54,7 @@ Route::get('/area7/{id}', 'PagesController@viewarea');
 Route::get('/area8/{id}', 'PagesController@viewarea');
 Route::get('/area9/{id}', 'PagesController@viewarea');
 Route::get('/area10{id}', 'PagesController@viewarea');
-
+ 
 Route::get('/area1', 'PagesController@area1')->name('area1');
 Route::get('/area2', 'PagesController@area2')->name('area2');
 Route::get('/area3', 'PagesController@area3')->name('area3');
@@ -65,5 +65,5 @@ Route::get('/area7', 'PagesController@area7')->name('area7');
 Route::get('/area8', 'PagesController@area8')->name('area8');
 Route::get('/area9', 'PagesController@area9')->name('area9');
 Route::get('/area10', 'PagesController@area10')->name('area10');
-
+ 
 Route::post('/tag', 'TagsController@store');

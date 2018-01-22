@@ -59,7 +59,6 @@
                    </div>
                    <div class="col-xs-12">
                     <div class="cos-logo">
-                    sadasd
                     </div>
                    </div>
                </div>

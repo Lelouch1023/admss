@@ -25,7 +25,8 @@
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="">{{$file->name}}</a>
-							<p>{{$file->created_at}}</p><td class="col-xs-4 action">
+							<p>{{$file->created_at}}</p>
+							<td class="col-xs-4 action">
 							<button type="button">
 			   				  <a href="/uploads/view/{{ $file->id }}" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>
 			   				</button>
@@ -67,17 +68,18 @@
 			   				<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
-							    <div class="modal-content">
+							    <div class="modal-content delete-modal">
 							      <div class="modal-header">
 							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
 							      </div>
-							      <div class="modal-body">
-							      	<p>Are you sure you want to delete <strong>{{ $file->name }}</strong>?</p>
+							      <div class="modal-body delete-modal-content">
+							      	<p>Are you sure you want to delete <i><a href="/uploads/view/{{ $file->id }}">{{ $file->name }}</a></i>?</p>
+							      	<br />
 							      	<p><strong>Note:</strong> Deleted items go to bin.</p>
 							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-							        <button type="button" class="btn btn-danger" onclick="location.href = '/delete/{{ $file->id }}';">Delete</button>
+							      <div class="delete-modal-footer">
+							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">No</button>
+							        <button type="button" class="btn btn-danger delete" onclick="location.href = '/delete/{{ $file->id }}';">Delete</button>
 							      </div>
 							    </div>
 							  </div>

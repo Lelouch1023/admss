@@ -87,3 +87,29 @@
         background: #1b1b1b;
     color: #fff;
 }
+/*Delete modal*/
+
+.delete-modal{
+    background: #1b1b1b8c;
+    color: #fff;
+}
+.delete-modal-content{
+        padding: 55px 10px;
+}
+.delete-modal-content a{
+    color: #f5d02a;
+}
+.delete-modal-footer{
+    padding: 5px;
+        text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.delete-modal-footer .no {
+    padding: 1px 10px;
+    color: #1b1b1b;
+    background-color: #efefef;
+}
+.delete-modal-footer .delete{
+    padding: 1px 10px;
+    background-color: #bf5329;
+}

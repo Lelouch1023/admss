@@ -139,7 +139,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 
 /*Content categories*/
 .categories{
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
     /*background: rgba(255, 255, 255, 0.1);
     margin: 2px;*/
     border-radius: 7px;
@@ -241,4 +241,12 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 }
 .ignore span:hover{
 	color: 	#954120;
+}
+
+/*alerts*/
+.msg-alert{
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 14px;
 }

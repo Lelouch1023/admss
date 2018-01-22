@@ -6360,10 +6360,10 @@ a.thumbnail.active {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 22px;
+  padding: 8px;
+  /*margin-bottom: 22px;*/
   border: 1px solid transparent;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
 }
 
 .alert h4 {
