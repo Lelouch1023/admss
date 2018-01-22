@@ -13,18 +13,41 @@ class TagsController extends Controller
 	public function __construct(){
 		$this->middleware('auth');
 	}
-	public function index(){
+	// public function index(){
 
-		return view('pages.tag');
-	}
+	// 	return view('posts.tag');
+	// }
 
 	public function store(Request $request){
-		$this->validate($request, [
-                
-                'tag' => 'required',
-                'file' => 'max:1999|mimes:doc,docx,pdf|required'
 
-            ]);
+		$input = $request->all();
+		$areas = array_values($input['area']['area']);
+		$param = array_values($input['param']['parameter']);
+		
+
+		//conditions for sizes of areas and param
+		for($i = 0; $i < count($areas); $i++){
+
+			$tags = new Tag;
+			$tags->file_name = $input['filename'];
+			$tags->area_id = $areas[$i];
+			$tags->parameter = $param[$i];
+			$tags->save();
+		}
+
+		return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
+
+
+
+		
+
+
+		// $this->validate($request, [
+                
+  //               'tag' => 'required',
+  //               'file' => 'max:1999|mimes:doc,docx,pdf|required'
+
+  //           ]);
 		// if($request->hasFile('file')){
   //           //filename with extension
   //           $filenameWithExt = $request->file('file')->getClientOriginalName();
@@ -38,24 +61,25 @@ class TagsController extends Controller
   //           $path = $request->file('file')->storeAs('public/files', $filenametoStore);
   //       }
 
-        $tags = new Tag;
-        $tags->filename = $filenametoStore;
-        $tags->tag = $request->input('tag');
-        $tags->user = auth()->user()->id;
-        $tags->save();
+        // $tags = new Tag;
+        // $tags->filename = $filenametoStore;
+        // $tags->tag = $request->input('tag');
+        // $tags->user = auth()->user()->id;
+        // $tags->save();
 
-        $tag = $request->input('tags');
-        $users = User::all();
+        // NOTIFICATION ALGO DO NOT TAMPER
+     //    $tag = $request->input('tags');
+     //    $users = User::all();
 
-       // var_dump($user);
-        foreach($users as $user){
-	      	if($user->area_handled == $request->input('tag')){
-		    //     //$user = User::where('area_handled', $request->input('tag'))->first();
-		     // Notification::send($user, new FileTagged(auth()->user()->tags()));
-	      		$user->notify(new FileTagged($filenametoStore));
-	    	}
-    	}
-        return redirect(route('home'))->with('success', 'Post Updated!');
+     //   // var_dump($user);
+     //    foreach($users as $user){
+	    //   	if($user->area_handled == $request->input('tag')){
+		   //  //     //$user = User::where('area_handled', $request->input('tag'))->first();
+		   //   // Notification::send($user, new FileTagged(auth()->user()->tags()));
+	    //   		$user->notify(new FileTagged($filenametoStore));
+	    // 	}
+    	// }
+     //    return redirect(route('home'))->with('success', 'Post Updated!');
 	}
 
 	// public function addArea(){
@@ -83,8 +107,6 @@ class TagsController extends Controller
 		
 	// }
 
-	tagFile($extractedKeyword){
-		
-	}
+	
 }
 

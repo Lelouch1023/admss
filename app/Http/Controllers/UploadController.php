@@ -58,7 +58,7 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'file' => 'required|max:1999|mimes:doc,docx,pdf'
+            'file' => 'required|max:1999|mimes: pdf'
         ]);
 
         //Handle File Upload
@@ -81,20 +81,59 @@ class UploadController extends Controller
             //upload the file
             $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
 
-        $file = new File;
+            $file = new File;
+            $file->user_id = auth()->user()->id;
+            $file->name = $fileNameToStore;
+            $file->file_type = $extension;
+            $file->save();
+            //echo $file->name;
 
-        $file->user_id = auth()->user()->id;
-
-        $file->name = $fileNameToStore;
-
-        $file->file_type = $extension;
-
-        //echo $file->name;
-        $this->extract($file->name);
-
-        // $file->save();
-
+            $tags = array();
+            $tags = $this->extract($file->name);
+            $arrkeys = array_keys($tags);
                 
+                // $values = array_reverse($value->toArray());
+               // array_push($values, $arrkeys);
+
+                // for($i = 0; $i < count($arrkeys); $i++){
+                //     $val['area_id'] = $arrkeys[$i];
+                //     $val['name'] = $values[$i]->name;
+                // }
+                // dd($arrkeys[0]);
+
+            //gets the area name based on area_id from tags table
+            $values = array();
+            $value = DB::table('areas')
+                        ->select('name')
+                        ->whereIn('area_id', $arrkeys)
+                        ->get();
+            //sorts the results from highest to lowest
+            $values = array_reverse($value->toArray());
+            // for($j = 0; $j < count($values); $j++){
+            //     $val[] = $values[$j]->name;
+            // }
+            // for($i = 0; $i < count($arrkeys); $i++){
+            //     $vals = array_combine($arrkeys, $val);
+            // }
+            //saves the area_name and area_id into on array
+            for($i = 0; $i < count($arrkeys); $i++){
+                    $val[] = array(
+                        'area_id'=> $arrkeys[$i],
+                        'name' => $values[$i]->name
+                );
+            }
+            $tagsfin = array();
+            foreach($tags as $ind => $data){
+                foreach($tags[$ind] as $key => $value){
+                    $tagsfin[] = array(
+                        'area_id' => $ind,
+                        'parameter' => $value
+                    );
+                }
+            }
+        
+         
+          return view('posts.tag')->with('tags', $tagsfin)->with('val', $val)->with('filename', $file->name);
 
         }
 
@@ -110,11 +149,6 @@ class UploadController extends Controller
        //          $user->notify(new FileTagged($fileNameToStore));
        //      }
        //  }
-
-        
-
-        
-
 
        //  return redirect('/home')->with('success', 'Post Created!');
 
@@ -199,7 +233,7 @@ class UploadController extends Controller
 
 
 
-        
+        //notif algorithm
        //  $tag = $request->input('tags');
        //  $users = User::all();
 
@@ -366,13 +400,45 @@ class UploadController extends Controller
          usort($res, function($a, $b) {
              return count($a) <=> count($b);
         });
-       dd(array_reverse($res));
+        $rev = array_reverse($res);
+
+        // foreach ($galleries as $gallery) {
+           // $grouped[$gallery['post_id']][] = $res['area_id'];
+        // }
+
+        //print($rev[0][$rev[0][rev[0][$rev[0]['area_id']]]]);
+        // for($i = 0 $i < count($rev); $i++){
+        //     for($j = 0 $j < count($rev[$i])){
+        //         foreach($rev[$i][$rev[$j]] as $val)
+        //             $rev[$i] [$rev[$j] [$rev[$i] [$rev[$j] [$rev[$i] [$rev[$j] []  ]]]]  ] = ceil(value)
+        //     }
+        // }
+
+        // gets the parameters tagged per area, $key = areas, $value = parameter
+        $tag = array();
+        $key = array('parameter');
+    
+        foreach($rev as $revA){
+            foreach($revA as $revB){
+                $tag[$revB->area_id][]  = $revB->parameter;        
+
+            }
+        } 
+        return $tag;
+
+    
+
+
+        // foreach ($res as $key => $values) {
+        //     print( $key . ' = ' . implode(',', $values) . "\n");
+        // }
         // dd($cnt6);
          //check if the keywords has less or more than 100 words.
         // if(count($cnt4) > 100){
         //     for($i=0; $i<=100; $i++){
         //         $cnt6[$i] = $cnt4[$i];
         //     }//for
+
 
         //     dd($cnt6);
         // }//if       

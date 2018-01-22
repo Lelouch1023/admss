@@ -118,52 +118,52 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area1') }}" title="Area 1">Vision, Mission, Goals and Obejectives</a>
+                                        <a href="{{ redirect()->route('area1') }}" title="Area 1">Vision, Mission, Goals and Obejectives</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area2') }}" title="Area 2">The Faculty</a>
+                                        <a href="{{ redirect()->route('area2') }}" title="Area 2">The Faculty</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area3') }}" title="Area 3">Curriculum and Instruction</a>
+                                        <a href="{{ redirect()->route('area3') }}" title="Area 3">Curriculum and Instruction</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area4') }}" title="Area 4">Support to Students</a>
+                                        <a href="{{ redirect()->route('area4') }}" title="Area 4">Support to Students</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area5') }}" title="Area 5">Research</a>
+                                        <a href="{{ redirect()->route('area5') }}" title="Area 5">Research</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area6') }}" title="Area 6">Extension and Community Involvement</a>
+                                        <a href="{{ redirect()->route('area6') }}" title="Area 6">Extension and Community Involvement</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area7') }}" title="Area 7">Library</a>
+                                        <a href="{{ redirect()->route('area7') }}" title="Area 7">Library</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area8') }}" title="Area 8">Physical Plant and Facilities</a>
+                                        <a href="{{ redirect()->route('area8') }}" title="Area 8">Physical Plant and Facilities</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area9') }}" title="Area 9">Laboratories</a>
+                                        <a href="{{ redirect()->route('area9') }}" title="Area 9">Laboratories</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="{{ route('area10') }}" title="Area 10">Administration</a>
+                                        <a href="{{ redirect()->route('area10') }}" title="Area 10">Administration</a>
                                     </td>
                                 </tr>
                             </table>

@@ -15,12 +15,8 @@ use DB;
 class PagesController extends Controller
 {
     public function index(){
-    	//$title = "Winter is Coming."
-    	$data = array(
-    		'title' => 'Welcome to Laravel!',
-    		'chars' => ['Jon', 'Dany', 'Cersei']
-    		);
-    	return view('pages.index')->with($data);
+    	
+    	return view('pages.index');
     }
 
     public function services(){
@@ -110,7 +106,7 @@ class PagesController extends Controller
     //     return view('pages.areas.view-area')->with('files', $files);
     // }
     public function viewarea($para){ 
-        $files = DB::table('files')->where('parameter', '=', $para)->paginate(5);           
+        $files = DB::table('tag')->where('parameter', '=', $para)->paginate(5);           
 
         return view('pages.areas.view-area')->with('files', $files);
     }

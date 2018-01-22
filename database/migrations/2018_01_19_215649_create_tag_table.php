@@ -13,10 +13,10 @@ class CreateTagTable extends Migration
      */
     public function up()
     {
-        Schema::create('tag', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->increments('tag_id');
-            $table->integer('file_id');
-            $table->integer('area_id');
+            $table->string('file_name');
+            $table->string('area_id');
             $table->string('parameter');
             $table->timestamps();
         });

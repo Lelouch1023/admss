@@ -43,9 +43,10 @@
 
 
     <!-- Scripts -->
+    
+    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/notif.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
