@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <div class="top-bar">
+<!--         <div class="top-bar">
             <div class="container">
               <div class="col-xs-6">
                 <img src="{{ URL::to('/images/phgov.png') }}">
@@ -25,10 +25,12 @@
               </div> 
             </div>
         </div>
-
+ -->
         <nav class="navbar navbar-default navbar-index">
           <div class="container">
-              <a class="navbar-logo col-xs-12" href="{{ route('home') }}" title="Accreditation Document Management System"><img src="{{ URL::to('/images/cos.jpg') }}"></a>
+            <a class="navbar-logo col-xs-6" href="{{ route('home') }}" title="Accreditation Document Management System"><img src="{{ URL::to('/images/logo.png') }}"></a>
+            <a class="navbar-brand col-xs-6" href="{{ route('home') }}" title="Accreditation Document Management System">ACCREDITATION<br>DOCUMENT MANAGEMENT<br>SYSTEM</a>
+            
           </div>
         </nav>
 
@@ -38,34 +40,34 @@
              <div id="banner" class="col-xs-12">
                <div class="container">
                    <div class="site-title">
-                       <h1>Accreditation<br> Document Management <br> System</h1>
+                       <h1>ac·cred·i·ta·tion.</h1>
+                       <h4><i>(n)</i> the accreditation process ensures that their certification practices are acceptable, typically meaning that they are competent to test and certify third parties, behave ethically and employ suitable quality assurance.</h4>
                    </div>
                    <div class="btn-section col-xs-12">
                     @guest
                     
                        <div class="login-btn-sec col-xs-6">
-                           <button class="btn">
-                               <a href="{{ route('login') }}">Login</a>
+                           <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Login">
+                               <a href="#">Login</a>
                            </button>
                        </div>
                        <div class="reg-btn-sec col-sm-6">
-                           <button class="btn" >
-                               <a href="{{ route('register') }}">Register</a>
+                           <button class="btn" onclick="window.location='{{('register')}}'" type="submit" title="Register">
+                               <a href="#">Register</a>
                            </button>
                        </div>
                    </div>
                    <div class="col-xs-12">
                     <div class="cos-logo">
-                       <img src="{{ URL::to('/images/logo.png') }}">
+                    sadasd
                     </div>
                    </div>
                </div>
              </div>
              @endguest
         </div>
-      <!-- END OF CONTENT SECTION -->
+        <!-- END OF CONTENT SECTION -->
 
-  @include('inc.footer')
-      
+        
     </body>
 </html>

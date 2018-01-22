@@ -2,11 +2,13 @@
 
 @section('content')
 	<div class="container">
-		<div class="col-md-9 col-xs-12">
+		<div class="col-sm-9 col-xs-12">
 		
 			<div class="categories">
 				<div class="category-title">
+					<!-- PHP code for search word -->
 					<label>Search results for <i>"word"</i></label>
+					<!-- /word -->
 				</div>
 				<div class="category-content">
 					<table class="table table-hover">

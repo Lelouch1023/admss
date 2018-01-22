@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-md-9 col-xs-12">
+<div class="col-sm-9 col-xs-12">
 	<div class="panel panel-bin">
 	  <div class="panel-heading">Deleted Files</div>
 		  <div class="panel-body">
