@@ -90,6 +90,7 @@ class UploadController extends Controller
 
             $tags = array();
             $tags = $this->extract($file->name);
+            
             $arrkeys = array_keys($tags);
                 
                 // $values = array_reverse($value->toArray());
@@ -131,9 +132,11 @@ class UploadController extends Controller
                     );
                 }
             }
-        
-         
-          return view('posts.tag')->with('tags', $tagsfin)->with('val', $val)->with('filename', $file->name);
+
+            //removes duplicated parameters
+            $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
+
+          return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
 
         }
 
@@ -425,6 +428,7 @@ class UploadController extends Controller
             }
         } 
         return $tag;
+
 
     
 

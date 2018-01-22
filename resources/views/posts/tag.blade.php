@@ -14,7 +14,7 @@
                            <ul>
                             @foreach($tags as $tagsa)
                                 @if($vals['area_id'] == $tagsa['area_id'])
-                                <li>{{ $tagsa['parameter']}}</li>
+                                    <li>{{ $tagsa['parameter']}}</li>
                                 @endif
                             @endforeach
                         </ul>

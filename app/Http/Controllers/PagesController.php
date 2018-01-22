@@ -9,7 +9,8 @@ use App\Http\Requests;
 use App\File;
 
 use App\Http\Controllers\Controller;
-
+use App\User;
+use App\Tag;
 use DB;
 
 class PagesController extends Controller
@@ -40,9 +41,17 @@ class PagesController extends Controller
     }
 
     public function assignedArea(){ 
-        $files = DB::table('files')->paginate(10);
+        $usernow = User::find(auth()->user()->id);
+        $areaAssigned = $usernow->area_handled;
+        $tag = DB::table('tags')
+                    ->where('area_id', '=', $areaAssigned)
+                    ->get();
+        dd($tag);
 
-        return view('pages.assignedArea')->with('files', $files);
+
+
+
+        //return view('pages.assignedArea')->with('files', $files);
     }
     public function bin(){ 
         $user = auth()->user()->id;
