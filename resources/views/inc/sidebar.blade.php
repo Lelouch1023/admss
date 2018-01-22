@@ -71,7 +71,7 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="#">Tags</a> <span class="label label-danger">2</span>
+                                        <a href="{{ ('pending')}}">Tags</a> <span class="label label-danger">2</span>
                                     </td>
                                 </tr>
                             </table>
@@ -184,7 +184,7 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-usd"></span><a href="{{ ('bin') }}">Sales</a>
+                                        <a href="{{ ('bin') }}">Deleted files</a>
                                     </td>
                                 </tr>
                             </table>

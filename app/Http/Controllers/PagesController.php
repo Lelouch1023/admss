@@ -100,6 +100,11 @@ class PagesController extends Controller
 
         return view('pages.areas.area10')->with('files', $files);
     }
+    public function pending(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('pages.pending')->with('files', $files);
+    }
     // public function viewarea(){ 
     //     $files = DB::table('files')->paginate(5);
 
