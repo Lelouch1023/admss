@@ -1,46 +1,58 @@
 #banner{
 	background-color: #fff;
 	height: -webkit-fill-available;
-	background-image: url('../images/indexbg.jpg');
+	background-image: url('../images/3134.jpg');
 	background-size: 100%;
+	background-color: #fff;
 }
 
 /*NAVIGATION*/
 .navbar-index{
-	background-color: #fff;
+	background-color: #1b1b1b;
+}
+.navbar-index .navbar-brand{
+	text-align: right;
 }
 .navbar-logo{
-	text-align: center;
+	text-align: left;
 	color: #fff;
     line-height: 1.1;
     font-size: 17px;
     font-family: Roboto;
 }
 .navbar-logo img{
-	width: 50px;
+	width: 55px;
 	margin: 5px 0;
 }
 
 /*SITE BANNER */
 .site-title{
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 5px;
-    font-family: Helvetica;
-    margin-top: 130px;
+    color: #000;
+    font-family: Times New Roman;
+    margin-top: 190px;
 }
+.site-title h1{
+    font-size: 70px;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 5px 5px 11px rgba(150, 150, 150, 1);
+}
+
 
 /*BUTTON SECTION*/
 .btn-section{
 	width: 100%;
+    color: #000;
+
 }
 .btn-section button{
-	border: none;
+    border: 1px solid #000;
     padding: 10px 40px;
     box-sizing: border-box;
-    background: #F5D02B;
+    background: transparent;
     text-transform: uppercase;
+    border-radius: 0px;
 }
 .btn-section button:hover{
     background: #1b1b1b;
@@ -48,6 +60,13 @@
     -webkit-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
 	box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
+}
+.btn-section button:hover > a{
+	color: #fff;
+
+}
+.btn-section a{
+	color: #000;
 }
 .login-btn-sec{
     text-align: right;
@@ -63,7 +82,7 @@
     margin-bottom: 65px;
 }
 .cos-logo img{
-	width: 15%;
+	width: 12%;
 }
 
 /*SIDE BAR MENU*/
@@ -130,7 +149,10 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 }
 .category-title{
 	border-bottom: 1px solid #1b1b1b;
-	padding: 5px;
+    padding: 5px;
+    background-color: #bf2626;
+    margin-top: 22px;
+    color: #fff;
 }
 .category-content{
 
@@ -141,8 +163,8 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
     font-weight: bold;
 }
 .category-fname{
-	    background-color: #1b1b1b;
-    color: #fff;
+	    /*background-color: #1b1b1b;*/
+    color: #000;
 }
 .filename{
 
@@ -189,8 +211,9 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 /*CSS PANEL*/
 .upload-panel{
     border-color: #d3e0e9;
-    margin-top: 10px;
     background-color: #fff;
+    /*min-height: -webkit-fill-available;*/
+    margin: 70px 0;
 }
 .upload-panel .panel-heading{
 	background-color: #bd2031;
