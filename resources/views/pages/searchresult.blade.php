@@ -11,6 +11,7 @@
 					<!-- /word -->
 				</div>
 				<div class="category-content">
+					@if(count($files)>0)
 					<table class="table table-hover">
 						<thead>
 							<tr class="category-content">
@@ -19,7 +20,6 @@
 							</tr>
 						</thead>
 				<!-- PHP CODE -->
-					@if(count($files)>0)
 							@foreach($files as $file)
 								@if($file->isDeleted == 0)
 						<tr class="file">
