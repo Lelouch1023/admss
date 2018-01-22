@@ -7,7 +7,7 @@
 			<div class="categories">
 				<div class="category-title">
 					<!-- PHP code for search word -->
-					<label>Search results for <i>"word"</i></label>
+					<label>Search results for <i>"{{ $_GET['searchItem'] }}"</i></label>
 					<!-- /word -->
 				</div>
 				<div class="category-content">
@@ -25,8 +25,8 @@
 						<tr class="file">
 							<td class="col-xs-8">
 								<img src="{{ URL::to('/images/pdf.png') }}">
-								<a href="post/{{ $file->id }}">{{ $file->name }}</a>
-								<p>Written on {{ $file->created_at }} by {{ $file->user->name }}</p>
+								<a href="post/{{ $file['id'] }}">{{ $file['name'] }}</a>
+								<p>Written on {{ $file['created_at'] }} by {{ $file->user->name }}</p>
 							</td>
 							<td class="col-xs-4 action">
 							<button type="button">

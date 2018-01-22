@@ -58,7 +58,7 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'file' => 'required|max:1999|mimes: pdf'
+            'file' => 'required|max:1999|mimes:pdf'
         ]);
 
         //Handle File Upload
