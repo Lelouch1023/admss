@@ -5,7 +5,7 @@
 	<div class="col-md-9 col-xs-12">
 		<div class="categories">
 			<div class="category-title">
-				<label>Area 1: Vision, Mission, Goals and Objectives</label>
+				<label>{{ $area[0]->name }}</label>
 			</div>
 			<!-- Category contents -->
 			<div class="category-content">
@@ -16,11 +16,13 @@
 							<th class="col-xs-4">Action</th>
 						</tr>
 					</thead>
+				@if(count($files) > 0)
+					@foreach($files as $file)
 					<tr class="file">
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="">TUP_MEMORANDUM.PDF</a>
-							<p>Jan. 2, 2018</p>
+							<a href="">{{ $file->name }}</a>
+							<p>{{ $file->created_at }}</p>
 						</td>
 						<td class="col-xs-4 action">
 							<button type="button">
@@ -75,6 +77,10 @@
 							<!-- End of Delete Modal -->
 						</td>
 					</tr>
+				@endforeach <!-- end loop for table -->
+			@else
+			<tr><td>No files.</td></tr>
+			@endif
 				</table>
 			</div>	
 		</div>

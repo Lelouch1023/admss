@@ -15,6 +15,10 @@ use DB;
 
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
     	
     	return view('pages.index');
@@ -36,22 +40,39 @@ class PagesController extends Controller
     public function uploads(){ 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
-
         return view('pages.my_uploads')->with('files', $files);
+    }
+    public function viewfile(){ 
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+        return view('pages.view-file')->with('files', $files);
     }
 
     public function assignedArea(){ 
         $usernow = User::find(auth()->user()->id);
         $areaAssigned = $usernow->area_handled;
+        $files = array();
+        $area = array();
+        //get files that is inside the Area specified
         $tag = DB::table('tags')
+                    ->select('file_name')
                     ->where('area_id', '=', $areaAssigned)
                     ->get();
-        dd($tag);
+        $tag = $tag->toArray();
+        if(count($tag) > 0){
+            $tagdup = array_values(array_map("unserialize", array_unique(array_map("serialize", $tag))));
 
+            //save the $tagdup results into array for whereIn
+            foreach($tagdup as $key => $value){
+                $wheres[] = $tagdup[$key]->file_name;
+            }
+            $files = DB::table('files')->whereIn("name", $wheres)->get();
 
+            //get the name of the user's area assigned
+            $area = DB::table('areas')->where('area_id', '=', $areaAssigned)->get();
+        }
 
-
-        //return view('pages.assignedArea')->with('files', $files);
+        return view('pages.assignedArea')->with('files', $files)->with('area', $area);
     }
     public function bin(){ 
         $user = auth()->user()->id;

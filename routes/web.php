@@ -18,6 +18,7 @@ Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
 Route::get('/pending', 'PagesController@pending');
+Route::get('/viewfile', 'PagesController@viewfile');
  
  
 //Route::resource('post', 'UploadController');
@@ -34,6 +35,7 @@ Route::get('/pending', 'PagesController@index')->name('pending');
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
+Route::get('/viewfile', 'PagesController@viewfile')->name('viewfile');
 Route::get('/upload', 'UploadController@create');
 Route::post('/upload', 'UploadController@store');
 Route::get('/uploads/view/{id}', 'UploadController@view');
