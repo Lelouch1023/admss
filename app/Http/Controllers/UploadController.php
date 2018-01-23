@@ -91,16 +91,9 @@ class UploadController extends Controller
             $tags = array();
             $tags = $this->extract($file->name);
             
-            $arrkeys = array_keys($tags);
+           $arrkeys = array_keys($tags);
                 
-                // $values = array_reverse($value->toArray());
-               // array_push($values, $arrkeys);
 
-                // for($i = 0; $i < count($arrkeys); $i++){
-                //     $val['area_id'] = $arrkeys[$i];
-                //     $val['name'] = $values[$i]->name;
-                // }
-                // dd($arrkeys[0]);
 
             //gets the area name based on area_id from tags table
             $values = array();
@@ -109,34 +102,31 @@ class UploadController extends Controller
                         ->whereIn('area_id', $arrkeys)
                         ->get();
             //sorts the results from highest to lowest
+
             $values = array_reverse($value->toArray());
-            // for($j = 0; $j < count($values); $j++){
-            //     $val[] = $values[$j]->name;
-            // }
-            // for($i = 0; $i < count($arrkeys); $i++){
-            //     $vals = array_combine($arrkeys, $val);
-            // }
-            //saves the area_name and area_id into on array
-            for($i = 0; $i < count($arrkeys); $i++){
-                    $val[] = array(
-                        'area_id'=> $arrkeys[$i],
-                        'name' => $values[$i]->name
-                );
-            }
-            $tagsfin = array();
-            foreach($tags as $ind => $data){
-                foreach($tags[$ind] as $key => $value){
-                    $tagsfin[] = array(
-                        'area_id' => $ind,
-                        'parameter' => $value
-                    );
-                }
-            }
+           
 
-            //removes duplicated parameters
-            $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
+          //!!!   //saves the area_name and area_id into on array
+          //   for($i = 0; $i < count($arrkeys); $i++){
+          //           $val[] = array(
+          //               'area_id'=> $arrkeys[$i],
+          //               'name' => $values[$i]->name
+          //       );
+          //   }
+          //   $tagsfin = array();
+          //   foreach($tags as $ind => $data){
+          //       foreach($tags[$ind] as $key => $value){
+          //           $tagsfin[] = array(
+          //               'area_id' => $ind,
+          //               'parameter' => $value
+          //           );
+          //       }
+          //   }
 
-          return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
+          //   //removes duplicated parameters
+          //   $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
+
+          // return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
 
         }
 
@@ -383,21 +373,27 @@ class UploadController extends Controller
         
         // $cnt5 = $freqDist->getValues();
         // $cnt6 = $freqDist->getWeightPerToken();
-        //extract texts with greater than 10 frequency
         $cnt6 = array();
-            foreach($alltxt as $key => $value){
-                if($value > 10){
-                    $cnt6[] = $key;
 
+            foreach($alltxt as $key => $value){
+                //extract texts with greater than 10 frequency if the highest frequency is 10
+                if(reset($alltxt) > 10){
+                    if($value > 10){
+                        $cnt6[] = $key;
+
+                    }
+                }else{
+                    $cnt6[] = $key;
                 }
+
                
          }
          $result = array();
          $result = $this->compareKeyword($cnt6);
-         
-         //$ress = $result->area_id;
-        // echo gettype($result);
-         // $this->compareKeyword($cnt6);
+     
+        //  //$ress = $result->area_id;
+        // // echo gettype($result);
+        //  // $this->compareKeyword($cnt6);
          $res = $this->group_by($result, "area_id");
          //$this->group_by($result, "area_id");
          usort($res, function($a, $b) {
@@ -406,10 +402,10 @@ class UploadController extends Controller
         $rev = array_reverse($res);
 
         // foreach ($galleries as $gallery) {
-           // $grouped[$gallery['post_id']][] = $res['area_id'];
+        //    $grouped[$gallery['post_id']][] = $res['area_id'];
         // }
 
-        //print($rev[0][$rev[0][rev[0][$rev[0]['area_id']]]]);
+        // print($rev[0][$rev[0][rev[0][$rev[0]['area_id']]]]);
         // for($i = 0 $i < count($rev); $i++){
         //     for($j = 0 $j < count($rev[$i])){
         //         foreach($rev[$i][$rev[$j]] as $val)
@@ -417,7 +413,8 @@ class UploadController extends Controller
         //     }
         // }
 
-        // gets the parameters tagged per area, $key = areas, $value = parameter
+
+        //gets the parameters tagged per area, $key = areas, $value = parameter
         $tag = array();
         $key = array('parameter');
     
@@ -427,27 +424,10 @@ class UploadController extends Controller
 
             }
         } 
-        return $tag;
 
 
     
 
-
-        // foreach ($res as $key => $values) {
-        //     print( $key . ' = ' . implode(',', $values) . "\n");
-        // }
-        // dd($cnt6);
-         //check if the keywords has less or more than 100 words.
-        // if(count($cnt4) > 100){
-        //     for($i=0; $i<=100; $i++){
-        //         $cnt6[$i] = $cnt4[$i];
-        //     }//for
-
-
-        //     dd($cnt6);
-        // }//if       
-        
-        //dd($cnt4);
     }
 
     /**
@@ -458,7 +438,7 @@ class UploadController extends Controller
     public function compareKeyword(Array $array){
 
         $files = DB::table('keywords')->get();
-        
+        $results = array();
         foreach($array as $arrayVal){
             foreach($files as $file){
 
@@ -472,7 +452,7 @@ class UploadController extends Controller
 
         }
 
-         return $results;
+        return $results;
     }
 
     /**
