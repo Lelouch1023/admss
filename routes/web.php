@@ -46,7 +46,7 @@ Route::get('/uploads/edit/{id}', 'UploadController@edit');
 Route::get('/test', 'UploadController@test');
 Route::get('/test2', 'UploadController@test2');
  
-Route::get('/{area}/{id}', 'PagesController@viewarea');
+Route::get('/{area}/{param}/{id}', 'PagesController@viewarea');
  
 Route::get('/area1', 'PagesController@area1')->name('area1');
 Route::get('/area2', 'PagesController@area2')->name('area2');
