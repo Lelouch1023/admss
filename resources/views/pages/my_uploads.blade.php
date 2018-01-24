@@ -14,7 +14,7 @@
 			@if(count($files) > 0)
 				<table class="table table-hover">
 					<thead>
-						<tr class="category-content">
+						<tr class="">
 							<th class="col-xs-5 category-fname">File Name</th>
 							<th class="col-xs-3">Type</th>
 							<th class="col-xs-3">Modified</th>
