@@ -9,59 +9,26 @@
 				<label>My Uploads</label>
 			</div>
 			<!-- Category contents -->
-			<div class="category-content">
+			@if(count($files) > 0)
+			<div id="file-content">
+			<!-- PHP code for data loop -->
 				<table class="table table-hover">
 					<thead>
-						<tr class="category-content">
-							<th class="col-xs-8 category-fname">File Name</th>
-							<th class="col-xs-4">Action</th>
+						<tr class="category-fname">
+							<th class="col-xs-6 ">File Name</th>
+							<th class="col-xs-6 ">QR Code</th>
 						</tr>
 					</thead>
-					<tr class="file">
-						<td class="col-xs-8">
-							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="">Accreditation.pdf</a>
-							<p>January 10, 2018</p>
-							<td class="col-xs-4 action">
-							<button type="button">
-			   				  <a href="/uploads/view/{{ $file->id }}" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>
-			   				</button>
-			   				<button type="button">
-			   				  <a href="/uploads/edit/{{$file->id}}" title="Upload revise"><span class="glyphicon glyphicon-upload"></span></a>
-			   				</button>
-			   				<button type="button">
-			   				  <a href="storage/uploads/{{$file->name}}" download="{{$file->name}}" title="Download"><span class="glyphicon glyphicon-download"></span></a>
-			   				</button>
-			   				<button type="button" data-toggle="modal" data-target="#{{$file->id}}" title="Scan">
-			   				  <span class="glyphicon glyphicon-qrcode"></span>
-			   				</button>
-			   				{{-- MODAL QR --}}
-			   				<!-- QR Modal -->
-			   				<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
-						      </div>
-						      <div class="modal-body qr-modal">
-						       
-						        	<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}">
-						        	<br>	
-						        	<br>	
-						        
-						      </div>
-						    </div>
-						  </div>
-						</div>
-							<!-- End of QR Code Modal -->
-			   				<button type="button" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">
-			   				  <span class="glyphicon glyphicon-trash"></span>
-			   				</button>
-			   				<!-- Delete Modal -->
+					<tr>
+			     		@foreach ($files as $file)	
+						<td class="col-xs-6 file">
+							<img src="{{ URL::to('/images/pdf-file.png') }}">
+							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<p>November 6, 2018</p>
+							<button type="button" class="bin-restore"><a href="/uploads/edit/{{$file->id}}">Revise</a></button>
+							<button type="button" class="download"><a href="storage/uploads/{{$file->name}}">Download</a></button>
+							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete">Delete</button>
+							<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content delete-modal">
@@ -82,15 +49,16 @@
 							</div>
 							<!-- End of Delete Modal -->
 						</td>
+						<td class="col-xs-6 qr-scan">
+							<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}">
+							<!-- <img src="{{ URL::to('/images/pdf-file.png') }}"> -->
 						</td>
-						
 					</tr>
-					@endforeach
+			@endforeach
            			{{$files->links()}}
            	@else
 			      	<center><p>No uploads.</p></center>
-			      
-           	@endif
+			@endif			      
 				</table>
 			</div>	
 		</div>

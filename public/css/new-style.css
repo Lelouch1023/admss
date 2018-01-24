@@ -272,3 +272,30 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .select, .type{
 	text-align: center;
 }
+
+/*view file css*/
+
+#file-content{
+	min-height: -webkit-fill-available;
+}
+#file-content img{
+	width: 25%;
+}
+#file-content th{
+	text-align: center;
+}
+#file-content .qr-scan {
+	text-align: center;
+}
+.download{
+    padding: 2px 5px;
+    border-radius: 2px;
+	background-color: #337ab7;
+	border: none;
+}
+.download a, 
+.bin-delete a, 
+.bin-restore a{
+	color: #fff;
+	font-weight: normal;
+}
