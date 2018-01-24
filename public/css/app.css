@@ -8450,3 +8450,9 @@ button.close {
 .home-login-reg .reg-btn{
     background-color: rgba(239, 239, 239,0.8);
 }
+
+/*makes a click unclick-able*/
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}

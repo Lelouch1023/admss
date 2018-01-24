@@ -53,6 +53,8 @@ class PagesController extends Controller
         $areaAssigned = $usernow->area_handled;
         $files = array();
         $area = array();
+        //get the name of the user's area assigned
+        $area = DB::table('areas')->where('area_id', '=', $areaAssigned)->get();
         //get files that is inside the Area specified
         $tag = DB::table('tags')
                     ->select('file_name')
@@ -68,11 +70,9 @@ class PagesController extends Controller
             }
             $files = DB::table('files')->whereIn("name", $wheres)->get();
 
-            //get the name of the user's area assigned
-            $area = DB::table('areas')->where('area_id', '=', $areaAssigned)->get();
+          
         }
-
-        return view('pages.assignedArea')->with('files', $files)->with('area', $area);
+            return view('pages.assignedArea')->with('files', $files)->with('area', $area);
     }
     public function bin(){ 
         $user = auth()->user()->id;
@@ -140,10 +140,22 @@ class PagesController extends Controller
 
     //     return view('pages.areas.view-area')->with('files', $files);
     // }
-    public function viewarea($para){ 
-        $files = DB::table('tag')->where('parameter', '=', $para)->paginate(5);           
+    public function viewarea($area, $para){ 
+        // $files = DB::table('tag')->where('parameter', '=', $para)->paginate(5);           
+        $result = DB::table('tags')
+                    ->select('file_name')
+                    ->where('area_id', '=', $area)
+                    ->where('parameter', '=', $para)
+                    ->get();
+        $files = array();   
 
-        return view('pages.areas.view-area')->with('files', $files);
+        foreach($result as $res){
+            $wheres[] = $res->file_name;
+        }
+
+        $files = File::whereIn('name', $wheres)->paginate(5);
+        
+        return view('pages.areas.view_area')->with('files', $files);
     }
 
 }

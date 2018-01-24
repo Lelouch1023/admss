@@ -5,7 +5,9 @@
 	<div class="col-md-9 col-xs-12">
 		<div class="categories">
 			<div class="category-title">
-				<label>{{ $area[0]->name }}</label>
+				@foreach($area as $areas)
+				<label>{{ $areas->name }}</label>
+				@endforeach
 			</div>
 			<!-- Category contents -->
 			<div class="category-content">
@@ -79,7 +81,7 @@
 					</tr>
 				@endforeach <!-- end loop for table -->
 			@else
-			<tr><td>No files.</td></tr>
+			<tr><td colspan="2"><center><h4>No files found on this area.</h4></center></td></tr>
 			@endif
 				</table>
 			</div>	

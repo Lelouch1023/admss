@@ -1,7 +1,9 @@
 $( function() {
+
             
+        var baseURL = $(this).data("url");
             $( "#searchItem" ).autocomplete({
-              source: 'http://adms.dev/search'
+              source: APP_URL + '/search'
             });
           } );
 
