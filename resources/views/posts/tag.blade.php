@@ -7,7 +7,8 @@
 		<div class="panel upload-panel">
             <div class="panel-heading">Confirm Tags</div>
             <div class="panel-body">
-            	<p>Are these your tags for {{ $filename }}?</p>
+            @if($)
+                <p>Are these your tags for {{ $filename }}?</p>
                 <ul>
                 	@foreach($val as $vals)
                     	   <li><p>{{ $vals['name']}}</p></li>
@@ -40,6 +41,9 @@
                     {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
 
                {!! Form::close() !!} 
+            @else
+
+            @endif
             </div>  
         </div>
 	</div>

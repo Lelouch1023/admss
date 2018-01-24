@@ -1,78 +1,82 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-sm-9 col-xs-12">
-	<div class="panel panel-bin">
-	  <div class="panel-heading">Deleted Files</div>
-		  <div class="panel-body">
-
-		 @if(count($files) >0)
-		  	<table class="table table-hover">
-			    <thead>
-			      <tr>
-			        <th>File Name</th>
-			        <th>Date Deleted</th>
-			        <th>Actions</th>
-			        <th>Select</th>
-			      </tr>
-			    </thead>
-			    <tbody>
+		
+<div class="container">
+	<div class="col-md-9 col-xs-12">
+		<div class="categories">
+			<div class="category-title">
+				<label>Deleted Files</label>
+			</div>
+			<!-- Category contents -->
+			<div class="category-content">
+			<!-- PHP code for data loop -->
+			@if(count($files) > 0)
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th class="col-xs-5 category-fname">File Name</th>
+							<th class="col-xs-3">Type</th>
+							<th class="col-xs-3">Date Deleted</th>
+							<th class="col-xs-2">Select</th>
+						</tr>
+					</thead>
 			     @foreach ($files as $file)
-			      <tr>
-			   		<td>
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link">
-			   			<span class="actions-btn text">{{$file->name}}</span>
-			   			</button>
-			   		</td>
-			   		<td>{{$file->created_at}}</td>
-			   		<td>
-			   			<button type="button" class="col-md-3 actions-btn btn btn-link" onclick="location.href='/restore/{{ $file->id }}'">
-			   			<span class="glyphicon glyphicon-transfer"></span>
-			   			<span class="actions-btn text"> Restore</span>
-			   			</button>
 
-			   			<button type="button" class="col-md-2 actions-btn btn btn-link" data-toggle="modal" data-target="#{{ $file->id }}modal">
-			   				<span class="glyphicon glyphicon-trash"></span>
-			   				<span class="actions-btn text">Delete</span>
-
-			   			</button>
-			   			<!--delete modal-->
-			   			<div class="modal fade" id="{{ $file->id }}modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						      </div>
-						      <div class="modal-body">
-						        <center>Are you sure you want to permanently delete <strong>{{ $file->name }}?</strong></center>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						        
-						        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.href = '/destroy/{{ $file->id }}';">Delete</button>
-						        
-						      </div>
-						    </div>
-						  </div>
-						</div>
-			   		</td>
-			   		<td>
-			   			<label class="form-check-label">
-					    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-					 	</label>
-			   		</td>
-			      </tr>
-			       @endforeach
+					<tr class="file">
+						<td class="col-xs-5">
+							<img src="{{ URL::to('/images/pdf.png') }}">
+							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<button type="button" class="bin-restore" data-toggle="modal" data-target="#{{ $file->id }}modal">Restore</button>
+							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">Delete</button>
+			   				<!-- Delete Modal -->
+			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content delete-modal">
+							      <div class="modal-header">
+							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
+							      </div>
+							      <div class="modal-body delete-modal-content">
+							      	<p>Are you sure you want to delete <i><a href="/uploads/view/{{ $file->id }}">{{ $file->name }}</a></i>?</p>
+							      	<br />
+							      	<p><strong>Note:</strong> Deleted items go to bin.</p>
+							      </div>
+							      <div class="delete-modal-footer">
+							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">No</button>
+							        <button type="button" class="btn btn-danger delete" onclick="location.href = '/destroy/{{ $file->id }}';">Delete</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+			   				
+						</td>
+						<td class="col-xs-3 type">
+							<!-- Php code for document type -->
+							<p>Memorandum</p>
+						</td>
+						<td id="user-date" class="col-xs-3">
+							<label>{{ Auth::user()->name }}</label>
+							<p>{{$file->created_at}}</p>
+						</td>
+						<td class="col-xs-2 select">
+							<label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+						 	</label>
+						</td>
+					</tr>
+					@endforeach
            			{{$files->links()}}
-			    @else 
-			   		<center><p>No Deleted Files</p></center>
-            	@endif
-			    </tbody>
-			</table>
-		  </div>
+           	@else
+			      	<center><p>No deleted files.</p></center>
+			      
+           	@endif
+				</table>
+			</div>	
+		</div>
+		
 	</div>
 </div>
+
+
+
 @endsection

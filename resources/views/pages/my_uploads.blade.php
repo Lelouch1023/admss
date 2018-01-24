@@ -15,79 +15,32 @@
 				<table class="table table-hover">
 					<thead>
 						<tr class="category-content">
-							<th class="col-xs-8 category-fname">File Name</th>
-							<th class="col-xs-4">Action</th>
+							<th class="col-xs-5 category-fname">File Name</th>
+							<th class="col-xs-3">Type</th>
+							<th class="col-xs-3">Modified</th>
+							<th class="col-xs-2">Select</th>
 						</tr>
 					</thead>
 			     		@foreach ($files as $file)	
 
 					<tr class="file">
-						<td class="col-xs-8">
+						<td class="col-xs-5">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="">{{$file->name}}</a>
+							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+						</td>
+						<td class="col-xs-3 type">
+							<!-- Php code for document type -->
+							<p>Memorandum</p>
+						</td>
+						<td id="user-date" class="col-xs-3">
+							<label>{{ Auth::user()->name }}</label>
 							<p>{{$file->created_at}}</p>
-							<td class="col-xs-4 action">
-							<button type="button">
-			   				  <a href="/uploads/view/{{ $file->id }}" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>
-			   				</button>
-			   				<button type="button">
-			   				  <a href="/uploads/edit/{{$file->id}}" title="Upload revise"><span class="glyphicon glyphicon-upload"></span></a>
-			   				</button>
-			   				<button type="button">
-			   				  <a href="storage/uploads/{{$file->name}}" download="{{$file->name}}" title="Download"><span class="glyphicon glyphicon-download"></span></a>
-			   				</button>
-			   				<button type="button" data-toggle="modal" data-target="#{{$file->id}}" title="Scan">
-			   				  <span class="glyphicon glyphicon-qrcode"></span>
-			   				</button>
-			   				{{-- MODAL QR --}}
-			   				<!-- QR Modal -->
-			   				<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						        <h5 class="modal-title" id="exampleModalLabel"><center>Scan QR</center></h5>
-						      </div>
-						      <div class="modal-body qr-modal">
-						       
-						        	<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}">
-						        	<br>	
-						        	<br>	
-						        
-						      </div>
-						    </div>
-						  </div>
-						</div>
-							<!-- End of QR Code Modal -->
-			   				<button type="button" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">
-			   				  <span class="glyphicon glyphicon-trash"></span>
-			   				</button>
-			   				<!-- Delete Modal -->
-			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							  <div class="modal-dialog" role="document">
-							    <div class="modal-content delete-modal">
-							      <div class="modal-header">
-							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
-							      </div>
-							      <div class="modal-body delete-modal-content">
-							      	<p>Are you sure you want to delete <i><a href="/uploads/view/{{ $file->id }}">{{ $file->name }}</a></i>?</p>
-							      	<br />
-							      	<p><strong>Note:</strong> Deleted items go to bin.</p>
-							      </div>
-							      <div class="delete-modal-footer">
-							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">No</button>
-							        <button type="button" class="btn btn-danger delete" onclick="location.href = '/delete/{{ $file->id }}';">Delete</button>
-							      </div>
-							    </div>
-							  </div>
-							</div>
-							<!-- End of Delete Modal -->
 						</td>
+						<td class="col-xs-2 select">
+							<label class="form-check-label">
+						    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+						 	</label>
 						</td>
-						
 					</tr>
 					@endforeach
            			{{$files->links()}}
