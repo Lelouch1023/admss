@@ -22,6 +22,7 @@
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
     
+    
 </head>
 <body>
 
@@ -29,7 +30,7 @@
     <div id="app">
         <div class="page-content">
             <div class="container">
-                @include('inc.sidebar')
+                @include('inc.sidebar', ['area' => $area, 'params' => $params, 'arealink' => $arealink])
                 @include('inc.messages')
                 @yield('content')
 
@@ -43,7 +44,9 @@
 
 
     <!-- Scripts -->
-    
+    <script type="text/javascript">
+        var APP_URL = {!! json_encode(url('/')) !!}
+    </script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/notif.js"></script>
@@ -51,5 +54,6 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
+
 </body>
 </html>

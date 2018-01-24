@@ -303,7 +303,7 @@
 		  	<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseE">E. Phhysical Set-up and Facilities</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseE">E. Physical Set-up and Facilities</a>
 					</h4>
 				</div>
 				<div id="collapseE" class="panel-collapse collapse">

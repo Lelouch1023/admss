@@ -37,22 +37,20 @@
                     <div class="panel-heading  ">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                            </span> My Area </a>
+                            </span> 
+                            @foreach($area as $areas)
+                                My Area - {{ $areas->name }}
+                            @endforeach
+                             </a>
+
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
-                                <tr>
-                                    <td>
-                                        <a href="#">A. Statement of Vision, Mission, Goals and Objectives</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#">B. Dissemination and Acceptability</a>
-                                    </td>
-                                </tr>
+                                @foreach($params as $para)
+                                    <tr><td><a href="{{ route($arealink) }}">{{ $para->param_name }}</a></td></tr>
+                                @endforeach
                             </table>
                         </div>
                     </div>

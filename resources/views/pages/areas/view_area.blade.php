@@ -8,16 +8,18 @@
 		<div class="panel area-panel">
 		  <div class="area-panel-heading">
 		  	
-		  	<a href="{{ route('area1') }}">Area 1</a> /
-		  	<a href="{{ route('area1') }}">Parameter A: System Input and Processes</a> /
-		  	<a href="#" class="active">S.1</a>
+		  	<a href="{{ route($arealink) }}">{{ $areanum  }}</a> /
+		  
+		  	@foreach($paraname as $para)
+		  		<a href="{{ route($arealink) }}">{{ $para->param_name }}</a>
+		  	@endforeach /
+		  	<a href="#" class="active">{{ $subparam }}</a>
 		  </div>
 		<div class="categories">
 			<!-- Category contents -->
 			<!-- Category contents -->
 			<div class="category-content">
 			<!-- PHP code for data loop -->
-			@if(count($files) > 0)
 				<table class="table table-hover">
 					<thead>
 						<tr class="category-content">
@@ -25,6 +27,8 @@
 							<th class="col-xs-4">Action</th>
 						</tr>
 					</thead>
+
+			@if(count($files) > 0)
 			     		@foreach ($files as $file)	
 
 					<tr class="file">
@@ -100,7 +104,7 @@
 					@endforeach
            			{{$files->links()}}
            	@else
-			      	<center><p>No uploads.</p></center>
+			      	<tr><td  valign="middle" colspan="2" rowspan="5"><center><h3>No files found.</h3></center></td></tr>
 			      
            	@endif
 				</table>

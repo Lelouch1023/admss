@@ -90,7 +90,9 @@ class UploadController extends Controller
 
             $tags = array();
             $tags = $this->extract($file->name);
-            
+        $tagdup = array();
+        $val = array();
+        if(count($tags) > 0){
            $arrkeys = array_keys($tags);
                 
 
@@ -106,27 +108,29 @@ class UploadController extends Controller
             $values = array_reverse($value->toArray());
            
 
-          //!!!   //saves the area_name and area_id into on array
-          //   for($i = 0; $i < count($arrkeys); $i++){
-          //           $val[] = array(
-          //               'area_id'=> $arrkeys[$i],
-          //               'name' => $values[$i]->name
-          //       );
-          //   }
-          //   $tagsfin = array();
-          //   foreach($tags as $ind => $data){
-          //       foreach($tags[$ind] as $key => $value){
-          //           $tagsfin[] = array(
-          //               'area_id' => $ind,
-          //               'parameter' => $value
-          //           );
-          //       }
-          //   }
+         //saves the area_name and area_id into on array
+            for($i = 0; $i < count($arrkeys); $i++){
+                    $val[] = array(
+                        'area_id'=> $arrkeys[$i],
+                        'name' => $values[$i]->name
+                );
+            }
+            $tagsfin = array();
 
-          //   //removes duplicated parameters
-          //   $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
+            //save the tags and with area_name
+            foreach($tags as $ind => $data){
+                foreach($tags[$ind] as $key => $value){
+                    $tagsfin[] = array(
+                        'area_id' => $ind,
+                        'parameter' => $value
+                    );
+                }
+            }
 
-          // return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
+            //removes duplicated parameters
+            $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
+        }//endif
+          return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
 
         }
 
