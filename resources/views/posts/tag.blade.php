@@ -7,8 +7,10 @@
 		<div class="panel upload-panel">
             <div class="panel-heading">Confirm Tags</div>
             <div class="panel-body">
+
             @if(count($tags) > 0)
             	<p>Are these your tags for {{ $filename }}?</p>
+
                 <ul>
                 	@foreach($val as $vals)
                     	   <li><p>{{ $vals['name']}}</p></li>
@@ -43,6 +45,7 @@
                {!! Form::close() !!} 
             @else
                 <center><div><h3><i>No matching tag found.</i></h3></div></center>
+
             @endif
             </div>  
         </div>

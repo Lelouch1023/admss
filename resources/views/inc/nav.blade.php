@@ -90,7 +90,13 @@
                     <h4 class="modal-title">Upload a file</h4>
                   </div>
                   <div class="modal-body">
-                     <div class="form-group">
+                    <!-- Php code for connection of data -->
+                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                    <!--/comment -->
+                
+                    <form method="POST" action="#" enctype="multipart/form-data">
+                      <!-- COMPONENT START -->
+                      <div class="form-group">
                         <label>Select document type</label>
                         <!-- Selection for document type -->
                         <select class="form-control" id="">
@@ -102,25 +108,24 @@
                           <option>Grade Sheets</option>
                         </select>
                     </div>
-                    <!-- Php code for connection of data -->
-                {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                <!--/comment -->
-                    <div class="form-group">
-                        <label>Title</label>
-                          {{ Form::text('tags', '', ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        <label>Add a tag</label>
-                          {{ Form::text('tags', '', ['class' => 'form-control']) }}
-                    </div>
-                  <div class="form-group">
-                        <label>Select a file</label>
-                            {{ Form::file('file') }}
-                   </div>
-                    {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
-              {!! Form::close() !!}
-
-                  </div>
+                      <div class="form-group">
+                        <div class="input-group input-file" name="Fichier1">
+                          <span class="input-group-btn">
+                                <button class="btn btn-default btn-choose" type="button">Choose</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder='Choose a file...' />
+                            <span class="input-group-btn">
+                                 <button class="btn btn-warning btn-reset" type="button">Reset</button>
+                            </span>
+                        </div>
+                      </div>
+                      
+                      <!-- COMPONENT END -->
+                      <div class="form-group">
+                        <br>
+                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                      </div>
+                    </form>
                   <div class="modal-footer">
                   </div>
                 </div>
@@ -135,4 +140,6 @@
     </div>
 </div>
 </nav>
+
+
 @endguest

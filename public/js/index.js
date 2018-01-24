@@ -10,3 +10,4 @@ document.getElementById('notif_butt').addEventListener('click', function(){
         el.classList.add('show-count');
     }
 }, false);
+

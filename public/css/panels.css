@@ -92,6 +92,7 @@
 .delete-modal{
     background: #1b1b1b8c;
     color: #fff;
+    text-align: center;
 }
 .delete-modal-content{
         padding: 55px 10px;
@@ -112,4 +113,20 @@
 .delete-modal-footer .delete{
     padding: 1px 10px;
     background-color: #bf5329;
+}
+
+/*bin buttons*/
+.bin-delete {
+    border: none;
+    color: #ffffff;
+    background: #bf5329;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+.bin-restore{
+    border: none;
+    color: #fbf8f8;
+    border-radius: 2px;
+    background-color: #2ab27b;
+    padding: 2px 4px;
 }

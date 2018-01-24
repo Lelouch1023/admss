@@ -11,21 +11,7 @@
         <link href="{!! asset('css/new-style.css') !!}" media="all" rel="stylesheet" type="text/css" />
     </head>
     <body>
-
-<!--         <div class="top-bar">
-            <div class="container">
-              <div class="col-xs-6">
-                <img src="{{ URL::to('/images/phgov.png') }}">
-                <a href="http://tup.edu.ph/" title="tup.edu.ph">Technological University of the Philippines</a>
-              </div>
-              <div class="col-xs-6 right-top-link">
-                <a href="/home" title="">Home</a>
-                <a href="#" title="">Contact</a>
-                <a href="#" title="">About</a>
-              </div> 
-            </div>
-        </div>
- -->
+      <!-- Navigation bar -->
         <nav class="navbar navbar-default navbar-index">
           <div class="container">
             <a class="navbar-logo col-xs-6" href="{{ route('home') }}" title="Accreditation Document Management System"><img src="{{ URL::to('/images/logo.png') }}"></a>
@@ -33,6 +19,7 @@
             
           </div>
         </nav>
+      <!-- End of Navigation bar -->
 
         <!-- CONTENT -->
 

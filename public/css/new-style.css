@@ -139,7 +139,8 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 
 /*Content categories*/
 .categories{
-    min-height: -webkit-fill-available;
+    min-height: 620px;
+    /*height: 600px;*/
     /*background: rgba(255, 255, 255, 0.1);
     margin: 2px;*/
     border-radius: 7px;
@@ -155,6 +156,9 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
     color: #fff;
 }
 .category-content{
+	    height: 620px;
+    overflow-y: scroll;
+    margin-bottom: 35px;
 
 }
 .category-content th{
@@ -178,7 +182,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 	text-decoration: underline;
 }
 .file img {
-	width: 9%;
+	width: 15%;
 	float: left;
 }
 .file a{
@@ -186,7 +190,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 	color: #000;
 }
 .file p{
-	margin:	-6px 0 0px 36px;
+	/*margin:	-6px 0 0px 36px;*/
 }
 .file-action{
 	text-align: center;
@@ -249,4 +253,49 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 	width: 50%;
 	margin: 0 auto;
 	margin-top: 14px;
+}
+
+/*home uploads*/
+
+#user-date{
+	    text-align: left;
+    padding: 0 39px;
+    vertical-align: middle;
+}
+#user-date p{
+    margin-top: -5px;
+    font-size: 13px;
+}
+#user-date label{
+	margin: 0px;
+}
+.select, .type{
+	text-align: center;
+}
+
+/*view file css*/
+
+#file-content{
+	min-height: -webkit-fill-available;
+}
+#file-content img{
+	width: 25%;
+}
+#file-content th{
+	text-align: center;
+}
+#file-content .qr-scan {
+	text-align: center;
+}
+.download{
+    padding: 2px 5px;
+    border-radius: 2px;
+	background-color: #337ab7;
+	border: none;
+}
+.download a, 
+.bin-delete a, 
+.bin-restore a{
+	color: #fff;
+	font-weight: normal;
 }
