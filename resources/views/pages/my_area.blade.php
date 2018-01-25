@@ -88,15 +88,14 @@
 						
 					</tr>
 					@endforeach
-           			{{$files->links()}}
            	@else
 			      	<center><p>No uploads.</p></center>
 			      
            	@endif
 				</table>
-			</div>	
+			</div>
+           	{{$files->links()}}
 		</div>
-		
 	</div>
 </div>
 @endsection

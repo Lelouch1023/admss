@@ -158,7 +158,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .category-content{
 	    height: 620px;
     overflow-y: scroll;
-    margin-bottom: 35px;
+    /*margin-bottom: 35px;*/
 
 }
 .category-content th{
@@ -298,4 +298,8 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .bin-restore a{
 	color: #fff;
 	font-weight: normal;
+}
+.download a:hover, .bin-restore a:hover{
+	color: #fff;
+
 }

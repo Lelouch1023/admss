@@ -30,6 +30,7 @@
     <div id="app">
         <div class="page-content">
             <div class="container">
+
                 @include('inc.sidebar')
                 @include('inc.messages')
                 @yield('content')

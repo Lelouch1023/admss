@@ -12,6 +12,7 @@
 */
  
 Route::get('/', 'PagesController@index');
+Route::get('/admin', 'AdminController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads');
@@ -31,6 +32,7 @@ Route::get('/markAsRead', function(){
  
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/pending', 'PagesController@index')->name('pending');
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');

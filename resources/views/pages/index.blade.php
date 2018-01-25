@@ -22,7 +22,6 @@
       <!-- End of Navigation bar -->
 
         <!-- CONTENT -->
-
         <div class="content">
              <div id="banner" class="col-xs-12">
                <div class="container">
