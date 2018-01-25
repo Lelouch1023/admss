@@ -30,7 +30,9 @@
     <div id="app">
         <div class="page-content">
             <div class="container">
+                @if(Auth::user())
                 @include('inc.sidebar', ['area' => $area, 'params' => $params, 'arealink' => $arealink])
+                @endif                
                 @include('inc.messages')
                 @yield('content')
 
