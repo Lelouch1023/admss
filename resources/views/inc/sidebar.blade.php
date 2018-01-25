@@ -77,32 +77,6 @@
                     </div>
                 </div>
                 <!-- END OF PENDING REQUESTS -->
-                <!-- UPLOADED FILES -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-upload">
-                            </span> Uploaded Files</a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table sidebar-submenu">
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('uploads') }}">Uploads</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#">Uploads by others.</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- END OF UPLOADED FILES -->
                 <!-- ALL AREAS -->
                 <div class="panel panel-default">
                     <div class="panel-heading">

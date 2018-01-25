@@ -30,7 +30,7 @@
     <div id="app">
         <div class="page-content">
             <div class="container">
-                @include('inc.sidebar', ['area' => $area, 'params' => $params, 'arealink' => $arealink])
+                @include('inc.sidebar')
                 @include('inc.messages')
                 @yield('content')
 

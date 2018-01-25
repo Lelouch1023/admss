@@ -17,7 +17,7 @@ class PagesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => 'index']);
     }
     public function index(){
     	
@@ -40,25 +40,8 @@ class PagesController extends Controller
     public function uploads(){ 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
-
-        $curuserarea = User::select('area_handled')
-                            ->where('id', '=', $user)
-                            ->get();
-        foreach($curuserarea as $area){
-            $userarea = $area->area_handled;
-        }
-
-        $area = DB::table('areas')
-                    ->select('name')
-                    ->where('area_id', '=', $userarea)
-                    ->get();
-
-        $params = DB::table('parameters')
-                    ->select('param_name')
-                    ->where('area_id', '=', $userarea)
-                    ->get();
         
-        return view('pages.my_uploads')->with('files', $files)->with('area', $area)->with('params', $params)->with('arealink', $userarea);
+        return view('pages.my_uploads')->with('files', $files);
     }
     public function viewfile(){ 
         $user = auth()->user()->id;

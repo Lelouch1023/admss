@@ -1,5 +1,5 @@
 		
-@extends('layouts.app', ['area' => $area, 'params' => $params, 'arealink' => $arealink])
+@extends('layouts.app')
 		
 @section('content')
 <div class="container">
