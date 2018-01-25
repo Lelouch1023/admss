@@ -18,7 +18,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
-Route::get('/pending', 'PagesController@pending');
+Route::get('/pending', 'PagesController@pending')->name('pending');
 Route::get('/viewfile', 'PagesController@viewfile');
  
  
@@ -33,7 +33,7 @@ Route::get('/markAsRead', function(){
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index')->name('admin');
-Route::get('/pending', 'PagesController@index')->name('pending');
+Route::get('/admin', 'PagesController@admin')->name('admin');
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');

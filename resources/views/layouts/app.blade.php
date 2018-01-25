@@ -17,6 +17,7 @@
     <link href="{{ asset('css/new-style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/notifbutton.css') }}" rel="stylesheet">
     <link href="{{ asset('css/panels.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adminpanel.css') }}" rel="stylesheet">
     <link href="js/jquery-ui.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 

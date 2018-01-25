@@ -36,6 +36,12 @@ class PagesController extends Controller
 
         return view('pages.about')->with('title', $title);
     }
+    // For admin
+    public function admin(){
+        $title = "Admin";
+
+        return view('pages.admin')->with('title', $title);
+    }
 
     public function uploads(){ 
         $user = auth()->user()->id;

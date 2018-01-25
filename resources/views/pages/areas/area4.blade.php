@@ -489,8 +489,6 @@
 							<li><a href="">Regular monitoring and evaluation on the implementation of student services are conducted.</a></li>
 							<li><a href="">Monitoring and evaluation instruments are developed, reviewed, and continuously improved.</a></li>
 							<li><a href="">Reports are filled and submitted regularly to CHEDRO.</a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
 				      	</ol>
 						</td>
 					</tr>

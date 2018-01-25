@@ -191,13 +191,13 @@
 							<li><a href="">The  laboratory equipment and instruments are good condition and periodically calibrated.</a></li>
 							<li><a href="">All equipment are coded, listed and inventoried.</a></li>
 							<li><a href="">Waste disposal is efficiently and effectively managed on campus.</a></li>
-							<li data-toggle="collapse" href="#sub-parameter2"><a href="">The following are properly maintained by tained staff/technicians: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>s
+							<li data-toggle="collapse" href="#sub-parameter2"><a href="">The following are properly maintained by tained staff/technicians: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter2" class="panel-collapse collapse">
 									<li><a href="#">shops</a></li>
 									<li><a href="#">computer laboratory</a></li>
 									<li><a href="#">multi-media/educational technology center</a></li>
 									<li><a href="#">research facility</a></li>
-									<li data-toggle="collapse" href="#sub-parameter3"><a href="#"></a></li>
+									<li data-toggle="collapse" href="#sub-parameter3"><a href="#"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
 										<ol id="sub-parameter3" class="panel-collapse collapse">
 											<li><a href="">natural science/physical science</a></li>
 											<li><a href="">speech laboratory</a></li>
