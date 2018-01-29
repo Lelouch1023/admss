@@ -13,13 +13,13 @@
 
                 <ul>
                 	@foreach($val as $vals)
-                    	   <li><p>{{ $vals['name']}}</p></li>
+                    	   <li><p>{{ $vals->name}}</p></li>
                            <ul>
-                            @foreach($tags as $tagsa)
-                                @if($vals['area_id'] == $tagsa['area_id'])
-                                    <li>{{ $tagsa['parameter']}}</li>
+                            @for($i=0; $i<count($tags); $i++)
+                                @if($vals->area_id == $tags[$i]['area_id'])
+                                    <li><a href="{{ URL::to('/')."/".$vals->area_id  }}" style="color: #333">{{ $paramnames[$i]}}</a></li>
                                 @endif
-                            @endforeach
+                            @endfor
                         </ul>
                            <br>
                 	@endforeach

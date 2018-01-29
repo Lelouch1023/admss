@@ -84,9 +84,9 @@ class UploadController extends Controller
             $file = new File;
             $file->user_id = auth()->user()->id;
             $file->name = $fileNameToStore;
-            $file->file_type = $extension;
+            $file->file_type = Input::get('doctype');
             $file->save();
-            //echo $file->name;
+            //dd($request->input('doctype'));
 
             $tags = array();
             $tags = $this->extract($file->name);
@@ -95,26 +95,38 @@ class UploadController extends Controller
         if(count($tags) > 0){
            $arrkeys = array_keys($tags);
                 
-
-
             //gets the area name based on area_id from tags table
             $values = array();
-            $value = DB::table('areas')
-                        ->select('name')
-                        ->whereIn('area_id', $arrkeys)
-                        ->get();
-            //sorts the results from highest to lowest
-
-            $values = array_reverse($value->toArray());
-           
-
-         //saves the area_name and area_id into on array
-            for($i = 0; $i < count($arrkeys); $i++){
-                    $val[] = array(
-                        'area_id'=> $arrkeys[$i],
-                        'name' => $values[$i]->name
-                );
+            $valueD = array();
+            for($i=0; $i<count($arrkeys); $i++){
+                $valueD[] = DB::table('areas')
+                            ->select('area_id', 'name')
+                            ->where('area_id', '=', $arrkeys[$i])
+                            // ->orderBy(DB::raw("FIELD(area_id, '".join(',',$arrkeys)."')"))
+                            ->get();
+                //sorts the results from highest to lowest
             }
+            
+        
+           
+            foreach($valueD as $value){
+                foreach($value as $vals){
+                        $val[] = $vals;
+                }
+            }
+         //saves the area_name and area_id into on array
+            // for($i = 0; $i < count($arrkeys); $i++){
+            //     foreach($valueD as $values){
+
+            //         if($arrkeys[$i] == $values[$i]->area_id){
+            //             $val[] = array(
+            //                 'area_id'=> $values[$i]->,
+            //                 'name' => $values[$i]->name
+                    
+            //             );
+            //         }
+            //     }
+            // }
             $tagsfin = array();
 
             //save the tags and with area_name
@@ -130,7 +142,17 @@ class UploadController extends Controller
             //removes duplicated parameters
             $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
         }//endif
-          return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name);
+            $subparam = array();
+            foreach($tagdup as $tags){
+             $subparam[] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tags['parameter'], 2, strlen($tags['parameter'])));
+            } 
+        //!!!
+
+        //dd($val);
+        // end of if hasFile
+
+
+        return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name)->with('paramnames', $subparam);
 
         }
 
@@ -429,7 +451,7 @@ class UploadController extends Controller
             }
         } 
 
-
+        return $tag;
     
 
     }

@@ -33,7 +33,7 @@
 
 					<tr class="file">
 						<td class="col-xs-8">
-							<img src="{{ URL::to('/images/pdf.png') }}">
+							<img src="{{ URL::to('/').$file->id }}">
 							<a href="">{{$file->name}}</a>
 							<p>{{$file->created_at}}</p>
 							<!-- PHP Insert tags -->
