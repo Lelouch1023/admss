@@ -157,7 +157,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 }
 .category-content{
 	    height: 620px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     /*margin-bottom: 35px;*/
 
 }

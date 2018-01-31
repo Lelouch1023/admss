@@ -28,7 +28,7 @@
         <div id="custom-search-input">
           <div class="input-group ">
             {!!  Form::open(['route' => 'result', 'method' => 'GET', 'id'=> 'searchForm'])!!}
-                    <input type="text" class="search-query form-control" placeholder="Search" id="searchItem" name="searchItem"/>
+                    <input type="text" class="search-query form-control" placeholder="Search a file" id="searchItem" name="searchItem"/>
             {{ Form:: close() }}
             <span class="input-group-btn">
             <button class="btn btn-danger" type="button">
@@ -133,6 +133,11 @@
               </div>
             </div>
           </li>
+          @if(auth()->user()->user_lvl == 1)
+          <li class="adminpanel"> 
+            <a href="{{ route('admin') }}"><button class="btn btn-link nabar-btn">Admin Panel</button></a>
+          </li>
+          @endif
           </div>
         </ul>
       <!-- End of User Control bar -->

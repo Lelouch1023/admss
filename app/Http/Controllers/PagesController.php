@@ -38,6 +38,10 @@ class PagesController extends Controller
 
         return view('pages.about')->with('title', $title);
     }
+
+
+
+    
     /**
     * Function to load my uploads
     */

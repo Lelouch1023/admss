@@ -1,0 +1,38 @@
+.admin-panel{
+  text-align: center;
+  margin-top: 22px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: 530px;
+    margin-bottom: 30px;
+
+}
+.admin--default{
+    border-color: transparent;
+    margin-top: 23px;
+    background-color: #fff;
+}
+.admin-heading{
+	/*text-align: center;*/
+	border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: 1px solid transparent;
+    background: #1b1b1b;
+    padding: 8px 12px 0 12px;
+}
+.admin-panel th{
+	text-align: center;
+}
+#user-data{
+	vertical-align: middle;
+}
+#user-data a{
+	color: #bf2626;
+	vertical-align: middle;
+}
+#user-data a:hover{
+	text-decoration: underline;
+}

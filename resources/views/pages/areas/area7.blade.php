@@ -24,7 +24,7 @@
 					</h4>
 					</div>
 					<div id="collapseA" class="panel-collapse collapse">
-					  <div class="panel-body parameter-panel">
+					  <div class="panel-body parameter-panel ">
 		  				<table class="table table-hover">
 		  				<thead>	
 						<tr>
@@ -53,7 +53,7 @@
 							<ol id="collapse2" class="accrdn">
 								<li><a href=""> The library develops an explicit statement of its goals and objectives in conformity with the mandate of the institution. </a></li>
 								<li data-toggle="collapse" href="#sub-parameter1"><a href="">The library is administered and supervised by: <span class="glyphicon glyphicon-chevron-down"></span></a></li>
-									<ol id="sub-parameter" class="panel-collapse collapse">
+									<ol id="sub-parameter1" class="panel-collapse collapse">
 										<li><a href="#">a full-time professional licensed librarian</a></li>
 										<li><a href="#">at least a master’s degree holder in MS Library and Information Science or MAEd/MA in Library Science. </a></li>
 									</ol>
@@ -90,7 +90,7 @@
 					</h4>
 				</div>
 				<div id="collapseB" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
@@ -157,7 +157,7 @@
 					</h4>
 				</div>
 				<div id="collapseC" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
@@ -231,7 +231,7 @@
 					</h4>
 				</div>
 				<div id="collapseD" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
@@ -307,7 +307,7 @@
 					</h4>
 				</div>
 				<div id="collapseE" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
@@ -402,7 +402,7 @@
 					</h4>
 				</div>
 				<div id="collapseF" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
@@ -461,7 +461,7 @@
 					</h4>
 				</div>
 				<div id="collapseG" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>

@@ -22,7 +22,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware(['auth', 'admin']);
     }
 
     /**
@@ -32,6 +32,31 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view ('/admin');
+        $title = "Admin";
+
+        $users = User::where('isApproved', '=', 0)
+                    ->orderBy('created_at', 'desc')
+                    ->paginate(7);
+
+
+        return view('pages.admin')->with('title', $title)->with('users', $users);
+    }
+
+    /**
+    * Assigns a user to an area by an admin
+    *
+    */
+    public function assign(Request $request){
+        dd($_POST);
+        // $user =  User::find();
+        // $user->area_handled = $request->area_assign;
+        // $user->isApproved = 1;
+        // $user->save();
+
+        // $users = User::where('isApproved', '=', 0)
+        //             ->orderBy('created_at', 'desc')
+        //             ->paginate(7);
+
+        // return view('pages.admin')->with('success', 'Approved the user successfully.')->with('users', $users);
     }
 }

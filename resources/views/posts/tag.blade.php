@@ -46,6 +46,11 @@
             @else
                 <center><div><h3><i>No matching tag found.</i></h3></div></center>
 
+                 {!! Form::open(['action' => 'TagsController@store', 'method' => 'POST']) !!}
+                 <button class="btn btn-danger">Delete</button>
+                {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
+
+               {!! Form::close() !!} 
             @endif
             </div>  
         </div>

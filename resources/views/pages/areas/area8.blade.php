@@ -328,7 +328,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li data-toggle="collapse" href="#sub-paramete2"><a href="">Indoor facilities are constructed with: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
+							<li data-toggle="collapse" href="#sub-parameter2"><a href="">Indoor facilities are constructed with: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter2" class="panel-collapse collapse">
 									<li><a href="#">appropriate flooring</a></li>
 									<li><a href="#">proper lighting and ventilation</a></li>

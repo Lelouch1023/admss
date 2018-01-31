@@ -108,7 +108,7 @@
 					</h4>
 				</div>
 				<div id="collapseB" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
@@ -268,7 +268,7 @@
 					</h4>
 				</div>
 				<div id="collapseD" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
@@ -334,7 +334,7 @@
 					</h4>
 				</div>
 				<div id="collapseE" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
@@ -424,7 +424,7 @@
 					</h4>
 				</div>
 				<div id="collapseF" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
@@ -509,7 +509,7 @@
 					</h4>
 				</div>
 				<div id="collapseG" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
@@ -568,7 +568,7 @@
 					</h4>
 				</div>
 				<div id="collapseH" class="panel-collapse collapse">
-					<div class="panel-body">
+					<div class="panel-body parameter-panel">
 		  			<table class="table">
 		  			<thead>	
 					<tr>
