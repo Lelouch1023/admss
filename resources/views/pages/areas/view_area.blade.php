@@ -53,14 +53,20 @@
 						</td>
 					</tr>
 					@endforeach
+
+           			
            	@else
-			      	<tr><td  valign="middle" colspan="2" rowspan="5"><center><h3>No files found.</h3></center></td></tr>
+           		</table>
+			      	<p><center>No files found.</center></p>
 			      
            	@endif
 				</table>
 			</div>
 			<!-- /Category content -->
-           			{{$files->links()}}
+
+			@if(count($files) > 0)
+				{{$files->links()}}
+			@endif
 		
 	</div>
 </div>

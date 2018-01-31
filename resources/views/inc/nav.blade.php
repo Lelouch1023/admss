@@ -32,7 +32,7 @@
             {{ Form:: close() }}
             <span class="input-group-btn">
             <button class="btn btn-danger" type="button">
-              <span class="glyphicon glyphicon-search" style="color: #fff;"></span>
+              <span class="glyphicon glyphicon-search" style="color: #fff;" aria-hidden="true"></span>
             </button>
             </span>
           </div>
@@ -47,7 +47,7 @@
               <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();" title="Logout">
-              <span class="glyphicon glyphicon-off"></span></a>
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
               </form>
@@ -73,11 +73,7 @@
             </ul>
           </li><!--notifications-->
           <li class="upload">
-            <!-- <a href="/post/create" class="btn upload-btn">
-            <span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span>
-            </a> -->
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
+             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
 
             <!-- Modal -->
             <div id="createModal" class="modal fade" role="dialog">

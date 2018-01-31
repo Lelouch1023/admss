@@ -34,7 +34,7 @@
                     
                        <div class="login-btn-sec col-xs-6">
                            <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Login">
-                               <a href="#">Login</a>
+                               <a href="#login">Login</a>
                            </button>
                        </div>
                        <div class="reg-btn-sec col-sm-6">

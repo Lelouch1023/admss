@@ -1,4 +1,4 @@
-@guest
+        @guest
     <div class="container">
         <div class="row">
             
@@ -20,14 +20,16 @@
                     <label>{{ Auth::user()->name }}</label>
                 </div>
                 <div class="profile-usertitle-job">
-                    Developer
-                </div>
+               @foreach($area as $areas)
+                   {{ $areas->name }}
+               @endforeach
+               </div>
             </div>
             <!-- END SIDEBAR USER TITLE -->
             <!-- SIDEBAR BUTTONS -->
             <div class="profile-userbuttons">
-                <button type="button" class="btn btn-success btn-sm">Follow</button>
-                <button type="button" class="btn btn-danger btn-sm">Message</button>
+                <button type="button" class="btn btn-success btn-xs">Admin</button>
+                <!-- <button type="button" class="btn btn-danger btn-sm">Faculty</button> -->
             </div>
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
@@ -36,16 +38,14 @@
                 <div class="panel panel-default">
                     <div class="panel-heading  ">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close">
                             </span> 
-                            @foreach($area as $areas)
-                                My Area - {{ $areas->name }}
-                            @endforeach
+                                My Area
                              </a>
 
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
                                 @foreach($params as $para)
@@ -60,10 +60,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-flag">
+                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
                             </span> Pending Requests</a>
                         </h4>
-                    </div>
+                    </div>  
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
@@ -76,16 +76,17 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- END OF PENDING REQUESTS -->
                 <!-- ALL AREAS -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-folder-open">
+                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
                             </span> &nbsp; All Areas</a>
                         </h4>
                     </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
+                    <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
                                 <tr>
@@ -147,11 +148,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-trash">
+                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
                             </span> Bin</a>
                         </h4>
                     </div>
-                    <div id="collapseFive" class="panel-collapse collapse">
+                    <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
                                 <tr>
@@ -167,4 +168,42 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function showMyArea(){
+            if ($("#collapseOne").is(':visible')) {
+                $("#collapseOne").slideUp();   
+            }
+            else {
+                $("#collapseOne").slideDown();   
+            }
+        }
+
+        function showRequest(){
+            if ($("#collapseTwo").is(':visible')) {
+                $("#collapseTwo").slideUp();   
+            }
+            else {
+                $("#collapseTwo").slideDown();   
+            }
+        }
+        function showAllAreas(){
+            if ($("#collapseThree").is(':visible')) {
+                $("#collapseThree").slideUp();   
+            }
+            else {
+                $("#collapseThree").slideDown();   
+            }
+        }
+
+        function showBin(){
+            if ($("#collapseFour").is(':visible')) {
+                $("#collapseFour").slideUp();   
+            }
+            else {
+                $("#collapseFour").slideDown();   
+            }
+        }
+        
+    </script>
 @endguest

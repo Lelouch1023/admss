@@ -35,18 +35,18 @@
 						<tr>
 							<td>
 							<ol id="collapse2" class="accrdn">
-								<li><a href="">There is a Site Development Plan, and Program of Implementation.</a></li>
-								<li><a href="">The Campus accessible good roads and pathways.</a></li>
-								<li><a href="">The campus is in a well-planned, clean and properly landscaped environment.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8AS_1">There is a Site Development Plan, and Program of Implementation.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8AS_2">The Campus accessible good roads and pathways.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8AS_3">The campus is in a well-planned, clean and properly landscaped environment.</a></li>
 								<li data-toggle="collapse" href="#sub-parameter1"><a href="">There is a system to ensure that all of the following are provided:</a></li>
 									<ol id="sub-parameter1" class="panel-collapse collapse">
-										<li><a href="#">traffic safety in and outside the campus.</a></li>
-										<li><a href="#">waste management program</a></li>
-										<li><a href="#">proper utilization, repair and upkeep of school facilities and equipment</a></li>
-										<li><a href="#">cleanliness and orderliness of the school campus</a></li>
+										<li><a href="{{ URL::to('/') }}/area8/A/8AS_4_1">traffic safety in and outside the campus.</a></li>
+										<li><a href="{{ URL::to('/') }}/area8/A/8AS_4_2">waste management program</a></li>
+										<li><a href="{{ URL::to('/') }}/area8/A/8AS_4_3">proper utilization, repair and upkeep of school facilities and equipment</a></li>
+										<li><a href="{{ URL::to('/') }}/area8/A/8AS_4_4">cleanliness and orderliness of the school campus</a></li>
 									</ol>
-								<li><a href="">An area for outdoor educational activities, e.g. social, physical, atheletic, cultural, military training, etc. exists.</a></li>
-								<li><a href="">There is a  campus security unit that ensures safety of the academic community.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8AS_5">An area for outdoor educational activities, e.g. social, physical, atheletic, cultural, military training, etc. exists.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8AS_6">There is a  campus security unit that ensures safety of the academic community.</a></li>
 						    </ol>
 							</td>
 						</tr>
@@ -59,11 +59,11 @@
 						<tr>
 							<td>
 							<ol id="collapse2" class="accrdn">
-								<li><a href="">The site infrastructure development plan is implemented as planned.</a></li>
-								<li><a href="">The site plan is trategically displayed inside the campus indicating the location of the different buildings, driveways, parking areas, etc.</a></li>
-								<li><a href="">The infrastructure development plan is implemented in accordance with approved zoning ordinaces</a></li>
-								<li><a href="">Covered walks are provided to protect the academic community from inclement weather.</a></li>
-								<li><a href="">The institution implements a Waste Management Program.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8A/I_1">The site infrastructure development plan is implemented as planned.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8A/I_2">The site plan is trategically displayed inside the campus indicating the location of the different buildings, driveways, parking areas, etc.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8A/I_3">The infrastructure development plan is implemented in accordance with approved zoning ordinaces</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8A/I_4">Covered walks are provided to protect the academic community from inclement weather.</a></li>
+								<li><a href="{{ URL::to('/') }}/area8/A/8A/I_5">The institution implements a Waste Management Program.</a></li>
 						   	</ol>
 							</td>
 						</tr>
@@ -76,9 +76,9 @@
 							<tr>
 								<td>
 								<ol id="collapse2" class="accrdn">
-						      		<li><a href="">The Campus environment is conducive to all eductional activities.</a></li>
-						      		<li><a href="">The site can accommodate its present school population and future expansion.</a></li>
-						      		<li><a href="">The campus is safe and well-maintained.</a></li>
+						      		<li><a href="{{ URL::to('/') }}/area8/A/8AO_1">The Campus environment is conducive to all eductional activities.</a></li>
+						      		<li><a href="{{ URL::to('/') }}/area8/A/8AO_2">The site can accommodate its present school population and future expansion.</a></li>
+						      		<li><a href="{{ URL::to('/') }}/area8/A/8AO_3">The campus is safe and well-maintained.</a></li>
 						      	</ol>
 							    </td>
 							</tr>
@@ -105,20 +105,20 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The buildings meet all requirements of the Building Code. A Certificate of Occupancy for each building is conspicuously displayed.</a></li>
-							<li><a href="">The building are constructed according to their respective uses.</a></li>
-							<li><a href="">The buildings are well-planned and appropriately located to provide for future expansion.</a></li>
-							<li><a href="">Entrt and exit points permit the use of the buildings for public and other functions with minimum interference to school activities</a></li>
-							<li><a href="">Emergency exits are provided and properly marked.</a></li>
-							<li><a href="">The buildings are equipped with emergency/fire escapes which are readily accessible.</a></li>
-							<li><a href="">The corridors, doorways and alleys are well-cconstructed for better mobility.</a></li>
-							<li><a href="">The buildings are well-ventilated and lighted.</a></li>
-							<li><a href="">The buildings have facilities for persons with disability (PWDs) as provided by law.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_1">The buildings meet all requirements of the Building Code. A Certificate of Occupancy for each building is conspicuously displayed.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_2">The building are constructed according to their respective uses.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_3">The buildings are well-planned and appropriately located to provide for future expansion.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_4">Entrt and exit points permit the use of the buildings for public and other functions with minimum interference to school activities</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_5">Emergency exits are provided and properly marked.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_6">The buildings are equipped with emergency/fire escapes which are readily accessible.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_7">The corridors, doorways and alleys are well-cconstructed for better mobility.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_8">The buildings are well-ventilated and lighted.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_9">The buildings have facilities for persons with disability (PWDs) as provided by law.</a></li>
 							<li><a href="">There is a central signal and fire alarm system.</a></li>
-							<li><a href="">There are readily accessible and functional fire extinguishers and other fire-fighting equipment.</a></li>
-							<li><a href="">Bulletin boards, display boards, waste disposal containers and other amenities are strategically located inside the buildings.</a></li>
-							<li><a href="">There are faculty rooms and offices.</a></li>
-							<li><a href="">The buildings are insured.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_10">There are readily accessible and functional fire extinguishers and other fire-fighting equipment.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_11">Bulletin boards, display boards, waste disposal containers and other amenities are strategically located inside the buildings.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_12">There are faculty rooms and offices.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/8BS_13">The buildings are insured.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -132,15 +132,15 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The building are clean, well-maintained and free from vandalistic acts.</a></li>
-							<li><a href="">Toilets are clean and well-maintained.</a></li>
-							<li><a href="">Electrical lines are safely installed and periodically checked.</a></li>
-							<li><a href="">Water facilities are functional and well-distributed in all buildings.</a></li>
-							<li><a href="">There is a periodic potability testing of drinking water.</a></li>
-							<li><a href="">Floor plans, indicating fire exists and location of fire-fighting equipment, stand pipes and other water sources are conspicuously displayed in each building.</a></li>
-							<li><a href="">All school facilities are periodically subjected to pest control annd inspection.</a></li>
-							<li><a href="">Smoking is strictly prohibited inside the campus.</a></li>
-							<li><a href="">Periodic drill on disaster and risk reduction (earthquake, flood, fire, etc.) is conducted.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_1">The building are clean, well-maintained and free from vandalistic acts.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_2">Toilets are clean and well-maintained.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_3">Electrical lines are safely installed and periodically checked.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_4">Water facilities are functional and well-distributed in all buildings.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_5">There is a periodic potability testing of drinking water.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_6">Floor plans, indicating fire exists and location of fire-fighting equipment, stand pipes and other water sources are conspicuously displayed in each building.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_7">All school facilities are periodically subjected to pest control annd inspection.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_8">Smoking is strictly prohibited inside the campus.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BI_9">Periodic drill on disaster and risk reduction (earthquake, flood, fire, etc.) is conducted.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -154,7 +154,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The buildings and other facilities are safe, well-maintained and functional.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/B/7BO_1">The buildings and other facilities are safe, well-maintained and functional.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -183,10 +183,10 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Classroom size (1.5 sq.m. per student) meets standard specifications for instruction.</a></li>
-							<li><a href="">The classrooms are well-lighted, ventilated and acoustically conditioned.</a></li>
-							<li><a href="">The classrooms are adequate and are provided with enough chairs, furniture and equipment.</a></li>
-							<li><a href="">There are sufficient supplies (chalkboards/whiteboards, and ainstructional materials) in each classroom.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CS_1">Classroom size (1.5 sq.m. per student) meets standard specifications for instruction.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CS_2">The classrooms are well-lighted, ventilated and acoustically conditioned.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CS_3">The classrooms are adequate and are provided with enough chairs, furniture and equipment.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CS_4">There are sufficient supplies (chalkboards/whiteboards, and ainstructional materials) in each classroom.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -200,9 +200,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The classrooms are clearly marked and arranged relative to their functions.</a></li>
-							<li><a href="">The classrooms are well-maintained and free from interference.</a></li>
-							<li><a href="">Students cooperate in mainting the cleanliness and orderliness of the classrooms.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CI_1">The classrooms are clearly marked and arranged relative to their functions.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CI_2">The classrooms are well-maintained and free from interference.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CI_3">Students cooperate in mainting the cleanliness and orderliness of the classrooms.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -216,7 +216,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Classrooms are adequate and conducive to learning.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/C/8CO_1">Classrooms are adequate and conducive to learning.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -245,14 +245,14 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The administrative offices are accessible to stakeholders.</a></li>
-							<li><a href="">All offices are accessible and conveniently located in accordance to their functions.</a></li>
-							<li><a href="">There are offices and workspaces for all officials, faculty and administrative staff.</a></li>
-							<li><a href="">Administration and faculty offices and staff rooms are clean, well-lighted and ventilated.</a></li>
-							<li><a href="">Function rooms and lounge are available.</a></li>
-							<li><a href="">Storerooms are strategically located.</a></li>
-							<li><a href="">There is internal and external communication system.</a></li>
-							<li><a href="">There are clean toilets for administrators, faculty, staff and students.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">The administrative offices are accessible to stakeholders.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">All offices are accessible and conveniently located in accordance to their functions.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There are offices and workspaces for all officials, faculty and administrative staff.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Administration and faculty offices and staff rooms are clean, well-lighted and ventilated.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Function rooms and lounge are available.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Storerooms are strategically located.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There is internal and external communication system.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There are clean toilets for administrators, faculty, staff and students.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -266,8 +266,8 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">All offices are furnished with necessary equipment, furniture, supplies and materials.</a></li>
-							<li><a href="">All offices are well-maintained.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DI_1">All offices are furnished with necessary equipment, furniture, supplies and materials.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DI_2">All offices are well-maintained.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -281,7 +281,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The offices and staff rooms are adequate and conducive to working environment.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DO_1">The offices and staff rooms are adequate and conducive to working environment.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -310,11 +310,11 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Function rooms for holding meetings, conferences, convocations and similar activities are sufficient.</a></li>
-							<li><a href="">Facilities for athletics sports, cultural activities, military training, etc. are accessible.</a></li>
-							<li><a href="">The seating capacity conforms to standards.</a></li>
-							<li><a href="">There are adequate and well-marked entry and exit points.</a></li>
-							<li><a href="">There are storage facilities for athletic sports and other curricular training equipment.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8ES_1">Function rooms for holding meetings, conferences, convocations and similar activities are sufficient.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8ES_2">Facilities for athletics sports, cultural activities, military training, etc. are accessible.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8ES_3">The seating capacity conforms to standards.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8ES_4">There are adequate and well-marked entry and exit points.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8ES_5">There are storage facilities for athletic sports and other curricular training equipment.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -330,23 +330,23 @@
 						<ol class="accrdn">
 							<li data-toggle="collapse" href="#sub-parameter2"><a href="">Indoor facilities are constructed with: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter2" class="panel-collapse collapse">
-									<li><a href="#">appropriate flooring</a></li>
-									<li><a href="#">proper lighting and ventilation</a></li>
-									<li><a href="#">safety measures</a></li>
-									<li><a href="#">toilets</a></li>
-									<li><a href="#">functional drinking facilities</a></li>
-									<li><a href="#">enough chairs</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_1">appropriate flooring</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_2">proper lighting and ventilation</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_3">safety measures</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_4">toilets</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_5">functional drinking facilities</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_1_6">enough chairs</a></li>
 								</ol>
 							<li data-toggle="collapse" href="#sub-parameter3"><a href="">The constructed outdoor facilities are: <span class="glyphicon glyphicon-chevron-down"></span> </a></li> 
 								<ol id="sub-parameter3" class="panel-collapse collapse">
-									<li><a href="#">free from hazards</a></li>
-									<li><a href="#">suitably surfaced floor</a></li>
-									<li><a href="#">appropriately laid out for a variety of activities</a></li>
-									<li><a href="#">properly maintined an secured</a></li>
-									<li><a href="#">installed with drainage system</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_2_1">free from hazards</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_2_2">suitably surfaced floor</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_2_3">appropriately laid out for a variety of activities</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_2_4">properly maintined an secured</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/E/8EI_2_5">installed with drainage system</a></li>
 								</ol>
-							<li><a href="">Assembly, athletic sports and cultural facilities are suffiecient and varied to meet the requirements of the institution.</a></li>
-							<li><a href="">Audio-visual room and facilities with appropriate equipment are utilized in support of the teaching-learning such as but not limited to video/overhead/slide projector, soundsystem, LCD projectors and screens.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8EI_3">Assembly, athletic sports and cultural facilities are suffiecient and varied to meet the requirements of the institution.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8EI_4">Audio-visual room and facilities with appropriate equipment are utilized in support of the teaching-learning such as but not limited to video/overhead/slide projector, soundsystem, LCD projectors and screens.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -360,7 +360,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Indoor and outdoor facilities are well-equipped and properly maintained.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/E/8EO_1">Indoor and outdoor facilities are well-equipped and properly maintained.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -389,35 +389,35 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Medical and Dental Clinic has basic facilities such as: reception area, records section, examination/treament room and toilets.</a></li>
-							<li><a href="">The institution has functional medical and dental section/area.</a></li>
-							<li><a href="">Portable water is available and sufficient.</a></li>
-							<li><a href="">Medical and dental equipment are provided.</a></li>
-							<li><a href="">There are enough medical and dental supplies and materials.</a></li>
-							<li><a href="">Storage facilities (refrigerator, steel cabinets, etc.) are available.</a></li>
-							<li><a href="">Medical and dental supplies and materials have proper labels.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_1">The Medical and Dental Clinic has basic facilities such as: reception area, records section, examination/treament room and toilets.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_2">The institution has functional medical and dental section/area.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_3">Portable water is available and sufficient.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_4">Medical and dental equipment are provided.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_5">There are enough medical and dental supplies and materials.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_6">Storage facilities (refrigerator, steel cabinets, etc.) are available.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_7">Medical and dental supplies and materials have proper labels.</a></li>
 							<li data-toggle="collapse" href="#sub-parameter4"><a href="">The following basic medical equipment and medicines are all available: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter4" class="panel-collapse collapse">
-									<li><a href="#">emergency medicines</a></li>
-									<li><a href="#">ambobag</a></li>
-									<li><a href="#">oxygen tank</a></li>
-									<li><a href="#">intravenous fluid</a></li>
-									<li><a href="#">sphygmomanometer <i>(at least 2 sets)</i></a></li>
-									<li><a href="#">thermometer <i>(at least 10 pcs)</i></a></li>
-									<li><a href="#">diagnostic sets</a></li>
-									<li><a href="#">stethoscope<i>(at least 2 units)</i></a></li>
-									<li><a href="#">treatment cart</a></li>
-									<li><a href="#">nebulizer</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_1">emergency medicines</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_2">ambobag</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_3">oxygen tank</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_4">intravenous fluid</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_5">sphygmomanometer <i>(at least 2 sets)</i></a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_6">thermometer <i>(at least 10 pcs)</i></a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_7">diagnostic sets</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_8">stethoscope<i>(at least 2 units)</i></a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_9">treatment cart</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_8_10">nebulizer</a></li>
 								</ol>
 							<li data-toggle="collapse" href="#sub-parameter5"><a href="">The following basic dental equipment and apparatuses are available: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter5" class="panel-collapse collapse">
-									<li><a href="#">dental chair</a></li>
-									<li><a href="#">autoclave (sterilizer)</a></li>
-									<li><a href="#">medical supplies</a></li>
-									<li><a href="#">filling instruments</a></li>
-									<li><a href="#">basic instruments (forceps, mouth, mirror, cotton fliers, explorer, etc).</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_9_1">dental chair</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_9_2">autoclave (sterilizer)</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_9_3">medical supplies</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_9_4">filling instruments</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/F/8FS_9_5">basic instruments (forceps, mouth, mirror, cotton fliers, explorer, etc).</a></li>
 								</ol>
-							<li><a href="">The Medical/Dental Clinic has able space, adequate lighting and ventilation.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FS_10">The Medical/Dental Clinic has able space, adequate lighting and ventilation.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -431,9 +431,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Medical and Dental Clinics are managed by qualified medical and dental officers.</a></li>
-							<li><a href="">Distinct rooms and storage areas are properly labeled.</a></li>
-							<li><a href="">Medical and dental services are regularly monitored and evaluated.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FI_1">The Medical and Dental Clinics are managed by qualified medical and dental officers.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FI_2">Distinct rooms and storage areas are properly labeled.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FI_3">Medical and dental services are regularly monitored and evaluated.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -447,7 +447,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The medical, dental clinic and services are functional.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/F/8FO_1">The medical, dental clinic and services are functional.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -465,7 +465,7 @@
 					</h4>
 				</div>
 				<div id="collapseG" class="panel-collapse collapse">
-					<div class="panel-body parameter-panel">
+					<d8iv class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
 					<tr>
