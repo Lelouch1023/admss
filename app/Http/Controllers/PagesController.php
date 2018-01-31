@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\File;
 
+use Jenssegers\Agent\Agent;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Tag;
@@ -46,6 +47,9 @@ class PagesController extends Controller
     * Function to load my uploads
     */
     public function uploads(){ 
+        $agent = new Agent();
+        $agent_view = $agent->isMobile();
+
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
         
@@ -149,6 +153,11 @@ class PagesController extends Controller
         $files = DB::table('files')->paginate(5);
 
         return view('pages.pending')->with('files', $files);
+    }
+    public function mobile(){ 
+        $files = DB::table('files')->paginate(5);
+
+        return view('mobile.pages.home')->with('files', $files);
     }
     
     /**

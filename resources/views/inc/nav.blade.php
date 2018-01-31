@@ -125,9 +125,10 @@
                   <div class="modal-footer">
                   </div>
                 </div>
-
               </div>
             </div>
+          </div>
+          <!-- End of modal -->
           </li>
           @if(auth()->user()->user_lvl == 1)
           <li class="adminpanel"> 

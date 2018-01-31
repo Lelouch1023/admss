@@ -22,6 +22,8 @@ Route::get('/bin', 'PagesController@bin');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 
 Route::get('uploads/view/{file}', 'PagesController@viewfile');
+// Routes for Mobile
+Route::get('/mobile/home', 'PagesController@mobile')->name('mobile');
 
  
  
@@ -38,6 +40,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
+Route::get('/mobile/result', 'UploadController@mobile_result')->name('mobile_result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
 Route::get('/viewfile', 'PagesController@viewfile')->name('viewfile');
 Route::get('/upload', 'UploadController@create');

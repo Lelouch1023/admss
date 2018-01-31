@@ -70,12 +70,11 @@
                                 <tr>
                                     <td>
                                         <a href="{{ ('pending')}}">Tags</a> <span class="label label-danger">2</span>
+                                        <br>
+                                        <button type="submit" class="btn see-all" ><a href="">See All</a></button>
                                     </td>
                                 </tr>
                             </table>
-                            <hr>
-                                <center><button><a href="">See All</a></button></center>
-                            <hr>
                         </div>
                     </div>
                 </div>

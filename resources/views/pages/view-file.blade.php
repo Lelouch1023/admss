@@ -24,7 +24,7 @@
 						<td class="col-xs-6 file">
 							<img src="{{ URL::to('/images/pdf-file.png') }}">
 							<p><b><h4>{{$file->name}}</h4></b></p>
-							<p>November 6, 2018</p>
+							<p>{{$file->created_at}}</p>
 
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-restore"><a href="/uploads/edit/{{$file->id}}">Revise</a></button>

@@ -28,15 +28,12 @@
              <div id="banner" class="col-xs-12">
                <div class="container">
                    <div class="site-title">
-                       <h1>ac·cred·i·ta·tion.</h1>
+                       <!-- <h1>ac·cred·i·ta·tion.</h1> -->
                        <h4><i>(n)</i> the accreditation process ensures that their certification practices are acceptable, typically meaning that they are competent to test and certify third parties, behave ethically and employ suitable quality assurance.</h4>
                    </div>
                    <div class="btn-section col-xs-12">
                     @guest
                     
-                       <!-- <div class="login-btn-sec col-xs-6">
-                           <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Login">Login</button>
-                       </div> -->
                        <div class="login-btn-sec col-sm-6">
                            <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Register">Login</button>
                        </div>
@@ -57,13 +54,11 @@
         <!-- Script -->
         <script type="text/javascript">
         var APP_URL = {!! json_encode(url('/')) !!}
-    </script>
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script> -->
-    <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
-
-    <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script> -->
-    </body>
+        </script>
+        <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
+        <!-- /Script -->
+  </body>
 </html>

@@ -190,7 +190,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 	color: #000;
 }
 .file p{
-	/*margin:	-6px 0 0px 36px;*/
+	margin:	-9px 0 0px 36px;
 }
 .file-action{
 	text-align: center;
@@ -246,6 +246,17 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .ignore span:hover{
 	color: 	#954120;
 }
+.see-all{
+	    background: transparent;
+    border: none;
+    padding: 2px 0px;
+}
+.keyword{
+	background: transparent;
+    border: none;
+    margin: 3px 0;
+    color: #fff
+}
 
 /*alerts*/
 .msg-alert{
@@ -263,11 +274,14 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
     vertical-align: middle;
 }
 #user-date p{
-    margin-top: -5px;
     font-size: 13px;
+    margin: -6px 0 0px 0px;
 }
 #user-date label{
 	margin: 0px;
+}
+.type label{
+	text-transform: uppercase;
 }
 .select, .type{
 	text-align: center;
