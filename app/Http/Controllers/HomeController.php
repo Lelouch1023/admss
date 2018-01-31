@@ -34,7 +34,19 @@ class HomeController extends Controller
     {
         // $user_id = auth()->user()->id;
         // $user = User::find($user_id);
+        if(auth()->user()->isApproved != 1){
+            return redirect(route('getLogout'));
+        }else{
+            return redirect('/uploads');
+        }
+    }
 
-        return redirect('/uploads');
+    /**
+    *logs a user out after registration
+    */
+    public function logoutreg(Request $request) {
+        auth()->logout();
+        return back()->with('success', 'Account created. Wait for the admin approval to be able to login.');
+      
     }
 }

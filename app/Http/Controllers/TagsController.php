@@ -12,6 +12,8 @@ class TagsController extends Controller
 {
 	public function __construct(){
 		$this->middleware('auth');
+		
+		
 	}
 	// public function index(){
 
@@ -20,6 +22,7 @@ class TagsController extends Controller
 
 	public function store(Request $request){
 
+	
 		$input = $request->all();
 		$areas = array_values($input['area']['area']);
 		$param = array_values($input['param']['parameter']);
@@ -36,6 +39,7 @@ class TagsController extends Controller
 		}
 
 		return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
+	
 
 
 

@@ -20,8 +20,10 @@ class PagesController extends Controller
         $this->middleware('auth', ['except' => 'index']);
     }
     public function index(){
-    	
-    	return view('pages.index');
+    	if(\Auth::guest())
+    	   return view('pages.index');
+        else
+            return redirect('/home');
     }
 
     public function services(){
@@ -36,25 +38,33 @@ class PagesController extends Controller
 
         return view('pages.about')->with('title', $title);
     }
-    // For admin
-    public function admin(){
-        $title = "Admin";
 
-        return view('pages.admin')->with('title', $title);
-    }
 
+
+    
+    /**
+    * Function to load my uploads
+    */
     public function uploads(){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
         
         return view('pages.my_uploads')->with('files', $files);
     }
-    public function viewfile(){ 
+    public function viewfile($file){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
-        return view('pages.view-file')->with('files', $files);
+        $files = File::where('id', '=', $file)->get();
+
+        if(count($files) > 0){
+            return view('pages.view-file')->with('files', $files);
+        }else{
+            abort(404);
+        }   
     }
 
+    /**
+    * Function to view 
+    */
     public function assignedArea(){ 
         $usernow = User::find(auth()->user()->id);
         $areaAssigned = $usernow->area_handled;
@@ -75,78 +85,75 @@ class PagesController extends Controller
             foreach($tagdup as $key => $value){
                 $wheres[] = $tagdup[$key]->file_name;
             }
-            $files = DB::table('files')->whereIn("name", $wheres)->get();
+            $files = DB::table('files')->whereIn("name", $wheres)
+                            ->where('isDeleted', '=', '0')->get();
 
           
         }
             return view('pages.assignedArea')->with('files', $files)->with('area', $area);
     }
+
+    /**
+    * Function for handling the bin
+    */
     public function bin(){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(10);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(5);
         return view('pages.bin')->with('files', $files);
     }
     
+    /**
+    * Functions that returns the view of areas
+    */
     public function area1(){ 
-        $files = DB::table('files')->paginate(5);
-
-        return view('pages.areas.area1')->with('files', $files);
+        return view('pages.areas.area1');
     }
     public function area2(){ 
-        $files = DB::table('files')->paginate(5);
-
-        return view('pages.areas.area2')->with('files', $files);
+        return view('pages.areas.area2');
     }
     public function area3(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area3')->with('files', $files);
+        return view('pages.areas.area3');
     }
     public function area4(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area4')->with('files', $files);
+        return view('pages.areas.area4');
     }
     public function area5(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area5')->with('files', $files);
+        return view('pages.areas.area5');
     }
     public function area6(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area6')->with('files', $files);
+        return view('pages.areas.area6');
     }
     public function area7(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area7')->with('files', $files);
+        return view('pages.areas.area7');
     }
     public function area8(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area8')->with('files', $files);
+        return view('pages.areas.area8');
     }
     public function area9(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area9')->with('files', $files);
+        return view('pages.areas.area9');
     }
     public function area10(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area10')->with('files', $files);
+        return view('pages.areas.area10');
     }
     public function pending(){ 
         $files = DB::table('files')->paginate(5);
 
         return view('pages.pending')->with('files', $files);
     }
-    // public function viewarea(){ 
-    //     $files = DB::table('files')->paginate(5);
-
-    //     return view('pages.areas.view-area')->with('files', $files);
-    // }
+    
+    /**
+    * Function to view the specific sub parameter
+    */
     public function viewarea($area, $para, $subpara){ 
         // $files = DB::table('tag')->where('parameter', '=', $para)->paginate(5);    
         $paraname = DB::table('parameters')
@@ -154,13 +161,14 @@ class PagesController extends Controller
                         ->where('area_id', '=', $area)
                         ->where('param_id', '=', $para)       
                         ->get();
+        // area1 => Area 1
         $areanum = strtoupper(substr($area, 0, 1)).substr($area, 1, 3)." ".substr($area, 4) ;
         $result = DB::table('tags')
                     ->select('file_name')
                     ->where('area_id', '=', $area)
                     ->where('parameter', '=', $subpara)
                     ->get();
-                    
+        //s_1 => s.1            
         $subparam = preg_replace('/[^A-Za-z0-9]/', '.', substr($subpara, 2, strlen($subpara)));
         $files = array();   
             if(count($result) > 0){
@@ -168,7 +176,7 @@ class PagesController extends Controller
                 $wheres[] = $res->file_name;
             }
 
-            $files = File::whereIn('name', $wheres)->paginate(5);
+            $files = File::whereIn('name', $wheres)->where('isDeleted', '=', '0')->paginate(5);
         }
         //dd($subparam);
         return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);

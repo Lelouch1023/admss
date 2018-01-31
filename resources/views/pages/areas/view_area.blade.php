@@ -34,13 +34,18 @@
 			     		@foreach ($files as $file)	
 
 					<tr class="file">
+
+						<td class="col-xs-8">
+							<img src="{{ URL::to('/').$file->id }}">
+							<a href="">{{$file->name}}</a>
+
 						<td class="col-xs-5">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<a href="{{ URL::to('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
 						</td>
 						<td class="col-xs-3 type">
 							<!-- Php code for document type -->
-							<p>Memorandum</p>
+							<p>{{ $file->file_type }}</p>
 						</td>
 						<td id="user-date" class="col-xs-3">
 							<label>{{ Auth::user()->name }}</label>

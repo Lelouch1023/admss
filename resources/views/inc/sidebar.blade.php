@@ -73,6 +73,9 @@
                                     </td>
                                 </tr>
                             </table>
+                            <hr>
+                                <center><button><a href="">See All</a></button></center>
+                            <hr>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -36,4 +38,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    /**
+    * Overriding login() for the admin-approved 
+    * account authentication
+    */
+   
+   public function authenticated(Request $request, $user)
+    {
+        if (!$user->isApproved) {
+            auth()->logout();
+            return back()->with('error', 'Your account is not activated yet, contact admin');
+        }
+        return redirect()->intended($this->redirectPath());
+    }
+
+    
+    
 }

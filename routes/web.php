@@ -12,14 +12,17 @@
 */
  
 Route::get('/', 'PagesController@index');
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::post('/admin', 'AdminController@assign');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
 Route::get('/pending', 'PagesController@pending')->name('pending');
-Route::get('/viewfile', 'PagesController@viewfile');
+
+Route::get('uploads/view/{file}', 'PagesController@viewfile');
+
  
  
 //Route::resource('post', 'UploadController');
@@ -32,8 +35,7 @@ Route::get('/markAsRead', function(){
  
 });
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'AdminController@index')->name('admin');
-Route::get('/admin', 'PagesController@admin')->name('admin');
+
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
@@ -61,4 +63,5 @@ Route::get('/area8', 'PagesController@area8')->name('area8');
 Route::get('/area9', 'PagesController@area9')->name('area9');
 Route::get('/area10', 'PagesController@area10')->name('area10');
  
+Route::get('/logout', 'HomeController@logoutreg')->name('getLogout'); 
 Route::post('/tag', 'TagsController@store');
