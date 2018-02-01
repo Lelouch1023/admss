@@ -87,7 +87,7 @@
                   </div>
                   <div class="modal-body">
                     <!-- Php code for connection of data -->
-                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                   {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <!--/comment -->
                 
                     <form method="POST" action="#" enctype="multipart/form-data">
@@ -95,13 +95,13 @@
                       <div class="form-group">
                         <label>Select document type</label>
                         <!-- Selection for document type -->
-                        <select class="form-control" id="">
-                          <option>Memorandum</option>
-                            <option>Office Orders</option>
-                            <option>TUP Orders</option>
-                            <option>Certicates</option>
-                          <option>Researches</option>
-                          <option>Grade Sheets</option>
+                        <select class="form-control" id="doctype" name="doctype">
+                          <option value="Memorandum">Memorandum</option>
+                          <option value="Office Order">Office Orders</option>
+                          <option value="TUP Orders">TUP Orders</option>
+                          <option value="Certificates">Certicates</option>
+                          <option value="Researches">Researches</option>
+                          <option value="Grade Sheets">Grade Sheets</option>
                         </select>
                     </div>
                       <div class="form-group">
@@ -115,12 +115,9 @@
                             </span>
                         </div>
                       </div>
-                      
                       <!-- COMPONENT END -->
-                      <div class="form-group">
-                        <br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                      </div>
+                        {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
+                        {!! Form::close() !!}
                     </form>
                   <div class="modal-footer">
                   </div>
@@ -130,11 +127,11 @@
           </div>
           <!-- End of modal -->
           </li>
-          @if(auth()->user()->user_lvl == 1)
+          <!-- @if(auth()->user()->user_lvl == 1)
           <li class="adminpanel"> 
             <a href="{{ route('admin') }}"><button class="btn btn-link nabar-btn">Admin Panel</button></a>
           </li>
-          @endif
+          @endif -->
           </div>
         </ul>
       <!-- End of User Control bar -->
@@ -142,6 +139,5 @@
     </div>
 </div>
 </nav>
-
 
 @endguest

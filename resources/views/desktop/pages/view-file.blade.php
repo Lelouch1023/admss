@@ -30,14 +30,14 @@
 								<button type="button" class="bin-restore"><a href="/uploads/edit/{{$file->id}}">Revise</a></button>
 							@endif
 
-							<button type="button" class="download"><a href="storage/uploads/{{$file->name}}">Download</a></button>
+							<button type="button" class="download"><a href="storage/uploads/{{$file->name}}"  download="{{$file->name}}">Download</a></button>
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete">Delete</button>
 							@endif
 							<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
-							    <div class="modal-content delete-modal">
+							    <div class="modal-content">
 							      <div class="modal-header">
 							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
 							      </div>

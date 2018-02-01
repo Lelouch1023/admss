@@ -37,7 +37,7 @@
 							<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
-							    <div class="modal-content delete-modal">
+							    <div class="modal-content">
 							      <div class="modal-header">
 							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
 							      </div>
@@ -61,12 +61,9 @@
 						</td>
 					</tr>
 			@endforeach
-          		      
 				</table>
-
 			</div>	
 		</div>
-		
 	</div>
 </div>
 @endsection

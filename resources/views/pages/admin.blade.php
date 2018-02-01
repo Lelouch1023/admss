@@ -13,10 +13,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                 
                         <div class="tab-pane fade in active" id="tab1default">
-
-						
                         	<table class="table table-hover">
 						    <thead>
 						      <tr>
@@ -48,29 +45,23 @@
 								        <option value="area10">Area 10</option>
 								    </select>
 						        </td>
-						        
 						        <td id="user-data">
-
 						        	<input type="hidden" name="user_id{{ $user->id }}" value={{ $user->id }}>
-
 						        	{{ Form::submit('Approve', ['class' => 'btn btn-success']) }}
 						        	<button class="btn btn-danger">Reject</button>
-
 						        </td>
-						        
 						 			{!! Form::close() !!}
 						      </tr>
+						  </tbody>
 						      @endforeach
-						    @else
-						    <tr><td colspan="4">No pending users.</td></tr>
+						  @else
+						    <p>No pending users</p>
 						    @endif
-
-						    </tbody>
-
-						  </table>
-
+						</table>
+					</div>
+						    
 						    <center>{{ $users->links() }}</center>
-                        </div>
+                    </div>
 
                         <!-- Area Panel -->
                         <div class="tab-pane fade" id="tab2default">

@@ -27,10 +27,12 @@
             </div>
             <!-- END SIDEBAR USER TITLE -->
             <!-- SIDEBAR BUTTONS -->
-            <div class="profile-userbuttons">
-                <button type="button" class="btn btn-success btn-xs">Admin</button>
-                <!-- <button type="button" class="btn btn-danger btn-sm">Faculty</button> -->
-            </div>
+            @if(auth()->user()->user_lvl == 1)
+              <div class="profile-userbuttons">
+                    <button onclick="window.location.href='{{ ('admin') }}'" type="button" class="btn btn-success btn-xs">Admin Panel</button>
+                </div>
+            @endif
+            
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
             <!-- MY AREA  -->
