@@ -15,28 +15,32 @@
 		  	@endforeach /
 		  	<a href="#" class="active">{{ $subparam }}</a>
 
-		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" onclick=""><span class="glyphicon glyphicon-plus" aria-hidden="true" title="Upload a file"></span></button>
+		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" ><span class="glyphicon glyphicon-plus" aria-hidden="true" title="Add keyword" style="color: #fff;"></span></button>
 
             <!-- Modal -->
-            <div id="keywordsModal" class="modal fade" role="dialog">
-              <div class="modal-dialog upload-modal">
+            <div id="keywordsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content keywords">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <h4 class="modal-title" id="myModalLabel">Add Keywords</h4>
+			        </div>
+			        <form class="tagForm" id="keyword-form" action="" method="post" enctype="multipart/form-data">
+			            <div class="modal-body">
+			                <label for="keywordName">Keyword: </label>
+			                <input id="keywordName" class="form-control" type="text"/>
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add keywords</h4>
-                  </div>
-                  <div class="modal-body">
-                    
-                    
-                  <div class="modal-footer">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of modal -->
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Add Keyword">
+			            </div>
+			        </form>
+			    </div>
+			</div>
+			</div>
+
+           <!-- End of modal -->
 		  </div>
 		<div class="categories">
 			<!-- Category contents -->
