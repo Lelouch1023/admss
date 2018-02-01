@@ -16,6 +16,6 @@ class BaseController extends Controller
 		if ( Agent::isMobile() ) 
            return view('mobile.pages.index');
 		 else 
-           return view('pages.index');
+           return view('desktop.pages.index');
     }
 }

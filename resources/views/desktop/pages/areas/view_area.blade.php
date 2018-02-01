@@ -25,45 +25,11 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upload a file</h4>
+                    <h4 class="modal-title">Add keywords</h4>
                   </div>
                   <div class="modal-body">
-                    <!-- Php code for connection of data -->
-                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                    <!--/comment -->
-                
-                    <form method="POST" action="#" enctype="multipart/form-data">
-                      <!-- COMPONENT START -->
-                      <div class="form-group">
-                        <label>Select document type</label>
-                        <!-- Selection for document type -->
-                        <select class="form-control" id="">
-                          <option>Memorandum</option>
-                            <option>Office Orders</option>
-                            <option>TUP Orders</option>
-                            <option>Certicates</option>
-                          <option>Researches</option>
-                          <option>Grade Sheets</option>
-                        </select>
-                    </div>
-                      <div class="form-group">
-                        <div class="input-group input-file" name="Fichier1">
-                          <span class="input-group-btn">
-                                <button class="btn btn-default btn-choose" type="button">Choose</button>
-                            </span>
-                            <input type="text" class="form-control" placeholder='Choose a file...' />
-                            <span class="input-group-btn">
-                                 <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                            </span>
-                        </div>
-                      </div>
-                      
-                      <!-- COMPONENT END -->
-                      <div class="form-group">
-                        <br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                      </div>
-                    </form>
+                    
+                    
                   <div class="modal-footer">
                   </div>
                 </div>

@@ -39,7 +39,7 @@ class AdminController extends Controller
                     ->paginate(7);
 
 
-        return view('pages.admin')->with('title', $title)->with('users', $users);
+        return view('desktop.pages.admin')->with('title', $title)->with('users', $users);
     }
 
     /**

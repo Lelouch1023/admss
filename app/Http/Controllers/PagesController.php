@@ -22,7 +22,7 @@ class PagesController extends Controller
     }
     public function index(){
     	if(\Auth::guest())
-    	   return view('pages.index');
+    	   return view('desktop.pages.index');
         else
             return redirect('/home');
     }
@@ -30,14 +30,14 @@ class PagesController extends Controller
     public function services(){
     	$title = "Services";
 
-    	return view('pages.services')->with('title', $title);
+    	return view('desktop.pages.services')->with('title', $title);
     }
 
 
     public function about(){
         $title = "About";
 
-        return view('pages.about')->with('title', $title);
+        return view('desktop.pages.about')->with('title', $title);
     }
 
 
@@ -48,19 +48,19 @@ class PagesController extends Controller
     */
     public function uploads(){ 
         $agent = new Agent();
-        $agent_view = $agent->isMobile();
+        $agent = $agent->isMobile();
 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
-        
-        return view('pages.my_uploads')->with('files', $files);
+
+        return view('desktop.pages.my_uploads')->with('files', $files);
     }
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
 
         if(count($files) > 0){
-            return view('pages.view-file')->with('files', $files);
+            return view('desktop.pages.view-file')->with('files', $files);
         }else{
             abort(404);
         }   
@@ -94,7 +94,7 @@ class PagesController extends Controller
 
           
         }
-            return view('pages.assignedArea')->with('files', $files)->with('area', $area);
+            return view('desktop.pages.assignedArea')->with('files', $files)->with('area', $area);
     }
 
     /**
@@ -103,56 +103,56 @@ class PagesController extends Controller
     public function bin(){ 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(5);
-        return view('pages.bin')->with('files', $files);
+        return view('desktop.pages.bin')->with('files', $files);
     }
     
     /**
     * Functions that returns the view of areas
     */
     public function area1(){ 
-        return view('pages.areas.area1');
+        return view('desktop.pages.areas.area1');
     }
     public function area2(){ 
-        return view('pages.areas.area2');
+        return view('desktop.pages.areas.area2');
     }
     public function area3(){ 
 
-        return view('pages.areas.area3');
+        return view('desktop.pages.areas.area3');
     }
     public function area4(){ 
 
-        return view('pages.areas.area4');
+        return view('desktop.pages.areas.area4');
     }
     public function area5(){ 
 
-        return view('pages.areas.area5');
+        return view('desktop.pages.areas.area5');
     }
     public function area6(){ 
 
-        return view('pages.areas.area6');
+        return view('desktop.pages.areas.area6');
     }
     public function area7(){ 
 
-        return view('pages.areas.area7');
+        return view('desktop.pages.areas.area7');
     }
     public function area8(){ 
 
-        return view('pages.areas.area8');
+        return view('desktop.pages.areas.area8');
     }
     public function area9(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area9');
+        return view('desktop.pages.areas.area9');
     }
     public function area10(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.areas.area10');
+        return view('desktop.pages.areas.area10');
     }
     public function pending(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('pages.pending')->with('files', $files);
+        return view('desktop.pages.pending')->with('files', $files);
     }
     public function mobile(){ 
         $files = DB::table('files')->paginate(5);
@@ -188,7 +188,7 @@ class PagesController extends Controller
             $files = File::whereIn('name', $wheres)->where('isDeleted', '=', '0')->paginate(5);
         }
         //dd($subparam);
-        return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);
+        return view('desktop.pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);
     }
 
 }
