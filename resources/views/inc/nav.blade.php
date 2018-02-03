@@ -99,13 +99,13 @@
                       <div class="form-group">
                         <label>Select document type</label>
                         <!-- Selection for document type -->
-                        <select class="form-control" id="">
-                          <option>Memorandum</option>
-                            <option>Office Orders</option>
-                            <option>TUP Orders</option>
-                            <option>Certicates</option>
-                          <option>Researches</option>
-                          <option>Grade Sheets</option>
+                        <select class="form-control" id="doctype" name="doctype"> 
+                          <option value="Memorandum">Memorandum</option>
+                          <option value="Office Order">Office Orders</option>
+                          <option value="TUP Orders">TUP Orders</option>
+                          <option value="Certificates">Certicates</option>
+                          <option value="Researches">Researches</option>
+                          <option value="Grade Sheets">Grade Sheets</option>
                         </select>
                     </div>
                       <div class="form-group">
@@ -123,7 +123,8 @@
                       <!-- COMPONENT END -->
                       <div class="form-group">
                         <br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                        <button type="submit" class="btn btn-primary pull-right" id="">Submit</button>
+                        <button id="submitbtn" class="btn btn-primary">Test</button>
                       </div>
                     </form>
                   <div class="modal-footer">
@@ -132,6 +133,26 @@
 
               </div>
             </div>
+
+            <!-- MODAL 2-->
+            <div id="modal2" class="modal fade" role="dialog">
+              <div class="modal-dialog upload-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Upload a file</h4>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Php code for connection of data -->
+                    <p>Hello!!</p>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 2-->
           </li>
           @if(auth()->user()->user_lvl == 1)
           <li class="adminpanel"> 

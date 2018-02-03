@@ -58,6 +58,8 @@
 						</td>
 					</tr>
 					@endforeach
+					
+           			{{$files->links()}}
            	@else
 			      	<tr><td  valign="middle" colspan="2" rowspan="5"><center><h3>No files found.</h3></center></td></tr>
 			      
@@ -65,7 +67,6 @@
 				</table>
 			</div>
 			<!-- /Category content -->
-           			{{$files->links()}}
 		
 	</div>
 </div>

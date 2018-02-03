@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Tag;
 use App\Notifications\FileTagged;
 use App\User;
-
+use \DB;
 
 class TagsController extends Controller
 {
@@ -38,52 +38,23 @@ class TagsController extends Controller
 			$tags->save();
 		}
 
-		return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
+		
 	
 
+     //    NOTIFICATION ALGO DO NOT TAMPER
+        $tagn = DB::table('tags')->where('file_name', '=', $input['filename'])->get();//TAGS where filename == the one in tags
+        $users = User::all();	
 
+       // var_dump($user);
+        foreach($users as $user){
+	        foreach($tagn as $tag)	
+		      	if($user->area_handled == $tag->area_id){
+			
+		      		$user->notify(new FileTagged($input['filename'], $tag->parameter, $tag->area_id));
+		    	}
+    	}
 
-		
-
-
-		// $this->validate($request, [
-                
-  //               'tag' => 'required',
-  //               'file' => 'max:1999|mimes:doc,docx,pdf|required'
-
-  //           ]);
-		// if($request->hasFile('file')){
-  //           //filename with extension
-  //           $filenameWithExt = $request->file('file')->getClientOriginalName();
-  //           //filename only
-  //           $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-  //           //ext
-  //           $extension = $request->file('file')->getClientOriginalExtension();   
-  //           //filename to store
-  //           $filenametoStore = $filename.'_'.time().'.'.$extension;
-  //           //upload image
-  //           $path = $request->file('file')->storeAs('public/files', $filenametoStore);
-  //       }
-
-        // $tags = new Tag;
-        // $tags->filename = $filenametoStore;
-        // $tags->tag = $request->input('tag');
-        // $tags->user = auth()->user()->id;
-        // $tags->save();
-
-        // NOTIFICATION ALGO DO NOT TAMPER
-     //    $tag = $request->input('tags');
-     //    $users = User::all();
-
-     //   // var_dump($user);
-     //    foreach($users as $user){
-	    //   	if($user->area_handled == $request->input('tag')){
-		   //  //     //$user = User::where('area_handled', $request->input('tag'))->first();
-		   //   // Notification::send($user, new FileTagged(auth()->user()->tags()));
-	    //   		$user->notify(new FileTagged($filenametoStore));
-	    // 	}
-    	// }
-     //    return redirect(route('home'))->with('success', 'Post Updated!');
+        return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
 	}
 
 	// public function addArea(){

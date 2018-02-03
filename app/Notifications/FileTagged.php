@@ -12,15 +12,26 @@ class FileTagged extends Notification
 {
     use Queueable;
     protected $file;
+    protected $area;
+    protected $parameter;
+    protected $paramletter;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($file)
+    public function __construct($file, $parameter, $area)
     {
         
         $this->file = $file;
+        $this->area = $area;
+        $this->parameter = $parameter;
+        if($area == "area10")
+            $this->paramletter = substr($parameter, 2, 2);
+        else
+            $this->paramletter = substr($parameter, 1, 1);
+
+
     }
 
     /**
@@ -38,7 +49,10 @@ class FileTagged extends Notification
     public function toDatabase($notifiable)
     {
         return [
-            'file' => $this->file, 
+            'file' => $this->file,
+            'area' => $this->area,
+            'parameter' => $this->parameter, 
+            'paramletter' => $this->paramletter,
             'user' => auth()->user()
         ];
     }
