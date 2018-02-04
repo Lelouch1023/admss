@@ -179,8 +179,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         App\Providers\ViewComposerServiceProvider::class,
-        Jenssegers\Agent\AgentServiceProvider::class,
-
     ],
 
     /*
@@ -233,7 +231,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Input' => Illuminate\Support\Facades\Input::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
-        'Agent' => Jenssegers\Agent\Facades\Agent::class,
     ],
 
 ];
