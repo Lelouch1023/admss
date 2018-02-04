@@ -15,14 +15,10 @@
                 <div id="loadsample"></div>
                 <div class="panel-body">
                     <div class="tab-content">
-<<<<<<< HEAD
                  
                         <div class="tab-pane fade in active" id="requeststab">
 						
 						
-=======
-                        <div class="tab-pane fade in active" id="tab1default">
->>>>>>> 70f959eaa099247600834bdb43c77c913c574519
                         	<table class="table table-hover">
 						    <thead>
 						      <tr>
@@ -55,7 +51,6 @@
 								        <option value="area10">Area 10</option>
 								    </select>
 						        </td>
-<<<<<<< HEAD
 						        
 						        <td id="user-data-">
 						        	<input type="hidden" name="userid" id="userid_{{ $request->id }}" value="{{ $request->id }}">
@@ -77,25 +72,6 @@
 						  	<center>{{ $requests->links() }}</center>
 						  @endif
                         </div>
-=======
-						        <td id="user-data">
-						        	<input type="hidden" name="user_id{{ $user->id }}" value={{ $user->id }}>
-						        	{{ Form::submit('Approve', ['class' => 'btn btn-success']) }}
-						        	<button class="btn btn-danger">Reject</button>
-						        </td>
-						 			{!! Form::close() !!}
-						      </tr>
-						  </tbody>
-						      @endforeach
-						  @else
-						    <p>No pending users</p>
-						    @endif
-						</table>
-					</div>
-						    
-						    <center>{{ $users->links() }}</center>
-                    </div>
->>>>>>> 70f959eaa099247600834bdb43c77c913c574519
 
                         <!-- Area Panel -->
                         <div class="tab-pane fade" id="chairstab">

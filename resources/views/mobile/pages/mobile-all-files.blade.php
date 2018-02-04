@@ -1,12 +1,12 @@
 		
-@extends('layouts.app')
+@extends('layouts.mobile_app')
 		
 @section('content')
 <div class="container">
-	<div class="col-md-9 col-xs-12">
+	<div class="col-xs-12">
 		<div class="categories">
 			<div class="category-title">
-				<label>My Uploads</label>
+				<label>All Files</label>
 			</div>
 			<!-- Category contents -->
 			<div class="category-content">
@@ -15,31 +15,33 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th class="col-xs-5 category-fname">File Name</th>
-							<th class="col-xs-3">Type</th>
-							<th class="col-xs-3">Modified</th>
-							<th class="col-xs-2">Select</th>
+							<th class="category-fname">File Name</th>
+							<!-- <th>Type</th> -->
+							<th>Type</th>
 						</tr>
 					</thead>
 			     		@foreach ($files as $file)	
 
 					<tr class="file">
-						<td class="col-xs-5">
+						<td>
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<p>
+								{{ Auth::user()->name }}
+								<br>
+								Area #
+							</p>
+							<!-- <label>{{ Auth::user()->name }}</label>
+							<p>{{$file->created_at}}</p> -->
 						</td>
-						<td class="col-xs-3 type">
-							<label>{{ $file->file_type }}</label>
+						<td class="type">
+							<!-- Php code for document type -->
+							<label>Memorandum</label>
 						</td>
-						<td id="user-date" class="col-xs-3">
+						<!-- <td id="user-date">
 							<label>{{ Auth::user()->name }}</label>
 							<p>{{$file->created_at}}</p>
-						</td>
-						<td class="col-xs-2 select">
-							<label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-						 	</label>
-						</td>
+						</td> -->
 					</tr>
 					@endforeach
            	@else

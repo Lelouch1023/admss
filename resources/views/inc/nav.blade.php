@@ -32,7 +32,7 @@
             {{ Form:: close() }}
             <span class="input-group-btn">
             <button class="btn btn-danger" type="button">
-              <span class="glyphicon glyphicon-search" style="color: #fff;"></span>
+              <span class="glyphicon glyphicon-search" style="color: #fff;" aria-hidden="true"></span>
             </button>
             </span>
           </div>
@@ -47,7 +47,7 @@
               <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();" title="Logout">
-              <span class="glyphicon glyphicon-off"></span></a>
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
               </form>
@@ -73,11 +73,7 @@
             </ul>
           </li><!--notifications-->
           <li class="upload">
-            <!-- <a href="/post/create" class="btn upload-btn">
-            <span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span>
-            </a> -->
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
+             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
 
             <!-- Modal -->
             <div id="createModal" class="modal fade" role="dialog">
@@ -91,7 +87,7 @@
                   </div>
                   <div class="modal-body">
                     <!-- Php code for connection of data -->
-                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                   {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <!--/comment -->
                 
                     <form method="POST" action="#" enctype="multipart/form-data">
@@ -99,7 +95,9 @@
                       <div class="form-group">
                         <label>Select document type</label>
                         <!-- Selection for document type -->
-                        <select class="form-control" id="doctype" name="doctype"> 
+
+                        <select class="form-control" id="doctype" name="doctype">
+
                           <option value="Memorandum">Memorandum</option>
                           <option value="Office Order">Office Orders</option>
                           <option value="TUP Orders">TUP Orders</option>
@@ -119,20 +117,23 @@
                             </span>
                         </div>
                       </div>
-                      
                       <!-- COMPONENT END -->
+{{-- <<<<<<< HEAD
                       <div class="form-group">
                         <br>
                         <button type="submit" class="btn btn-primary pull-right" id="">Submit</button>
                         <button id="submitbtn" class="btn btn-primary">Test</button>
                       </div>
+======= --}}
+                        {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
+                        {!! Form::close() !!}
                     </form>
                   <div class="modal-footer">
                   </div>
                 </div>
-
               </div>
             </div>
+{{-- <<<<<<< HEAD
 
             <!-- MODAL 2-->
             <div id="modal2" class="modal fade" role="dialog">
@@ -153,12 +154,15 @@
               </div>
             </div>
             <!-- end of modal 2-->
+======= --}}
+          </div>
+          <!-- End of modal -->
           </li>
-          @if(auth()->user()->user_lvl == 1)
+          <!-- @if(auth()->user()->user_lvl == 1)
           <li class="adminpanel"> 
             <a href="{{ route('admin') }}"><button class="btn btn-link nabar-btn">Admin Panel</button></a>
           </li>
-          @endif
+          @endif -->
           </div>
         </ul>
       <!-- End of User Control bar -->
@@ -166,6 +170,5 @@
     </div>
 </div>
 </nav>
-
 
 @endguest

@@ -33,6 +33,10 @@
                    </div>
                    <div class="btn-section col-xs-12">
                     @guest
+                    
+                       <!-- <div class="login-btn-sec col-xs-6">
+                           <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Login">Login</button>
+                       </div> -->
                        <div class="login-btn-sec col-sm-6">
                            <button class="btn" onclick="window.location='{{('login')}}'" type="submit" title="Register">Login</button>
                        </div>

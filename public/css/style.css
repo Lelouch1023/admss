@@ -416,6 +416,9 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .footer-info .tup-abt {
     padding: 5px 0px;
 }
+.footer-info .tup-abt span {
+  color: #fff;
+}
 .footer-info .tup-abt p{
     font-size: 12px;
     /*text-align: left;*/

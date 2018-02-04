@@ -43,7 +43,10 @@ class AdminController extends Controller
                         ->paginate(5);
 
 
+
         return view('pages.admin')->with('requests', $requests)->with('chairs', $chairs);
+
+
     }
 
     /**
@@ -143,5 +146,4 @@ class AdminController extends Controller
         // return 'no action found';
         // }
     }
-
 }

@@ -56,6 +56,7 @@
 }
 .btn-section button:hover{
     background: #1b1b1b;
+    color: #fff;
     transition: 0.3s;
     -webkit-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 6px 47px -16px rgba(0,0,0,0.75);
@@ -156,7 +157,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
     color: #fff;
 }
 .category-content{
-	    height: 620px;
+	    height: 720px;
     /*overflow-y: scroll;*/
     /*margin-bottom: 35px;*/
 
@@ -190,7 +191,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 	color: #000;
 }
 .file p{
-	/*margin:	-6px 0 0px 36px;*/
+	margin:	-9px 0 0px 36px;
 }
 .file-action{
 	text-align: center;
@@ -246,6 +247,17 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .ignore span:hover{
 	color: 	#954120;
 }
+.see-all{
+	    background: transparent;
+    border: none;
+    padding: 2px 0px;
+}
+.keyword{
+	background: transparent;
+    border: none;
+    margin: 3px 0;
+    color: #fff
+}
 
 /*alerts*/
 .msg-alert{
@@ -263,11 +275,15 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
     vertical-align: middle;
 }
 #user-date p{
-    margin-top: -5px;
     font-size: 13px;
+    margin: -6px 0 0px 0px;
 }
 #user-date label{
 	margin: 0px;
+}
+.type label{
+	text-transform: uppercase;
+	    vertical-align: middle;
 }
 .select, .type{
 	text-align: center;
@@ -302,4 +318,7 @@ box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 .download a:hover, .bin-restore a:hover{
 	color: #fff;
 
+}
+.keywords{
+	color: #000;
 }

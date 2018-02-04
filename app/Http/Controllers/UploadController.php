@@ -323,7 +323,7 @@ class UploadController extends Controller
         $term = Input::get('searchItem', '');
         $files = File::where('name', 'LIKE', '%'.$term.'%')->paginate(10);
 
-        return view('pages.searchResult')->with('files', $files);
+        return view('desktop.pages.searchResult')->with('files', $files);
         //return $files;
 
         
