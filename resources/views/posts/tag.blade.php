@@ -17,7 +17,7 @@
                            <ul>
                             @for($i=0; $i<count($tags); $i++)
                                 @if($vals->area_id == $tags[$i]['area_id'])
-                                    <li><a href="{{ URL::to('/')."/".$vals->area_id  }}" style="color: #333">{{ $paramnames[$i]}}</a></li>
+                                    <li><a href="{{ URL::to('/')."/".$vals->area_id  }}" style="color: #333" target="_blank">{{ $paramnames[$i]}}</a></li>
                                 @endif
                             @endfor
                         </ul>

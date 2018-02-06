@@ -8,7 +8,6 @@ use App\Http\Requests;
 
 use App\File;
 
-use Jenssegers\Agent\Agent;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Tag;
@@ -47,20 +46,19 @@ class PagesController extends Controller
     * Function to load my uploads
     */
     public function uploads(){ 
-        $agent = new Agent();
-        $agent = $agent->isMobile();
+        
 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
 
-        return view('desktop.pages.my_uploads')->with('files', $files);
+        return view('pages.my_uploads')->with('files', $files);
     }
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
 
         if(count($files) > 0){
-            return view('desktop.pages.view-file')->with('files', $files);
+            return view('pages.view-file')->with('files', $files);
         }else{
             abort(404);
         }   

@@ -26,7 +26,7 @@
 					<tr class="file">
 						<td class="col-xs-5">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<a href=" {{ url('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
 						</td>
 						<td class="col-xs-3 type">
 							<label>{{ $file->file_type }}</label>
