@@ -22,10 +22,9 @@
 					<option value="Grade Sheets">Grade Sheets</option>
 				</select>
             </div>
+            <input type=text name="input">
                 <!-- Php code for connection of data -->
-				
 				<!--/comment -->
-
 	        <div class="form-group">
                 <label>Select a file</label>
 	                  {{ Form::file('file') }}

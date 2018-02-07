@@ -19,12 +19,15 @@
     <link href="{{ asset('css/panels.css') }}" rel="stylesheet">
     <link href="{{ asset('css/adminpanel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mobile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tags.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
 
     <script src="{{ URL::asset('js/jquery.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
+
     
     
 </head>
@@ -56,6 +59,7 @@
 
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script> -->
     <!-- <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script> -->
 
 </body>

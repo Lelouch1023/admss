@@ -23,19 +23,24 @@
 			    <div class="modal-content keywords">
 			        <div class="modal-header">
 			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			            <h4 class="modal-title" id="myModalLabel">Add Keywords</h4>
+			            <h4 class="modal-title" id="myModalLabel">Keywords</h4>
 			        </div>
-			        <form class="tagForm" id="keyword-form" action="" method="post" enctype="multipart/form-data">
 			            <div class="modal-body">
-			                <label for="keywordName">Keyword: </label>
-			                <input id="keywordName" class="form-control" type="text"/>
+			        	<form id="bootstrapTagsInputForm" method="post" class="form-horizontal">
+						    <div class="form-group">
+						        <label class="control-label">Note: Add words that are related to this area.</label>
+						        <div class="col-xs-12">
+						            <input type="text" name="cities" class="form-control"
+						                   value="Hanoi" data-role="tagsinput" />
+						        </div>
 
-			            </div>
-			            <div class="modal-footer">
+						    </div>
+						</form>
+					</div>
+					 <div class="modal-footer">
 			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Add Keyword">
 			            </div>
-			        </form>
 			    </div>
 			</div>
 			</div>
@@ -79,8 +84,6 @@
 						</td>
 					</tr>
 					@endforeach
-
-           			
            	@else
            		</table>
 			      	<p><center>No files found.</center></p>
@@ -97,5 +100,51 @@
 	</div>
 </div>
 	
-
+<script>
+$(document).ready(function () {
+    $('#bootstrapTagsInputForm')
+        .find('[name="cities"]')
+            // Revalidate the cities field when it is changed
+            .change(function (e) {
+                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'cities');
+            })
+            .end()
+        .find('[name="countries"]')
+            // Revalidate the countries field when it is changed
+            .change(function (e) {
+                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'countries');
+            })
+            .end()
+        .formValidation({
+            framework: 'bootstrap',
+            excluded: ':disabled',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                cities: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter at least one city you like the most.'
+                        }
+                    }
+                },
+                countries: {
+                    validators: {
+                        callback: {
+                            message: 'Please enter 2-4 countries you like most.',
+                            callback: function (value, validator, $field) {
+                                // Get the entered elements
+                                var options = validator.getFieldElements('countries').tagsinput('items');
+                                return (options !== null && options.length >= 2 && options.length <= 4);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+});
+</script>
 @endsection
