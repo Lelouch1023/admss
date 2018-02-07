@@ -497,5 +497,24 @@ class UploadController extends Controller
             $group[$id][] = $val;
          }
         return $group;
+    }
+
+    public function wordtest(Request $request){
+        $this->validate($request,[
+            'file' => 'required|max:1999|mimes:pdf,docx'
+        ]);
+        if($request->has('file')){
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //Get the Ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            if($extension == "docx")
+                echo 'this is a doc';
+            else if ($extension == "pdf")
+                echo 'this is a pdf';
+        }
     }    
 }

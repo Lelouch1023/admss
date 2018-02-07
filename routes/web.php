@@ -29,7 +29,7 @@ Route::get('getRequest', function(){
 	if(Request::ajax()){
 		return 'getRequest has fully loaded!';
 	}
-});
+});	
  
  
 //Route::resource('post', 'UploadController');
@@ -49,7 +49,7 @@ Route::get('/mobile/result', 'UploadController@mobile_result')->name('mobile_res
 Route::get('/assignedArea', 'PagesController@assignedArea')->name('assignedArea');
 Route::get('/viewfile', 'PagesController@viewfile')->name('viewfile');
 Route::get('/upload', 'UploadController@create');
-Route::post('/upload', 'UploadController@store');
+Route::post('/upload', 'UploadController@wordtest');
 Route::get('/uploads/view/{id}', 'UploadController@view');
 Route::get('/delete/{id}', 'UploadController@delete');
 Route::get('/restore/{id}', 'UploadController@restore');
@@ -73,3 +73,4 @@ Route::get('/area10', 'PagesController@area10')->name('area10');
  
 Route::get('/logout', 'HomeController@logoutreg')->name('getLogout'); 
 Route::post('/tag', 'TagsController@store');
+Route::post('/sth', 'UploadController@store');

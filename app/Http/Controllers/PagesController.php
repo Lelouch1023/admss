@@ -177,16 +177,20 @@ class PagesController extends Controller
                     ->get();
         //s_1 => s.1            
         $subparam = preg_replace('/[^A-Za-z0-9]/', '.', substr($subpara, 2, strlen($subpara)));
-        $files = array();   
+        $files = array();  
+        
+        if(count($paraname) > 0){
             if(count($result) > 0){
-            foreach($result as $res){
-                $wheres[] = $res->file_name;
-            }
+                foreach($result as $res){
+                    $wheres[] = $res->file_name;
+                }
 
-            $files = File::whereIn('name', $wheres)->where('isDeleted', '=', '0')->paginate(5);
-        }
-        //dd($subparam);
-        return view('desktop.pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);
+                $files = File::whereIn('name', $wheres)->where('isDeleted', '=', '0')->paginate(5);
+            }
+            //dd($subparam);
+            return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);
+        }else{ abort(404); }
+
     }
 
 }

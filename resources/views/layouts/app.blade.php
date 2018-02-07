@@ -24,8 +24,6 @@
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
 
-    <script src="{{ URL::asset('js/jquery.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
     
     
 </head>
@@ -63,6 +61,44 @@
     <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
+    <script type="text/javascript"> 
+    function showMyArea(){
+            if ($("#collapseOne").is(':visible')) {
+                $("#collapseOne").slideUp();   
+            }
+            else {
+                $("#collapseOne").slideDown();   
+            }
+        }
+
+        function showRequest(){
+            if ($("#collapseTwo").is(':visible')) {
+                $("#collapseTwo").slideUp();   
+            }
+            else {
+                $("#collapseTwo").slideDown();   
+            }
+        }
+        function showAllAreas(){
+            if ($("#collapseThree").is(':visible')) {
+                $("#collapseThree").slideUp();   
+            }
+            else {
+                $("#collapseThree").slideDown();   
+            }
+        }
+
+        function showBin(){
+            if ($("#collapseFour").is(':visible')) {
+                $("#collapseFour").slideUp();   
+            }
+            else {
+                $("#collapseFour").slideDown();   
+            }
+        }
+
+
+    </script>
 
 </body>
 </html>

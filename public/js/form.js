@@ -105,3 +105,6 @@ function revokeadmin(id){
 			
    		});
 }
+
+//sidebar script
+
