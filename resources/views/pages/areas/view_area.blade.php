@@ -15,62 +15,37 @@
 		  	@endforeach /
 		  	<a href="#" class="active">{{ $subparam }}</a>
 
-		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" onclick=""><span class="glyphicon glyphicon-plus" aria-hidden="true" title="Upload a file"></span></button>
+		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" ><span class="glyphicon glyphicon-plus" aria-hidden="true" title="Add keyword" style="color: #fff;"></span></button>
 
             <!-- Modal -->
-            <div id="keywordsModal" class="modal fade" role="dialog">
-              <div class="modal-dialog upload-modal">
+            <div id="keywordsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content keywords">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <h4 class="modal-title" id="myModalLabel">Keywords</h4>
+			        </div>
+			            <div class="modal-body">
+			        	<form id="bootstrapTagsInputForm" method="post" class="form-horizontal">
+						    <div class="form-group">
+						        <label class="control-label">Note: Add words that are related to this area.</label>
+						        <div class="col-xs-12">
+						            <input type="text" name="cities" class="form-control"
+						                   value="Hanoi" data-role="tagsinput" />
+						        </div>
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upload a file</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Php code for connection of data -->
-                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                    <!--/comment -->
-                
-                    <form method="POST" action="#" enctype="multipart/form-data">
-                      <!-- COMPONENT START -->
-                      <div class="form-group">
-                        <label>Select document type</label>
-                        <!-- Selection for document type -->
-                        <select class="form-control" id="">
-                          <option>Memorandum</option>
-                            <option>Office Orders</option>
-                            <option>TUP Orders</option>
-                            <option>Certicates</option>
-                          <option>Researches</option>
-                          <option>Grade Sheets</option>
-                        </select>
-                    </div>
-                      <div class="form-group">
-                        <div class="input-group input-file" name="Fichier1">
-                          <span class="input-group-btn">
-                                <button class="btn btn-default btn-choose" type="button">Choose</button>
-                            </span>
-                            <input type="text" class="form-control" placeholder='Choose a file...' />
-                            <span class="input-group-btn">
-                                 <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                            </span>
-                        </div>
-                      </div>
-                      
-                      <!-- COMPONENT END -->
-                      <div class="form-group">
-                        <br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                      </div>
-                    </form>
-                  <div class="modal-footer">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of modal -->
+						    </div>
+						</form>
+					</div>
+					 <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Add Keyword">
+			            </div>
+			    </div>
+			</div>
+			</div>
+
+           <!-- End of modal -->
 		  </div>
 		<div class="categories">
 			<!-- Category contents -->
@@ -92,7 +67,6 @@
 
 					<tr class="file">
 						<td class="col-xs-5">
-
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="{{ URL::to('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
 						</td>
@@ -110,8 +84,6 @@
 						</td>
 					</tr>
 					@endforeach
-
-
            	@else
            		</table>
 			      	<p><center>No files found.</center></p>
@@ -121,14 +93,58 @@
 			</div>
 			<!-- /Category content -->
 
-
 			@if(count($files) > 0)
 				{{$files->links()}}
 			@endif
-
 		
 	</div>
 </div>
 	
-
+<script>
+$(document).ready(function () {
+    $('#bootstrapTagsInputForm')
+        .find('[name="cities"]')
+            // Revalidate the cities field when it is changed
+            .change(function (e) {
+                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'cities');
+            })
+            .end()
+        .find('[name="countries"]')
+            // Revalidate the countries field when it is changed
+            .change(function (e) {
+                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'countries');
+            })
+            .end()
+        .formValidation({
+            framework: 'bootstrap',
+            excluded: ':disabled',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                cities: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter at least one city you like the most.'
+                        }
+                    }
+                },
+                countries: {
+                    validators: {
+                        callback: {
+                            message: 'Please enter 2-4 countries you like most.',
+                            callback: function (value, validator, $field) {
+                                // Get the entered elements
+                                var options = validator.getFieldElements('countries').tagsinput('items');
+                                return (options !== null && options.length >= 2 && options.length <= 4);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+});
+</script>
 @endsection

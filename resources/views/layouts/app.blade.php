@@ -28,9 +28,6 @@
     <script src="{{ URL::asset('js/jquery.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
-
-    
-    
 </head>
 <body>
 
@@ -55,24 +52,11 @@
         var APP_URL = {!! json_encode(url('/')) !!}
     </script>
 
-<<<<<<< HEAD
+    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
+
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script> -->
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script> -->
-=======
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/notif.js"></script>
-
-    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
->>>>>>> 741c842ff1be6df72879a5056a9ca83ba9ccf2c3
 
 </body>
 </html>
