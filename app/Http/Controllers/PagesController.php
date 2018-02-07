@@ -178,7 +178,12 @@ class PagesController extends Controller
         //s_1 => s.1            
         $subparam = preg_replace('/[^A-Za-z0-9]/', '.', substr($subpara, 2, strlen($subpara)));
         $files = array();  
-        
+        $keywords = DB::table('keywords')
+                        ->select('keyword')
+                        ->where('parameter', $subpara)
+                        ->get();
+
+
         if(count($paraname) > 0){
             if(count($result) > 0){
                 foreach($result as $res){
@@ -188,7 +193,7 @@ class PagesController extends Controller
                 $files = File::whereIn('name', $wheres)->where('isDeleted', '=', '0')->paginate(5);
             }
             //dd($subparam);
-            return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam);
+            return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam)->with('keywords', $keywords)->with('paramletter', $para)->with('sub', $subpara);
         }else{ abort(404); }
 
     }

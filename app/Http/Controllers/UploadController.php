@@ -183,6 +183,11 @@ class UploadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    // For adding keywords
+
+    // public function addkeyword(Request $request)
+
     public function show($id)
     {
         $file = File::find($id);

@@ -23,19 +23,24 @@
 			    <div class="modal-content keywords">
 			        <div class="modal-header">
 			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			            <h4 class="modal-title" id="myModalLabel">Add Keywords</h4>
+			            <h4 class="modal-title" id="myModalLabel">Keywords</h4>
 			        </div>
-			        <form class="tagForm" id="keyword-form" action="" method="post" enctype="multipart/form-data">
 			            <div class="modal-body">
-			                <label for="keywordName">Keyword: </label>
-			                <input id="keywordName" class="form-control" type="text"/>
+			        	<form id="bootstrapTagsInputForm" method="post" class="form-horizontal">
+						    <div class="form-group">
+						        <label class="control-label">Note: Add words that are related to this area.</label>
+						        <div class="col-xs-12">
+						            <input type="text" name="cities" class="form-control"
+						                   value="Hanoi" data-role="tagsinput" />
+						        </div>
 
-			            </div>
-			            <div class="modal-footer">
+						    </div>
+						</form>
+					</div>
+					 <div class="modal-footer">
 			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Add Keyword">
 			            </div>
-			        </form>
 			    </div>
 			</div>
 			</div>
@@ -79,8 +84,6 @@
 						</td>
 					</tr>
 					@endforeach
-
-           			
            	@else
            		</table>
 			      	<p><center>No files found.</center></p>
@@ -96,6 +99,4 @@
 		
 	</div>
 </div>
-	
-
 @endsection

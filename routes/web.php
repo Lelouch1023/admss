@@ -74,3 +74,4 @@ Route::get('/area10', 'PagesController@area10')->name('area10');
 Route::get('/logout', 'HomeController@logoutreg')->name('getLogout'); 
 Route::post('/tag', 'TagsController@store');
 Route::post('/sth', 'UploadController@store');
+Route::post('/keyword', 'TagsController@addKeyword');
