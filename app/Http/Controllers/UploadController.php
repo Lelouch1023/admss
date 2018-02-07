@@ -143,7 +143,11 @@ class UploadController extends Controller
             $tagdup = array_map("unserialize", array_unique(array_map("serialize", $tagsfin)));
         }//endif
             $subparam = array();
+        //s_1 = s.1
             foreach($tagdup as $tags){
+            if($tags['area_id'] == "area10")
+                $subparam[] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tags['parameter'], 3, strlen($tags['parameter'])));
+            else
              $subparam[] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tags['parameter'], 2, strlen($tags['parameter'])));
             } 
         //!!!

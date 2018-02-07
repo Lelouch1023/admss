@@ -13,7 +13,7 @@
  
 Route::get('/', 'PagesController@index');
 Route::get('/admin', 'AdminController@index')->name('admin');
-Route::post('/admin', 'AdminController@assign');
+Route::post('/admin', 'AdminController@findaction');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads');
@@ -25,6 +25,11 @@ Route::get('uploads/view/{file}', 'PagesController@viewfile');
 // Routes for Mobile
 Route::get('/mobile/home', 'PagesController@mobile')->name('mobile');
 
+Route::get('getRequest', function(){
+	if(Request::ajax()){
+		return 'getRequest has fully loaded!';
+	}
+});
  
  
 //Route::resource('post', 'UploadController');

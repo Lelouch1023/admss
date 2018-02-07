@@ -7,14 +7,14 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
-        "jenssegers/agent": "^2.6",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.3.0",
         "php-ai/php-ml": "^0.5.0",
         "simplesoftwareio/simple-qrcode": "~1",
         "smalot/pdfparser": "^0.11.0",
-        "yooper/php-text-analysis": "^1.2"
+        "yooper/php-text-analysis": "^1.2",
+        "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

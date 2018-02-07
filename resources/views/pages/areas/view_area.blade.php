@@ -92,6 +92,7 @@
 
 					<tr class="file">
 						<td class="col-xs-5">
+
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="{{ URL::to('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
 						</td>
@@ -110,7 +111,7 @@
 					</tr>
 					@endforeach
 
-           			
+
            	@else
            		</table>
 			      	<p><center>No files found.</center></p>
@@ -120,9 +121,11 @@
 			</div>
 			<!-- /Category content -->
 
+
 			@if(count($files) > 0)
 				{{$files->links()}}
 			@endif
+
 		
 	</div>
 </div>

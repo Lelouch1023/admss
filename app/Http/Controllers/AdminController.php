@@ -10,7 +10,9 @@ use App\Http\Requests;
 use \Input as Input;
 
 use App\File;
-
+use \App\Jobs\AdminApprove;
+// use \App\Jobs\AdminReject
+// use \App\Jobs\AdminAssign
 use DB;
 
 class AdminController extends Controller
@@ -32,32 +34,116 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $title = "Admin";
+        
+        $requests = User::where('isApproved', '=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->paginate(5);
+            $chairs = User::where('isApproved', '=', 1)
+                        ->orderBy('name', 'asc')
+                        ->paginate(5);
 
-        $users = User::where('isApproved', '=', 0)
-                    ->orderBy('created_at', 'desc')
-                    ->paginate(7);
 
 
-        return view('desktop.pages.admin')->with('title', $title)->with('users', $users);
+        return view('pages.admin')->with('requests', $requests)->with('chairs', $chairs);
+
+
     }
 
     /**
     * Assigns a user to an area by an admin
     *
     */
-    public function assign(Request $request){
-        dd($_POST);
-        // $user =  User::find();
-        // $user->area_handled = $request->area_assign;
-        // $user->isApproved = 1;
-        // $user->save();
+    public function findaction(Request $request){
+        if ($request->has('approve')) {
+            $user = User::find($request->user_id);
+            $user->area_handled = $request->area_assign;
+            $user->isApproved = 1;
+            $user->save();
 
-        // $users = User::where('isApproved', '=', 0)
-        //             ->orderBy('created_at', 'desc')
-        //             ->paginate(7);
+            $requests = User::where('isApproved', '=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->paginate(5);
+            $chairs = User::where('isApproved', '=', 1)
+                        ->orderBy('name', 'asc')
+                        ->paginate(5);
+         
 
-        // return view('pages.admin')->with('success', 'Approved the user successfully.')->with('users', $users);
+            //$request->session()->flash('success', 'Approved the user successfully.');
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $data = array(
+                'html' => $html['content'],
+                'success' => true,
+               
+            );
+            return response()->json($data);
+        }else if ($request->has('assign')) {
+            $user = User::find($request->user_id);
+            $user->area_handled = $request->area_handled;
+            $user->save();
+
+            $requests = User::where('isApproved', '=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->paginate(5);
+            $chairs = User::where('isApproved', '=', 1)
+                        ->orderBy('name', 'asc')
+                        ->paginate(5);
+         
+
+            //$request->session()->flash('success', 'Approved the user successfully.');
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $data = array(
+                'html' => $html['content'],
+                'success' => true,
+               
+            );
+            return response()->json($data);
+
+        }else if($request->has('giveadmin')){
+            $user = User::find($request->user_id);
+            $user->user_lvl = 1;
+            $user->save();
+
+            $requests = User::where('isApproved', '=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->paginate(5);
+            $chairs = User::where('isApproved', '=', 1)
+                        ->orderBy('name', 'asc')
+                        ->paginate(5);
+         
+
+            //$request->session()->flash('success', 'Approved the user successfully.');
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $data = array(
+                'html' => $html['content'],
+                'success' => true,
+               
+            );
+            return response()->json($data);
+        }else if($request->has('revokeadmin')){
+            $user = User::find($request->user_id);
+            $user->user_lvl = 0;
+            $user->save();
+
+            $requests = User::where('isApproved', '=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->paginate(5);
+            $chairs = User::where('isApproved', '=', 1)
+                        ->orderBy('name', 'asc')
+                        ->paginate(5);
+         
+
+            //$request->session()->flash('success', 'Approved the user successfully.');
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $data = array(
+                'html' => $html['content'],
+                'success' => true,
+               
+            );
+            return response()->json($data);
+        }
+
+
+        // return 'no action found';
+        // }
     }
-    
 }

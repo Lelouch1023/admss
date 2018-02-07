@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" sizes="16x16" type="image/png" href="{{ asset('images/logo.png') }}"/>
 
     <!-- CSRF Token -->
@@ -53,14 +54,25 @@
     <script type="text/javascript">
         var APP_URL = {!! json_encode(url('/')) !!}
     </script>
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script> -->
-    <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 
+<<<<<<< HEAD
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
     <!-- <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script> -->
     <!-- <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script> -->
+=======
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/notif.js"></script>
+
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-autocomplete.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/form.js') }}"></script>
+>>>>>>> 741c842ff1be6df72879a5056a9ca83ba9ccf2c3
 
 </body>
 </html>
