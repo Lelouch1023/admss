@@ -147,11 +147,44 @@ class PagesController extends Controller
 
         return view('desktop.pages.areas.area10');
     }
-    public function pending(){ 
-        $files = DB::table('files')->paginate(5);
 
-        return view('desktop.pages.pending')->with('files', $files);
+    public function pending(){ 
+        $filename = DB::table('tags')
+                    ->select('file_name', 'parameter')
+                    ->where('area_id', '=', auth()->user()->area_handled)
+                    ->where('tagstatus', '=', 'pending')
+                    ->get()
+                    ->toArray();
+        $filenames = array();
+        foreach($filename as $file){
+            if(auth()->user()->area_handled == "area10"){
+            $filenames[] = array(
+                'filename' => $file->file_name,
+                'parameter'=> $file->parameter,
+                'letter' => substr($file->parameter, 2, 2)
+            );
+            }else{
+                $filenames[] = array(
+                'filename' => $file->file_name,
+                'parameter'=> $file->parameter,
+                'letter' => substr($file->parameter, 1, 1)  
+            );}
+        }
+        $compare = array();
+
+        foreach($filename as $file){
+            $compare[] = $file->file_name;
+        }
+
+        $files = File::join('users', 'files.user_id', '=', 'users.id')
+                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at')
+                        ->whereIn('files.name', $compare)->paginate(5);
+        
+        
+            //dd($paramletter);
+        return view('pages.pending')->with('files', $files)->with('filetags', $filenames);
     }
+
     public function mobile(){ 
         $files = DB::table('files')->paginate(5);
 
@@ -174,6 +207,7 @@ class PagesController extends Controller
                     ->select('file_name')
                     ->where('area_id', '=', $area)
                     ->where('parameter', '=', $subpara)
+                    ->where('tagstatus', '=', 'approved')
                     ->get();
         //s_1 => s.1            
         $subparam = preg_replace('/[^A-Za-z0-9]/', '.', substr($subpara, 2, strlen($subpara)));
@@ -196,6 +230,73 @@ class PagesController extends Controller
             return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam)->with('keywords', $keywords)->with('paramletter', $para)->with('sub', $subpara);
         }else{ abort(404); }
 
+    }
+
+    public function viewpdf($id){
+        $files = File::where('id', '=', $id)->get();
+        //dd(storage_path());
+       return view('posts.view')->with('files', $files);
+    }
+
+//CONTINUE APPROVE TAG
+    public function approvetag(Request $request){
+        if($request->has('approvetag')){
+         DB::table('tags')
+            ->where('file_name', $request->filename)
+            ->where('parameter', $request->param)
+            ->update(array('tagstatus' => 'approved'));
+        }else if($request->has('rejectag')){
+            DB::table('tags')
+                ->where('file_name', $request->filename)
+                ->where('parameter', $request->param)
+                ->delete();
+        }    
+            //code to render pending page
+
+            $filename = DB::table('tags')
+                    ->select('file_name', 'parameter')
+                    ->where('area_id', '=', auth()->user()->area_handled)
+                    ->where('tagstatus', '=', 'pending')
+                    ->get()
+                    ->toArray();
+        $filenames = array();
+        foreach($filename as $file){
+            if(auth()->user()->area_handled == "area10"){
+            $filenames[] = array(
+                'filename' => $file->file_name,
+                'parameter'=> $file->parameter,
+                'letter' => substr($file->parameter, 2, 2)
+            );
+            }else{
+                $filenames[] = array(
+                'filename' => $file->file_name,
+                'parameter'=> $file->parameter,
+                'letter' => substr($file->parameter, 1, 1)  
+            );}
+        }
+        $compare = array();
+
+        foreach($filename as $file){
+            $compare[] = $file->file_name;
+        }
+
+        $files = File::join('users', 'files.user_id', '=', 'users.id')
+                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at')
+                        ->whereIn('files.name', $compare)->paginate(5);
+         
+        //endlogic to render
+
+            //$request->session()->flash('success', 'Approved the user successfully.');
+             $html = view('pages.pending')->with('files', $files)->with('filetags', $filenames)->renderSections();
+            $data = array(
+                'success' => true,
+                'html' => $html['content']
+                
+            );
+
+
+            return response()->json($data);
+        
     }
 
 }

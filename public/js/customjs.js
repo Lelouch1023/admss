@@ -106,51 +106,50 @@ function revokeadmin(id){
    		});
 }
 
-//script for keywords
+function approvetag(id){
+	var values = {
+		
+		'filename' : $('#file_'+id).val(),
+		'param' : $('#param_'+id).val(),
+		'approvetag' : true
+	}
+		$.ajax({
+	        url: 'pending',
+	        type: "POST",
+	        data: values,
+	        success: function(data){
+		    	if(data.success == true){
+		    	   $('#pendingcontainer').html(data.html);
+		    	   $('#pendingsucc').show(500).fadeOut(2000);
+  				
+		    	}		
+       		},			
+   		});
 
-$(document).ready(function () {
-    $('#bootstrapTagsInputForm')
-        .find('[name="cities"]')
-            // Revalidate the cities field when it is changed
-            .change(function (e) {
-                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'cities');
-            })
-            .end()
-        .find('[name="countries"]')
-            // Revalidate the countries field when it is changed
-            .change(function (e) {
-                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'countries');
-            })
-            .end()
-        .formValidation({
-            framework: 'bootstrap',
-            excluded: ':disabled',
-            icon: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                cities: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please enter at least one city you like the most.'
-                        }
-                    }
-                },
-                countries: {
-                    validators: {
-                        callback: {
-                            message: 'Please enter 2-4 countries you like most.',
-                            callback: function (value, validator, $field) {
-                                // Get the entered elements
-                                var options = validator.getFieldElements('countries').tagsinput('items');
-                                return (options !== null && options.length >= 2 && options.length <= 4);
-                            }
-                        }
-                    }
-                }
-            }
-        });
-});
+  	//console.log(values);
 
+}
+
+function rejectag(id){
+	var values = {
+		
+		'filename' : $('#file_'+id).val(),
+		'param' : $('#param_'+id).val(),
+		'rejectag' : true
+	}
+		$.ajax({
+	        url: 'pending',
+	        type: "POST",
+	        data: values,
+	        success: function(data){
+		    	if(data.success == true){
+		    	   $('#pendingcontainer').html(data.html);
+		    	   $('#pendingdel').show(500).fadeOut(2000);
+  				
+		    	}		
+       		},			
+   		});
+
+  	//console.log(values);
+
+}

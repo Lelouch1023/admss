@@ -31,7 +31,7 @@ Route::get('getRequest', function(){
 	}
 });	
  
- 
+Route::get('viewpdf/{id}', 'PagesController@viewpdf');
 //Route::resource('post', 'UploadController');
  
 Auth::routes();
@@ -75,3 +75,4 @@ Route::get('/logout', 'HomeController@logoutreg')->name('getLogout');
 Route::post('/tag', 'TagsController@store');
 Route::post('/sth', 'UploadController@store');
 Route::post('/keyword', 'TagsController@addKeyword');
+Route::post('/pending', 'PagesController@approvetag');

@@ -5,9 +5,7 @@
 <div class="container">
 	<div class="col-md-9 col-xs-12">
 		<div class="categories">
-			<div class="category-title">
-				<label>My Uploads</label>
-			</div>
+			
 			<!-- Category contents -->
 			
 			<div id="file-content">
@@ -23,7 +21,7 @@
 			     	@foreach ($files as $file)	
 						<td class="col-xs-6 file">
 							<img src="{{ URL::to('/images/pdf-file.png') }}">
-							<p><b><h4>{{$file->name}}</h4></b></p>
+							<a href="{{ URL::to('/').'/viewpdf/'.$file->id }}"><b><h4>{{$file->name}}</h4></b></a>
 							<p>{{$file->created_at}}</p>
 
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
