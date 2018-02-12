@@ -1,4 +1,4 @@
-		
+{{-- 		
 @extends('layouts.app')
 		
 @section('content')
@@ -138,3 +138,4 @@
 		</div> <!-- End of Column -->
 	</div> <!-- End of Container -->
 @endsection
+ --}}

@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
-    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
 </head>
 <body>
 
@@ -51,61 +49,17 @@
     </script>
 
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
 
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/customjs.js') }}"></script>
-   <script type="text/javascript">
-       
-       //script for keywords
 
-$(document).ready(function () {
-    $('#bootstrapTagsInputForm')
-        .find('[name="cities"]')
-            // Revalidate the cities field when it is changed
-            .change(function (e) {
-                $('#bootstrapTagsInputForm').formValidation('revalidateField', 'cities');
-            })
-            .end()
-        
-        .formValidation({
-            framework: 'bootstrap',
-            excluded: ':disabled',
-            icon: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                cities: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please enter at least one city you like the most.'
-                        }
-                    }
-                },
-                countries: {
-                    validators: {
-                        callback: {
-                            message: 'Please enter 2-4 countries you like most.',
-                            callback: function (value, validator, $field) {
-                                // Get the entered elements
-                                var options = validator.getFieldElements('countries').tagsinput('items');
-                                return (options !== null && options.length >= 2 && options.length <= 4);
-                            }
-                        }
-                    }
-                }
-            }
-        });
-});
-
-
-   </script>
 </body>
 </html>
