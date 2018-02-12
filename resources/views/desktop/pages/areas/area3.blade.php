@@ -497,14 +497,12 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							
 							<li data-toggle="collapse" href="#sub-parameter16"><a href="">The institution has policies on: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
-								<ol id="#sub-parameter16" class="panel-collapse collapse">
+								<ol id="sub-parameter16" class="panel-collapse collapse">
 									<li><a href="{{ URL::to('/') }}/area3/F/3FS_1_1">Substitution or special arrangements whenever a faculty is on leave or absent</a></li>
 									<li><a href="{{ URL::to('/') }}/area3/F/3FS_1_2">Giving awards and/or recognition for faculty and students with outstanding achievements</a></li>
 									<li><a href="{{ URL::to('/') }}/area3/F/3FS_1_3">Supervision/monitoring and evaluation of faculty performance.</a></li>
 								</ol>
-							
 				      	</ol>
 						</td>
 					</tr>
@@ -519,7 +517,7 @@
 						<td>
 						<ol class="accrdn">
 							<li><a href="{{ URL::to('/') }}/area3/F/3FI_1">The institution implements rules on the attendance of the faculty in their respective classes and other academic related activities.</a></li>
-							<li data-toggle="collapse" href="#sub-parameter17"><a href="">Dialogues are regularly conducted by the administration with the <span class="glyphicon glyphicon-chevron-down"></span> </a></li>s
+							<li data-toggle="collapse" href="#sub-parameter17"><a href="">Dialogues are regularly conducted by the administration with the <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter17" class="panel-collapse collapse">
 									<li><a href="{{ URL::to('/') }}/area3/F/3FI_2_1">faculty</a></li>
 									<li><a href="{{ URL::to('/') }}/area3/F/3FI_2_2">students</a></li>

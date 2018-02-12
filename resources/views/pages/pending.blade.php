@@ -35,7 +35,8 @@
 								</a></strong>
 								<input type="hidden" id = "param_{{ $file->id }}" value="{{$filetag['parameter'] }}">
 							</p>
-							<a href="{{ URL::to('/').'/viewpdf/'.$file->id }}">View file ></a>
+							<button type="button" class="view"><a class="view" href="{{ URL::to('/').'/viewpdf/'.$file->id }}">View</a></button>
+							
 							<td class="col-xs-4 pending">
 								<input type="hidden" id = "file_{{ $file->id }}" value="{{ $file->filename }}">
 

@@ -4,11 +4,11 @@
 
 <div class="container">
 	<div class="col-md-9 col-xs-12">
-		<div class="panel upload-panel">
+		<div class="panel create">
             <div class="panel-heading">Upload a file</div>
             <div class="panel-body">
 
-        	{!! Form::open(['action' => 'UploadController@wordtest', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        	{!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
             <div class="form-group">
            		<label>Select document type</label>
