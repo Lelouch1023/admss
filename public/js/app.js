@@ -42054,5 +42054,12 @@ function showMyArea(){
             }
         }
 
+        function test(){
+            if ($("#test").is(':visible')) {
+                // $("#test").slideUp(); 
+                alert('test')  
+            }
+        }
+
 
 

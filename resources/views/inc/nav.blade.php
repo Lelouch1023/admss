@@ -118,13 +118,6 @@
                         </div>
                       </div>
                       <!-- COMPONENT END -->
-{{-- <<<<<<< HEAD
-                      <div class="form-group">
-                        <br>
-                        <button type="submit" class="btn btn-primary pull-right" id="">Submit</button>
-                        <button id="submitbtn" class="btn btn-primary">Test</button>
-                      </div>
-======= --}}
                         {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
                         {!! Form::close() !!}
                     </form>
@@ -133,7 +126,6 @@
                 </div>
               </div>
             </div>
-{{-- <<<<<<< HEAD
 
             <!-- MODAL 2-->
             <div id="modal2" class="modal fade" role="dialog">

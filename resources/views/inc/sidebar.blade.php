@@ -35,6 +35,72 @@
             
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
+            <!-- ALL AREAS -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
+                            </span> &nbsp; All Areas</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table sidebar-submenu">
+                                <tr>
+                                    <td >
+                                        <a onclick="window.location.href='{{ route('area1') }}'" title="Area 1">Vision, Mission, Goals and Obejectives</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area2') }}'"  title="Area 2">The Faculty</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area3') }}'"  title="Area 3">Curriculum and Instruction</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area4') }}'"  title="Area 4">Support to Students</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area5') }}'"  title="Area 5">Research</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area6') }}'"  title="Area 6">Extension and Community Involvement</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area7') }}'"  title="Area 7">Library</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area8') }}'"  title="Area 8">Physical Plant and Facilities</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area9') }}'"  title="Area 9">Laboratories</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area10') }}'"  title="Area 10">Administration</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF ALL AREAS -->
             <!-- MY AREA  -->
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
@@ -71,7 +137,7 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('pending')}}">Tags</a> <span class="label label-danger">2</span>
+                                        <a href="{{ ('pending')}}">Tags</a>
                                         <br>
                                         <button type="submit" class="btn see-all" ><a href="">See All</a></button>
                                     </td>
@@ -82,72 +148,7 @@
                 </div>
 
                 <!-- END OF PENDING REQUESTS -->
-                <!-- ALL AREAS -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
-                            </span> &nbsp; All Areas</a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table sidebar-submenu">
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area1') }}" title="Area 1">Vision, Mission, Goals and Obejectives</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area2') }}" title="Area 2">The Faculty</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area3') }}" title="Area 3">Curriculum and Instruction</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area4') }}" title="Area 4">Support to Students</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area5') }}" title="Area 5">Research</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area6') }}" title="Area 6">Extension and Community Involvement</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area7') }}" title="Area 7">Library</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area8') }}" title="Area 8">Physical Plant and Facilities</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area9') }}" title="Area 9">Laboratories</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="{{ ('area10') }}" title="Area 10">Administration</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- END OF ALL AREAS -->
+                
                 <!-- BIN MENU -->
                 <div class="panel panel-default">
                     <div class="panel-heading">

@@ -3,7 +3,7 @@
 		
 @section('content')
 	<div class="container" id="containeradmin">
-		<div class="msg-alert alert alert-success" style="display: none;" id="successmsg">The user has been approved successfully!</div>
+		<div class="msg-alert alert alert-success" style="display: none; position: fixed; z-index: 999;" id="successmsg">The user has been approved successfully!</div>
 		<div class="col-md-9 col-xs-12">
             <div class="admin-panel with-nav-tabs admin-default">
                 <div class="admin-heading">
@@ -15,10 +15,7 @@
                 <div id="loadsample"></div>
                 <div class="panel-body">
                     <div class="tab-content">
-                 
                         <div class="tab-pane fade in active" id="requeststab">
-						
-						
                         	<table class="table table-hover">
 						    <thead>
 						      <tr>
@@ -51,11 +48,12 @@
 								        <option value="area10">Area 10</option>
 								    </select>
 						        </td>
+
 						        
 						        <td id="user-data-">
 						        	<input type="hidden" name="userid" id="userid_{{ $request->id }}" value="{{ $request->id }}">
-						        	<center><button onclick="approve({{ $request->id }})" class="btn btn-link approvebtn" id="acceptbtn_{{ $request->id }}"><a style="color: #006400;">Approve</a></button>        	
-						        	<button onclick = "reject({{ $request->id }})" class="btn btn-link" id="rejectbtn_{{ $request->id }}"><a style="color: #BD2031;">Reject</a></button></center>
+						        	<center><button type="button" class="btn btn-success" onclick="approve({{ $request->id }})" class="btn btn-link approvebtn" id="acceptbtn_{{ $request->id }}">Approve</button>        	
+						        	<button type="button" class="btn btn-danger" onclick="reject({{ $request->id }})" class="btn btn-link" id="rejectbtn_{{ $request->id }}">Reject</button></center>
 
 						        </td>
 
@@ -73,6 +71,7 @@
 						  @endif
                         </div>
 
+
                         <!-- Area Panel -->
                         <div class="tab-pane fade" id="chairstab">
                         	<table class="table table-hover">
@@ -89,12 +88,16 @@
 						    	@foreach($chairs as $chair)
 						      <tr> {{--area1 => Area 1 --}}
 						        <td id="user-data"> 
-						        	@if($chair->user_lvl == 1)
-						        		<span style="color: red; ">[admin]</span> 
-						        	@endif
-
 						        	{{ strtoupper(substr($chair->area_handled, 0, 1)).substr($chair->area_handled, 1, 3)." ".substr($chair->area_handled, 4) }} </td> 
-						        <td id="user-data">{{ $chair->name }} <h6>({{ $chair->email }})</h6></td>
+						        <!-- If else for admin access -->
+						        <td id="user-data">
+						        	@if($chair->user_lvl == 1)
+						        	<span class="identify-admin">[admin]</span> 
+						        	<br>
+						        	@endif
+						        	{{ $chair->name }}
+						        	<h6>({{ $chair->email }})</h6></td>
+						        <!-- End admin access -->
 						        <td>
 						        	
 						        	<select class="form-control" id="area_handled{{ $chair->id }}">
@@ -111,15 +114,14 @@
 								        <option value="area10" @if($chair->area_handled == "area10") selected @endif>Area 10</option>
 								    </select>
 						        </td>
-						        <td id="user-data">
+						        <td id="admin-rights">
 						        	<input type="hidden" name="user{{ $chair->id }}" id="user{{ $chair->id }}" value="{{ $chair->id }}">
-						        	<button class="btn btn-link" onclick="assign({{ $chair->id }})"><a>Assign</a></button>
+						        	<button class="btn btn-success" onclick="assign({{ $chair->id }})"><a>Assign</a></button>
 						        	@if($chair->user_lvl == 1)
-						        		<button class="btn btn-link" onclick="revokeadmin({{ $chair->id }})"><a>Revoke Admin Rights</a></button>
+						        		<button class="btn btn-danger" onclick="revokeadmin({{ $chair->id }})"><a>Revoke Admin</a></button>
 						        	@else
-						        		<button class="btn btn-link" onclick="giveadmin({{ $chair->id }})"><a>Invoke Admin Rights</a></button>
+						        		<button class="btn btn-primary" onclick="giveadmin({{ $chair->id }})"><a>Make Admin</a></button>
 						        	@endif
-
 						        </td>
 						      </tr>
 						      @endforeach
