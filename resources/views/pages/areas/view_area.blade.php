@@ -28,20 +28,17 @@
 			        </div>
 			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST', 'id' => 'bootstrapTagsInputForm']) !!}
 			        	{{ csrf_field() }}
-			            <div class="modal-body">
+			            <div class="modal-body keycontent">
 			        	
 						    <div class="form-group">
 						        <label class="control-label">Note: Add words that are related to this area. To add a tag, press "tab" after typing.</label><br><br>
 						        <div class="col-xs-12">
-						        	
 						            <input type="text" name="keyword[]" class="form-control"
 						                   value="@foreach($keywords as $keyword)
 						        		{{ $keyword->keyword."," }}
 						            @endforeach" data-role="tagsinput" />
-						                 
+						            <br>
 						        </div>
-
-
 						    </div>
 					</div>
 					{!! Form::hidden('arealink', $arealink) !!}

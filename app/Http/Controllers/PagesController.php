@@ -147,10 +147,6 @@ class PagesController extends Controller
 
         return view('desktop.pages.areas.area10');
     }
-    public function tags(){ 
-
-        return view('posts.tag-test');
-    }
 
     public function pending(){ 
         $filename = DB::table('tags')
