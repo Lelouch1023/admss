@@ -359,3 +359,35 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 background: #bf2626;
     color: #fff;
 }
+
+/*All Areas*/
+.tile-menu{
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+	margin: 0 auto;
+}
+.area1-box{
+	border: 1px solid #000;
+	padding: 30px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    float: left;
+    width: 32%;
+    background-color: transparent;
+}
+.area1-box > a{
+	color: #f5d02a;
+	font-size: 20px;
+}
+.area1-box:hover{
+	background-color: #1b1b1b;
+	transition: 0.5s;
+	color: #fff;
+}
+.home{
+	cursor: pointer;
+}

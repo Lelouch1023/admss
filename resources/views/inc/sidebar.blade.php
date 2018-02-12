@@ -32,10 +32,20 @@
                     <button onclick="window.location.href='{{ ('admin') }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
-            
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
-            <!-- ALL AREAS -->
+            
+            <div class="panel-group" id="accordion">
+                <!-- ALL AREAS -->
+                <div class="panel panel-default">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                        <h4 class="panel-title ">
+                           <span class="glyphicon glyphicon-home">
+                            </span> &nbsp; Home 
+                        </h4>
+                    </div>
+                </div>
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -43,7 +53,7 @@
                             </span> &nbsp; All Areas</a>
                         </h4>
                     </div>
-                    <div id="collapseThree" class="panel-collapse collapse in">
+                    <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table sidebar-submenu">
                                 <tr>
@@ -101,8 +111,7 @@
                     </div>
                 </div>
                 <!-- END OF ALL AREAS -->
-            <!-- MY AREA  -->
-            <div class="panel-group" id="accordion">
+                <!-- MY AREA  -->
                 <div class="panel panel-default">
                     <div class="panel-heading  ">
                         <h4 class="panel-title">

@@ -14,9 +14,6 @@
 		  		<a href="{{ route($arealink) }}">{{ $para->param_name }}</a>
 		  	@endforeach /
 		  	<a href="#" class="active">{{ $subparam }}</a>
-
-
-
 		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" ><span  aria-hidden="true" title="Add keyword" style="color: #fff;">See Keywords</span></button>
 
 		  	{{-- <p class="keyword pull-right">Keywords</p> --}}
