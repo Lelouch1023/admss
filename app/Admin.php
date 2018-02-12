@@ -24,9 +24,9 @@ class Admin extends Authenticatable
      *
      * @var array
      */
-    // protected $hidden = [
-    //     'password', 'remember_token',
-    // ];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 
     public function file(){
         return $this->hasMany('App\File');
