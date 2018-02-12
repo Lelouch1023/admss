@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
+    
 </head>
 <body>
 
@@ -40,7 +45,7 @@
         </div>
     </div>
 
-@include('inc.footer')
+        @include('inc.footer')
 
 
     <!-- Scripts -->
@@ -49,8 +54,7 @@
     </script>
 
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/keywords.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
