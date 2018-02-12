@@ -29,11 +29,8 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
-<<<<<<< HEAD
-                    <button onclick="window.location.href='{{ ('admin') }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
-=======
-                    <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-success btn-xs">Admin Panel</button>
->>>>>>> a34554bc0089e0e54f5c2ecd33db0397234b5223
+
+                    <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             <!-- END SIDEBAR BUTTONS -->
