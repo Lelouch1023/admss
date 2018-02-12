@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#bootstrapTagsInputForm')
-        .find('[name="cities"]')
+        .find('[name="keyword"]')
             // Revalidate the cities field when it is changed
             .change(function (e) {
                 $('#bootstrapTagsInputForm').formValidation('revalidateField', 'keyword');
@@ -27,3 +27,4 @@ $(document).ready(function () {
             }
         });
 });
+

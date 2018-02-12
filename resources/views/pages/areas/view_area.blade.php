@@ -43,6 +43,7 @@
 
 
 						    </div>
+						   
 					</div>
 					{!! Form::hidden('arealink', $arealink) !!}
 					{!! Form::hidden('paramletter', $paramletter) !!}
@@ -52,7 +53,7 @@
 			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Save">
 			            </div>
 
-						</form>{{-- closes the form --}}
+						{!! Form::close() !!}{{-- closes the form --}}
 
 			    </div>
 			</div>

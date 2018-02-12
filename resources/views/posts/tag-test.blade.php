@@ -7,11 +7,11 @@
 		<div class="panel create">
             <div class="panel-heading">Confirm Tags</div>
             <div class="panel-body">
-                <form id="bootstrapTagsInputForm" method="post" class="form-horizontal">
+                <form id="TagsInputForm" method="post" class="form-horizontal">
                     <div class="form-group">
                       <label class="control-label">Are these tags for <i>file_name</i>? </label>
                     <div class="col-xs-12">
-                      <input type="text" name="cities" class="form-control"
+                      <input type="text" name="tag" class="form-control"
                        value="Hanoi" data-role="tagsinput" />
                     </div>
                     </div>
