@@ -453,9 +453,9 @@
 						<td>
 						<ol class="accrdn">
 							<label>The Faculty</label>
-							<li data-toggle="collapse" href="#sub-parameter12"><a href="">Demonstrate skills and competencies in all of the following: <span class="glyphicon glyphicon-chevron-down"></span>      
+							<li data-toggle="collapse" href="#sub-parameter14"><a href="">Demonstrate skills and competencies in all of the following: <span class="glyphicon glyphicon-chevron-down"></span>      
 							</a></li>
-								<ol id="sub-parameter12" class="panel-collapse collapse">
+								<ol id="sub-parameter14" class="panel-collapse collapse">
 									<li><a href="{{ URL::to('/') }}/area2/F/2FI_1_1">knowledge of the program objectives/outcome(s)</a></li>
 									<li><a href="{{ URL::to('/') }}/area2/F/2FI_1_2">reflecting the program outcomes in the course objectives</a></li>
 									<li><a href="{{ URL::to('/') }}/area2/F/2FI_1_3">knowledge/mastery of the content, issues, and methodologies in the discipline</a></li>
@@ -593,7 +593,7 @@
 						<td>
 						<ol class="accrdn">
 							<label>The Faculty</label>
-							<li data-toggle="collapse" href="#sub-parameter12"><a href="">Responsibly observe the following</a></li>
+							<li data-toggle="collapse" href="#sub-parameter12"><a href="">Responsibly observe the following <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter12" class="panel-collapse collapse">
 									<li><a href="{{ URL::to('/') }}/area2/H/2HI_1_1">regular and prompt attendance to classes</a></li>
 									<li><a href="{{ URL::to('/') }}/area2/H/2HI_1_2">participation in facul{{ URL::to('/') }}/area2/H/2HI_1_2ty meetings and university</a></li>

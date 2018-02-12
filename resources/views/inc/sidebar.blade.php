@@ -29,7 +29,7 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
-                    <button onclick="window.location.href='{{ ('admin') }}'" type="button" class="btn btn-success btn-xs">Admin Panel</button>
+                    <button onclick="window.location.href='{{ ('admin') }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             

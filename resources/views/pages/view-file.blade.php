@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
 	<div class="col-md-9 col-xs-12">
-		<div class="categories">
+		<div class="viewfilecontainer">
 			
 			<!-- Category contents -->
 			
@@ -28,7 +28,7 @@
 								<button type="button" class="bin-restore"><a href="/uploads/edit/{{$file->id}}">Revise</a></button>
 							@endif
 
-							<button type="button" class="download"><a href="storage/uploads/{{$file->name}}">Download</a></button>
+							<button type="button" class="download"><a href="storage/uploads/{{$file->name}}" download="{{$file->name}}">Download</a></button>
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete">Delete</button>
 							@endif

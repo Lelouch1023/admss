@@ -149,15 +149,20 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 }
 
 /*Content categories*/
+.viewfilecontainer{
+	margin-top: 20px;
+	min-height: 620px;
+   border-radius: 7px;
+    -webkit-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+}
 .categories{
     min-height: 620px;
-    /*height: 600px;*/
-    /*background: rgba(255, 255, 255, 0.1);
-    margin: 2px;*/
-    border-radius: 7px;
+   border-radius: 7px;
     -webkit-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 50px -15px rgba(0,0,0,0.75);
 }
 .category-title{
 	border-bottom: 1px solid #1b1b1b;

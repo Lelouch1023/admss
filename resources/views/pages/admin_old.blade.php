@@ -6,17 +6,17 @@
 		<div class="msg-alert alert alert-success" style="display: none; position: fixed; z-index: 999;" id="successmsg">The user has been approved successfully!</div>
 		<div class="col-md-9 col-xs-12">
             <div class="admin-panel with-nav-tabs admin-default">
-            	<div id="content"  class="admin-heading">
-				    <ul id="mytab" class="nav nav-tabs" data-tabs="tabs" >
-					    <li class="active"><a href="#requeststab" data-toggle="tab">Pending Requests</a></li>
-					    <li><a href="#chairstab" data-toggle="tab">Area Chairs</a></li>
-					</ul>
-				</div>
+                <div class="admin-heading">
+                        <ul class="nav nav-tabs mytab" id="mytab" role="tablist">
+                            <li class="active"><a href="#requeststab" role="tab" data-toggle="tab">Pending User Requests</a></li>
+                            <li><a href="#chairstab" role="tab" data-toggle="tab">Area Chairs</a></li>
+                        </ul>
+                </div>
                 <div id="loadsample"></div>
-				<div class="panel-body">
-				<div id="my-tab-content" class="tab-content">
-				    <div class="tab-pane active" id="requeststab">
-				        <table class="table table-hover">
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="requeststab">
+                        	<table class="table table-hover">
 						    <thead>
 						      <tr>
 						        <th>User</th>
@@ -28,7 +28,6 @@
 						    <tbody>
 						    @if(count($requests) > 0)	
 						    	@foreach($requests as $request)						      	
-						    		
 						      <tr>
 						        <td id="user-data">{{ $request->name }} </td>
 						        <td id="user-data">{{ $request->created_at }}</td>
@@ -46,24 +45,32 @@
 								        <option value="area10">Area 10</option>
 								    </select>
 						        </td>
+
+						        
 						        <td id="user-data-">
 						        	<input type="hidden" name="userid" id="userid_{{ $request->id }}" value="{{ $request->id }}">
 						        	<center><button type="button" class="btn btn-success" onclick="approve({{ $request->id }})" class="btn btn-link approvebtn" id="acceptbtn_{{ $request->id }}">Approve</button>        	
 						        	<button type="button" class="btn btn-danger" onclick="reject({{ $request->id }})" class="btn btn-link" id="rejectbtn_{{ $request->id }}">Reject</button></center>
+
 						        </td>
+
 						      </tr>
 						      @endforeach						    
 						    @else
 						    <tr><td colspan="4">No pending users.</td></tr>
 						    @endif
+
 						    </tbody>
+
 						  </table>
 						  @if(count($requests) > 0)
 						  	<center>{{ $requests->links() }}</center>
 						  @endif
-				    </div>
-				    <div class="tab-pane" id="chairstab">
-				        <table class="table table-hover">
+                        </div>
+
+                        <!-- Area Panel -->
+                        <div class="tab-pane fade in" id="chairstab">
+                        	<table class="table table-hover">
 						    <thead>
 						      <tr>
 						        <th>Area Handled</th>
@@ -122,12 +129,10 @@
 						  @if(count($chairs) > 0)
 						  	<center>{{ $chairs->links() }}</center>
 						  @endif
-				    </div>
-				</div>
-				</div>
-			</div>
-        </div> <!-- End of Admin Panel -->
-	</div> <!-- End of Column -->
-</div> <!-- End of Container -->
+                        </div>
+                    </div>
+                </div> <!-- End of Panel Body -->
+            </div> <!-- End of Admin Panel -->
+		</div> <!-- End of Column -->
+	</div> <!-- End of Container -->
 @endsection
-
