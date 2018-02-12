@@ -7,17 +7,21 @@
 		<div class="panel create">
             <div class="panel-heading">Confirm Tags</div>
             <div class="panel-body">
-                <form id="bootstrapTagsInputForm" method="post" class="form-horizontal">
-                    <div class="form-group">
-                      <label class="control-label">Are these tags for <i>file_name</i>? </label>
-                    <div class="col-xs-12">
-                      <input type="text" name="cities" class="form-control"
-                       value="Hanoi" data-role="tagsinput" />
+
+            <form id="inputTags" method="post" class="form-horizontal">
+
+                <div class="form-group">
+                    <label class="control-label">Do you want to tag <i>file_name</i> to these areas?</label>
+                    <div class="col-xs-12 tag-input">
+                        <input type="text" name="cities" class="form-control"
+                               value="insert tags" data-role="tagsinput" />
                     </div>
-                    </div>
-                </form>
-                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <input id="tag-form-submit" type="submit" class="btn btn-success" value="Save">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
             </div>  
         </div>
 	</div>

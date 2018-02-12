@@ -23,13 +23,11 @@
 			    <div class="modal-content keywords">
 			        <div class="modal-header">
 			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
 			            <center><h4 class="modal-title" id="myModalLabel">Current Keywords</h4></center>
 			        </div>
 			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST', 'id' => 'bootstrapTagsInputForm']) !!}
 			        	{{ csrf_field() }}
 			            <div class="modal-body keycontent">
-			        	
 						    <div class="form-group">
 						        <label class="control-label">Note: Add words that are related to this area. To add a tag, press "tab" after typing.</label><br><br>
 						        <div class="col-xs-12">
@@ -48,9 +46,7 @@
 			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Save">
 			            </div>
-
-						</form>{{-- closes the form --}}
-
+					{!! Form::close() !!}
 			    </div>
 			</div>
 			</div>
