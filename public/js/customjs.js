@@ -149,7 +149,7 @@ function rejectag(id){
 		    	}		
        		},			
    		});
-
+zz
   	//console.log(values);
 
 }

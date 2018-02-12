@@ -26,7 +26,7 @@
 
 			            <center><h4 class="modal-title" id="myModalLabel">Current Keywords</h4></center>
 			        </div>
-			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST']) !!}
+			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST', 'id' => 'bootstrapTagsInputForm']) !!}
 			        	{{ csrf_field() }}
 			            <div class="modal-body">
 			        	

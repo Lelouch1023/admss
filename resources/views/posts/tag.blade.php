@@ -15,11 +15,13 @@
                 	@foreach($val as $vals)
                     	   <li><p>{{ $vals->name}}</p></li>
                            <ul>
-                            @for($i=0; $i<count($tags); $i++)
-                                @if($vals->area_id == $tags[$i]['area_id'])
-                                    <li><a href="{{ URL::to('/')."/".$vals->area_id  }}" style="color: #333" target="_blank">{{ $paramnames[$i]}}</a></li>
+                            @foreach($tags as $tagsb)
+                                @if($vals->area_id == $tagsb['area_id'])
+                                   
+                                    <li><a href="{{ URL::to('/')."/".$vals->area_id  }}" style="color: #333" target="_blank">{{ $tagsb["dot"] }}</a></li>
+                                   
                                 @endif
-                            @endfor
+                            @endforeach
                         </ul>
                            <br>
                 	@endforeach
@@ -34,7 +36,7 @@
                     @endforeach
                      @foreach($tags as $tagsb)
 
-                            <input type="hidden" name="param[parameter][]" value={{ $tagsb['parameter']}} />
+                            <input type="hidden" name="param[parameter][]" value={{ $tagsb['parameters']}} />
                                                       
                     @endforeach
 
