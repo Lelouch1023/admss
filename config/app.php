@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         App\Providers\ViewComposerServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
+
     ],
 
     /*

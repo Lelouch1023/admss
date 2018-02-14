@@ -1,0 +1,10 @@
+diff a/config/app.php b/config/app.php	(rejected hunks)
+@@ -179,8 +179,6 @@
+         App\Providers\RouteServiceProvider::class,
+         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+         App\Providers\ViewComposerServiceProvider::class,
+-        Jenssegers\Agent\AgentServiceProvider::class,
+-
+     ],
+ 
+     /*

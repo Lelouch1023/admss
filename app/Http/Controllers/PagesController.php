@@ -47,8 +47,8 @@ class PagesController extends Controller
     * Function to load my uploads
     */
     public function uploads(){ 
-        $agent = new Agent();
-        $agent = $agent->isMobile();
+        // $agent = new Agent();
+        // $agent = $agent->isMobile();
 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
