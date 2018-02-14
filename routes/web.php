@@ -29,9 +29,9 @@ Route::get('getRequest', function(){
 	if(Request::ajax()){
 		return 'getRequest has fully loaded!';
 	}
-});
+});	
  
- 
+Route::get('viewpdf/{id}', 'PagesController@viewpdf');
 //Route::resource('post', 'UploadController');
  
 Auth::routes();
@@ -70,6 +70,9 @@ Route::get('/area7', 'PagesController@area7')->name('area7');
 Route::get('/area8', 'PagesController@area8')->name('area8');
 Route::get('/area9', 'PagesController@area9')->name('area9');
 Route::get('/area10', 'PagesController@area10')->name('area10');
+Route::get('/tags', 'PagesController@tags')->name('tags');
  
 Route::get('/logout', 'HomeController@logoutreg')->name('getLogout'); 
 Route::post('/tag', 'TagsController@store');
+Route::post('/keyword', 'TagsController@addKeyword');
+Route::post('/pending', 'PagesController@approvetag');

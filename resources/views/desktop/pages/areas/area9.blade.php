@@ -197,7 +197,7 @@
 									<li><a href="{{ URL::to('/') }}/area9/C/9CI_7_2">computer laboratory</a></li>
 									<li><a href="{{ URL::to('/') }}/area9/C/9CI_7_3">multi-media/educational technology center</a></li>
 									<li><a href="{{ URL::to('/') }}/area9/C/9CI_7_4">research facility</a></li>
-									<li data-toggle="collapse" href="#sub-parameter3"><a href="#"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+									<li data-toggle="collapse" href="#sub-parameter3"><a href="#"> general education laboratory<span class="glyphicon glyphicon-chevron-down"></span></a></li>
 										<ol id="sub-parameter3" class="panel-collapse collapse">
 											<li><a href="{{ URL::to('/') }}/area9/C/9CI_7_5_1">natural science/physical science</a></li>
 											<li><a href="{{ URL::to('/') }}/area9/C/9CI_7_5_2">speech laboratory</a></li>

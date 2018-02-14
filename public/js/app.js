@@ -42018,3 +42018,48 @@ $(function() {
   bs_input_file();
 });
 
+
+function showMyArea(){
+            if ($("#collapseOne").is(':visible')) {
+                $("#collapseOne").slideUp();   
+            }
+            else {
+                $("#collapseOne").slideDown();   
+            }
+        }
+
+        function showRequest(){
+            if ($("#collapseTwo").is(':visible')) {
+                $("#collapseTwo").slideUp();   
+            }
+            else {
+                $("#collapseTwo").slideDown();   
+            }
+        }
+        function showAllAreas(){
+            if ($("#collapseThree").is(':visible')) {
+                $("#collapseThree").slideUp();   
+            }
+            else {
+                $("#collapseThree").slideDown();   
+            }
+        }
+
+        function showBin(){
+            if ($("#collapseFour").is(':visible')) {
+                $("#collapseFour").slideUp();   
+            }
+            else {
+                $("#collapseFour").slideDown();   
+            }
+        }
+
+        function test(){
+            if ($("#test").is(':visible')) {
+                // $("#test").slideUp(); 
+                alert('test')  
+            }
+        }
+
+
+

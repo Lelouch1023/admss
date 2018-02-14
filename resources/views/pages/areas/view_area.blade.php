@@ -14,68 +14,49 @@
 		  		<a href="{{ route($arealink) }}">{{ $para->param_name }}</a>
 		  	@endforeach /
 		  	<a href="#" class="active">{{ $subparam }}</a>
+		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" ><span  aria-hidden="true" title="Add keyword" style="color: #fff;">See Keywords</span></button>
 
-		  	<button type="button" class="keyword pull-right" data-toggle="modal" data-target="#keywordsModal" onclick=""><span class="glyphicon glyphicon-plus" aria-hidden="true" title="Upload a file"></span></button>
-
+		  	{{-- <p class="keyword pull-right">Keywords</p> --}}
             <!-- Modal -->
-            <div id="keywordsModal" class="modal fade" role="dialog">
-              <div class="modal-dialog upload-modal">
+            <div id="keywordsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content keywords">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <center><h4 class="modal-title" id="myModalLabel">Current Keywords</h4></center>
+			        </div>
+			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST', 'id' => 'bootstrapTagsInputForm']) !!}
+			        	{{ csrf_field() }}
+			            <div class="modal-body keycontent">
+						    <div class="form-group">
+						        <label class="control-label">Note: Add words that are related to this area. To add a tag, press "tab" after typing.</label><br><br>
+						        <div class="col-xs-12">
+						            <input type="text" name="keyword[]" class="form-control"
+						                   value="@foreach($keywords as $keyword)
+						        		{{ $keyword->keyword."," }}
+						            @endforeach" data-role="tagsinput" />
+						            <br>
+						        </div>
+						    </div>
+					</div>
+					{!! Form::hidden('arealink', $arealink) !!}
+					{!! Form::hidden('paramletter', $paramletter) !!}
+					{!! Form::hidden('sub', $sub) !!}
+					 <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Save">
+			            </div>
+					{!! Form::close() !!}
+			    </div>
+			</div>
+			</div>
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upload a file</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Php code for connection of data -->
-                    {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                    <!--/comment -->
-                
-                    <form method="POST" action="#" enctype="multipart/form-data">
-                      <!-- COMPONENT START -->
-                      <div class="form-group">
-                        <label>Select document type</label>
-                        <!-- Selection for document type -->
-                        <select class="form-control" id="">
-                          <option>Memorandum</option>
-                            <option>Office Orders</option>
-                            <option>TUP Orders</option>
-                            <option>Certicates</option>
-                          <option>Researches</option>
-                          <option>Grade Sheets</option>
-                        </select>
-                    </div>
-                      <div class="form-group">
-                        <div class="input-group input-file" name="Fichier1">
-                          <span class="input-group-btn">
-                                <button class="btn btn-default btn-choose" type="button">Choose</button>
-                            </span>
-                            <input type="text" class="form-control" placeholder='Choose a file...' />
-                            <span class="input-group-btn">
-                                 <button class="btn btn-warning btn-reset" type="button">Reset</button>
-                            </span>
-                        </div>
-                      </div>
-                      
-                      <!-- COMPONENT END -->
-                      <div class="form-group">
-                        <br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
-                      </div>
-                    </form>
-                  <div class="modal-footer">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of modal -->
+           <!-- End of modal -->
+
 		  </div>
 		<div class="categories">
 			<!-- Category contents -->
-			<!-- Category contents -->
-			<div class="category-content">
+			<div class="category-content"> 
 			<!-- PHP code for data loop -->
 				<table class="table table-hover">
 					<thead>
@@ -86,13 +67,13 @@
 							<th class="col-xs-2">Select</th>
 						</tr>
 					</thead>
+					<tbody>
 
 			@if(count($files) > 0)
 			     		@foreach ($files as $file)	
 
 					<tr class="file">
 						<td class="col-xs-5">
-
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="{{ URL::to('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
 						</td>
@@ -110,22 +91,20 @@
 						</td>
 					</tr>
 					@endforeach
-
-
            	@else
-           		</table>
-			      	<p><center>No files found.</center></p>
+           		<tr>
+			      	<td colspan="4"><p><center>No files found.</center></p></td>
+			    </tr>
 			      
            	@endif
-				</table>
+           		</tbody>
+			</table>
 			</div>
 			<!-- /Category content -->
-
 
 			@if(count($files) > 0)
 				{{$files->links()}}
 			@endif
-
 		
 	</div>
 </div>

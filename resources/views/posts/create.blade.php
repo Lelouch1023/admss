@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="col-md-9 col-xs-12">
-		<div class="panel upload-panel">
+		<div class="panel create">
             <div class="panel-heading">Upload a file</div>
             <div class="panel-body">
 
@@ -22,10 +22,9 @@
 					<option value="Grade Sheets">Grade Sheets</option>
 				</select>
             </div>
+            <input type=text name="input">
                 <!-- Php code for connection of data -->
-				
 				<!--/comment -->
-
 	        <div class="form-group">
                 <label>Select a file</label>
 	                  {{ Form::file('file') }}

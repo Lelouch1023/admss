@@ -105,3 +105,51 @@ function revokeadmin(id){
 			
    		});
 }
+
+function approvetag(id){
+	var values = {
+		
+		'filename' : $('#file_'+id).val(),
+		'param' : $('#param_'+id).val(),
+		'approvetag' : true
+	}
+		$.ajax({
+	        url: 'pending',
+	        type: "POST",
+	        data: values,
+	        success: function(data){
+		    	if(data.success == true){
+		    	   $('#pendingcontainer').html(data.html);
+		    	   $('#pendingsucc').show(500).fadeOut(2000);
+  				
+		    	}		
+       		},			
+   		});
+
+  	//console.log(values);
+
+}
+
+function rejectag(id){
+	var values = {
+		
+		'filename' : $('#file_'+id).val(),
+		'param' : $('#param_'+id).val(),
+		'rejectag' : true
+	}
+		$.ajax({
+	        url: 'pending',
+	        type: "POST",
+	        data: values,
+	        success: function(data){
+		    	if(data.success == true){
+		    	   $('#pendingcontainer').html(data.html);
+		    	   $('#pendingdel').show(500).fadeOut(2000);
+  				
+		    	}		
+       		},			
+   		});
+zz
+  	//console.log(values);
+
+}

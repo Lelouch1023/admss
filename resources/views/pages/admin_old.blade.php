@@ -1,4 +1,4 @@
-{{-- 		
+		
 @extends('layouts.app')
 		
 @section('content')
@@ -28,12 +28,9 @@
 						    <tbody>
 						    @if(count($requests) > 0)	
 						    	@foreach($requests as $request)						      	
-						    		
 						      <tr>
 						        <td id="user-data">{{ $request->name }} </td>
 						        <td id="user-data">{{ $request->created_at }}</td>
-						       
-						    	   
 						     	<td>
 						        	<select class="form-control" id="area_assign{{ $request->id }}" name="area_assign">
 								        <option value="area1">Area 1</option>
@@ -71,9 +68,8 @@
 						  @endif
                         </div>
 
-
                         <!-- Area Panel -->
-                        <div class="tab-pane fade" id="chairstab">
+                        <div class="tab-pane fade in" id="chairstab">
                         	<table class="table table-hover">
 						    <thead>
 						      <tr>
@@ -140,4 +136,3 @@
 		</div> <!-- End of Column -->
 	</div> <!-- End of Container -->
 @endsection
- --}}

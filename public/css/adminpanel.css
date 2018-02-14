@@ -36,3 +36,9 @@
 #user-data a:hover{
 	text-decoration: underline;
 }
+#admin-rights{
+  color: #fff;
+}
+.identify-admin{
+  color: red;
+}

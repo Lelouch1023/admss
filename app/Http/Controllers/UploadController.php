@@ -91,7 +91,7 @@ class UploadController extends Controller
             $tags = array();
             $tags = $this->extract($file->name);
         $tagdup = array();
-        $val = array();
+        $valA = array();
         if(count($tags) > 0){
            $arrkeys = array_keys($tags);
                 
@@ -111,7 +111,7 @@ class UploadController extends Controller
            
             foreach($valueD as $value){
                 foreach($value as $vals){
-                        $val[] = $vals;
+                        $valA[] = $vals;
                 }
             }
          //saves the area_name and area_id into on array
@@ -134,7 +134,7 @@ class UploadController extends Controller
                 foreach($tags[$ind] as $key => $value){
                     $tagsfin[] = array(
                         'area_id' => $ind,
-                        'parameter' => $value
+                        'parameters' => $value
                     );
                 }
             }
@@ -144,19 +144,17 @@ class UploadController extends Controller
         }//endif
             $subparam = array();
         //s_1 = s.1
-            foreach($tagdup as $tags){
-            if($tags['area_id'] == "area10")
-                $subparam[] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tags['parameter'], 3, strlen($tags['parameter'])));
-            else
-             $subparam[] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tags['parameter'], 2, strlen($tags['parameter'])));
+            foreach($tagdup as $key => $val){
+                if($tagdup[$key]['area_id'] == "area10")
+                $tagdup[$key]['dot'] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tagdup[$key]['parameters'], 3, strlen($tagdup[$key]['parameters'])));
+                else
+                $tagdup[$key]['dot'] = preg_replace('/[^A-Za-z0-9]/', '.', substr($tagdup[$key]['parameters'], 2, strlen($tagdup[$key]['parameters'])));
             } 
-        //!!!
+        //!!!va
 
-        //dd($val);
         // end of if hasFile
-
-
-        return view('posts.tag')->with('tags', $tagdup)->with('val', $val)->with('filename', $file->name)->with('paramnames', $subparam);
+         //  sdd($tags);
+         return view('posts.tag-test')->with('tags', $tagdup)->with('val', $valA)->with('filename', $file->name);
 
         }
 
@@ -183,6 +181,11 @@ class UploadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    // For adding keywords
+
+    // public function addkeyword(Request $request)
+
     public function show($id)
     {
         $file = File::find($id);
@@ -497,5 +500,24 @@ class UploadController extends Controller
             $group[$id][] = $val;
          }
         return $group;
+    }
+
+    public function wordtest(Request $request){
+        $this->validate($request,[
+            'file' => 'required|max:1999|mimes:pdf,docx'
+        ]);
+        if($request->has('file')){
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //Get the Ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            if($extension == "docx")
+                echo 'this is a doc';
+            else if ($extension == "pdf")
+                echo 'this is a pdf';
+        }
     }    
 }

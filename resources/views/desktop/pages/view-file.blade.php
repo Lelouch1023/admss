@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
 	<div class="col-md-9 col-xs-12">
-		<div class="categories">
+		<div class="viewfilecontainer">
 			<div class="category-title">
 				<label>My Uploads</label>
 			</div>
