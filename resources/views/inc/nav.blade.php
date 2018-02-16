@@ -145,16 +145,6 @@
                 </div>
               </div>
             </div>
-            <!-- end of modal 2-->
-======= --}}
-          </div>
-          <!-- End of modal -->
-          </li>
-          <!-- @if(auth()->user()->user_lvl == 1)
-          <li class="adminpanel"> 
-            <a href="{{ route('admin') }}"><button class="btn btn-link nabar-btn">Admin Panel</button></a>
-          </li>
-          @endif -->
           </div>
         </ul>
       <!-- End of User Control bar -->

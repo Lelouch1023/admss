@@ -8,8 +8,8 @@
             <div class="admin-panel with-nav-tabs admin-default">
             	<div id="content"  class="admin-heading">
 				    <ul id="mytab" class="nav nav-tabs" data-tabs="tabs" >
-					    <li class="active"><a href="#requeststab" data-toggle="tab">Pending Requests</a></li>
-					    <li><a href="#chairstab" data-toggle="tab">Area Chairs</a></li>
+					    <li class="active" id="reqtab"><a href="#requeststab" data-toggle="tab">Pending Requests</a></li>
+					    <li id="chairtab"><a href="#chairstab" data-toggle="tab">Area Chairs</a></li>
 					</ul>
 				</div>
                 <div id="loadsample"></div>
@@ -119,9 +119,9 @@
 						    @endif
 						    </tbody>
 						  </table>
-						  @if(count($chairs) > 0)
-						  	<center>{{ $chairs->links() }}</center>
-						  @endif
+										  @if(count($chairs) > 0)
+										  	<center>{{ $chairs->links() }}</center>
+										  @endif
 				    </div>
 				</div>
 				</div>

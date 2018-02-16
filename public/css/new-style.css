@@ -192,6 +192,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .file{
 	/*background-color: #efefef;*/
     padding: 5px 15px;
+        /*text-align: center;*/
 }
 .file a:hover{
 	color: #bd2031;
@@ -204,11 +205,15 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .file a{
 	font-weight: bold;
 	color: #000;
+	margin-left: 6px;
 }
 .file p{
 	margin:	-9px 0 0px 36px;
 }
 .file-action{
+	text-align: center;
+}
+.file-type{
 	text-align: center;
 }
 .action{
@@ -293,7 +298,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 }
 #user-date p{
     font-size: 13px;
-    margin: -6px 0 0px 0px;
+    margin: -4px 0 0px 0px;
 }
 #user-date label{
 	margin: 0px;
@@ -390,4 +395,25 @@ background: #bf2626;
 }
 .home{
 	cursor: pointer;
+}
+
+/*search results*/
+.search-result{
+	padding: 5px 15px;
+}
+.search-result img{
+    width: 13%;
+    float: left;
+}
+.search-result a{
+	font-weight: bold;
+	color: #000;
+}
+.search-result a:hover{
+	text-decoration: underline;
+	transition: 0.3s;
+	color: #bd2031;
+}
+.search-result p{
+	margin: -4px 0 0 0;
 }

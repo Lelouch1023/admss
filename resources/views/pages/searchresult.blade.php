@@ -14,7 +14,7 @@
 					@if(count($files)>0)
 					<table class="table table-hover">
 						<thead>
-							<tr class="category-content">
+							<tr>
 								<th class="col-xs-8 category-fname">File Name</th>
 								<th class="col-xs-4">Action</th>
 							</tr>
@@ -22,7 +22,7 @@
 				<!-- PHP CODE -->
 							@foreach($files as $file)
 								@if($file->isDeleted == 0)
-						<tr class="file">
+						<tr class="search-result">
 							<td class="col-xs-8">
 								<img src="{{ URL::to('/images/pdf.png') }}">
 								<a href="post/{{ $file['id'] }}">{{ $file['name'] }}</a>

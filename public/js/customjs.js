@@ -49,7 +49,9 @@ function assign(id){
 	    	  	$('#containeradmin').html(data.html);
 	    		//$('#successmsg').show(500).fadeOut(2000);
   				$('#mytab li a[href="#chairstab"]').tab('show');
-	  
+	  			$("#reqtab").removeClass("active");
+	  			$("#chairtab").addClass("active");
+	  			
 	    		}	
 	    	  	
        		}, 
