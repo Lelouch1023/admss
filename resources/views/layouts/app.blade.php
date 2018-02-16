@@ -27,6 +27,7 @@
 
     <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
     
 </head>
@@ -56,10 +57,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/keywords.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
-
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    
-
+    <!-- <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script> -->
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
