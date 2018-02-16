@@ -22,13 +22,48 @@ class TagsController extends Controller
 
 	public function store(Request $request){
 
-	
+		//dd($request->all());
 		$input = $request->all();
-		$areas = array_values($input['area']['area']);
-		$param = array_values($input['param']['parameter']);
+		$inputtags = array();
+		$inparea = array_map("unserialize", array_unique(array_map("serialize", $input['area']['area'])));
+		//dd($inparea);
+
+		//extract tags from $request
+		foreach($inparea as $inp ){
+			for($i = 0; $i < count($input['tags_'.$inp]); $i++){
+				$inpstring = $input['tags_'.$inp][$i];
+				$trim = trim(preg_replace('/[^a-zA-Z0-9\_,]+/', '', $inpstring));
+				$trimmed = explode(',', $trim);
+				$inputtags[] = array(
+					'tag' => array_values($trimmed),
+					'area' => $inp
+
+				); 
+
+			}
+
+		}
+
+		$areas = array();
+		$param = array();
+
+		foreach($inputtags as $inptags){
+
+			
+			for($i = 0; $i < count($inptags['tag']); $i++){
+
+				$areas[] = $inptags['area'];
+				$param[] = $inptags['tag'][$i];
+			}
+		}
+
+		//dd($param);
+		// $input = $request->all();
+		// $areas = array_values($input['area']['area']);
+		// $param = array_values($input['param']['parameter']);
 		
 
-		//conditions for sizes of areas and param
+		// //saving tags
 		for($i = 0; $i < count($areas); $i++){
 
 			$tags = new Tag;
@@ -41,20 +76,20 @@ class TagsController extends Controller
 		
 	
 
-     //    NOTIFICATION ALGO DO NOT TAMPER
-        $tagn = DB::table('tags')->where('file_name', '=', $input['filename'])->get();//TAGS where filename == the one in tags
-        $users = User::all();	
+  //    //    NOTIFICATION ALGO DO NOT TAMPER
+  //       $tagn = DB::table('tags')->where('file_name', '=', $input['filename'])->get();//TAGS where filename == the one in tags
+  //       $users = User::all();	
 
-       // var_dump($user);
-        foreach($users as $user){
-	        foreach($tagn as $tag)	
-		      	if($user->area_handled == $tag->area_id){
+  //      // var_dump($user);
+  //       foreach($users as $user){
+	 //        foreach($tagn as $tag)	
+		//       	if($user->area_handled == $tag->area_id){
 			
-		      		$user->notify(new FileTagged($input['filename'], $tag->parameter, $tag->area_id));
-		    	}
-    	}
+		//       		$user->notify(new FileTagged($input['filename'], $tag->parameter, $tag->area_id));
+		//     	}
+  //   	}
 
-        return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
+     return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
 	}
 
 	public function addKeyword(Request $request){

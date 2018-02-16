@@ -57,7 +57,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/keywords.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
     
 
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
