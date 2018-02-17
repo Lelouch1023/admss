@@ -205,14 +205,14 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .view-file p{
 	margin:	-9px 0 0px 36px;
 }
-.file{
+.file, .pending-file {
     padding: 5px 15px;
 }
-.file a:hover{
+.file a:hover, .pending-file a:hover{
 	color: #bd2031;
 	text-decoration: underline;
 }
-.file img {
+.file img, .pending-file img {
 	width: 15%;
 	float: left;
 }
@@ -221,8 +221,15 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	color: #000;
 	margin-left: 6px;
 }
+.pending-file a{
+	font-weight: bold;
+	color: #000;
+}
 .file p{
 	margin:	-9px 0 0px 36px;
+}
+.pending-file p{
+	margin: -4px 0 0 0;
 }
 .file-action{
 	text-align: center;
@@ -316,6 +323,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 }
 #user-date label{
 	margin: 0px;
+	text-transform: capitalize;
 }
 .type label{
 	text-transform: uppercase;
@@ -460,8 +468,8 @@ background: #bf2626;
 .box1:hover,
 .box7:hover,
 .box5:hover{
-    background-color: #efefef;
-    color: #bf2626;
+    background-color: #504d4d;
+    color: #fff;
 }
 .box2:hover,
 .box6:hover,

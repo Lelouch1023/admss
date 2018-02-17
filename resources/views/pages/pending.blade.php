@@ -24,7 +24,7 @@
 			     @foreach ($files as $file)	
 			     	@foreach($filetags as $filetag)
 			     		@if($filetag['filename'] == $file->filename)
-					<tr class="file">
+					<tr class="pending-file">
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="uploads/view/{{ $file->id }}">{{$file->filename}}</a>

@@ -38,16 +38,6 @@
             
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
-                <!-- HOME -->
-                <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
-                        <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-home" aria-hidden="true">
-                            </span> &nbsp; Home 
-                        </h4>
-                    </div>
-                </div>
-                <!-- END OF HOME -->
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
                         <h4 class="panel-title ">
