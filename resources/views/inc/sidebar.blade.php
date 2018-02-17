@@ -139,7 +139,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
-                            </span> Pending Requests</a>
+                            </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>
                         </h4>
                     </div>  
                     <div id="collapseTwo" class="panel-collapse collapse">
@@ -149,7 +149,7 @@
                                     <td>
                                         <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
                                         <hr>
-                                        <a href="{{ URL::to('/') }}/pending">See Pending Tags</a>
+                                        <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
                                     </td>
                                 </tr>
                             </table>

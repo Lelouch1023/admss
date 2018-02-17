@@ -72,17 +72,7 @@
                   @endforeach
                 @endif
               </li>
-              <li>
-                  @if(count(auth()->user()->readNotifications) == 0)
-                <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
-                @else
-                  @foreach(auth()->user()->readNotifications as $notification)
-                   
-                      @include('notif.file_tagged_read');
-                   
-                  @endforeach
-                @endif
-              </li>
+              
             </ul>
           </li><!--notifications-->
           <li class="upload">
