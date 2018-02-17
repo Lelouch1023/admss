@@ -272,6 +272,12 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .area-panel .panel-title span:hover{
 	color: #F5D02B; 
 }
+.panel-default > .panel-heading:hover{
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+	transition: 0.3s;
+}
 /*Buttons*/
 .pending{
 	text-align: center;
@@ -415,7 +421,7 @@ background: #bf2626;
 	color: #1b1b1b;
 }
 .area-box:hover{
-	transition: 0.5s;
+	transition: 0.3s;
 	border: 4px solid #efefef;
 }
 .all-area-content{

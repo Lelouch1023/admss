@@ -119,44 +119,44 @@ class PagesController extends Controller
     * Functions that returns the view of areas
     */
     public function area1(){ 
-        return view('desktop.pages.areas.area1');
+        return view('pages.areas.area1');
     }
     public function area2(){ 
-        return view('desktop.pages.areas.area2');
+        return view('pages.areas.area2');
     }
     public function area3(){ 
 
-        return view('desktop.pages.areas.area3');
+        return view('pages.areas.area3');
     }
     public function area4(){ 
 
-        return view('desktop.pages.areas.area4');
+        return view('pages.areas.area4');
     }
     public function area5(){ 
 
-        return view('desktop.pages.areas.area5');
+        return view('pages.areas.area5');
     }
     public function area6(){ 
 
-        return view('desktop.pages.areas.area6');
+        return view('pages.areas.area6');
     }
     public function area7(){ 
 
-        return view('desktop.pages.areas.area7');
+        return view('pages.areas.area7');
     }
     public function area8(){ 
 
-        return view('desktop.pages.areas.area8');
+        return view('pages.areas.area8');
     }
     public function area9(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('desktop.pages.areas.area9');
+        return view('pages.areas.area9');
     }
     public function area10(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('desktop.pages.areas.area10');
+        return view('pages.areas.area10');
     }
     public function tags(){ 
 

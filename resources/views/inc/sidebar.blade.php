@@ -1,12 +1,9 @@
-        @guest
+@guest
     <div class="container">
         <div class="row">
-            
         </div>        
     </div>
-
 @else
-
         <div class="col-sm-3 col-md-3">
         <div class="sidebar">
             <!-- SIDEBAR USERPIC -->
@@ -29,13 +26,11 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
-
                     <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
-            
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
                 <div class="panel panel-default">
@@ -47,9 +42,9 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="showAllAreas()">
                         <h4 class="panel-title">
-                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open" aria-hidden="true">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open" aria-hidden="true">
                             </span> &nbsp; All Areas</a>
                         </h4>
                     </div>
@@ -113,13 +108,12 @@
                 <!-- END OF ALL AREAS -->
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
-                    <div class="panel-heading  ">
+                    <div class="panel-heading" onclick="showMyArea()">
                         <h4 class="panel-title">
-                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close" aria-hidden="true">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close" aria-hidden="true">
                             </span> 
                                 My Area
                              </a>
-
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
@@ -129,15 +123,15 @@
                                     <tr><td><a href="{{ route($arealink) }}">{{ $para->param_name }}</a></td></tr>
                                 @endforeach
                             </table>
-                        </div>
+                        </div><!-- PANEL BODY -->
                     </div>
-                </div>
+                </div><!-- PANEL -->
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="showRequest()">
                         <h4 class="panel-title">
-                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag" aria-hidden="true">
+                            <a  data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag" aria-hidden="true">
                             </span> Pending Requests</a>
                         </h4>
                     </div>  
@@ -146,23 +140,20 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('pending')}}">Tags</a>
+                                        <a onclick="window.location.href='{{ route('pending') }}'" >Tags</a>
                                         <br>
                                         <button type="submit" class="btn see-all" ><a href="">See All</a></button>
                                     </td>
                                 </tr>
                             </table>
-                        </div>
+                        </div><!-- PANEL BODY -->
                     </div>
-                </div>
-
-                <!-- END OF PENDING REQUESTS -->
-                
+                </div><!-- END OF PENDING REQUESTS -->
                 <!-- BIN MENU -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="showBin()">
                         <h4 class="panel-title">
-                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash" aria-hidden="true">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash" aria-hidden="true">
                             </span> Bin</a>
                         </h4>
                     </div>
@@ -171,17 +162,16 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('bin') }}">Deleted files</a>
+                                        <a onclick="window.location.href='{{ route('bin') }}'">Deleted files</a>
                                     </td>
                                 </tr>
                             </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- END OF BIN -->
-            </div>
-        </div>
-    </div>
+                        </div><!-- PANEL BODY -->
+                    </div><!-- PANEL HEADING -->
+                </div><!-- END OF BIN -->
+            </div><!-- PANEL GROUP -->
+        </div><!-- END OF SIDEBAR -->
+    </div><!-- END OF COLUMN -->
 
 @endguest
 
