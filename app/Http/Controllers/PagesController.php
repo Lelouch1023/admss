@@ -49,10 +49,16 @@ class PagesController extends Controller
 
         return view('pages.home')->with('files', $files);
     }
+    public function archive(){ 
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+
+        return view('pages.archive')->with('files', $files);
+    }
     public function uploads(){         
 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
 
         return view('pages.my_uploads')->with('files', $files);
     }

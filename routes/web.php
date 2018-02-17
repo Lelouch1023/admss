@@ -19,6 +19,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin');
+Route::get('/archive', 'PagesController@archive')->name('archive');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 
 Route::get('uploads/view/{file}', 'PagesController@viewfile');
