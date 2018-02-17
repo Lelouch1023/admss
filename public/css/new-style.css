@@ -187,13 +187,26 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	    /*background-color: #1b1b1b;*/
     color: #000;
 }
-.filename{
-
+.view-file{
+    padding: 5px 15px;
+}
+.view-file a:hover{
+	color: #bd2031;
+	text-decoration: underline;
+}
+.view-file img {
+	width: 15%;
+	float: left;
+}
+.view-file a{
+	font-weight: bold;
+	color: #000;
+}
+.view-file p{
+	margin:	-9px 0 0px 36px;
 }
 .file{
-	/*background-color: #efefef;*/
     padding: 5px 15px;
-        /*text-align: center;*/
 }
 .file a:hover{
 	color: #bd2031;
@@ -374,7 +387,8 @@ background: #bf2626;
 	margin: 0 auto;
 }
 .area-box{
-	border: 1px solid transparent;
+	background-color: transparent;
+	border: 1px solid #1b1b1b;
 	padding: 5px 5px;
     text-align: center;
     box-sizing: border-box;
@@ -383,113 +397,87 @@ background: #bf2626;
     margin-right: 10px;
     float: left;
     width: 99%;
+
 }
-.area-box > a{
+.area-box > h3{
 	font-size: 20px;
 	text-transform: uppercase;
 	font-family: Roboto;
 	letter-spacing: 1px;
+	color: #1b1b1b;
 }
 .area-box:hover{
-	/*background-color: #1b1b1b;*/
 	transition: 0.5s;
 	border: 4px solid #efefef;
-	/*color: #fff;*/
-}
-.box5:hover,
-.box8:hover{
-	border: 4px solid #1b1b1b;
-
 }
 .all-area-content{
     height: auto;
 }
 .box1{
 	height: 350px;
-    background-color: #f5d02a;
-    color: #fff;
-}
-.box1 >a,
-.box7 >a{
-	color: #bf2626;
-}
-.box1 >p,
-.box7 >p{
-	color: #efefef;
+	color: #1b1b1b
 }
 .box2{
 	height: 230px;
-    background-color: #1b1b1b;
 }
 .box3{
 	height: 300px;
-    background-color: #bf2626;
-    color: #000;
-}
-.box2 >p,
-.box6 >p,
-.box9 >p{
-	color: #bf2626;
-}
-
-.box3 >p,
-.box4 >p,
-.box10 >p{
-	color: #fff;
-}
-.box3 >a,
-.box4 >a,
-.box10 >a{
-	color: #f5d02a;
 }
 .box4{
 	height: 400px;
 	margin-top: -78px;
-    background-color: #bf2626;
 
 }
 .box5{
 	margin-top: -78px;
 	height: 200px;
-    background-color: #fff;
-}
-.box5 >p,
-.box8 >p{
-	color: #000;
-}
-.box5 >a,
-.box8 >a{
-	color: #bf2626;
+	color: #1b1b1b
+
 }
 .box6{
 	height: 132px;
 	margin-top: -10px;
-    background-color: #1b1b1b;
-
 }
 .box7{
 	margin-top: -10px;
 	height: 198px;
-	background-color: #f5d02a;
-    color: #fff;
+	color: #1b1b1b
+
 }
 .box8{
 	margin-top: -293px;
     height: 282px;
-    background-color: #fff;
-
+	color: #1b1b1b
 }
 .box9{
 	margin-top: -10px;
 	height: 100px;
-    background-color: #1b1b1b;
 }
 .box10{
 	margin-top: -10px;
 	height: 100px;
-	background-color: #bf2626;
+}
+.box1:hover,
+.box7:hover,
+.box5:hover{
+    background-color: #efefef;
+    color: #bf2626;
+}
+.box2:hover,
+.box6:hover,
+.box9:hover,
+.box8:hover{
+    background-color: #f5d02a;
+	color: #fff;	
+}
+.box3:hover,
+.box4:hover,
+.box10:hover{
+    background-color: #bf2626;
+	color: #fff;	
 
 }
+
 .home{
 	cursor: pointer;
 }

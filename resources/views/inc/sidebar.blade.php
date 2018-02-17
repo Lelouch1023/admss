@@ -42,7 +42,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
                         <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-home">
+                           <span class="glyphicon glyphicon-home" aria-hidden="true">
                             </span> &nbsp; Home 
                         </h4>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
                         <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-upload">
+                           <span class="glyphicon glyphicon-upload" aria-hidden="true">
                             </span> &nbsp; My Uploads 
                         </h4>
                     </div>
@@ -59,7 +59,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
+                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open" aria-hidden="true">
                             </span> &nbsp; All Areas</a>
                         </h4>
                     </div>
@@ -125,7 +125,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading  ">
                         <h4 class="panel-title">
-                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close">
+                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close" aria-hidden="true">
                             </span> 
                                 My Area
                              </a>
@@ -147,7 +147,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
+                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag" aria-hidden="true">
                             </span> Pending Requests</a>
                         </h4>
                     </div>  
@@ -172,7 +172,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
+                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash" aria-hidden="true">
                             </span> Bin</a>
                         </h4>
                     </div>

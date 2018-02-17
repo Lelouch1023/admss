@@ -105,8 +105,8 @@ class PagesController extends Controller
     */
     public function bin(){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(5);
-        return view('desktop.pages.bin')->with('files', $files);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(10);
+        return view('pages.bin')->with('files', $files);
     }
     
     /**

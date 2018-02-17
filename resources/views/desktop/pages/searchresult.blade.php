@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -22,7 +23,7 @@
 				<!-- PHP CODE -->
 							@foreach($files as $file)
 								@if($file->isDeleted == 0)
-						<tr class="file">
+						<tr class="search-result">
 							<td class="col-xs-8">
 								<img src="{{ URL::to('/images/pdf.png') }}">
 								<a href="post/{{ $file['id'] }}">{{ $file['name'] }}</a>

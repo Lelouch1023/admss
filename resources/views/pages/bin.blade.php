@@ -27,7 +27,8 @@
 						<td class="col-xs-5">
 							<img src="{{ URL::to('/images/pdf.png') }}">
 							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
-							<button type="button" class="bin-restore" data-toggle="modal" data-target="#{{ $file->id }}modal">Restore</button>
+							<br>
+							<button type="button" class="bin-restore">Restore</button>
 							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">Delete</button>
 			   				<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -50,7 +51,7 @@
 							</div>
 			   				
 						</td>
-						<td class="col-xs-3 type">
+						<td class="col-xs-3 file-type">
 							<!-- Php code for document type -->
 							<p>Memorandum</p>
 						</td>
