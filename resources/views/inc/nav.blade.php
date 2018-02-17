@@ -52,7 +52,7 @@
               {{ csrf_field() }}
               </form>
           </li>
-          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead('{{ count(auth()->user()->unreadNotifications)}}')">
+          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead({{ count(auth()->user()->unreadNotifications)}})">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span>
               @if( count(auth()->user()->unreadNotifications) !== 0)
@@ -66,7 +66,20 @@
                 <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
                 @else
                   @foreach(auth()->user()->unreadNotifications as $notification)
-                  @include('notif.'.snake_case(class_basename($notification->type)))
+                   
+                      @include('notif.'.snake_case(class_basename($notification->type)))
+                   
+                  @endforeach
+                @endif
+              </li>
+              <li>
+                  @if(count(auth()->user()->readNotifications) == 0)
+                <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
+                @else
+                  @foreach(auth()->user()->readNotifications as $notification)
+                   
+                      @include('notif.file_tagged_read');
+                   
                   @endforeach
                 @endif
               </li>

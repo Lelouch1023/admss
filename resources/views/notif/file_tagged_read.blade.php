@@ -1,4 +1,4 @@
-<a href="{{ URL::to('/').'/'.$notification->data['area'].'/'.$notification->data['paramletter'].'/'.$notification->data['parameter'] }}" style="background-color: #egf2ff;"><strong>{{ $notification->data['user']['name'] }}</strong> has tagged <strong>{{ $notification->data['file'] }}</strong> on your Area. <b>(
+<a href="{{ URL::to('/').'/'.$notification->data['area'].'/'.$notification->data['paramletter'].'/'.$notification->data['parameter'] }}"><strong>{{ $notification->data['user']['name'] }}</strong> has tagged <strong>{{ $notification->data['file'] }}</strong> on your Area. <b>(
 
 	@if($notification->data['area'] == "area10")
                {{  preg_replace('/[^A-Za-z0-9]/', '.', substr($notification->data['parameter'], 3, strlen($notification->data['parameter']))) }}

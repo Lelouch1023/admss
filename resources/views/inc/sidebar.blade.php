@@ -147,9 +147,9 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('pending')}}">Tags</a>
-                                        <br>
-                                        <button type="submit" class="btn see-all" ><a href="">See All</a></button>
+                                        <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
+                                        <hr>
+                                        <a href="{{ URL::to('/') }}/pending">See Pending Tags</a>
                                     </td>
                                 </tr>
                             </table>
