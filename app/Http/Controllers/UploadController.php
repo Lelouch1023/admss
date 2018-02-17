@@ -154,7 +154,7 @@ class UploadController extends Controller
 
         // end of if hasFile
          //  sdd($tags);
-         return view('posts.tag-test')->with('tags', $tagdup)->with('val', $valA)->with('filename', $file->name);
+         return view('posts.tag')->with('tags', $tagdup)->with('val', $valA)->with('filename', $file->name);
 
         }
 

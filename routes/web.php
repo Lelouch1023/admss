@@ -42,6 +42,7 @@ Route::get('/markAsRead', function(){
  
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PagesController@home')->name('home');
 
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');

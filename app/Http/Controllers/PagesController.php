@@ -23,7 +23,7 @@ class PagesController extends Controller
     	if(\Auth::guest())
     	   return view('desktop.pages.index');
         else
-            return redirect('/home');
+            return redirect('/uploads');
     }
 
     public function services(){
@@ -39,20 +39,25 @@ class PagesController extends Controller
         return view('desktop.pages.about')->with('title', $title);
     }
 
-
-
-    
     /**
     * Function to load my uploads
     */
-    public function uploads(){ 
-        
+
+    public function home(){ 
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+
+        return view('pages.home')->with('files', $files);
+    }
+    public function uploads(){         
 
         $user = auth()->user()->id;
         $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
 
         return view('pages.my_uploads')->with('files', $files);
     }
+
+
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
