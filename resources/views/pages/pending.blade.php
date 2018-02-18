@@ -57,7 +57,7 @@
 							<div class="modal-dialog">
 							    <div class="modal-content keywords">
 							    	<div class="msg-alert alert alert-success" style="display: none;" id="pendingsucc">The  file has been tagged on your area successfully!</div>
-									<div class="msg-alert alert alert-success" style="display: none;" id="pendingdel">The  file has been tagged on your area successfully!</div>
+									<div class="msg-alert alert alert-success" style="display: none;" id="pendingdel">The  file has been deleted on your area successfully!</div>
 							        <div class="modal-header">
 							            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 							            <center><h4 class="modal-title" id="myModalLabel">Tags</h4></center>
@@ -70,7 +70,7 @@
 												<th class="col-m-4">Action</th>
 											</tr>
 										</thead>
-										<tbody>                                <input type="hidden" id = "file_{{ $file->id }}" value="{{ $file->filename }}">
+										<tbody>                                
 
 											<tr>
 												<td>

@@ -40,9 +40,9 @@
 							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
 							      </div>
 							      <div class="modal-body delete-modal-content">
-							      	<p>Are you sure you want to delete <i><a href="/uploads/view/{{ $file->id }}">{{ $file->name }}</a></i>?</p>
+							      	<p>Are you sure you want to delete <i><a href="{{ URL::to('/').'/viewpdf/'.$file->id }}">{{ $file->name }}</a></i>?</p>
 							      	<br />
-							      	<p><strong>Note:</strong> Deleted items go to bin.</p>
+							      	<p><b>Note:</b> Deleted item will be stored to bin for future use.</p>
 							      </div>
 							      <div class="delete-modal-footer">
 							        

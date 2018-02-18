@@ -121,9 +121,10 @@ function approvetag(id){
 	        data: values,
 	        success: function(data){
 		    	if(data.success == true){
+		    		location.reload();
 		    	   $('#pendingcontainer').html(data.html);
-		    	   //$('#pendingsucc').show(500).fadeOut(2000);
-		    	   $('#actionmodal').modal('show');
+		    	   $('#pendingsucc').show(500).fadeOut(3000);
+		    	   // $('#actionmodal').modal('show');
   				
 		    	}		
        		},			

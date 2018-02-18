@@ -42,6 +42,7 @@ Route::get('/markAsRead', function(){
  
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PagesController@home')->name('home');
 
 Route::get('/search', 'UploadController@search');
 Route::get('/result', 'UploadController@result')->name('result');
@@ -57,8 +58,7 @@ Route::get('/destroy/{id}', 'UploadController@destroy');
 Route::get('/uploads/edit/{id}', 'UploadController@edit');
 Route::put('/uploads/edit/{id}', 'UploadController@update')->name('updatefile');
 
-Route::get('/test', 'UploadController@test');
-Route::get('/test2', 'UploadController@test2');
+Route::post('/home', 'UploadController@test');
  
 Route::get('/{area}/{param}/{id}', 'PagesController@viewarea');
  

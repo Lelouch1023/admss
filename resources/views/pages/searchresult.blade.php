@@ -16,7 +16,6 @@
 						<thead>
 							<tr>
 								<th class="col-xs-8 category-fname">File Name</th>
-								<th class="col-xs-4">Action</th>
 							</tr>
 						</thead>
 				<!-- PHP CODE -->
@@ -25,10 +24,10 @@
 						<tr class="search-result">
 							<td class="col-xs-8">
 								<img src="{{ URL::to('/images/pdf.png') }}">
-								<a href="post/{{ $file['id'] }}">{{ $file['name'] }}</a>
-								<p>Written on {{ $file['created_at'] }} by {{ $file->user->name }}</p>
+								<a href="uploads/view/{{ $file->id }}">{{ $file['name'] }}</a>
+								<p>Uploaded on {{ $file['created_at'] }} by {{ $file->user->name }}</p>
 							</td>
-							<td class="col-xs-4 action">
+							{{-- <td class="col-xs-4 action">
 							<button type="button">
 			   				  <a href="/uploads/view/{{ $file->id }}" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>
 			   				</button>
@@ -41,9 +40,9 @@
 			   				<button type="button" data-toggle="modal" data-target="#{{$file->id}}" title="Scan">
 			   				  <span class="glyphicon glyphicon-qrcode"></span>
 			   				</button>
-			   				{{-- MODAL QR --}}
+			   				MODAL QR --}}
 			   				<!-- QR Modal -->
-			   				<div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			   				{{-- <div class="modal fade" id="{{$file->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
 						    <div class="modal-content">
 						      <div class="modal-header">
@@ -63,11 +62,11 @@
 						    </div>
 						  </div>
 						</div>
-							<!-- End of QR Code Modal -->
+							 End of QR Code Modal 
 			   				<button type="button" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">
 			   				  <span class="glyphicon glyphicon-trash"></span>
 			   				</button>
-			   				<!-- Delete Modal -->
+			   				 Delete Modal 
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content delete-modal">
@@ -85,9 +84,12 @@
 							      </div>
 							    </div>
 							  </div>
-							</div>
-							<!-- End of Delete Modal -->
-						</td>
+							</div> 
+							 End of Delete Modal 
+						 </td> --}}
+						 <td>
+
+						 </td>
 						</tr>
 						@endif
 					@endforeach	

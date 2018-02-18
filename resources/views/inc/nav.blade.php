@@ -90,7 +90,9 @@
                   </div>
                   <div class="modal-body">
                     <!-- Php code for connection of data -->
-                   {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                  {{--  {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!} --}}
+                   <form action="{{ URL::to('/') }}/test" method="POST" enctype="multipart/form-data">
+
                     <!--/comment -->
                 
                     <form method="POST" action="#" enctype="multipart/form-data">
@@ -121,6 +123,7 @@
                         </div>
                       </div>
                       <!-- COMPONENT END -->
+                        <button id="uploadbtn" onclick="upload()">Upload</button>
                         {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
                         {!! Form::close() !!}
                     </form>

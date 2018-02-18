@@ -26,7 +26,7 @@
 					<tr class="file">
 						<td class="col-xs-5">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a><br/>sdsd<br/>
 							<button type="button" class="bin-restore" data-toggle="modal" data-target="#{{ $file->id }}modal">Restore</button>
 							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">Delete</button>
 			   				<!-- Delete Modal -->

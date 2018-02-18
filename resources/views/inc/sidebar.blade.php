@@ -38,15 +38,24 @@
             
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
+                <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-home">
                             </span> &nbsp; Home 
                         </h4>
                     </div>
                 </div>
-
+                <!-- END OF HOME -->
+                <div class="panel panel-default">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                        <h4 class="panel-title ">
+                           <span class="glyphicon glyphicon-upload">
+                            </span> &nbsp; My Uploads 
+                        </h4>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -147,9 +156,14 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
+                                    @if(count($files) > 0)
                                         <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
                                         <hr>
                                         <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
+                                    @else
+                                        <p>No pending files.</p>
+                                    @endif
+                                        
                                     </td>
                                 </tr>
                             </table>
@@ -172,7 +186,7 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('bin') }}">Deleted files</a>
+                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
                                     </td>
                                 </tr>
                             </table>
