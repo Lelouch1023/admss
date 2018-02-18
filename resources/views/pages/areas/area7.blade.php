@@ -103,15 +103,15 @@
 						<ol class="accrdn">
 							<li data-toggle="collapse" href="#sub-parameter2"><a href="{{ URL::to('/') }}/area7/B/7BS_1"> The library has staff with the following qualifications: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter2" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area7/B/7BS_2_1">BS in Library and Information Science for the College/Academic Unit Library.</a></li>
-									<li><a href="{{ URL::to('/') }}/area7/B/7BS_2_2">MS in Library and Information Science or MAED/MA in Library Science for the institution.</a></li>
+									<li><a href="{{ URL::to('/') }}/area7/B/7BS_1_1">BS in Library and Information Science for the College/Academic Unit Library.</a></li>
+									<li><a href="{{ URL::to('/') }}/area7/B/7BS_1_2">MS in Library and Information Science or MAED/MA in Library Science for the institution.</a></li>
 								</ol>
 							<li data-toggle="collapse" href="#sub-parameter3"><a href="">The library meets the required number of qualified and licensed librarians and staff to meets the needs of the school population with the ratio of: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter3" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area7/B/7BS_3_1">one (1) Licensed Librarian with two (2) full time staff for the first 500 – student population</a></li>
-									<li><a href="{{ URL::to('/') }}/area7/B/7BS_3_2">one (1) additional full time Professional Librarian with one (1) full time staff for every additional 1,000 students. </a></li>
+									<li><a href="{{ URL::to('/') }}/area7/B/7BS_2_1">one (1) Licensed Librarian with two (2) full time staff for the first 500 – student population</a></li>
+									<li><a href="{{ URL::to('/') }}/area7/B/7BS_2_2">one (1) additional full time Professional Librarian with one (1) full time staff for every additional 1,000 students. </a></li>
 								</ol>
-							<li><a href="{{ URL::to('/') }}/area7/B/7BS_4">There is a continuing staff development program with the corresponding financial assistance from the institution. </a></li>
+							<li><a href="{{ URL::to('/') }}/area7/B/7BS_3">There is a continuing staff development program with the corresponding financial assistance from the institution. </a></li>
 				      	</ol>
 						</td>
 					</tr>

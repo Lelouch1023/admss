@@ -117,7 +117,6 @@
 								<li><a href="{{ URL::to('/') }}/area4/A/4AI_5">The SAS is represented in the policy and decision-making body of the institution.</a></li>
 								<li><a href="{{ URL::to('/') }}/area4/A/4AI_6">The projects and activities of the SAS Unit are recognized and implemented.</a></li>
 								<li><a href="{{ URL::to('/') }}/area4/A/4AI_7">There is a continuous and systematic evaluation of the effectiveness of the programs and services for student welfare and development.</a></li>
-								<li><a href="{{ URL::to('/') }}/area4/A/4AI_8"></a></li>
 						   	</ol>
 							</td>
 						</tr>

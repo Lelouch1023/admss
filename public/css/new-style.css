@@ -1,7 +1,7 @@
 #banner{
 	background-color: #fff;
 	height: -webkit-fill-available;
-	background-image: url('../images/3134.jpg');
+	background-image: url('../images/index.jpg');
 	background-size: 100%;
 	background-color: #fff;
 }
@@ -9,6 +9,10 @@
 /*NAVIGATION*/
 .navbar-index{
 	background-color: #1b1b1b;
+}
+.index-content{
+	background-size: 100%;
+
 }
 .navbar-index .navbar-brand{
 	text-align: right;
