@@ -1,6 +1,8 @@
 .keycontent{
   display: inline-block;
-  
+}
+.addtag-input {
+  text-align: left !important;
 }
 .bootstrap-tagsinput {
     width: 100%;

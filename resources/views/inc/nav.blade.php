@@ -43,7 +43,6 @@
       <ul class="nav navbar-nav navbar-right col-sm-3 col-xs-6">
         <div class="col-xs-12 user-navbar">
           <li class="name-drpdwn">
-              
               <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();" title="Logout">
@@ -75,8 +74,13 @@
               
             </ul>
           </li><!--notifications-->
+          <!-- Home button -->
           <li class="upload">
-             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
+            <button type="button" class="upload-btn" onclick="window.location.href='{{ URL::to('/').'/home' }}'"><span class="glyphicon glyphicon-home" aria-hidden="true" title="Home"></span></button>
+          </li>
+          <!-- End of Home button -->
+          <li class="upload">
+             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload a file"></span></button>
 
             <!-- Modal -->
             <div id="createModal" class="modal fade" role="dialog">
@@ -132,26 +136,9 @@
                 </div>
               </div>
             </div>
-
-            <!-- MODAL 2-->
-            <div id="modal2" class="modal fade" role="dialog">
-              <div class="modal-dialog upload-modal">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upload a file</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Php code for connection of data -->
-                    <p>Hello!!</p>
-                    <div class="modal-footer">
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+          </li>
+
         </ul>
       <!-- End of User Control bar -->
     </div>
