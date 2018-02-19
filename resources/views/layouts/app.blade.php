@@ -29,7 +29,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tag.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/archiveagain.js') }}"></script>
- 
+    <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 </head>
 <body>
 
@@ -59,7 +59,6 @@
 
 
     <script type="text/javascript" src="{{ URL::asset('js/customjs.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
