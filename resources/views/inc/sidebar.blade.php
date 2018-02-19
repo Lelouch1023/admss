@@ -38,18 +38,8 @@
             
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
-                <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
-                        <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-home">
-                            </span> &nbsp; Home 
-                        </h4>
-                    </div>
-                </div>
-                <!-- END OF HOME -->
-                <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ route('uploads') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-upload">
                             </span> &nbsp; My Uploads 
@@ -123,9 +113,9 @@
                 <!-- END OF ALL AREAS -->
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
-                    <div class="panel-heading  ">
+                    <div class="panel-heading" onclick="showMyArea()">
                         <h4 class="panel-title">
-                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close">
                             </span> 
                                 My Area
                              </a>
@@ -145,9 +135,9 @@
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading " onclick="showRequest()">
                         <h4 class="panel-title">
-                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
                             </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>
                         </h4>
                     </div>  
@@ -157,9 +147,7 @@
                                 <tr>
                                     <td>
                                     @if(count($files) > 0)
-                                        <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
-                                        <hr>
-                                        <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
+                                        <a onclick="window.location.href='{{ route('pending') }}'"  href="#pending">See Pending Tags</a></center>
                                     @else
                                         <p>No pending files.</p>
                                     @endif
@@ -175,22 +163,11 @@
                 
                 <!-- BIN MENU -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="window.location.href='{{ route('bin') }}'">
                         <h4 class="panel-title">
-                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
                             </span> Bin</a>
                         </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table sidebar-submenu">
-                                <tr>
-                                    <td>
-                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
                     </div>
                 </div>
                 <!-- END OF BIN -->

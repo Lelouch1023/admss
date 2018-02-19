@@ -80,7 +80,8 @@
           </li>
           <!-- End of Home button -->
           <li class="upload">
-             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload a file"></span></button>
+            <button type="button" class="upload-btn" onclick="window.location.href='{{ URL::to('/').'/upload' }}'"><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload"></span></button>
+             <!-- <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload a file"></span></button> -->
 
             <!-- Modal -->
             <div id="createModal" class="modal fade" role="dialog">

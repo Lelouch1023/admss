@@ -16,8 +16,7 @@
 				<tr>
 					<th class="col-xs-5 category-fname">File Name</th>
 					<th class="col-xs-3">Type</th>
-					<th class="col-xs-3">Modified</th>
-					<th class="col-xs-2">Select</th>
+					<th class="col-xs-4">Modified</th>
 				</tr>
 				</thead>
 				@foreach ($files as $file)
@@ -29,14 +28,11 @@
 					<td class="col-xs-3 file-type">
 						<label>{{ $file->file_type }}</label>
 					</td>
-					<td id="user-date" class="col-xs-3">
+					<td id="user-date" class="col-xs-4">
 						<label>{{ Auth::user()->name }}</label>
 						<p>{{$file->created_at}}</p>
 					</td>
-					<td class="col-xs-2">
-						<label class="form-check-label"></label>
-						<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-					</td>
+					
 				</tr>
 				@endforeach
 				@else

@@ -16,7 +16,7 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 Route::post('/admin', 'AdminController@findaction');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
-Route::get('/uploads', 'PagesController@uploads');
+Route::get('/uploads', 'PagesController@uploads')->name('uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin')->name('bin');
 Route::get('/archive', 'PagesController@archive')->name('archive');
