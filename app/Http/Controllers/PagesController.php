@@ -23,7 +23,7 @@ class PagesController extends Controller
     	if(\Auth::guest())
     	   return view('desktop.pages.index');
         else
-            return redirect('/uploads');
+            return redirect('/home');
     }
 
     public function services(){

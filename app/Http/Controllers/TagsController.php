@@ -76,18 +76,18 @@ class TagsController extends Controller
 		
 	
 
-  //    //    NOTIFICATION ALGO DO NOT TAMPER
-  //       $tagn = DB::table('tags')->where('file_name', '=', $input['filename'])->get();//TAGS where filename == the one in tags
-  //       $users = User::all();	
+     //    NOTIFICATION ALGO DO NOT TAMPER
+        $tagn = DB::table('tags')->where('file_name', '=', $input['filename'])->get();//TAGS where filename == the one in tags
+        $users = User::all();	
 
-  //      // var_dump($user);
-  //       foreach($users as $user){
-	 //        foreach($tagn as $tag)	
-		//       	if($user->area_handled == $tag->area_id){
+       // var_dump($user);
+        foreach($users as $user){
+	        foreach($tagn as $tag)	
+		      	if($user->area_handled == $tag->area_id){
 			
-		//       		$user->notify(new FileTagged($input['filename'], $tag->parameter, $tag->area_id));
-		//     	}
-  //   	}
+		      		$user->notify(new FileTagged($input['filename'], $tag->parameter, $tag->area_id));
+		    	}
+    	}
 
      return redirect('/uploads')->with('success', 'File has been uploaded successfully!');
 	}

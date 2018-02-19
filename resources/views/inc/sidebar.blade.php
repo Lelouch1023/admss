@@ -1,9 +1,12 @@
-@guest
+        @guest
     <div class="container">
         <div class="row">
+            
         </div>        
     </div>
+
 @else
+
         <div class="col-sm-3 col-md-3">
         <div class="sidebar">
             <!-- SIDEBAR USERPIC -->
@@ -26,25 +29,37 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
+
                     <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             <!-- END SIDEBAR BUTTONS -->
             <!-- ACCORDION MENU -->
+            
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
+                <!-- HOME -->
+                <div class="panel panel-default">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
+                        <h4 class="panel-title ">
+                           <span class="glyphicon glyphicon-home">
+                            </span> &nbsp; Home 
+                        </h4>
+                    </div>
+                </div>
+                <!-- END OF HOME -->
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
                         <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-upload" aria-hidden="true">
+                           <span class="glyphicon glyphicon-upload">
                             </span> &nbsp; My Uploads 
                         </h4>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="showAllAreas()">
+                    <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open" aria-hidden="true">
+                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
                             </span> &nbsp; All Areas</a>
                         </h4>
                     </div>
@@ -108,12 +123,13 @@
                 <!-- END OF ALL AREAS -->
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="showMyArea()">
+                    <div class="panel-heading  ">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close" aria-hidden="true">
+                            <a onclick="showMyArea()" data-toggle="collapse" data-parent="#accordion" href="#myarea"><span class="glyphicon glyphicon-folder-close">
                             </span> 
                                 My Area
                              </a>
+
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
@@ -123,16 +139,16 @@
                                     <tr><td><a href="{{ route($arealink) }}">{{ $para->param_name }}</a></td></tr>
                                 @endforeach
                             </table>
-                        </div><!-- PANEL BODY -->
+                        </div>
                     </div>
-                </div><!-- PANEL -->
+                </div>
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="showRequest()">
+                    <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a  data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag" aria-hidden="true">
-                            </span> Pending Requests</a>
+                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
+                            </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>
                         </h4>
                     </div>  
                     <div id="collapseTwo" class="panel-collapse collapse">
@@ -140,20 +156,28 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a onclick="window.location.href='{{ route('pending') }}'" >Tags</a>
-                                        <br>
-                                        <button type="submit" class="btn see-all" ><a href="">See All</a></button>
+                                    @if(count($files) > 0)
+                                        <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
+                                        <hr>
+                                        <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
+                                    @else
+                                        <p>No pending files.</p>
+                                    @endif
+                                        
                                     </td>
                                 </tr>
                             </table>
-                        </div><!-- PANEL BODY -->
+                        </div>
                     </div>
-                </div><!-- END OF PENDING REQUESTS -->
+                </div>
+
+                <!-- END OF PENDING REQUESTS -->
+                
                 <!-- BIN MENU -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="showBin()">
+                    <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash" aria-hidden="true">
+                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
                             </span> Bin</a>
                         </h4>
                     </div>
@@ -162,16 +186,17 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a onclick="window.location.href='{{ route('bin') }}'">Deleted files</a>
+                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
                                     </td>
                                 </tr>
                             </table>
-                        </div><!-- PANEL BODY -->
-                    </div><!-- PANEL HEADING -->
-                </div><!-- END OF BIN -->
-            </div><!-- PANEL GROUP -->
-        </div><!-- END OF SIDEBAR -->
-    </div><!-- END OF COLUMN -->
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF BIN -->
+            </div>
+        </div>
+    </div>
 
 @endguest
 

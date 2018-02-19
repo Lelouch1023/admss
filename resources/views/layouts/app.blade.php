@@ -51,7 +51,7 @@
 
     <!-- Scripts -->
     <script type="text/javascript">
-        var APP_URL = {!! json_encode(url('/')) !!}
+        var appURL = {!! json_encode(url('/')) !!}
     </script>
 
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>

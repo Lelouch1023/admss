@@ -1,8 +1,9 @@
 function markNotificationAsRead(notifCount){
-
-	if(notifCount !== '0'){
-  		$.get('/markAsRead');
+	var get = appURL +"/markAsRead";
+	if(notifCount !== 0){
+  		$.get(get);
   		$('#notifCount').hide();
+  		//console.log(get);
 	}
 	
 }

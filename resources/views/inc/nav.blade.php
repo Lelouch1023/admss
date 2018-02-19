@@ -51,7 +51,7 @@
               {{ csrf_field() }}
               </form>
           </li>
-          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead('{{ count(auth()->user()->unreadNotifications)}}')">
+          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead({{ count(auth()->user()->unreadNotifications)}})">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span>
               @if( count(auth()->user()->unreadNotifications) !== 0)
@@ -65,10 +65,13 @@
                 <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
                 @else
                   @foreach(auth()->user()->unreadNotifications as $notification)
-                  @include('notif.'.snake_case(class_basename($notification->type)))
+                   
+                      @include('notif.'.snake_case(class_basename($notification->type)))
+                   
                   @endforeach
                 @endif
               </li>
+              
             </ul>
           </li><!--notifications-->
           <!-- Home button -->
@@ -91,7 +94,9 @@
                   </div>
                   <div class="modal-body">
                     <!-- Php code for connection of data -->
-                   {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                  {{--  {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!} --}}
+                   <form action="{{ URL::to('/') }}/test" method="POST" enctype="multipart/form-data">
+
                     <!--/comment -->
                 
                     <form method="POST" action="#" enctype="multipart/form-data">
@@ -122,6 +127,7 @@
                         </div>
                       </div>
                       <!-- COMPONENT END -->
+                        <button id="uploadbtn" onclick="upload()">Upload</button>
                         {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
                         {!! Form::close() !!}
                     </form>
