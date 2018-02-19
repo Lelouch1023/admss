@@ -183,13 +183,16 @@
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <table class="table sidebar-submenu">
+                           <center> <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
                                         <a href="{{ URL::to('/') }}/bin">Deleted files</a>
                                     </td>
+                                    <td>
+                                        <a href="{{ URL::to('/') }}/archive">Archived files</a>
+                                    </td>
                                 </tr>
-                            </table>
+                            </table></center>
                         </div>
                     </div>
                 </div>

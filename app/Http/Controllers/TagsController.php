@@ -22,7 +22,7 @@ class TagsController extends Controller
 
 	public function store(Request $request){
 
-		//dd($request->all());
+		dd($request->all());
 		$input = $request->all();
 		$inputtags = array();
 		$inparea = array_map("unserialize", array_unique(array_map("serialize", $input['area']['area'])));
@@ -159,6 +159,68 @@ class TagsController extends Controller
 		//things needed to load view_area.blade.php
 		return redirect('/'.$request->arealink.'/'.$request->paramletter.'/'.$request->sub);
 		
+	}
+
+	public function manualtag(Request $request){
+		
+		//dd($request->all());
+
+  	 	$area = $request->areaarch;
+  	 	$letter = $request->paramletarch;
+  	 	$sub = $request->subparamarch;
+  	 	$file = $request->filename;
+
+  	 	$tags = new Tag();
+  	 	$tags->file_name = $file;
+  	 	$tags->area_id = $area;
+  	 	$tags->parameter = $sub;
+  	 	$tags->save();
+
+  	 	//    NOTIFICATION ALGO DO NOT TAMPER
+        $tagn = DB::table('tags')->where('file_name', '=', $file)->get();//TAGS where filename == the one in tags
+        $users = User::all();	
+
+       // var_dump($user);
+        foreach($users as $user){
+	        foreach($tagn as $tag)	
+		      	if($user->area_handled == $tag->area_id){
+			
+		      		$user->notify(new FileTagged($file, $tag->parameter, $tag->area_id));
+		    	}
+    	}
+
+
+
+  	 	return redirect('/archive')->with('success', "Tag has been successfully added.");
+	}
+
+	public function unarchive(Request $request){
+
+		$file = $request->filename;
+
+		$tags = array();
+		$tags = DB::table('tags')
+				->where('file_name', '=', $file)
+				->get();
+		if(count($tags) > 0){
+			$files = DB::table('files')
+						->where('name', '=', $file)
+						->update(array('isArchived' => 0));
+
+	  	 	$data = array(
+	  	 		'success' => true,
+	  	 	);
+  	 	} 
+  	 	else{
+  	 		$data = array(
+
+  	 			'success' => false
+  	 		);
+  	 	}
+		// $data = array(
+		// 	'success' => count($tags);
+		// );
+  	 	return response()->json($data);
 	}
 	
 }

@@ -20,6 +20,9 @@ Route::get('/uploads', 'PagesController@uploads');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin')->name('bin');
 Route::get('/archive', 'PagesController@archive')->name('archive');
+Route::post('/archive', 'PagesController@loaddropdown');
+Route::post('/mnltag', 'TagsController@manualtag');
+Route::post('/unarchv', 'TagsController@unarchive');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 
 Route::get('uploads/view/{file}', 'PagesController@viewfile');

@@ -60,6 +60,8 @@
             </a>
             <!-- Dropdown menu content -->
             <ul class="dropdown-menu" role="menu">
+              <li><p><center><b>Notifications</b></center></p></li>
+              <li class="divider"></li>
               <li>
                   @if(count(auth()->user()->unreadNotifications) == 0)
                 <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
@@ -71,7 +73,8 @@
                   @endforeach
                 @endif
               </li>
-              
+              <li class="divider"></li>
+              <center><li><a style="color: #000;" href="{{ URL::to('/') }}/pending">See Pending Requests</a></li></center>
             </ul>
           </li><!--notifications-->
           <!-- Home button -->

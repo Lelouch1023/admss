@@ -51,7 +51,7 @@ class PagesController extends Controller
     }
     public function archive(){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isArchived', '=', '1']])->paginate(10);
 
         return view('pages.archive')->with('files', $files);
     }
@@ -260,11 +260,14 @@ class PagesController extends Controller
             ->where('file_name', $request->filename)
             ->where('parameter', $request->param)
             ->update(array('tagstatus' => 'approved'));
+
+             $request->session()->flash('success', 'Approved the tag successfully.');
         }else if($request->has('rejectag')){
             DB::table('tags')
                 ->where('file_name', $request->filename)
                 ->where('parameter', $request->param)
                 ->delete();
+             $request->session()->flash('success', 'Rejected the tag successfully.');
         }    
             //code to render pending page
 
@@ -301,7 +304,7 @@ class PagesController extends Controller
          
         //endlogic to render
 
-            //$request->session()->flash('success', 'Approved the user successfully.');
+           
              $html = view('pages.pending')->with('files', $files)->with('filetags', $filenames)->renderSections();
             $data = array(
                 'success' => true,
@@ -311,6 +314,51 @@ class PagesController extends Controller
 
 
             return response()->json($data);
+        
+    }
+
+    public function loaddropdown(Request $request){
+
+        if($request->has('paramletarch')){
+                $response = "";
+
+                $letter = DB::table('parameters')
+                                ->select('param_id')
+                                ->where('area_id', '=', $request->areaid)
+                                ->get();
+
+                foreach($letter as $let){
+                        $response = $response."<option value=\"".$let->param_id."\" selected>".$let->param_id."</option>";
+
+                }
+
+                $data = array(
+                    'response' => $response
+                );
+
+                return response()->json($data);
+        }//endhas
+        else if($request->has('subparam')){
+                $responseopt = "";
+
+                $subpar = DB::table('subparam')
+                                ->select('subparam')
+                                ->where('area_id', '=', $request->areaid)
+                                ->where('paramletter', '=', $request->letter)
+                                ->get();
+
+                foreach($subpar as $sub){
+                        $responseopt = $responseopt."<option value=\"".$sub->subparam."\">".$sub->subparam."</option>";
+
+                }
+
+                $datav = array(
+                    'responsev' => $responseopt
+                );
+
+                return response()->json($datav);
+        }//endhas
+
         
     }
 

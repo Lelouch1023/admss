@@ -3,12 +3,14 @@
 		
 @section('content')
 <div class="container" id="pendingcontainer">
-	
+	<div class="msg-alert alert alert-success" style="display: none;" id="pendingsucc">The  file has been tagged on your area successfully!</div>
+	<div class="msg-alert alert alert-success" style="display: none;" id="pendingdel">The  file has been deleted on your area successfully!</div>
 	<div class="col-sm-9 col-xs-12">
 		<div class="categories">
 			<div class="category-title">
 				<label>Pending Requests/Tags</label>
-			</div>
+			</div><div class="msg-alert alert alert-success" style="display: none;" id="pendingsucc">The  file has been tagged on your area successfully!</div>
+									<div class="msg-alert alert alert-success" style="display: none;" id="pendingdel">The  file has been deleted on your area successfully!</div>
 			<!-- Category contents -->
 			<div class="category-content">
 			<!-- PHP code for data loop -->
@@ -50,14 +52,13 @@
 								<input type="hidden" id = "file_{{ $file->id }}" value="{{ $file->filename }}">
 
 								{{-- --}}
-				   				<button class="btn btn-link" data-toggle="modal" data-target="#actionmodal" ><span  aria-hidden="true" title="Add keyword">Manage</button>
+				   				<button class="btn btn-link" data-toggle="modal" data-target="#actionmodal_{{ $file->id }}" ><span  aria-hidden="true" title="Add keyword">Manage</button>
 				   				<!--modal for action tags-->
-				   				<div id="actionmodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				   				<div id="actionmodal_{{ $file->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				   			
 							<div class="modal-dialog">
 							    <div class="modal-content keywords">
-							    	<div class="msg-alert alert alert-success" style="display: none;" id="pendingsucc">The  file has been tagged on your area successfully!</div>
-									<div class="msg-alert alert alert-success" style="display: none;" id="pendingdel">The  file has been deleted on your area successfully!</div>
+							    	
 							        <div class="modal-header">
 							            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 							            <center><h4 class="modal-title" id="myModalLabel">Tags</h4></center>
@@ -86,7 +87,8 @@
 												</td>
 												<td>									    
 												<input type="hidden" id = "file_{{ $file->id }}" value="{{ $file->filename }}">
-
+												<input type="hidden" name="_tokentag" id="tokentag" value="{{ csrf_token() }}">
+												<input type="hidden" name="_tokentagdel" id="tokentagdel" value="{{ csrf_token() }}">
 													 <button type="button" class="approve" onclick="approvetag({{ $file->id }})" >
 									   				  <span class="glyphicon glyphicon-ok" title="Approve"></span>
 									   				</button>

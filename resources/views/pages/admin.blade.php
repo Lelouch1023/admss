@@ -47,6 +47,8 @@
 								    </select>
 						        </td>
 						        <td id="user-data-">
+
+									<input type="hidden" name="_tokenadm" id="tokenadm" value="{{ csrf_token() }}">
 						        	<input type="hidden" name="userid" id="userid_{{ $request->id }}" value="{{ $request->id }}">
 						        	<center><button type="button" class="btn btn-success" onclick="approve({{ $request->id }})" class="btn btn-link approvebtn" id="acceptbtn_{{ $request->id }}">Approve</button>        	
 						        	<button type="button" class="btn btn-danger" onclick="reject({{ $request->id }})" class="btn btn-link" id="rejectbtn_{{ $request->id }}">Reject</button></center>
