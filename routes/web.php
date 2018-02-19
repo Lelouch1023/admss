@@ -22,6 +22,8 @@ Route::get('/bin', 'PagesController@bin')->name('bin');
 Route::get('/archive', 'PagesController@archive')->name('archive');
 Route::post('/archive', 'PagesController@loaddropdown');
 Route::post('/mnltag', 'TagsController@manualtag');
+Route::post('/movefile', 'TagsController@move');
+
 Route::post('/unarchv', 'TagsController@unarchive');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 

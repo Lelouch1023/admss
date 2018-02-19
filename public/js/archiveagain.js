@@ -33,6 +33,7 @@ function unarchive(id){
         success: function (data) {
             if(data.success == true){
                     //remove disabled from province and change the options
+                    location.reload();
                     $('#successmsgarch').show('800').fadeOut('2000');
                     //console.log(data);
             }

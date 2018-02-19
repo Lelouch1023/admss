@@ -222,6 +222,18 @@ class TagsController extends Controller
 		// );
   	 	return response()->json($data);
 	}
+
+	public function move(Request $request){
+
+		$file = $request->filename;
+
+		$files = DB::table('files')
+					->where('name', '=', $file)
+					->update(array('isArchived' => 1));
+
+		return redirect('/archive')->with('success', "The file has been archived.");
+
+	}
 	
 }
 

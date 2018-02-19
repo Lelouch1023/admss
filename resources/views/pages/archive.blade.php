@@ -40,7 +40,7 @@
 					<td class="col-xs-2 select">
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thisModal_{{ $file->id }}" ><span  aria-hidden="true" title="Add keyword" style="color: #000;">Add Tag</span></button>
 						<button type="button" id="unarchive_{{ $file->id }}" onclick = "unarchive({{ $file->id }})" class="btn btn-success" title="Remove the file from archive">Done</button>
-						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#thisModal_{{ $file->id }}" ><span  aria-hidden="true" title="Delete file" style="color: #000;">Delete</span></button>
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $file->id }}" ><span  aria-hidden="true" title="Delete file" style="color: #000;">Delete</span></button>
 		            <!-- Modal -->
 		            <div id="thisModal_{{ $file->id }}" class="modal fade" style="color: #000;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -108,6 +108,26 @@
 				</div>
 				</div><!-- End of modal -->
 
+				<!-- delete modal -->
+				<div class="modal fade" id="del_{{ $file->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <label class="modal-title" id="exampleModalLabel">Delete this file</label>
+							      </div>
+							      <div class="modal-body delete-modal-content">
+							      	<p>Are you sure you want to delete <i><a href="{{ URL::to('/').'/viewpdf/'.$file->id }}">{{ $file->name }}</a></i>?</p>
+							      	<br />
+							      	<p><b>Note:</b> Deleted item will be stored to bin for future use.</p>
+							      </div>
+							      <div class="delete-modal-footer">
+							        
+							        <button type="button" class="btn btn-danger delete" onclick="location.href = '{{ URL::to('/') }}/delete/{{ $file->id }}';">Delete</button>
+							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">Cancel</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
 				</td>
 				</tr>
 				@endforeach
