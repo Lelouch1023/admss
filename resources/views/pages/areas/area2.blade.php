@@ -279,9 +279,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="{{ URL::to('/') }}/area2/E/2DS_1">The institution has a system of promotion in rank and tenure based on official issuances</a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DS_2">The institution has a policy on probationary status of employment.</a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DS_3">At least 50% of the full-time faculty teaching the professional courses are under permanent/regular status. </a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DS_1">The institution has a system of promotion in rank and tenure based on official issuances</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DS_2">The institution has a policy on probationary status of employment.</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DS_3">At least 50% of the full-time faculty teaching the professional courses are under permanent/regular status. </a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -295,14 +295,14 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_1">The institution implements the system of the promotion in rank and salary based on existing policies and issuances (e.g. NBC 461).</a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_2">Retirement, separation or termination benefits are implemented in accordance with institutional and government (CSC, GSIS/DNM) policies and guidelines. </a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_3">The faculty are officially informed of their rank and tenure after evaluation of the credentials and performance. </a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_4">The faculty concerned is officially informed of the extension, renewal, or termination of their appointments. </a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_5">The Institution implements a CSC-approved Strategic Performance Management System (SPMS) which emphasizes quality teaching 
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_1">The institution implements the system of the promotion in rank and salary based on existing policies and issuances (e.g. NBC 461).</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_2">Retirement, separation or termination benefits are implemented in accordance with institutional and government (CSC, GSIS/DNM) policies and guidelines. </a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_3">The faculty are officially informed of their rank and tenure after evaluation of the credentials and performance. </a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_4">The faculty concerned is officially informed of the extension, renewal, or termination of their appointments. </a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_5">The Institution implements a CSC-approved Strategic Performance Management System (SPMS) which emphasizes quality teaching 
 					       performance, research, creative work, extension, and production 
 					       services.</a></li>
-							<li><a href="{{ URL::to('/') }}/area2/E/2DI_6">The probationary period or temporary status required before the grant of a permanent status to the faculty is in accordance with Civil Service and institutional policies and guidelines.</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DI_6">The probationary period or temporary status required before the grant of a permanent status to the faculty is in accordance with Civil Service and institutional policies and guidelines.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -316,7 +316,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="{{ URL::to('/') }}/area2/E/2DO_1">The faculty are satisfied with their rank and employment status.</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/D/2DO_1">The faculty are satisfied with their rank and employment status.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -372,7 +372,7 @@
 									<li><a href="{{ URL::to('/') }}/area2/E/2EI_1_3">conduct of research activities and publication of research output</a></li>
 									<li><a href="{{ URL::to('/') }}/area2/E/2EI_1_4">giving lectures and presentation of papers in national/international conferences, symposia, and seminars.</a></li>
 								</ol>
-							<li><a href="{{ URL::to('/') }}/area2/E/2EI_2">The institution supports the professional growth of the faculty through attendance in educational lectures, symposia, seminars, workshops, conferences, and other forms of training.</a></li>
+							<li><a href="{{ URL::to('/') }}/area2/E/2EI_2">The institution supports the professional growth of the faculty through attendance in educational lectures, symposia, seminars, workshops, conferences,a nd other forms of training.</a></li>
 							<li><a href="{{ URL::to('/') }}/area2/E/2EI_3">The institution conducts in-service training activities regularly at least once per team</a></li>
 							<li><a href="{{ URL::to('/') }}/area2/E/2EI_4">Selection of deserving faculty to be granted scholarships, fellowships, seminars, conferences and/or training grants is done objectively.</a></li>
 							<li><a href="{{ URL::to('/') }}/area2/E/2EI_5">The budget for faculty development is adequately allocated. </a></li>

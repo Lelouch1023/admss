@@ -1,7 +1,7 @@
 #banner{
 	background-color: #fff;
 	height: -webkit-fill-available;
-	background-image: url('../images/3134.jpg');
+	background-image: url('../images/index.jpg');
 	background-size: 100%;
 	background-color: #fff;
 }
@@ -9,6 +9,10 @@
 /*NAVIGATION*/
 .navbar-index{
 	background-color: #1b1b1b;
+}
+.index-content{
+	background-size: 100%;
+
 }
 .navbar-index .navbar-brand{
 	text-align: right;
@@ -282,11 +286,9 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .pending{
 	text-align: center;
 }
-.pending button{
-	background: transparent;
-	border: none;
-	padding: 2px;
-}
+/*pending button{
+	color: #fff;
+}*/
 
 .approve span:hover{
 	color: #2ab27b;

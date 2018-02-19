@@ -24,7 +24,7 @@
       <!-- End of Navigation bar -->
 
         <!-- CONTENT -->
-        <div class="content">
+        <div class="content index-content">
              <div id="banner" class="col-xs-12">
                <div class="container">
                    <div class="site-title">
@@ -55,11 +55,9 @@
         var APP_URL = {!! json_encode(url('/')) !!}
     </script>
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script> -->
     <script type="text/javascript" src="{{ URL::asset('js/notif.js') }}"></script>
 
     <script type="text/javascript" src="{{ URL::asset('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery-autocomplete.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script> -->
     </body>
 </html>

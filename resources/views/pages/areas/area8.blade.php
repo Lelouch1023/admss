@@ -245,14 +245,14 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">The administrative offices are accessible to stakeholders.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">All offices are accessible and conveniently located in accordance to their functions.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There are offices and workspaces for all officials, faculty and administrative staff.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Administration and faculty offices and staff rooms are clean, well-lighted and ventilated.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Function rooms and lounge are available.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">Storerooms are strategically located.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There is internal and external communication system.</a></li>
-							<li><a href="{{ URL::to('/') }}/area8/D/8DS_">There are clean toilets for administrators, faculty, staff and students.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_1">The administrative offices are accessible to stakeholders.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_2">All offices are accessible and conveniently located in accordance to their functions.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_3">There are offices and workspaces for all officials, faculty and administrative staff.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_4">Administration and faculty offices and staff rooms are clean, well-lighted and ventilated.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_5">Function rooms and lounge are available.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_6">Storerooms are strategically located.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_7">There is internal and external communication system.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/D/8DS_8">There are clean toilets for administrators, faculty, staff and students.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -476,14 +476,14 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The institution has a Student Center with supplies and materials.</a></li>
-							<li><a href="">Plicies and guidance on the proper utilization of Student Center are in place.</a></li>
-							<li><a href="">The Student Center is well-lighted and ventilated.</a></li>
-							<li><a href="">A conference room is available for students' use.</a></li>
-							<li><a href="">There are facilities and equipment for table games, music appreciation and TV or video viewing.</a></li>
-							<li><a href="">Clean and sanitary toilets for men separate from those women are available.</a></li>
-							<li><a href="">Toilet fixtures for students with special needs and PWD's are provided.</a></li>
-							<li><a href="">There are offices for student leaders, the editorial staff of the student publication and the officers of other student organizations.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_1">The institution has a Student Center with supplies and materials.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_2">Plicies and guidance on the proper utilization of Student Center are in place.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_3">The Student Center is well-lighted and ventilated.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_4">A conference room is available for students' use.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_5">There are facilities and equipment for table games, music appreciation and TV or video viewing.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_6">Clean and sanitary toilets for men separate from those women are available.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_7">Toilet fixtures for students with special needs and PWD's are provided.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GS_8">There are offices for student leaders, the editorial staff of the student publication and the officers of other student organizations.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -497,8 +497,8 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Student activities at the Student Center are regularly conducted and monitored.</a></li>
-							<li><a href="">The Student Center is properly maintained.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GI_1">Student activities at the Student Center are regularly conducted and monitored.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GI_2">The Student Center is properly maintained.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -512,7 +512,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Student Center is fully equipped and functional.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/G/8GO_1">The Student Center is fully equipped and functional.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -544,10 +544,10 @@
 							<li><a href="">The canteen/cafeteria is well-lighted, ventilated, screened and provided with potable water supply.</a></li>
 							<li data-toggle="collapse" href="#sub-parameter6"><a href="">There are enough: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter6" class="panel-collapse collapse">
-									<li><a href="#">cooking and preparatory equipment</a></li>
-									<li><a href="#">serving tools and utensils</a></li>
-									<li><a href="#">cleaning supplies and materials</a></li>
-									<li><a href="#">dining tables and chairs</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/H/8HS_1">cooking and preparatory equipment</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/H/8HS_2">serving tools and utensils</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/H/8HS_3">cleaning supplies and materials</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/H/8HS_4">dining tables and chairs</a></li>
 								</ol>
 							<li><a href="">Wash area and toilets are available.</a></li>
 				      	</ol>
@@ -563,11 +563,11 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The institution requires business and sanitary permits for the operation of the Food Center/Cafeteria/Canteen.</a></li>
-							<li><a href="">Food served is varied, nutritious, safe and sold at affordable price.</a></li>
-							<li><a href="">The Food Center/Cafeteria/Canteen is well-managed by qualified and competent staff.</a></li>
-							<li><a href="">Cleanliness and orderliness are enforced.</a></li>
-							<li><a href="">The food services are prompt.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HI_1">The institution requires business and sanitary permits for the operation of the Food Center/Cafeteria/Canteen.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HI_2">Food served is varied, nutritious, safe and sold at affordable price.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HI_3">The Food Center/Cafeteria/Canteen is well-managed by qualified and competent staff.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HI_4">Cleanliness and orderliness are enforced.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HI_5">The food services are prompt.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -581,8 +581,8 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Canteen/Cafeteria/Food Center is well-patronized.</a></li>
-							<li><a href="">The food services generate income for the institution.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HO_1">The Canteen/Cafeteria/Food Center is well-patronized.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/H/8HO_2">The food services generate income for the institution.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -611,15 +611,15 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Accreditation Center (AC) is accessible and conveniently located.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/I/8IS_1">The Accreditation Center (AC) is accessible and conveniently located.</a></li>
 							<li data-toggle="collapse" href="#sub-parameter7"><a href="">The AC has the following equipment and fixtures: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter7" class="panel-collapse collapse">
-									<li><a href="#">working tables and chairs</a></li>
-									<li><a href="#">cabinets for display and filing</a></li>
-									<li><a href="#">good ventilation and lighting</a></li>
-									<li><a href="#">computer unit</a></li>
-									<li><a href="#">toilets</a></li>
-									<li><a href="#">lounge</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_1">working tables and chairs</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_2">cabinets for display and filing</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_3">good ventilation and lighting</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_4">computer unit</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_5">toilets</a></li>
+									<li><a href="{{ URL::to('/') }}/area8/I/8IS_2_6">lounge</a></li>
 								</ol>
 				      	</ol>
 						</td>
@@ -634,9 +634,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The Institution/College/Academic Unit maintains the AC with the required resources, furniture and documents.</a></li>
-							<li><a href="">The AC is managed by a qualified and committed staff/faculty.</a></li>
-							<li><a href="">Required documents/information and exhibits are updated, systematically packaged and readily available.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/I/8II_1">The Institution/College/Academic Unit maintains the AC with the required resources, furniture and documents.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/I/8II_2">The AC is managed by a qualified and committed staff/faculty.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/I/8II_3">Required documents/information and exhibits are updated, systematically packaged and readily available.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -650,7 +650,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The AC is well-equipped and managed.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/I/8IO_1">The AC is well-equipped and managed.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -679,9 +679,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">There are dormitories and housing facilities for students, faculty and staff.</a></li>
-							<li><a href="">There is an Implementing Rules and Regulations (IRR) for in-campus housing services.</a></li>
-							<li><a href="">There is a system of coordinating with LGU's on privately owned boarding houses.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JS_1">There are dormitories and housing facilities for students, faculty and staff.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JS_2">There is an Implementing Rules and Regulations (IRR) for in-campus housing services.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JS_3">There is a system of coordinating with LGU's on privately owned boarding houses.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -695,10 +695,10 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">The housing facilities are functionally designed.</a></li>
-							<li><a href="">The housing facilities and surroundings are properly maintaiined and monitored.</a></li>
-							<li><a href="">The IRR on housing services is strictly followed (e.g. dormitory fees, etc.)</a></li>
-							<li><a href="">The institution coordinates with LGU's and owners of private boarding houses.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JI_1">The housing facilities are functionally designed.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JI_2">The housing facilities and surroundings are properly maintaiined and monitored.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JI_3">The IRR on housing services is strictly followed (e.g. dormitory fees, etc.)</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JI_4">The institution coordinates with LGU's and owners of private boarding houses.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -712,8 +712,8 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">THe housing facilities are safe, habitable and well-maintained.</a></li>
-							<li><a href="">There is wholesome coordination among the Institution, the LGU's and owner of private boarding houses.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JO_1">THe housing facilities are safe, habitable and well-maintained.</a></li>
+							<li><a href="{{ URL::to('/') }}/area8/J/8JO_2">There is wholesome coordination among the Institution, the LGU's and owner of private boarding houses.</a></li>
 				      	</ol>
 						</td>
 					</tr>

@@ -19,11 +19,10 @@
 					</thead>
 					<tr>
 			     	@foreach ($files as $file)	
-						<td class="col-xs-6 file">
+						<td class="col-xs-6 view-file">
 							<img src="{{ URL::to('/images/pdf-file.png') }}">
 							<a href="{{ URL::to('/').'/viewpdf/'.$file->id }}"><b><h4>{{$file->name}}</h4></b></a>
 							<p>{{$file->created_at}}</p>
-							<button type="button" class="view"><a class="view" href="{{ URL::to('/').'/viewpdf/'.$file->id }}">View</a></button>
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-restore"><a href="{{ URL::to('/') }}/uploads/edit/{{$file->id}}">Revise</a></button>
 							@endif
