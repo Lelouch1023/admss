@@ -22,7 +22,7 @@ class TagsController extends Controller
 
 	public function store(Request $request){
 
-		dd($request->all());
+		//dd($request->all());
 		$input = $request->all();
 		$inputtags = array();
 		$inparea = array_map("unserialize", array_unique(array_map("serialize", $input['area']['area'])));

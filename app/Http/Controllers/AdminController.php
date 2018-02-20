@@ -146,4 +146,14 @@ class AdminController extends Controller
         // return 'no action found';
         // }
     }
+
+    public function deluser($id){
+
+        $user = User::find($id);
+        $user->delete();
+
+
+        return redirect('/admin')->with('success', "Successfully deleted.");
+
+    }
 }

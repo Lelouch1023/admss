@@ -90,18 +90,22 @@
 /*Delete modal*/
 
 .delete-modal{
-    background: #1b1b1b8c;
-    color: #fff;
+    background: #fff;
+    color: #000 !important;
     text-align: center;
+}
+.delete-modal-header{
+    text-align: left;
 }
 .delete-modal-content{
         padding: 55px 10px;
+    color: #000 !important;
 }
 .delete-modal-content a{
-    color: #f5d02a;
+    color: #bf5329;
 }
 .delete-modal-footer{
-    padding: 5px;
+    padding: 12px;
         text-align: right;
     border-top: 1px solid #e5e5e5;
 }

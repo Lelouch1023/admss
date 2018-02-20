@@ -54,7 +54,7 @@
 							<!-- End of Delete Modal -->
 						</td>
 						<td class="col-xs-6 qr-scan">
-							<center><img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate($file->name)) !!}"></center>
+							<center><img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate('dl/'.$file->id)) !!}"></center>
 							<!-- <img src="{{ URL::to('/images/pdf-file.png') }}"> -->
 						</td>
 					</tr>

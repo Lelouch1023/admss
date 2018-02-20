@@ -113,6 +113,29 @@
 						        	@else
 						        		<button class="btn btn-primary" onclick="giveadmin({{ $chair->id }})"><a>Make Admin</a></button>
 						        	@endif
+
+						        	<button class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $chair->id }}delete"><span class="glyphicon glyphicon-trash"></span></button>
+
+						        		<!--del user modal-->
+						        	<div class="modal fade" id="del_{{ $chair->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content delete-modal">
+							      <div class="modal-header delete-modal-header">
+							        <label class="modal-title" id="exampleModalLabel">Delete User</label>
+							      </div>
+							      <div class="modal-body delete-modal-content">
+							      	<p>Are you sure you want to delete the user <i><a href="#">{{ $chair->name }}</a></i>?</p>
+							      	
+							      </div>
+							      <div class="delete-modal-footer">
+							        
+							        <button type="button" class="btn btn-danger delete"> <a href = "{{ URL::to('/') }}/deluser/{{ $chair->id }}">Delete</a></button>
+							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">Cancel</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<!-- End of Delete Modal -->
 						        </td>
 						      </tr>
 						      @endforeach

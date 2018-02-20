@@ -8,7 +8,7 @@ $.ajaxSetup({
 
 });
 
-
+//approve user
 function approve(id){
 	var values = {
 		'_token' : $('#tokenadm').val(),
@@ -34,9 +34,38 @@ function approve(id){
 			
    		});
 
+}
+
+//reject user
+function reject(id){
+	var values = {
+		'_token' : $('#tokenadm').val(),
+		'user_id' : $('#userid_'+id).val(),
+		'reject' : true
+	}
+		$.ajax({
+	        url: 'admin',
+	        type: "POST",
+	        data: values,
+	        success: function(data){
+	    	if(data.success == true){
+
+	    	  	$('#containeradmin').html(data.html);
+	    		$('#successmsg').show(500).fadeOut(2000);
+  				
+	    	  // console.log(data);
+	    		}	
+	    	  	
+       		},
+      		
+			
+   		});
+
 
 
 }
+
+//assig a user to an area
 function assign(id){
 	var values = {
 		'_token' : $('#tokenadm').val(),
@@ -65,6 +94,8 @@ function assign(id){
    		});
 }
 
+//give admin to user
+
 function giveadmin(id){
 	var values = {
 		'_token' : $('#tokenadm').val(),
@@ -90,6 +121,8 @@ function giveadmin(id){
    		});
 }
 
+
+//remove admin to user
 function revokeadmin(id){
 	var values = {
 		'_token' : $('#tokenadm').val(),
@@ -114,6 +147,8 @@ function revokeadmin(id){
 			
    		});
 }
+
+//approve tag
 
 function approvetag(id){
 	var values = {
@@ -142,6 +177,8 @@ function approvetag(id){
   	//console.log(values);
 
 }
+
+//reject tag
 
 function rejectag(id){
 	var values = {

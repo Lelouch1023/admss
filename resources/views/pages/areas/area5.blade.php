@@ -20,7 +20,7 @@
 				  <div class="panel panel-default">
 				    <div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseA">Parameter A: Priorities and Relevance</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseA">A: Priorities and Relevance</a>
 					</h4>
 					</div>
 					<div id="collapseA" class="panel-collapse collapse">

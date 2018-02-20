@@ -47,7 +47,7 @@ class LoginController extends Controller
    
    public function authenticated(Request $request, $user)
     {
-        if (!$user->isApproved) {
+        if ($user->isApproved != 1) {
             auth()->logout();
             return back()->with('error', 'Your account is not activated yet, contact admin');
         }

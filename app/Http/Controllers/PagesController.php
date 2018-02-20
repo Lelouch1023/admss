@@ -67,7 +67,7 @@ class PagesController extends Controller
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
-
+        
         if(count($files) > 0){
             return view('pages.view-file')->with('files', $files);
         }else{

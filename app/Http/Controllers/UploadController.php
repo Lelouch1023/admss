@@ -11,6 +11,7 @@ use App\Notifications\FileTagged;
 use App\File;
 use App\User;
 use Carbon\Carbon;
+use URL;
 use DB;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -290,7 +291,7 @@ class UploadController extends Controller
     public function download(){
 
         $file = DB::table('files')->get();
-        return view('home', compact(file));
+        return view('home', compact($file));
     }
 
     public function search(Request $request){
@@ -514,4 +515,20 @@ class UploadController extends Controller
     public function test(){
         dd($request->all);
     }  
+
+    public function dl($file){
+
+        $file = File::find($file);
+        if(count($file) > 0){
+            $filename = $file->name;
+
+            $path = public_path()."\storage\uploads\\".$filename;
+            return response()->download($path, $filename);
+        }else{
+            abort(418);
+            
+        }
+
+
+    }
 }
