@@ -39,24 +39,35 @@ class PagesController extends Controller
         return view('desktop.pages.about')->with('title', $title);
     }
 
-
-
-    
     /**
     * Function to load my uploads
     */
-    public function uploads(){ 
-        
+
+    public function home(){ 
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+
+        return view('pages.home')->with('files', $files);
+    }
+    public function archive(){ 
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isArchived', '=', '1']])->paginate(10);
+
+        return view('pages.archive')->with('files', $files);
+    }
+    public function uploads(){         
 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(5);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
 
         return view('pages.my_uploads')->with('files', $files);
     }
+
+
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
-
+        
         if(count($files) > 0){
             return view('pages.view-file')->with('files', $files);
         }else{
@@ -100,52 +111,52 @@ class PagesController extends Controller
     */
     public function bin(){ 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(5);
-        return view('desktop.pages.bin')->with('files', $files);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '1']])->paginate(10);
+        return view('pages.bin')->with('files', $files);
     }
     
     /**
     * Functions that returns the view of areas
     */
     public function area1(){ 
-        return view('desktop.pages.areas.area1');
+        return view('pages.areas.area1');
     }
     public function area2(){ 
-        return view('desktop.pages.areas.area2');
+        return view('pages.areas.area2');
     }
     public function area3(){ 
 
-        return view('desktop.pages.areas.area3');
+        return view('pages.areas.area3');
     }
     public function area4(){ 
 
-        return view('desktop.pages.areas.area4');
+        return view('pages.areas.area4');
     }
     public function area5(){ 
 
-        return view('desktop.pages.areas.area5');
+        return view('pages.areas.area5');
     }
     public function area6(){ 
 
-        return view('desktop.pages.areas.area6');
+        return view('pages.areas.area6');
     }
     public function area7(){ 
 
-        return view('desktop.pages.areas.area7');
+        return view('pages.areas.area7');
     }
     public function area8(){ 
 
-        return view('desktop.pages.areas.area8');
+        return view('pages.areas.area8');
     }
     public function area9(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('desktop.pages.areas.area9');
+        return view('pages.areas.area9');
     }
     public function area10(){ 
         $files = DB::table('files')->paginate(5);
 
-        return view('desktop.pages.areas.area10');
+        return view('pages.areas.area10');
     }
     public function tags(){ 
 
@@ -249,11 +260,14 @@ class PagesController extends Controller
             ->where('file_name', $request->filename)
             ->where('parameter', $request->param)
             ->update(array('tagstatus' => 'approved'));
+
+             $request->session()->flash('success', 'Approved the tag successfully.');
         }else if($request->has('rejectag')){
             DB::table('tags')
                 ->where('file_name', $request->filename)
                 ->where('parameter', $request->param)
                 ->delete();
+             $request->session()->flash('success', 'Rejected the tag successfully.');
         }    
             //code to render pending page
 
@@ -290,7 +304,7 @@ class PagesController extends Controller
          
         //endlogic to render
 
-            //$request->session()->flash('success', 'Approved the user successfully.');
+           
              $html = view('pages.pending')->with('files', $files)->with('filetags', $filenames)->renderSections();
             $data = array(
                 'success' => true,
@@ -300,6 +314,51 @@ class PagesController extends Controller
 
 
             return response()->json($data);
+        
+    }
+
+    public function loaddropdown(Request $request){
+
+        if($request->has('paramletarch')){
+                $response = "";
+
+                $letter = DB::table('parameters')
+                                ->select('param_id')
+                                ->where('area_id', '=', $request->areaid)
+                                ->get();
+
+                foreach($letter as $let){
+                        $response = $response."<option value=\"".$let->param_id."\" selected>".$let->param_id."</option>";
+
+                }
+
+                $data = array(
+                    'response' => $response
+                );
+
+                return response()->json($data);
+        }//endhas
+        else if($request->has('subparam')){
+                $responseopt = "";
+
+                $subpar = DB::table('subparam')
+                                ->select('subparam')
+                                ->where('area_id', '=', $request->areaid)
+                                ->where('paramletter', '=', $request->letter)
+                                ->get();
+
+                foreach($subpar as $sub){
+                        $responseopt = $responseopt."<option value=\"".$sub->subparam."\">".$sub->subparam."</option>";
+
+                }
+
+                $datav = array(
+                    'responsev' => $responseopt
+                );
+
+                return response()->json($datav);
+        }//endhas
+
         
     }
 

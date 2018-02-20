@@ -38,15 +38,24 @@
             
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
+                <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('home') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-home">
                             </span> &nbsp; Home 
                         </h4>
                     </div>
                 </div>
-
+                <!-- END OF HOME -->
+                <div class="panel panel-default">
+                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                        <h4 class="panel-title ">
+                           <span class="glyphicon glyphicon-upload">
+                            </span> &nbsp; My Uploads 
+                        </h4>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -139,7 +148,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
-                            </span> Pending Requests</a>
+                            </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>
                         </h4>
                     </div>  
                     <div id="collapseTwo" class="panel-collapse collapse">
@@ -147,9 +156,14 @@
                             <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('pending')}}">Tags</a>
-                                        <br>
-                                        <button type="submit" class="btn see-all" ><a href="">See All</a></button>
+                                    @if(count($files) > 0)
+                                        <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
+                                        <hr>
+                                        <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
+                                    @else
+                                        <p>No pending files.</p>
+                                    @endif
+                                        
                                     </td>
                                 </tr>
                             </table>
@@ -169,13 +183,16 @@
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <table class="table sidebar-submenu">
+                           <center> <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ ('bin') }}">Deleted files</a>
+                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ URL::to('/') }}/archive">Archived files</a>
                                     </td>
                                 </tr>
-                            </table>
+                            </table></center>
                         </div>
                     </div>
                 </div>

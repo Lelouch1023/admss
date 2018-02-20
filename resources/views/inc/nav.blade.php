@@ -43,7 +43,6 @@
       <ul class="nav navbar-nav navbar-right col-sm-3 col-xs-6">
         <div class="col-xs-12 user-navbar">
           <li class="name-drpdwn">
-              
               <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();" title="Logout">
@@ -52,7 +51,7 @@
               {{ csrf_field() }}
               </form>
           </li>
-          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead('{{ count(auth()->user()->unreadNotifications)}}')">
+          <li class="dropdown notif-drpdwn" id="markasread" onclick="markNotificationAsRead({{ count(auth()->user()->unreadNotifications)}})">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <span class="glyphicon glyphicon-bell" aria-hidden="true" title="Notifications"></span>
               @if( count(auth()->user()->unreadNotifications) !== 0)
@@ -61,19 +60,31 @@
             </a>
             <!-- Dropdown menu content -->
             <ul class="dropdown-menu" role="menu">
+              <li><p><center><b>Notifications</b></center></p></li>
+              <li class="divider"></li>
               <li>
                   @if(count(auth()->user()->unreadNotifications) == 0)
                 <i style="color: #000; text-align: center; padding: 5px;">No unread notifications</i>
                 @else
                   @foreach(auth()->user()->unreadNotifications as $notification)
-                  @include('notif.'.snake_case(class_basename($notification->type)))
+                   
+                      @include('notif.'.snake_case(class_basename($notification->type)))
+                   
                   @endforeach
                 @endif
               </li>
+              <li class="divider"></li>
+              <center><li><a style="color: #000;" href="{{ URL::to('/') }}/pending">See Pending Requests</a></li></center>
             </ul>
           </li><!--notifications-->
+          <!-- Home button -->
           <li class="upload">
-             <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-upload" aria-hidden="true" title="Upload a file"></span></button>
+            <button type="button" class="upload-btn" onclick="window.location.href='{{ URL::to('/').'/home' }}'"><span class="glyphicon glyphicon-home" aria-hidden="true" title="Home"></span></button>
+          </li>
+          <!-- End of Home button -->
+          <li class="upload">
+            <button type="button" class="upload-btn" onclick="window.location.href='{{ URL::to('/').'/upload' }}'"><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload"></span></button>
+             <!-- <button type="button" class="upload-btn" data-toggle="modal" data-target="#createModal" onclick=""><span class="glyphicon glyphicon-edit" aria-hidden="true" title="Upload a file"></span></button> -->
 
             <!-- Modal -->
             <div id="createModal" class="modal fade" role="dialog">
@@ -87,7 +98,9 @@
                   </div>
                   <div class="modal-body">
                     <!-- Php code for connection of data -->
-                   {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                  {{--  {!! Form::open(['action' => 'UploadController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!} --}}
+                   <form action="{{ URL::to('/') }}/test" method="POST" enctype="multipart/form-data">
+
                     <!--/comment -->
                 
                     <form method="POST" action="#" enctype="multipart/form-data">
@@ -118,6 +131,7 @@
                         </div>
                       </div>
                       <!-- COMPONENT END -->
+                        <button id="uploadbtn" onclick="upload()">Upload</button>
                         {{ Form::submit('Submit', ['class'=>'btn btn-primary pull-right']) }}
                         {!! Form::close() !!}
                     </form>
@@ -126,36 +140,9 @@
                 </div>
               </div>
             </div>
-
-            <!-- MODAL 2-->
-            <div id="modal2" class="modal fade" role="dialog">
-              <div class="modal-dialog upload-modal">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upload a file</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Php code for connection of data -->
-                    <p>Hello!!</p>
-                    <div class="modal-footer">
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <!-- end of modal 2-->
-======= --}}
-          </div>
-          <!-- End of modal -->
           </li>
-          <!-- @if(auth()->user()->user_lvl == 1)
-          <li class="adminpanel"> 
-            <a href="{{ route('admin') }}"><button class="btn btn-link nabar-btn">Admin Panel</button></a>
-          </li>
-          @endif -->
-          </div>
+
         </ul>
       <!-- End of User Control bar -->
     </div>

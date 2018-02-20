@@ -213,9 +213,9 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="">Students are provided opportunities to participate in the planning and implementation of activities concerning their welfare.</a></li>
-							<li><a href="">Concerned officials, faculty and staff act promptly on requests, needs and problems of the students.</a></li>
-							<li><a href="">The administration, faculty, staff and studdents work harmoniously and maintain good relationship.</a></li>
+							<li><a href="{{ URL::to('/') }}/area10/C/10CI_1">Students are provided opportunities to participate in the planning and implementation of activities concerning their welfare.</a></li>
+							<li><a href="{{ URL::to('/') }}/area10/C/10CI_2">Concerned officials, faculty and staff act promptly on requests, needs and problems of the students.</a></li>
+							<li><a href="{{ URL::to('/') }}/area10/C/10CI_3">The administration, faculty, staff and studdents work harmoniously and maintain good relationship.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -432,7 +432,7 @@
 							<li data-toggle="collapse" href="#sub-parameter9"><a href="">The following updated record compilations are made available to concerned parties: <span class="glyphicon glyphicon-chevron-down"></span> </a></li>
 								<ol id="sub-parameter9" class="panel-collapse collapse">
 									<li><a href="{{ URL::to('/') }}/area10/F/10FI_4_1">minutes of the Board of Regents/Trustees meetings;</a></li>
-									<li><a href="#{{ URL::to('/') }}/area10/F/10FI_4_2">minutes of the faculty meeting e.g. minutes of the Academic Council meetings;</a></li>
+									<li><a href="{{ URL::to('/') }}/area10/F/10FI_4_2">minutes of the faculty meeting e.g. minutes of the Academic Council meetings;</a></li>
 									<li><a href="{{ URL::to('/') }}/area10/F/10FI_4_3">faculty and staff individual files;</a></li>
 									<li><a href="{{ URL::to('/') }}/area10/F/10FI_4_4">faculty and staff performance evaluation results;</a></li>
 									<li data-toggle="collapse" href="#sub-parameter10"><a href="#">other records such as <span class="glyphicon glyphicon-chevron-down"></span></a></li>

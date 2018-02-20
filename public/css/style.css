@@ -430,7 +430,11 @@ box-shadow: 10px 10px 35px -12px rgba(0,0,0,0.75);
 .footer-info .footer-nav {
     padding: 0px 15px;
 }
-
+.footer-nav h3,
+.footer-abt-us h3,
+.footer-area-nav h3{
+  color: #f5d02a;
+}
 .footer-info .footer-nav ul{
     list-style: none;
     text-align: left;

@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="col-md-9 col-xs-12">
-		<div class="panel upload-panel">
+		<div class="panel create">
             <div class="panel-heading">Confirm Tags</div>
             <div class="panel-body">
 
@@ -46,11 +46,11 @@
 
                {!! Form::close() !!} 
             @else
-                <center><div><h3><i>No matching tag found.</i></h3></div></center>
-
+                <center><div><h3><i>No matching tag found. </i></h3></div></center>
+                    <button class="btn btn-danger">Delete</button>
                  {!! Form::open(['action' => 'TagsController@store', 'method' => 'POST']) !!}
-                 <button class="btn btn-danger">Delete</button>
-                {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
+
+                {{ Form::submit('Move to Archive', ['class'=>'btn login-btn']) }}
 
                {!! Form::close() !!} 
             @endif

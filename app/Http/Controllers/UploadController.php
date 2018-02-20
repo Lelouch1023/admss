@@ -11,6 +11,7 @@ use App\Notifications\FileTagged;
 use App\File;
 use App\User;
 use Carbon\Carbon;
+use URL;
 use DB;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -175,23 +176,7 @@ class UploadController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
 
-    // For adding keywords
-
-    // public function addkeyword(Request $request)
-
-    public function show($id)
-    {
-        $file = File::find($id);
-        //
-        return view('posts.show')->with('posts', $file);
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -201,8 +186,9 @@ class UploadController extends Controller
      */
     public function edit($id)
     {
+        $files = File::where('id', $id)->get();
 
-        $files = File::find($id);
+
         return view('posts.edit')->with('files', $files);
 
          
@@ -220,12 +206,13 @@ class UploadController extends Controller
        $this->validate($request,[
 
             // 'tags' => 'required',
-            'file' => 'required|max:1999|mimes:doc,docx,pdf'
+            'file' => 'required|max:1999|mimes:pdf'
 
 
         ]);
+       //dd($request->oldname);
 
-        // Handle File Upload
+        //Handle File Upload
         if ($request->hasFile('file')) {
 
             //Get file name with extension
@@ -242,19 +229,23 @@ class UploadController extends Controller
             //Filename to store 
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
-            //upload the file
-            //$path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
+            //upload the files
+        $path = $request->file('file')->storeAs('public/uploads', $fileNameToStore);
+        Storage::delete('public/uploads/'.$request->oldname);
 
         $file = File::find($id);
 
-        $file->user_id = auth()->user()->id;
 
         $file->name = $fileNameToStore;
 
-        $file->file_type = $extension;
+        $file->file_type = $request->doctype;
+
 
         $file->save();
+
+       // dd($fileNameToStore);
         
+
        
 
 
@@ -272,7 +263,7 @@ class UploadController extends Controller
        //      }
          }
 
-        //return redirect('/home')->with('success', 'File Updated!');
+        return back()->with('success', 'File Updated!');
     }
 
     /**
@@ -300,7 +291,7 @@ class UploadController extends Controller
     public function download(){
 
         $file = DB::table('files')->get();
-        return view('home', compact(file));
+        return view('home', compact($file));
     }
 
     public function search(Request $request){
@@ -326,7 +317,7 @@ class UploadController extends Controller
         $term = Input::get('searchItem', '');
         $files = File::where('name', 'LIKE', '%'.$term.'%')->paginate(10);
 
-        return view('desktop.pages.searchResult')->with('files', $files);
+        return view('pages.searchResult')->with('files', $files);
         //return $files;
 
         
@@ -519,5 +510,25 @@ class UploadController extends Controller
             else if ($extension == "pdf")
                 echo 'this is a pdf';
         }
-    }    
+    }  
+
+    public function test(){
+        dd($request->all);
+    }  
+
+    public function dl($file){
+
+        $file = File::find($file);
+        if(count($file) > 0){
+            $filename = $file->name;
+
+            $path = public_path()."\storage\uploads\\".$filename;
+            return response()->download($path, $filename);
+        }else{
+            abort(418);
+            
+        }
+
+
+    }
 }

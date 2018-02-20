@@ -144,8 +144,8 @@
 						<ol class="accrdn">
 							<li data-toggle="collapse" href="#sub-parameter2"><a href=""></a></li>
 								<ol id="sub-parameter2" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area6/B/6BO_1_1">The Extension Program is well-planned, implemented, monitored, evaluated and disseminated.</a></li>
-									<li><a href="{{ URL::to('/') }}/area6/B/6BO_1_2">The Extension Program has contributed to the improvement on the quality of life of the target clientele/beneficiaries.</a></li>
+									<li><a href="{{ URL::to('/') }}/area6/B/6BO_1">The Extension Program is well-planned, implemented, monitored, evaluated and disseminated.</a></li>
+									<li><a href="{{ URL::to('/') }}/area6/B/6BO_2">The Extension Program has contributed to the improvement on the quality of life of the target clientele/beneficiaries.</a></li>
 								</ol>
 				      	</ol>
 						</td>
@@ -245,7 +245,7 @@
 					<tr>
 						<td>
 						<ol class="accrdn">
-							<li><a href="{{ URL::to('/') }}/area6/D/6D1_1">There is a strategy for involving the communicaty, government and  private agencies in the Extension Program.</a></li>
+							<li><a href="{{ URL::to('/') }}/area6/D/6DS_1">There is a strategy for involving the communicaty, government and  private agencies in the Extension Program.</a></li>
 							
 				      	</ol>
 						</td>

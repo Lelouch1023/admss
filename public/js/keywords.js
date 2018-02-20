@@ -26,9 +26,8 @@ $(document).ready(function () {
                
             }
         });
-});
 
-$(document).ready(function () {
+
     $('#inputTags')
         .find('[name="cities"]')
             // Revalidate the cities field when it is changed
@@ -61,3 +60,4 @@ $(document).ready(function () {
             }
         });
 });
+

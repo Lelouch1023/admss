@@ -165,62 +165,62 @@
 						<ol class="accrdn">
 							<li data-toggle="collapse" href="#sub-parameter5"><a href="">Classroom instruction is enriched through theuse of the following strategies:<span class="glyphicon glyphicon-chevron-down"></span></a></li>
 								<ol id="sub-parameter5" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_5_1">Symposia, seminars, workshops, professional lectures</a></li>			
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_5_2">Educational tours/learning visits/oteher co-curricular activities</a></li>						
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_5_3">Computer-assisted instruction (CAI) and computer-assisted learning (CAL)</a></li>						
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_1">Symposia, seminars, workshops, professional lectures</a></li>			
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_2">Educational tours/learning visits/oteher co-curricular activities</a></li>						
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_3">Computer-assisted instruction (CAI) and computer-assisted learning (CAL)</a></li>						
 								</ol>
 							<li data-toggle="collapse" href="#sub-parameter6"><a href="">At least three(3) of the following course requirements are used:<span class="glyphicon glyphicon-chevron-down"></span></a></li>
 								<ol id="sub-parameter6" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_1">group/individual projects</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_2">group/individual reports</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_3">group/individual term papers</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_4">performance activities</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_5">learning contract</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_6">portfolio</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_7">learning modules</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_8">research, study</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_6_9">others (please specify)</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_1">group/individual projects</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_2">group/individual reports</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_3">group/individual term papers</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_4">performance activities</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_5">learning contract</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_6">portfolio</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_7">learning modules</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_8">research, study</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_9">others (please specify)</a></li>
 								</ol>
 							<li data-toggle="collapse" href="#sub-parameter7"><a href="">Instruction is enriched through the use of at least ten (10) of the following techniques/strategies<span class="glyphicon glyphicon-chevron-down"></span></a></li>
 								<ol id="sub-parameter7" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_1">film showing</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_2">projects</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_3">group dynamics</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_4">case study</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_5">workshops</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_6">simulations</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_7">dimensional question approach</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_8">breainstorming</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_9">buzz sessions</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_10">informal creative groups</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_11">interactive learning</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_12">micro teaching</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_13">macro teaching</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_14">tandem teaching</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_15">peer teaching</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_16">multi-media/courseware/teachware</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_17">experiments</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_18">problem solving</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_19">type study methods</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_20">reporting</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_21">panel discussion</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_7_22">others (please specify)</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_1">film showing</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_2">projects</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_3">group dynamics</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_4">case study</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_5">workshops</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_6">simulations</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_7">dimensional question approach</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_8">breainstorming</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_9">buzz sessions</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_10">informal creative groups</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_11">interactive learning</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_12">micro teaching</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_13">macro teaching</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_14">tandem teaching</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_15">peer teaching</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_16">multi-media/courseware/teachware</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_17">experiments</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_18">problem solving</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_19">type study methods</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_20">reporting</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_21">panel discussion</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_22">others (please specify)</a></li>
 								</ol>
-							<li><a href="{{ URL::to('/') }}/area3/B/3BI_8">Instructional strategies provide for student's individual needs and multiple intelligences</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/B/3BI_9">Instructional strategies provide for student's individual needs and multiple intelligences</a></li>
 							<li data-toggle="collapse" href="#sub-parameter8"><a href="">Instruction is enhanced through the following:<span class="glyphicon glyphicon-chevron-down"></span></a></li>
 								<ol id="sub-parameter8" class="panel-collapse collapse">
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_1">submission of approved and updated syllabus per course</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_2">regular classroom observation/supervision</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_3">regular faculty meetings with the College/Academic Unit/Dean/Department Chair</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_4">regular faculty performance evaluation</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_5">attendance/participation of faculty in in-service training</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_6">conduct of experimental classes</a></li>
-									<li><a href="{{ URL::to('/') }}/area3/B/3BI_8_7">adoption of alternative instructional delivery modes such as modular instruction, e-learning and on-line study</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_1">submission of approved and updated syllabus per course</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_2">regular classroom observation/supervision</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_3">regular faculty meetings with the College/Academic Unit/Dean/Department Chair</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_4">regular faculty performance evaluation</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_5">attendance/participation of faculty in in-service training</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_6">conduct of experimental classes</a></li>
+									<li><a href="{{ URL::to('/') }}/area3/B/3BI_10_7">adoption of alternative instructional delivery modes such as modular instruction, e-learning and on-line study</a></li>
 								</ol>
-							<li><a href="{{ URL::to('/') }}/area3/B/3BI_9">Instructional materials (IMs) are reviewed and recommended by the Instructional Materials Committee (IMC).</a></li>
-							<li><a href="{{ URL::to('/') }}/area3/B/3BI_">Varied, multi-sensory materials and computer programs are utiized.</a></li>
-							<li><a href="{{ URL::to('/') }}/area3/B/3BI_">The College/Academic Unit maintains consortia and linkages with other learning institutions for academic exchange of instructional materials.</a></li>
-							<li><a href="{{ URL::to('/') }}/area3/B/3BI_">The faculty are cncouraged to produce their own instructional materials such as modules, software, visual aids, manuals and textbooks</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/B/3BI_11">Instructional materials (IMs) are reviewed and recommended by the Instructional Materials Committee (IMC).</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/B/3BI_12">Varied, multi-sensory materials and computer programs are utiized.</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/B/3BI_13">The College/Academic Unit maintains consortia and linkages with other learning institutions for academic exchange of instructional materials.</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/B/3BI_14">The faculty are cncouraged to produce their own instructional materials such as modules, software, visual aids, manuals and textbooks</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -393,7 +393,7 @@
 									<li><a href="{{ URL::to('/') }}/area3/D/3DI_7_2">thesis</a></li>
 									<li><a href="{{ URL::to('/') }}/area3/D/3DI_7_3">others <i>(please specify)</i></a></li>
 								</ol>
-							<li><a href="{{ URL::to('/') }}/area3/D/3DI_4">In practivum courses, (field study, OJT, practice teaching, etc;) the number of trainees supervised by each coordinator does not exceed 50.</a></li>
+							<li><a href="{{ URL::to('/') }}/area3/D/3DI_8">In practivum courses, (field study, OJT, practice teaching, etc;) the number of trainees supervised by each coordinator does not exceed 50.</a></li>
 				      	</ol>
 						</td>
 					</tr>
@@ -504,7 +504,6 @@
 									<li><a href="{{ URL::to('/') }}/area3/F/3FS_1_2">Giving awards and/or recognition for faculty and students with outstanding achievements</a></li>
 									<li><a href="{{ URL::to('/') }}/area3/F/3FS_1_3">Supervision/monitoring and evaluation of faculty performance.</a></li>
 								</ol>
-							
 				      	</ol>
 						</td>
 					</tr>

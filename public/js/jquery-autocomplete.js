@@ -3,7 +3,7 @@ $( function() {
             
         var baseURL = $(this).data("url");
             $( "#searchItem" ).autocomplete({
-              source: APP_URL + '/search'
+              source: appURL + '/search'
             });
           } );
 

@@ -8,8 +8,8 @@
             <div class="admin-panel with-nav-tabs admin-default">
             	<div id="content"  class="admin-heading">
 				    <ul id="mytab" class="nav nav-tabs" data-tabs="tabs" >
-					    <li class="active"><a href="#requeststab" data-toggle="tab">Pending Requests</a></li>
-					    <li><a href="#chairstab" data-toggle="tab">Area Chairs</a></li>
+					    <li class="active" id="reqtab"><a href="#requeststab" data-toggle="tab">Pending Requests</a></li>
+					    <li id="chairtab"><a href="#chairstab" data-toggle="tab">Area Chairs</a></li>
 					</ul>
 				</div>
                 <div id="loadsample"></div>
@@ -47,6 +47,8 @@
 								    </select>
 						        </td>
 						        <td id="user-data-">
+
+									<input type="hidden" name="_tokenadm" id="tokenadm" value="{{ csrf_token() }}">
 						        	<input type="hidden" name="userid" id="userid_{{ $request->id }}" value="{{ $request->id }}">
 						        	<center><button type="button" class="btn btn-success" onclick="approve({{ $request->id }})" class="btn btn-link approvebtn" id="acceptbtn_{{ $request->id }}">Approve</button>        	
 						        	<button type="button" class="btn btn-danger" onclick="reject({{ $request->id }})" class="btn btn-link" id="rejectbtn_{{ $request->id }}">Reject</button></center>
@@ -111,6 +113,29 @@
 						        	@else
 						        		<button class="btn btn-primary" onclick="giveadmin({{ $chair->id }})"><a>Make Admin</a></button>
 						        	@endif
+
+						        	<button class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $chair->id }}delete"><span class="glyphicon glyphicon-trash"></span></button>
+
+						        		<!--del user modal-->
+						        	<div class="modal fade" id="del_{{ $chair->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content delete-modal">
+							      <div class="modal-header delete-modal-header">
+							        <label class="modal-title" id="exampleModalLabel">Delete User</label>
+							      </div>
+							      <div class="modal-body delete-modal-content">
+							      	<p>Are you sure you want to delete the user <i><a href="#">{{ $chair->name }}</a></i>?</p>
+							      	
+							      </div>
+							      <div class="delete-modal-footer">
+							        
+							        <button type="button" class="btn btn-danger delete"> <a href = "{{ URL::to('/') }}/deluser/{{ $chair->id }}">Delete</a></button>
+							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">Cancel</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<!-- End of Delete Modal -->
 						        </td>
 						      </tr>
 						      @endforeach
@@ -119,9 +144,9 @@
 						    @endif
 						    </tbody>
 						  </table>
-						  @if(count($chairs) > 0)
-						  	<center>{{ $chairs->links() }}</center>
-						  @endif
+										  @if(count($chairs) > 0)
+										  	<center>{{ $chairs->links() }}</center>
+										  @endif
 				    </div>
 				</div>
 				</div>

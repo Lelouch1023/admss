@@ -45,6 +45,16 @@
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
                 </form>
+            @else
+                <center><div><h3><i>No matching tag found. </i></h3></div></center>
+                 {!! Form::open(['action' => 'TagsController@move', 'method' => 'POST']) !!}
+
+                 <input type="hidden" name="filename" value="{{ $filename }}">
+                <center><button class="btn btn-default">Delete</button>
+                {{ Form::submit('Move to Archive', ['class'=>'btn btn-danger']) }} </center>
+
+               {!! Form::close() !!}
+
             @endif
             </div>  
         </div>

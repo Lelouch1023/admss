@@ -71,5 +71,16 @@ class RegisterController extends Controller
         ]);
     }
 
+    /**
+    *
+    */
+    protected function registered(Request $request, $user){
+        if ($user->isApproved != 1) {
+            auth()->logout();
+            return back()->with('success', 'Your account has been registered, waiting for admin approval.');
+        }
+        return redirect()->intended($this->redirectPath());
+    }
+
     
 }
