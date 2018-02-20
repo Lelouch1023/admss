@@ -65,7 +65,7 @@ Route::get('/destroy/{id}', 'UploadController@destroy');
 Route::get('/uploads/edit/{id}', 'UploadController@edit');
 Route::put('/uploads/edit/{id}', 'UploadController@update')->name('updatefile');
 
-Route::post('/home', 'UploadController@test');
+Route::get('/test', 'UploadController@test');
  
 Route::get('/{area}/{param}/{id}', 'PagesController@viewarea');
  

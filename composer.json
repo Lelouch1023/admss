@@ -15,6 +15,7 @@
         "simplesoftwareio/simple-qrcode": "~1",
         "smalot/pdfparser": "^0.11.0",
         "tymon/jwt-auth": "dev-develop",
+        "yk/laravel-ocr": "^1.0",
         "yooper/php-text-analysis": "^1.2"
     },
     "require-dev": {
