@@ -63,6 +63,14 @@ class PagesController extends Controller
         return view('pages.my_uploads')->with('files', $files);
     }
 
+    public function all_files(){         
+
+        $user = auth()->user()->id;
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+
+        return view('pages.all_files')->with('files', $files);
+    }
+
 
     public function viewfile($file){ 
         $user = auth()->user()->id;

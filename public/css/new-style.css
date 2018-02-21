@@ -285,10 +285,11 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 /*Buttons*/
 .pending{
 	text-align: center;
+	color: #fff !important;
+	
 }
-/*pending button{
-	color: #fff;
-}*/
+.pending button{
+}
 
 .approve span:hover{
 	color: #2ab27b;
@@ -314,8 +315,13 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	width: 85%;
 	margin: 0 auto;
 	margin-top: 14px;
-	position:fixed;
+	position:absolute;
     z-index: 999;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;	
 }
 
 /*home uploads*/
@@ -430,18 +436,18 @@ background: #bf2626;
     height: auto;
 }
 .box1{
-	height: 350px;
+	height: 110px;
 	color: #1b1b1b
 }
 .box2{
-	height: 230px;
+	height: 150px;
 }
 .box3{
-	height: 300px;
+	height: 220px;
 }
 .box4{
-	height: 400px;
-	margin-top: -78px;
+	height: 160px;
+	margin-top: -120px;
 
 }
 .box5{
@@ -451,8 +457,8 @@ background: #bf2626;
 
 }
 .box6{
-	height: 132px;
-	margin-top: -10px;
+	    height: 132px;
+    margin-top: -78px;
 }
 .box7{
 	margin-top: -10px;
@@ -517,4 +523,10 @@ background: #bf2626;
 }
 .search-result p{
 	margin: -4px 0 0 0;
+}
+
+.dropdown-file{
+	margin: 13px 0;
+	padding: 0 5px
+
 }
