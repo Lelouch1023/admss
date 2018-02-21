@@ -33,8 +33,21 @@
             <!-- ACCORDION MENU -->
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
+<<<<<<< HEAD
+=======
+                <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ ('uploads') }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/home') }}'">
+                        <h4 class="panel-title ">
+                           <span class="glyphicon glyphicon-home">
+                            </span> &nbsp; Home 
+                        </h4>
+                    </div>
+                </div>
+                <!-- END OF HOME -->
+>>>>>>> a345b89c7c0068db2abe0a2bc39fe8bbfd2efc3c
+                <div class="panel panel-default">
+                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/uploads' }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-upload">
                             </span>&nbsp; My Uploads 

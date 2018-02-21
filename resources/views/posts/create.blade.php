@@ -22,6 +22,10 @@
 					<option value="Grade Sheets">Grade Sheets</option>
 				</select>
             </div>
+            <div class="form-group">
+			  <label for="usr">Name:</label>
+			  <input type="text" class="form-control" id="usr">
+			</div>
                 <!-- Php code for connection of data -->
 				<!--/comment -->
 	        <div class="form-group">

@@ -6,13 +6,15 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Hello this is dashboard</div>
-
+                <p>{{ Ocr::recognize('C:\xampp\htdocs\adms\public\images\ocr.jpg') }}</p>
                 <div class="panel-heading">Dashboard 
                 </div>
                 <div class="panel-body">
-                   <h3><strong>All files.</strong></h3>
+                   <h3><strong>All files. </strong></h3>
                 </div>
+
             </div>
+
                 
                 
                 </div>

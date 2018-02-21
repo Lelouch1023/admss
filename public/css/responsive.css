@@ -5,4 +5,7 @@
 	.sidebar{
 		display: none;
 	}
+	.create {
+	    margin: 40px 0 150px 0;
+	}
 }

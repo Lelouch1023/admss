@@ -11,6 +11,7 @@ use App\Notifications\FileTagged;
 use App\File;
 use App\User;
 use Carbon\Carbon;
+use Ocr;
 use URL;
 use DB;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -513,7 +514,8 @@ class UploadController extends Controller
     }  
 
     public function test(){
-        dd($request->all);
+        return view('home');
+
     }  
 
     public function dl($file){
