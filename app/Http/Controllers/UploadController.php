@@ -63,7 +63,8 @@ class UploadController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'file' => 'required|max:1000|mimes:pdf'
+            'file' => 'required|max:1000|mimes:pdf',
+            'dispname' => 'required|min:5'
         ]);
 
         //Handle File Upload
@@ -89,6 +90,7 @@ class UploadController extends Controller
             $file = new File;
             $file->user_id = auth()->user()->id;
             $file->name = $fileNameToStore;
+            $file->dispname = $request->dispname;
             $file->file_type = Input::get('doctype');
             $file->save();
             //dd($request->input('doctype'));

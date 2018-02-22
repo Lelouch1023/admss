@@ -18,6 +18,7 @@ Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads')->name('uploads');
 Route::get('/all_files', 'PagesController@all_files')->name('all_files');
+Route::post('/all_files', 'PagesController@loadfiles');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin')->name('bin');
 Route::get('/archive', 'PagesController@archive')->name('archive');
@@ -87,3 +88,5 @@ Route::get('/logout', 'HomeController@logoutreg')->name('getLogout');
 Route::post('/tag', 'TagsController@store');
 Route::post('/keyword', 'TagsController@addKeyword');
 Route::post('/pending', 'PagesController@approvetag');
+
+Route::get('/mobile/login', 'Mobile\Auth\LoginController@showLogInForm');

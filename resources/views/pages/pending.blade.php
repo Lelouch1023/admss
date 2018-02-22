@@ -27,7 +27,7 @@
 					<tr class="pending-file">
 						<td class="col-xs-8">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="uploads/view/{{ $file->id }}">{{$file->filename}}</a>
+							<a href="uploads/view/{{ $file->id }}">{{$file->dispname}}</a>
 
 							<p>{{$file->created_at}}</p>
 							<!--Tagger-->

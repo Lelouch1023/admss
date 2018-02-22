@@ -56,11 +56,11 @@
                         </h4>
                     </div>
                 </div>
-                <div class="panel panel-default">
+                <div class="panel panel-default" onclick="window.location.href = '{{ URL::to('/').'/all_files' }}'">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
-                            </span> &nbsp; All Areas</a>
+                            <a  data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
+                            </span> &nbsp; All Files</a>
                         </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">

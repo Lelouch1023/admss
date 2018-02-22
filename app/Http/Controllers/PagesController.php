@@ -58,37 +58,53 @@ class PagesController extends Controller
     public function uploads(){         
 
         $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
-
-        return view('pages.my_uploads')->with('files', $files);
+        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(7);
+        $tags = Tag::get();
+        return view('pages.my_uploads')->with('files', $files)->with('tags', $tags);
     }
 
     public function all_files(){         
 
-        $user = auth()->user()->id;
-        $files = File::orderBy('created_at', 'desc')->where([['user_id','=', $user], ['isDeleted', '=', '0']])->paginate(10);
+        //$user = auth()->user()->id;
+         $files = File::join('users', 'files.user_id', '=', 'users.id')
+                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at', 'files.dispname')->paginate(7);
+        $tags = Tag::get();
 
-        return view('pages.all_files')->with('files', $files);
+        return view('pages.all_files')->with('files', $files)->with('tags', $tags);
     }
 
 
     public function viewfile($file){ 
+        
+
+        $files = File::where('id', '=', $file)
+                ->get();
+        if(count($files) > 0){
         $user = auth()->user()->id;
-        $files = File::where('id', '=', $file)->get();
+        //
+        $paramletter="";
+        $tags = array();
+        $file = array();
+
+       // dd($file);
         // foreach $files
         // $filenames[] = 
-        foreach($files as $file){
-            $tags = Tag::where('file_name', '=', $file->name)
+        //DB::connection()->enableQueryLog();
+        foreach($files as $filev){
+            $tags = DB::table('tags')
+                        ->where('file_name', '=', $filev->name)
                         ->get();
         }
-
-
+        //dd($tags);
+        //dd(DB::connection()->getQueryLog());
+        if (count($tags) > 0) {
+            
             if($tags[0]->area_id == "area10")
                 $paramletter = substr($tags[0]->parameter, 2, 2);
             else
                 $paramletter = substr($tags[0]->parameter, 1, 1);
-
-        if(count($files) > 0){
+            //
+        }
             return view('pages.view-file')->with('files', $files)->with('tags', $tags)->with('paramletter', $paramletter);
         }else{
             abort(404);
@@ -212,7 +228,7 @@ class PagesController extends Controller
         }
 
         $files = File::join('users', 'files.user_id', '=', 'users.id')
-                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at')
+                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at', 'files.dispname')
                         ->whereIn('files.name', $compare)->paginate(5);
         
         
@@ -395,7 +411,30 @@ class PagesController extends Controller
                 return response()->json($datav);
         
 
+        }
     }
+
+    public function loadfiles(Request $request){
+
+        $files = File::join('users', 'files.user_id', '=', 'users.id')
+                        ->select('files.name as filename', 'users.name as username', 'file_type', 'files.id', 'files.created_at', 'files.dispname')
+                        ->where('file_type', '=', $request->doctype)
+                        ->paginate(7);
+
+        $tags = Tag::get();
+
+        $html = view('pages.all_files')->with('files', $files)->with('tags', $tags)->renderSections();
+
+        $data = array(
+            'html' => $html['content'],
+            'doctype' => $request->doctype,
+            
+            'success' => true
+        );
+
+        return response()->json($data);
+
+
     }
 
 }
