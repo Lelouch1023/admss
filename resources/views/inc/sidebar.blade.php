@@ -33,19 +33,6 @@
             <!-- ACCORDION MENU -->
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
-<<<<<<< HEAD
-=======
-                <!-- HOME -->
-                <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/home') }}'">
-                        <h4 class="panel-title ">
-                           <span class="glyphicon glyphicon-home">
-                            </span> &nbsp; Home 
-                        </h4>
-                    </div>
-                </div>
-                <!-- END OF HOME -->
->>>>>>> a345b89c7c0068db2abe0a2bc39fe8bbfd2efc3c
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/uploads' }}'">
                         <h4 class="panel-title ">
@@ -142,7 +129,7 @@
                 <!-- END OF MY AREA -->
                 <!-- ALL FILES -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="window.location.href='{{ route('pending') }}'">
+                    <div class="panel-heading" onclick="window.location.href='{{ route('all_files') }}'">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-folder-open"></span> &nbsp; All Files</a>
                         </h4>

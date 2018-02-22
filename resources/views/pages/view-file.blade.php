@@ -26,10 +26,9 @@
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-restore"><a href="{{ URL::to('/') }}/uploads/edit/{{$file->id}}">Revise</a></button>
 							@endif
-
 							<button type="button" class="download"><a href="{{ URL::to('/')}}/storage/uploads/{{$file->name}}" download="{{$file->name}}">Download</a></button>
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
-								<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete">Delete</button>
+							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete">Delete</button>
 							@endif
 							<!-- Delete Modal -->
 			   				<div class="modal fade" id="{{ $file->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,7 +43,6 @@
 							      	<p><b>Note:</b> Deleted item will be stored to bin for future use.</p>
 							      </div>
 							      <div class="delete-modal-footer">
-							        
 							        <button type="button" class="btn btn-danger delete" onclick="location.href = '{{ URL::to('/') }}/delete/{{ $file->id }}';">Delete</button>
 							        <button type="button" class="btn btn-secondary no" data-dismiss="modal">Cancel</button>
 							      </div>
@@ -52,9 +50,23 @@
 							  </div>
 							</div>
 							<!-- End of Delete Modal -->
+							<br>
+							<label>Tags:</label>
 						</td>
 						<td class="col-xs-6 qr-scan">
-							<center><img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate('dl/'.$file->id)) !!}"></center>
+							<a href="#" data-toggle="modal" data-target="#imageModal">
+								<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate('dl/'.$file->id)) !!}">
+							</a>
+							<!-- Image Modal -->
+			   				<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="image-modal">
+							      <div class="modal-body">
+							      	<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->encoding('UTF-8')->size(250)->generate('dl/'.$file->id)) !!}">
+							      </div>
+							  </div>
+							</div>
+							<!-- End of Image Modal -->
 							<!-- <img src="{{ URL::to('/images/pdf-file.png') }}"> -->
 						</td>
 					</tr>

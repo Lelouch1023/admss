@@ -1,6 +1,6 @@
 #banner{
 	background-color: #fff;
-	height: -webkit-fill-available;
+	height: 630px;
 	background-image: url('../images/index.jpg');
 	background-size: 100%;
 	background-color: #fff;
@@ -413,12 +413,12 @@ background: #bf2626;
 	border: 1px solid #1b1b1b;
 	padding: 5px 5px;
     text-align: center;
-    box-sizing: border-box;
     /*border-radius: 3px;*/
     margin-bottom: 12px;
     margin-right: 10px;
     float: left;
     width: 99%;
+    position: relative;
 
 }
 .area-box > h3{
@@ -430,54 +430,34 @@ background: #bf2626;
 }
 .area-box:hover{
 	transition: 0.3s;
-	border: 4px solid #efefef;
 }
 .all-area-content{
     height: auto;
 }
 .box1{
-	height: 110px;
-	color: #1b1b1b
 }
 .box2{
-	height: 150px;
 }
 .box3{
-	height: 220px;
 }
 .box4{
-	height: 160px;
-	margin-top: -120px;
-
 }
 .box5{
-	margin-top: -78px;
-	height: 200px;
-	color: #1b1b1b
-
 }
 .box6{
-	    height: 132px;
-    margin-top: -78px;
 }
 .box7{
-	margin-top: -10px;
-	height: 198px;
-	color: #1b1b1b
+	
 
 }
 .box8{
-	margin-top: -293px;
-    height: 282px;
-	color: #1b1b1b
+	
 }
 .box9{
-	margin-top: -10px;
-	height: 100px;
+	
 }
 .box10{
-	margin-top: -10px;
-	height: 100px;
+	
 }
 .box1:hover,
 .box7:hover,
@@ -528,5 +508,30 @@ background: #bf2626;
 .dropdown-file{
 	margin: 13px 0;
 	padding: 0 5px
+}
 
+/*Image modal*/
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.image-modal{
+	/*border: 1px solid #fff;*/
+    /*border-radius: 9px;*/
+}
+.image-modal img{
+ 	width: 45% !important;
 }

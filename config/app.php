@@ -180,7 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         App\Providers\ViewComposerServiceProvider::class,
-        Yk\LaravelOcr\OcrProvider::class,
+        // Yk\LaravelOcr\OcrProvider::class,
 
     ],
 

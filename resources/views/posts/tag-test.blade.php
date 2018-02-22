@@ -11,7 +11,7 @@
             
             @if(count($tags) > 0)
                 {!! Form::open(['action' => 'TagsController@store', 'id' => 'inputTags', 'method' => 'POST', 'class' => 'form-horizontal' ]) !!}
-                <p>Do you want to tag <i>{{ $filename }}</i> to these areas?</p>
+                <p>Do you want to tag <i>{{ $filename }}</i> to this/these area/s?</p>
                 @foreach($val as $vals)
                 <div class="form-group">
                     <label class="control-label">{{ $vals->name }}</label>
@@ -40,7 +40,7 @@
                 @endforeach
                             <input type="hidden" name="filename" value="{{ $filename }}"/>
 
-                <div class="form-group">
+                <div class="form-group pull-right">
                     <button type="submit" class="btn btn-default">Cancel</button>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>

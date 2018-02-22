@@ -68,9 +68,9 @@
 				        <table class="table table-hover">
 						    <thead>
 						      <tr>
-						        <th>Area Handled</th>
-						        <th>User Assigned</th>
-						        <th>Change Assigned Area</th>
+						        <th>Area No.</th>
+						        <th>Assigned User</th>
+						        <th>Area Chair</th>
 						        <th>Action</th>
 						      </tr>
 						    </thead>
@@ -90,9 +90,7 @@
 						        	<h6>({{ $chair->email }})</h6></td>
 						        <!-- End admin access -->
 						        <td>
-						        	
 						        	<select class="form-control" id="area_handled{{ $chair->id }}">
-
 								        <option value="area1" @if($chair->area_handled == "area1") selected @endif>Area 1</option>
 								        <option value="area2" @if($chair->area_handled == "area2") selected @endif>Area 2</option>
 								        <option value="area3" @if($chair->area_handled == "area3") selected @endif>Area 3</option>

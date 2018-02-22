@@ -11,7 +11,7 @@
 			<!-- Category contents -->
 			<div class="category-content">
 			@if(count($files) > 0)
-				<div class="col-xs-6 dropdown-file">
+				<div class="col-xs-3 dropdown-file pull-left">
 						<select class="form-control" id="doctype" name="doctype">
 							<option value="Memorandum">Memorandum</option>
 						    <option value="Office Order">Office Orders</option>
@@ -21,7 +21,7 @@
 							<option value="Grade Sheets">Grade Sheets</option>
 						</select>
 				</div>
-				<div class="col-xs-6">
+				<div class="col-xs-4 pull-right">
 						<div id="custom-search-input">
 				          <div class="input-group ">
 				                    <input type="text" class="search-query form-control" placeholder="Search a file" id="searchItem" name="searchItem"/>

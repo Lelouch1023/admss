@@ -23,7 +23,7 @@
 				</select>
             </div>
             <div class="form-group">
-			  <label for="usr">Name:</label>
+			  <label for="usr">File Name:</label>
 			  <input type="text" class="form-control" id="usr">
 			</div>
                 <!-- Php code for connection of data -->
