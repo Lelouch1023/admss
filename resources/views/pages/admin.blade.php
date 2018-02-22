@@ -68,53 +68,58 @@
 				        <table class="table table-hover">
 						    <thead>
 						      <tr>
-						        <th>Area Handled</th>
+						        <th>Areas</th>
 						        <th>User Assigned</th>
-						        <th>Change Assigned Area</th>
 						        <th>Action</th>
 						      </tr>
 						    </thead>
 						    <tbody>
 						    @if(count($chairs) > 0)	
-						    	@foreach($chairs as $chair)
+						    	@foreach($areas as $area)
 						      <tr> {{--area1 => Area 1 --}}
 						        <td id="user-data"> 
-						        	{{ strtoupper(substr($chair->area_handled, 0, 1)).substr($chair->area_handled, 1, 3)." ".substr($chair->area_handled, 4) }} </td> 
+						        	<p>Area {{ $area->id }}</p>
+						        	<input type="hidden" id="area_{{ $area->id }}" name="area_{{ $area->id }}" value="{{ $area->area_id }}">
+						        </td> 
 						        <!-- If else for admin access -->
 						        <td id="user-data">
-						        	@if($chair->user_lvl == 1)
+						        	{{-- @if($chair->user_lvl == 1)
 						        	<span class="identify-admin">[admin]</span> 
 						        	<br>
-						        	@endif
-						        	{{ $chair->name }}
-						        	<h6>({{ $chair->email }})</h6></td>
-						        <!-- End admin access -->
-						        <td>
+						        	@endif --}}
+						        <select class="form-control" id="chairs_{{ $area->id }}" name="chairs_{{ $area->id }}">
 						        	
-						        	<select class="form-control" id="area_handled{{ $chair->id }}">
+						        	@if(count($area->area_handler) != 0)
+						        	<option disabled  selected>Select users</option>
+						        	@endif
+						        
+						        @foreach($chairs as $chair)	
+						        	
+						        		<option value="{{ $chair->id }}"
 
-								        <option value="area1" @if($chair->area_handled == "area1") selected @endif>Area 1</option>
-								        <option value="area2" @if($chair->area_handled == "area2") selected @endif>Area 2</option>
-								        <option value="area3" @if($chair->area_handled == "area3") selected @endif>Area 3</option>
-								        <option value="area4" @if($chair->area_handled == "area4") selected @endif>Area 4</option>
-								        <option value="area5" @if($chair->area_handled == "area5") selected @endif>Area 5</option>
-								        <option value="area6" @if($chair->area_handled == "area6") selected @endif>Area 6</option>
-								        <option value="area7" @if($chair->area_handled == "area7") selected @endif>Area 7</option>
-								        <option value="area8" @if($chair->area_handled == "area8") selected @endif>Area 8</option>
-								        <option value="area9" @if($chair->area_handled == "area9") selected @endif>Area 9</option>
-								        <option value="area10" @if($chair->area_handled == "area10") selected @endif>Area 10</option>
-								    </select>
+						        			@if(count($chair->area_handled) > 0)
+						        				disabled
+						        			@endif
+						        			@if($chair->area_handled == $area->area_id )
+						        				 selected
+						        			@endif
+						        			>{{ $chair->name }}</option>
+						        
+						        @endforeach
+						    	</select>
+						        	{{-- <h6>({{ $chair->email }})</h6></td> --}}
+						        <!-- End admin access -->
 						        </td>
 						        <td id="admin-rights">
 						        	<input type="hidden" name="user{{ $chair->id }}" id="user{{ $chair->id }}" value="{{ $chair->id }}">
-						        	<button class="btn btn-success" onclick="assign({{ $chair->id }})"><a>Assign</a></button>
-						        	@if($chair->user_lvl == 1)
+						        	<button class="btn btn-success" onclick="assign({{ $area->id }})"><a>Assign</a></button>
+						        	{{-- @if($chair->user_lvl == 1)
 						        		<button class="btn btn-danger" onclick="revokeadmin({{ $chair->id }})"><a>Revoke Admin</a></button>
 						        	@else
 						        		<button class="btn btn-primary" onclick="giveadmin({{ $chair->id }})"><a>Make Admin</a></button>
 						        	@endif
 
-						        	<button class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $chair->id }}delete"><span class="glyphicon glyphicon-trash"></span></button>
+						        	<button class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $chair->id }}delete"><span class="glyphicon glyphicon-trash"></span></button> --}}
 
 						        		<!--del user modal-->
 						        	<div class="modal fade" id="del_{{ $chair->id }}delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -139,8 +144,6 @@
 						        </td>
 						      </tr>
 						      @endforeach
-						    @else
-						      	<p>No area chairs found.</p>
 						    @endif
 						    </tbody>
 						  </table>

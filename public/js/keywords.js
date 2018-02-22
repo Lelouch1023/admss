@@ -58,6 +58,21 @@ $(document).ready(function () {
                     }
                 },
             }
-        });
+    //     });
+
+    // $('#tag-form-submit').prop('disabled',true);
+    // $('#keywordinp').keyup(function(){
+    //     $('#tag-form-submit').prop('disabled', this.value == "" ? true : false);     
+    })
 });
 
+function stoppedTyping(){
+
+    var count = $('#keywordinp').val().length();
+        // if(count == 0) { 
+        //     document.getElementById('keysub').disabled = false; 
+        // } else { 
+        //     document.getElementById('keysub').disabled = true;
+        // }
+        console.log(count);
+    }

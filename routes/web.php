@@ -25,6 +25,7 @@ Route::post('/mnltag', 'TagsController@manualtag');
 Route::post('/movefile', 'TagsController@move');
 
 Route::get('dl/{file}', 'UploadController@dl');
+
 Route::post('/unarchv', 'TagsController@unarchive');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 Route::get('/deluser/{user}', 'AdminController@deluser');

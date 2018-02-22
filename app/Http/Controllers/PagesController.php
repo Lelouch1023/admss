@@ -67,9 +67,21 @@ class PagesController extends Controller
     public function viewfile($file){ 
         $user = auth()->user()->id;
         $files = File::where('id', '=', $file)->get();
-        
+        // foreach $files
+        // $filenames[] = 
+        foreach($files as $file){
+            $tags = Tag::where('file_name', '=', $file->name)
+                        ->get();
+        }
+
+
+            if($tags[0]->area_id == "area10")
+                $paramletter = substr($tags[0]->parameter, 2, 2);
+            else
+                $paramletter = substr($tags[0]->parameter, 1, 1);
+
         if(count($files) > 0){
-            return view('pages.view-file')->with('files', $files);
+            return view('pages.view-file')->with('files', $files)->with('tags', $tags)->with('paramletter', $paramletter);
         }else{
             abort(404);
         }   
@@ -211,6 +223,23 @@ class PagesController extends Controller
     */
     public function viewarea($area, $para, $subpara){ 
         // $files = DB::table('tag')->where('parameter', '=', $para)->paginate(5);    
+
+        
+
+        //check if subpara exists
+        $sbprm = DB::table('subparam')
+                    ->select('area_id', 'subparam', 'paramletter')
+                    ->where('subparam', '=', $subpara)
+                    ->get();
+    if(count($sbprm) > 0){
+        foreach($sbprm as $sbpr){
+            if($sbpr->area_id != $area || $sbpr->paramletter != $para){
+                abort(404);
+            }
+        }
+    }else abort(404);
+    
+
         $paraname = DB::table('parameters')
                         ->select('param_name')
                         ->where('area_id', '=', $area)
@@ -233,7 +262,6 @@ class PagesController extends Controller
                         ->get();
 
 
-        if(count($paraname) > 0){
             if(count($result) > 0){
                 foreach($result as $res){
                     $wheres[] = $res->file_name;
@@ -243,7 +271,7 @@ class PagesController extends Controller
             }
             //dd($subparam);
             return view('pages.areas.view_area')->with('files', $files)->with('paraname', $paraname)->with('areanum', $areanum)->with('arealink', $area)->with('subparam', $subparam)->with('keywords', $keywords)->with('paramletter', $para)->with('sub', $subpara);
-        }else{ abort(404); }
+         
 
     }
 
@@ -357,9 +385,9 @@ class PagesController extends Controller
                 );
 
                 return response()->json($datav);
-        }//endhas
-
         
+
+    }
     }
 
 }

@@ -23,7 +23,7 @@
 			<div class="modal-dialog">
 			    <div class="modal-content keywords">
 			        <div class="modal-header">
-			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <button type="button" class="close" onclick="location.reload()" data-dismiss="modal" aria-hidden="true">&times;</button>
 			            <center><h4 class="modal-title" id="myModalLabel">Current Keywords</h4></center>
 			        </div>
 			        {!! Form::open(['action' => 'TagsController@addKeyword', 'method' => 'POST', 'id' => 'bootstrapTagsInputForm']) !!}
@@ -32,10 +32,10 @@
 						    <div class="form-group">
 						        <label class="control-label">Note: Add words that are related to this area. To add a tag, press "tab" after typing.</label><br><br>
 						        <div class="col-xs-12">
-						            <input type="text" name="keyword[]" class="form-control"
+						            <input type="text" name="keyword[]" id="keywordinp" class="form-control"
 						                   value="@foreach($keywords as $keyword)
 						        		{{ $keyword->keyword."," }}
-						            @endforeach" data-role="tagsinput" />
+						            @endforeach" data-role="tagsinput" onkeypress ="stoppedTyping()" />
 						            <br>
 						        </div>
 						    </div>
@@ -44,8 +44,11 @@
 					{!! Form::hidden('paramletter', $paramletter) !!}
 					{!! Form::hidden('sub', $sub) !!}
 					 <div class="modal-footer">
+					 	@if($arealink == auth()->user()->area_handled)
 			                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			                <input id="tag-form-submit" type="submit" class="btn btn-primary" value="Save">
+			                <input id="keysub" type="submit" class=".sendButton btn btn-primary" value="Save"
+			               >
+			             @endif
 			            </div>
 					{!! Form::close() !!}
 			    </div>

@@ -23,6 +23,10 @@
 							<img src="{{ URL::to('/images/pdf-file.png') }}">
 							<a href="{{ URL::to('/').'/viewpdf/'.$file->id }}"><b><h4>{{$file->name}}</h4></b></a>
 							<p>{{$file->created_at}}</p>
+							<strong>Tags:</strong><br>
+							@foreach($tags as $tag)
+								<a href="{{ URL::to('/') }}/{{ $paramletter }}/{{ $tag->areaid }}/{{ $tag->parameter }}">{{ $tag->parameter }}</a><br><br>
+							@endforeach
 							@if($file->user_id == Auth::user()->id || Auth::user()->user_lvl == 1)
 								<button type="button" class="bin-restore"><a href="{{ URL::to('/') }}/uploads/edit/{{$file->id}}">Revise</a></button>
 							@endif

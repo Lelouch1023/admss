@@ -40,7 +40,7 @@
                 <!-- ALL AREAS -->
                 <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/home') }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/home'}}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-home">
                             </span> &nbsp; Home 

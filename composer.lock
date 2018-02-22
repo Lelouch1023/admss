@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d5ebe76bddb976149596b341d10a270",
+    "content-hash": "591440bd776147b624d8ccef4ac25a4c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -771,6 +771,55 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jfuentestgn/ocr-space",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jfuentestgn/ocr-space.git",
+                "reference": "3b5d2ece62d9928a0327310e7654a2c52d51922c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jfuentestgn/ocr-space/zipball/3b5d2ece62d9928a0327310e7654a2c52d51922c",
+                "reference": "3b5d2ece62d9928a0327310e7654a2c52d51922c",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "laravel/framework": "5.3.*",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~5.0",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JFuentesTgn\\OcrSpace\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juan Fuentes",
+                    "email": "jfuentestgna@gmail.com"
+                }
+            ],
+            "description": "Laravel OCR.space API Client",
+            "keywords": [
+                "OCR",
+                "api",
+                "laravel",
+                "service"
+            ],
+            "time": "2017-01-19T20:24:14+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3389,6 +3438,51 @@
             "time": "2018-02-19T15:01:27+00:00"
         },
         {
+            "name": "thiagoalessio/tesseract_ocr",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thiagoalessio/tesseract-ocr-for-php.git",
+                "reference": "96f6d53cbea202e63a436490869c7f4214501bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thiagoalessio/tesseract-ocr-for-php/zipball/96f6d53cbea202e63a436490869c7f4214501bb0",
+                "reference": "96f6d53cbea202e63a436490869c7f4214501bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "codacy/coverage": "dev-master",
+                "phpunit/php-code-coverage": "^4.0.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "thiagoalessio\\TesseractOCR\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "thiagoalessio",
+                    "email": "thiagoalessio@me.com"
+                }
+            ],
+            "description": "A wrapper to work with Tesseract OCR inside PHP.",
+            "keywords": [
+                "OCR",
+                "Tesseract",
+                "text recognition"
+            ],
+            "time": "2018-02-06T19:34:21+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -3603,51 +3697,6 @@
                 "stemmer"
             ],
             "time": "2017-01-27T17:16:44+00:00"
-        },
-        {
-            "name": "yk/laravel-ocr",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yassine-khachlek/laravel-ocr.git",
-                "reference": "abf03a3f25215503a352723f7986fae407ff907c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yassine-khachlek/laravel-ocr/zipball/abf03a3f25215503a352723f7986fae407ff907c",
-                "reference": "abf03a3f25215503a352723f7986fae407ff907c",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ],
-                "psr-4": {
-                    "Yk\\LaravelOcr\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPLv2"
-            ],
-            "authors": [
-                {
-                    "name": "Yassine Khachlek",
-                    "email": "yassine.khachlek@gmail.com"
-                }
-            ],
-            "description": "A wrapper for gocr.",
-            "homepage": "https://github.com/yassine-khachlek/laravel-ocr",
-            "keywords": [
-                "OCR",
-                "gocr",
-                "image",
-                "laravel",
-                "recognition",
-                "text"
-            ],
-            "time": "2016-11-05T04:36:58+00:00"
         },
         {
             "name": "yooper/nicknames",
@@ -5516,7 +5565,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tymon/jwt-auth": 20
+        "tymon/jwt-auth": 20,
+        "jfuentestgn/ocr-space": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

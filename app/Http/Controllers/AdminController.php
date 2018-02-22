@@ -42,9 +42,9 @@ class AdminController extends Controller
                         ->orderBy('name', 'asc')
                         ->paginate(5);
 
+        $area = DB::table("areas")->get();
 
-
-        return view('pages.admin')->with('requests', $requests)->with('chairs', $chairs);
+        return view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->with('areas', $area);
 
 
     }
@@ -67,9 +67,11 @@ class AdminController extends Controller
                         ->orderBy('name', 'asc')
                         ->paginate(5);
          
+                        
 
+            $area = DB::table("areas")->get();
             //$request->session()->flash('success', 'Approved the user successfully.');
-            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->with('areas', $area)->renderSections();
             $data = array(
                 'html' => $html['content'],
                 'success' => true,
@@ -81,16 +83,21 @@ class AdminController extends Controller
             $user->area_handled = $request->area_handled;
             $user->save();
 
+            $areaf = DB::table('areas')
+                    ->where('area_id', '=', $request->area_handled)
+                    ->update(['area_handler' => $request->user_id]);
+
             $requests = User::where('isApproved', '=', 0)
                         ->orderBy('created_at', 'desc')
                         ->paginate(5);
             $chairs = User::where('isApproved', '=', 1)
                         ->orderBy('name', 'asc')
                         ->paginate(5);
-         
+
+            $area = DB::table("areas")->get();
 
             //$request->session()->flash('success', 'Approved the user successfully.');
-            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->renderSections();
+            $html = view('pages.admin')->with('requests', $requests)->with('chairs', $chairs)->with('areas', $area)->renderSections();
             $data = array(
                 'html' => $html['content'],
                 'success' => true,

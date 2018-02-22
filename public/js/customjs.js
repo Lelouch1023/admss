@@ -8,6 +8,10 @@ $.ajaxSetup({
 
 });
 
+function refresh(){
+	// location.reload();
+	alert("close");
+}
 //approve user
 function approve(id){
 	var values = {
@@ -69,8 +73,8 @@ function reject(id){
 function assign(id){
 	var values = {
 		'_token' : $('#tokenadm').val(),
-		'area_handled' : $("#area_handled"+id).val(),
-		'user_id' : $('#user'+id).val(),
+		'user_id' : $('#chairs_'+id).val(),
+		'area_handled' : $('#area_'+id).val(),
 		'assign' : true
 	}
 		$.ajax({
@@ -81,7 +85,7 @@ function assign(id){
 	    	if(data.success == true){
 
 	    	  	$('#containeradmin').html(data.html);
-	    		//$('#successmsg').show(500).fadeOut(2000);
+	    		('#successmsg').show(500).delay(2000).fadeOut();
   				$('#mytab li a[href="#chairstab"]').tab('show');
 	  			$("#reqtab").removeClass("active");
 	  			$("#chairtab").addClass("active");
@@ -92,6 +96,8 @@ function assign(id){
       		
 			
    		});
+
+  //console.log(values);
 }
 
 //give admin to user
