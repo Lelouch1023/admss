@@ -38,9 +38,9 @@
 					</td>
 					
 					<td class="col-xs-2 select">
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thisModal_{{ $file->id }}" ><span  aria-hidden="true" title="Add keyword" style="color: #000;">Add Tag</span></button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thisModal_{{ $file->id }}" >Add Tag</button>
 						<button type="button" id="unarchive_{{ $file->id }}" onclick = "unarchive({{ $file->id }})" class="btn btn-success" title="Remove the file from archive">Done</button>
-						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $file->id }}" ><span  aria-hidden="true" title="Delete file" style="color: #000;">Delete</span></button>
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del_{{ $file->id }}" >Delete</button>
 		            <!-- Modal -->
 		            <div id="thisModal_{{ $file->id }}" class="modal fade" style="color: #000;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog">

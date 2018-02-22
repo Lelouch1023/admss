@@ -26,7 +26,7 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
-                    <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
+                    <button onclick="window.location.href='{{ route('admin') }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             <!-- END SIDEBAR BUTTONS -->
@@ -34,78 +34,13 @@
             <div class="panel-group" id="accordion">
                 <!-- ALL AREAS -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/uploads' }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ route('uploads') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-upload">
                             </span>&nbsp; My Uploads 
                         </h4>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" onclick="showAllAreas()">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
-                            </span> &nbsp; All Areas</a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table sidebar-submenu">
-                                <tr>
-                                    <td >
-                                        <a onclick="window.location.href='{{ route('area1') }}'" title="Area 1">Vision, Mission, Goals and Obejectives</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area2') }}'"  title="Area 2">The Faculty</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area3') }}'"  title="Area 3">Curriculum and Instruction</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area4') }}'"  title="Area 4">Support to Students</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area5') }}'"  title="Area 5">Research</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area6') }}'"  title="Area 6">Extension and Community Involvement</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area7') }}'"  title="Area 7">Library</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area8') }}'"  title="Area 8">Physical Plant and Facilities</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area9') }}'"  title="Area 9">Laboratories</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a onclick="window.location.href='{{ route('area10') }}'"  title="Area 10">Administration</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- END OF ALL AREAS -->
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
                     <div class="panel-heading" onclick="showMyArea()">
@@ -131,7 +66,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" onclick="window.location.href='{{ route('all_files') }}'">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-folder-open"></span> &nbsp; All Files</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;All Files</a>
                         </h4>
                     </div>  
                 </div>
@@ -159,10 +94,10 @@
                            <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
+                                        <a onclick="window.location.href='{{ route('bin') }}'">Deleted files</a>
                                     </td>
                                     <td>
-                                        <a href="{{ URL::to('/') }}/archive">Archived files</a>
+                                        <a onclick="window.location.href='{{ route('archive') }}'">Archived files</a>
                                     </td>
                                 </tr>
                             </table>

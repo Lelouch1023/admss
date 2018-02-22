@@ -3,7 +3,7 @@
 		
 @section('content')
 	<div class="container" id="containeradmin">
-		<div class="msg-alert alert alert-success" style="display: none; position: fixed; z-index: 999;" id="successmsg">The user has been approved successfully!</div>
+		<div class="msg-alert alert alert-success col-md-6 col-md-offset-3" style="display: none; position: fixed; z-index: 999;" id="successmsg">The user has been approved successfully!</div>
 		<div class="col-md-9 col-xs-12">
             <div class="admin-panel with-nav-tabs admin-default">
             	<div id="content"  class="admin-heading">
