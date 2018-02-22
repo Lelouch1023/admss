@@ -1,6 +1,6 @@
 #banner{
 	background-color: #fff;
-	height: -webkit-fill-available;
+	height: 630px;
 	background-image: url('../images/index.jpg');
 	background-size: 100%;
 	background-color: #fff;
@@ -194,7 +194,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .view-file{
     padding: 5px 15px;
 }
-.view-file a:hover{
+.view-file a:hover, .upload-view a:hover{
 	color: #bd2031;
 	text-decoration: underline;
 }
@@ -202,21 +202,21 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	width: 15%;
 	float: left;
 }
-.view-file a{
+.view-file a, .uploads-view a{
 	font-weight: bold;
 	color: #000;
 }
 .view-file p{
 	margin:	-9px 0 0px 36px;
 }
-.file, .pending-file {
+.file, .pending-file, .uploads-view {
     padding: 5px 15px;
 }
 .file a:hover, .pending-file a:hover{
 	color: #bd2031;
 	text-decoration: underline;
 }
-.file img, .pending-file img {
+.file img, .pending-file img, .uploads-view img {
 	width: 15%;
 	float: left;
 }
@@ -240,6 +240,14 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 }
 .file-type{
 	text-align: center;
+	vertical-align: middle;
+}
+.uploads-view label{
+	margin-top: -2px;
+}
+.uploads-view p{
+	margin-top: -5px;
+	margin-bottom: 0;
 }
 .action{
     padding: 12px 15px;
@@ -285,10 +293,11 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 /*Buttons*/
 .pending{
 	text-align: center;
+	color: #fff !important;
+	
 }
-/*pending button{
-	color: #fff;
-}*/
+.pending button{
+}
 
 .approve span:hover{
 	color: #2ab27b;
@@ -314,8 +323,13 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	width: 85%;
 	margin: 0 auto;
 	margin-top: 14px;
-	position:fixed;
+	position:absolute;
     z-index: 999;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;	
 }
 
 /*home uploads*/
@@ -407,12 +421,12 @@ background: #bf2626;
 	border: 1px solid #1b1b1b;
 	padding: 5px 5px;
     text-align: center;
-    box-sizing: border-box;
     /*border-radius: 3px;*/
-    margin-bottom: 12px;
-    margin-right: 10px;
+    margin-bottom: 2px;
+    /*margin-right: 10px;*/
     float: left;
     width: 99%;
+    position: relative;
 
 }
 .area-box > h3{
@@ -424,54 +438,48 @@ background: #bf2626;
 }
 .area-box:hover{
 	transition: 0.3s;
-	border: 4px solid #efefef;
 }
 .all-area-content{
     height: auto;
 }
-.box1{
-	height: 350px;
-	color: #1b1b1b
+.box10{
+	background-color: transparent;
+	border: 1px solid #1b1b1b;
+	padding: 5px 5px;
+    text-align: center;
+    /*border-radius: 3px;*/
+    margin-bottom: 2px;
+    /*margin-right: 10px;*/
+    float: left;
+    position: relative;
+    width: 100%
+}
+.box10:hover{
+	transition: 0.3s;
+
 }
 .box2{
-	height: 230px;
 }
 .box3{
-	height: 300px;
 }
 .box4{
-	height: 400px;
-	margin-top: -78px;
-
 }
 .box5{
-	margin-top: -78px;
-	height: 200px;
-	color: #1b1b1b
-
 }
 .box6{
-	height: 132px;
-	margin-top: -10px;
 }
 .box7{
-	margin-top: -10px;
-	height: 198px;
-	color: #1b1b1b
+	
 
 }
 .box8{
-	margin-top: -293px;
-    height: 282px;
-	color: #1b1b1b
+	
 }
 .box9{
-	margin-top: -10px;
-	height: 100px;
+	
 }
 .box10{
-	margin-top: -10px;
-	height: 100px;
+	
 }
 .box1:hover,
 .box7:hover,
@@ -517,4 +525,35 @@ background: #bf2626;
 }
 .search-result p{
 	margin: -4px 0 0 0;
+}
+
+.dropdown-file{
+	margin: 13px 0;
+	padding: 0 5px
+}
+
+/*Image modal*/
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.image-modal{
+	/*border: 1px solid #fff;*/
+    /*border-radius: 9px;*/
+}
+.image-modal img{
+ 	width: 45% !important;
 }

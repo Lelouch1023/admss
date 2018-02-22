@@ -16,23 +16,23 @@
 				<tr>
 					<th class="col-xs-5 category-fname">File Name</th>
 					<th class="col-xs-3">Type</th>
-					<th class="col-xs-4">Modified</th>
+					<th class="col-xs-4">Tag/s</th>
 				</tr>
 				</thead>
 				@foreach ($files as $file)
-				<tr class="file">
-					<td class="col-xs-5">
-						<img src="{{ URL::to('/images/pdf.png') }}">
+				<tr>
+					<td class="col-xs-5 uploads-view">
+						<img src="{{ URL::to('/images/pdf-file.png') }}">
 						<a href="{{ URL::to('/') }}/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+						<p><strong>by {{ Auth::user()->name }}</strong></p>
+						<p>{{$file->created_at}}</p>
 					</td>
 					<td class="col-xs-3 file-type">
 						<label>{{ $file->file_type }}</label>
 					</td>
-					<td id="user-date" class="col-xs-4">
-						<label>{{ Auth::user()->name }}</label>
-						<p>{{$file->created_at}}</p>
+					<td class="col-xs-4 file-type">
+						<label>PARAMETER B</label>
 					</td>
-					
 				</tr>
 				@endforeach
 				@else

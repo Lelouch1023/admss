@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc05b24eb5b609a39ca7e64b63933891",
+    "content-hash": "591440bd776147b624d8ccef4ac25a4c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -773,6 +773,55 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "jfuentestgn/ocr-space",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jfuentestgn/ocr-space.git",
+                "reference": "3b5d2ece62d9928a0327310e7654a2c52d51922c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jfuentestgn/ocr-space/zipball/3b5d2ece62d9928a0327310e7654a2c52d51922c",
+                "reference": "3b5d2ece62d9928a0327310e7654a2c52d51922c",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "laravel/framework": "5.3.*",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~5.0",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JFuentesTgn\\OcrSpace\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juan Fuentes",
+                    "email": "jfuentestgna@gmail.com"
+                }
+            ],
+            "description": "Laravel OCR.space API Client",
+            "keywords": [
+                "OCR",
+                "api",
+                "laravel",
+                "service"
+            ],
+            "time": "2017-01-19T20:24:14+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.5.34",
             "source": {
@@ -1040,16 +1089,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.5.1",
+            "version": "v5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6"
+                "reference": "b79edc7acf574144c9811277286b4cafee8a07cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
-                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/b79edc7acf574144c9811277286b4cafee8a07cc",
+                "reference": "b79edc7acf574144c9811277286b4cafee8a07cc",
                 "shasum": ""
             },
             "require": {
@@ -1067,6 +1116,7 @@
             },
             "type": "library",
             "extra": {
+                "branch-alias": [],
                 "laravel": {
                     "providers": [
                         "Collective\\Html\\HtmlServiceProvider"
@@ -1100,8 +1150,8 @@
                 }
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
-            "homepage": "http://laravelcollective.com",
-            "time": "2017-08-31T14:46:03+00:00"
+            "homepage": "https://laravelcollective.com",
+            "time": "2018-02-12T14:19:55+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -1752,16 +1802,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558"
+                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
-                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d305b780829ea4252ed9400b3f5937c2c99b51d4",
+                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4",
                 "shasum": ""
             },
             "require": {
@@ -1769,7 +1819,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
                 "sami/sami": "~2.0",
                 "squizlabs/php_codesniffer": "~2.0"
             },
@@ -1840,7 +1890,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2017-11-29T06:38:08+00:00"
+            "time": "2018-02-19T04:29:13+00:00"
         },
         {
             "name": "psr/container",
@@ -3327,16 +3377,16 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.2.13",
+            "version": "6.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "95c5938aafe4b20df1454dbddb3e5005c0b26f64"
+                "reference": "3527098537e6061b752fc261a44563489c927889"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/95c5938aafe4b20df1454dbddb3e5005c0b26f64",
-                "reference": "95c5938aafe4b20df1454dbddb3e5005c0b26f64",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/3527098537e6061b752fc261a44563489c927889",
+                "reference": "3527098537e6061b752fc261a44563489c927889",
                 "shasum": ""
             },
             "require": {
@@ -3365,13 +3415,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPLv3"
+                "LGPL-3.0"
             ],
             "authors": [
                 {
                     "name": "Nicola Asuni",
                     "email": "info@tecnick.com",
-                    "homepage": "http://nicolaasuni.tecnick.com"
+                    "role": "lead"
                 }
             ],
             "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
@@ -3385,7 +3435,52 @@
                 "pdf417",
                 "qrcode"
             ],
-            "time": "2017-04-26T08:14:48+00:00"
+            "time": "2018-02-19T15:01:27+00:00"
+        },
+        {
+            "name": "thiagoalessio/tesseract_ocr",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thiagoalessio/tesseract-ocr-for-php.git",
+                "reference": "96f6d53cbea202e63a436490869c7f4214501bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thiagoalessio/tesseract-ocr-for-php/zipball/96f6d53cbea202e63a436490869c7f4214501bb0",
+                "reference": "96f6d53cbea202e63a436490869c7f4214501bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "codacy/coverage": "dev-master",
+                "phpunit/php-code-coverage": "^4.0.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "thiagoalessio\\TesseractOCR\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "thiagoalessio",
+                    "email": "thiagoalessio@me.com"
+                }
+            ],
+            "description": "A wrapper to work with Tesseract OCR inside PHP.",
+            "keywords": [
+                "OCR",
+                "Tesseract",
+                "text recognition"
+            ],
+            "time": "2018-02-06T19:34:21+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3605,16 +3700,16 @@
         },
         {
             "name": "yooper/nicknames",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yooper/nicknames.git",
-                "reference": "723172543a39cf989325326118ef3521b6a70f27"
+                "reference": "7daf7eab54e1c94baa4c1aa18a9158759dbd66fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yooper/nicknames/zipball/723172543a39cf989325326118ef3521b6a70f27",
-                "reference": "723172543a39cf989325326118ef3521b6a70f27",
+                "url": "https://api.github.com/repos/yooper/nicknames/zipball/7daf7eab54e1c94baa4c1aa18a9158759dbd66fb",
+                "reference": "7daf7eab54e1c94baa4c1aa18a9158759dbd66fb",
                 "shasum": ""
             },
             "require-dev": {
@@ -3637,38 +3732,38 @@
                 }
             ],
             "description": "Give a name and get back a list of nick names",
-            "time": "2017-03-02T14:38:23+00:00"
+            "time": "2017-11-09T18:48:35+00:00"
         },
         {
             "name": "yooper/php-text-analysis",
-            "version": "v1.2.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yooper/php-text-analysis.git",
-                "reference": "14b6f788de05bba8f497a9a45ff55903b53c309c"
+                "reference": "c1d6572561aa84f0107c90046833f552f21fd599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yooper/php-text-analysis/zipball/14b6f788de05bba8f497a9a45ff55903b53c309c",
-                "reference": "14b6f788de05bba8f497a9a45ff55903b53c309c",
+                "url": "https://api.github.com/repos/yooper/php-text-analysis/zipball/c1d6572561aa84f0107c90046833f552f21fd599",
+                "reference": "c1d6572561aa84f0107c90046833f552f21fd599",
                 "shasum": ""
             },
             "require": {
-                "camspiers/porter-stemmer": "1.0.*",
-                "php": ">=7.0",
-                "symfony/console": ">=2.7",
-                "wamania/php-stemmer": "1.2",
-                "yooper/nicknames": "1.0.1",
-                "yooper/stop-words": "^1.0"
+                "camspiers/porter-stemmer": "~1",
+                "php": ">=7",
+                "symfony/console": "~2.7|~3.4|~4.0",
+                "wamania/php-stemmer": "~1",
+                "yooper/nicknames": "~1",
+                "yooper/stop-words": "~1"
             },
             "require-dev": {
-                "mockery/mockery": "1.0",
-                "phpunit/phpunit": "5.*"
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -3684,7 +3779,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache 2"
+                "MIT"
             ],
             "authors": [
                 {
@@ -3699,7 +3794,7 @@
                 "nlp",
                 "text analysis"
             ],
-            "time": "2018-01-10T15:05:49+00:00"
+            "time": "2018-02-16T15:15:54+00:00"
         },
         {
             "name": "yooper/stop-words",
@@ -4364,16 +4459,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.7.4",
+            "version": "1.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be"
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
                 "shasum": ""
             },
             "require": {
@@ -4423,7 +4518,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-11T18:49:29+00:00"
+            "time": "2018-02-19T10:16:54+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5470,7 +5565,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tymon/jwt-auth": 20
+        "tymon/jwt-auth": 20,
+        "jfuentestgn/ocr-space": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

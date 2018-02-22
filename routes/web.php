@@ -17,6 +17,7 @@ Route::post('/admin', 'AdminController@findaction');
 Route::get('/services', 'PagesController@services');
 Route::get('/about', 'PagesController@about');
 Route::get('/uploads', 'PagesController@uploads')->name('uploads');
+Route::get('/all_files', 'PagesController@all_files')->name('all_files');
 Route::get('/myarea', 'PagesController@assignedArea');
 Route::get('/bin', 'PagesController@bin')->name('bin');
 Route::get('/archive', 'PagesController@archive')->name('archive');
@@ -25,6 +26,7 @@ Route::post('/mnltag', 'TagsController@manualtag');
 Route::post('/movefile', 'TagsController@move');
 
 Route::get('dl/{file}', 'UploadController@dl');
+
 Route::post('/unarchv', 'TagsController@unarchive');
 Route::get('/pending', 'PagesController@pending')->name('pending');
 Route::get('/deluser/{user}', 'AdminController@deluser');
@@ -65,7 +67,7 @@ Route::get('/destroy/{id}', 'UploadController@destroy');
 Route::get('/uploads/edit/{id}', 'UploadController@edit');
 Route::put('/uploads/edit/{id}', 'UploadController@update')->name('updatefile');
 
-Route::post('/home', 'UploadController@test');
+Route::get('/test', 'UploadController@test');
  
 Route::get('/{area}/{param}/{id}', 'PagesController@viewarea');
  

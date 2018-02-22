@@ -24,7 +24,6 @@
       <!-- End of Navigation bar -->
 
         <!-- CONTENT -->
-        <div class="content index-content">
              <div id="banner" class="col-xs-12">
                <div class="container">
                    <div class="site-title">
@@ -47,7 +46,6 @@
                </div>
              </div>
              @endguest
-        </div>
         <!-- END OF CONTENT SECTION -->
 
         <!-- Script -->
