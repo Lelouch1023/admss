@@ -194,7 +194,7 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 .view-file{
     padding: 5px 15px;
 }
-.view-file a:hover{
+.view-file a:hover, .upload-view a:hover{
 	color: #bd2031;
 	text-decoration: underline;
 }
@@ -202,21 +202,21 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 	width: 15%;
 	float: left;
 }
-.view-file a{
+.view-file a, .uploads-view a{
 	font-weight: bold;
 	color: #000;
 }
 .view-file p{
 	margin:	-9px 0 0px 36px;
 }
-.file, .pending-file {
+.file, .pending-file, .uploads-view {
     padding: 5px 15px;
 }
 .file a:hover, .pending-file a:hover{
 	color: #bd2031;
 	text-decoration: underline;
 }
-.file img, .pending-file img {
+.file img, .pending-file img, .uploads-view img {
 	width: 15%;
 	float: left;
 }
@@ -240,6 +240,14 @@ box-shadow: -6px -10px 83px -30px rgba(0,0,0,0.75);
 }
 .file-type{
 	text-align: center;
+	vertical-align: middle;
+}
+.uploads-view label{
+	margin-top: -2px;
+}
+.uploads-view p{
+	margin-top: -5px;
+	margin-bottom: 0;
 }
 .action{
     padding: 12px 15px;
@@ -414,8 +422,8 @@ background: #bf2626;
 	padding: 5px 5px;
     text-align: center;
     /*border-radius: 3px;*/
-    margin-bottom: 12px;
-    margin-right: 10px;
+    margin-bottom: 2px;
+    /*margin-right: 10px;*/
     float: left;
     width: 99%;
     position: relative;
@@ -434,7 +442,21 @@ background: #bf2626;
 .all-area-content{
     height: auto;
 }
-.box1{
+.box10{
+	background-color: transparent;
+	border: 1px solid #1b1b1b;
+	padding: 5px 5px;
+    text-align: center;
+    /*border-radius: 3px;*/
+    margin-bottom: 2px;
+    /*margin-right: 10px;*/
+    float: left;
+    position: relative;
+    width: 100%
+}
+.box10:hover{
+	transition: 0.3s;
+
 }
 .box2{
 }
