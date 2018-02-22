@@ -1,0 +1,17 @@
+@media only screen and (max-width: 415px) {
+    .login-btn {
+	    width: 30%;
+	}
+	.sidebar{
+		display: none;
+	}
+	.create {
+	    margin: 40px 0 150px 0;
+	}
+	.navbar-toggle{
+		display: none;
+	}
+	.footer-info{
+		display: none;
+	}
+}
