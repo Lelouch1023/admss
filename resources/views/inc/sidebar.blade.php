@@ -36,7 +36,6 @@
             <!-- ACCORDION MENU -->
             
             <div class="panel-group" id="accordion">
-                <!-- ALL AREAS -->
                 <!-- HOME -->
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ route('home') }}'">
@@ -55,11 +54,13 @@
                         </h4>
                     </div>
                 </div>
-                <div class="panel panel-default">
+<<<<<<< HEAD
+=======
+                <div class="panel panel-default" onclick="window.location.href = '{{ URL::to('/').'/all_files' }}'">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a onclick="showAllAreas()" data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
-                            </span> &nbsp; All Areas</a>
+                            <a  data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
+                            </span> &nbsp; All Files</a>
                         </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
@@ -120,6 +121,7 @@
                     </div>
                 </div>
                 <!-- END OF ALL AREAS -->
+>>>>>>> 720276c3c539f8d7ec5304c09deea6023db9c4a6
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
                     <div class="panel-heading  ">
@@ -144,7 +146,7 @@
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="window.location.href='{{ route('admin') }}'">
+                    <div class="panel-heading" onclick="window.location.href='{{ route('pending') }}'">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
                             </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>

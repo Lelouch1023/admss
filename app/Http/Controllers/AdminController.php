@@ -56,7 +56,6 @@ class AdminController extends Controller
     public function findaction(Request $request){
         if ($request->has('approve')) {
             $user = User::find($request->user_id);
-            $user->area_handled = $request->area_assign;
             $user->isApproved = 1;
             $user->save();
 
@@ -67,7 +66,7 @@ class AdminController extends Controller
                         ->orderBy('name', 'asc')
                         ->paginate(5);
          
-                        
+
 
             $area = DB::table("areas")->get();
             //$request->session()->flash('success', 'Approved the user successfully.');
@@ -79,6 +78,10 @@ class AdminController extends Controller
             );
             return response()->json($data);
         }else if ($request->has('assign')) {
+
+            $oldchair = User::where('area_handled', '=', $request->area_handled)
+                                ->update(['area_handled' => 0]);
+
             $user = User::find($request->user_id);
             $user->area_handled = $request->area_handled;
             $user->save();

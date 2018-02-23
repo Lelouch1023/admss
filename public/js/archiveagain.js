@@ -71,3 +71,30 @@ function loadsub(id) {
     });
     //console.log(vals);
 }
+
+function loadfiless(){
+
+    var values = {
+            'doctype' : $('#doctypeallfiles').val(),
+            '_token' : $('#tokenaf').val(),
+
+        };
+
+        $.ajax({
+            url: 'all_files',
+            type: "POST",
+            data: values,
+            success: function(data){
+                if(data.success == true){
+                    
+                   $('#filetcontainer').html(data.html);
+                   $('#doctypeallfiles').val(data.doctype);
+                   console.log(data);
+
+
+                
+                }       
+            },          
+        });
+
+}

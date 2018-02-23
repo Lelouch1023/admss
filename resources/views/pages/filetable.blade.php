@@ -1,22 +1,4 @@
-		
-@extends('layouts.app')
-		
-@section('content')
-<div class="container" id="filetcontainer">
-	<div class="col-md-9 col-xs-12">
-		<div class="categories">
-			<div class="category-title">
-				<label>All Files</label>
-			</div>
-			<!-- Category contents -->
-		
-		@include('inc.filter')
-
-			<input type="hidden" name="_token" id="tokenaf" value="{{ csrf_token() }}">
-			<div class="category-content">
-			@if(count($files) > 0)
-				
-
+@section('filetables')
 			<table id="myTable" class="table table-striped" >
             <thead>
                 <tr>
@@ -55,18 +37,9 @@
             	</tr>
             	@endforeach
             	@else
-           			<div class="col-xs-12 text-center">
-           				<hr>
-           				<p>No files.</p>
-           			</div>
+					<center><p>No files.</p></center>
 				@endif
             </tbody>
         </table>
     
-			</div><!-- End of category content -->
-			{{ $files->links() }}
-		</div><!-- End of category -->
-	</div><!-- End of column -->
-</div><!-- End of container -->
-
-@endsection
+ @endsection
