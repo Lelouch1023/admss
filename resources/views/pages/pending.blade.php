@@ -26,9 +26,15 @@
 			     @foreach ($files as $file)	
 			     	
 					<tr class="pending-file">
+<<<<<<< HEAD
 						<td class="col-xs-6">
 							<img src="{{ URL::to('/images/pdf-file.png') }}">
 							<a href="uploads/view/{{ $file->id }}">{{$file->filename}}</a>
+=======
+						<td class="col-xs-8">
+							<img src="{{ URL::to('/images/pdf.png') }}">
+							<a href="uploads/view/{{ $file->id }}">{{$file->dispname}}</a>
+>>>>>>> 720276c3c539f8d7ec5304c09deea6023db9c4a6
 
 							<p>{{$file->created_at}}</p>
 							<!--Tagger-->

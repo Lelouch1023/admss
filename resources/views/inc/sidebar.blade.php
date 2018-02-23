@@ -54,6 +54,74 @@
                         </h4>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+                <div class="panel panel-default" onclick="window.location.href = '{{ URL::to('/').'/all_files' }}'">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a  data-toggle="collapse" data-parent="#accordion" href="#menu"><span class="glyphicon glyphicon-folder-open">
+                            </span> &nbsp; All Files</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table sidebar-submenu">
+                                <tr>
+                                    <td >
+                                        <a onclick="window.location.href='{{ route('area1') }}'" title="Area 1">Vision, Mission, Goals and Obejectives</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area2') }}'"  title="Area 2">The Faculty</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area3') }}'"  title="Area 3">Curriculum and Instruction</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area4') }}'"  title="Area 4">Support to Students</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area5') }}'"  title="Area 5">Research</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area6') }}'"  title="Area 6">Extension and Community Involvement</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area7') }}'"  title="Area 7">Library</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area8') }}'"  title="Area 8">Physical Plant and Facilities</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area9') }}'"  title="Area 9">Laboratories</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a onclick="window.location.href='{{ route('area10') }}'"  title="Area 10">Administration</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF ALL AREAS -->
+>>>>>>> 720276c3c539f8d7ec5304c09deea6023db9c4a6
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
                     <div class="panel-heading  ">

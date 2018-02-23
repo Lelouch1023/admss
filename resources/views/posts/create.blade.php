@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
 			  <label for="usr">File Name:</label>
-			  <input type="text" class="form-control" id="usr">
+			  <input type="text" class="form-control" id="dispname" name="dispname">
 			</div>
                 <!-- Php code for connection of data -->
 				<!--/comment -->
