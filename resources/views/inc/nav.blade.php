@@ -9,7 +9,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="{{ route('home') }}" title="Accreditation Document Management System">ACCREDITATION<br>DOCUMENT MANAGEMENT<br>SYSTEM</a>
+      <a class="navbar-brand" href="{{ route('home') }}" title="Accreditation Document Management System">
+      ACCREDITATION<br>DOCUMENT MANAGEMENT<br>SYSTEM</a>
     </div>
   </div> 
     <div class="collapse navbar-collapse" id="login-nav">

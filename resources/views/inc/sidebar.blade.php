@@ -29,8 +29,7 @@
             <!-- SIDEBAR BUTTONS -->
             @if(auth()->user()->user_lvl == 1)
               <div class="profile-userbuttons">
-
-                    <button onclick="window.location.href='{{ URL::to('/').'/admin' }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
+                    <button onclick="window.location.href='{{ route('admin') }}'" type="button" class="btn btn-primary btn-xs">Admin Panel</button>
                 </div>
             @endif
             <!-- END SIDEBAR BUTTONS -->
@@ -40,7 +39,7 @@
                 <!-- ALL AREAS -->
                 <!-- HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/home'}}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ route('home') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-home">
                             </span> &nbsp; Home 
@@ -49,7 +48,7 @@
                 </div>
                 <!-- END OF HOME -->
                 <div class="panel panel-default">
-                    <div class="panel-heading home" onclick="window.location.href='{{ URL::to('/').'/uploads' }}'">
+                    <div class="panel-heading home" onclick="window.location.href='{{ route('uploads') }}'">
                         <h4 class="panel-title ">
                            <span class="glyphicon glyphicon-upload">
                             </span> &nbsp; My Uploads 
@@ -145,39 +144,19 @@
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="window.location.href='{{ route('admin') }}'">
                         <h4 class="panel-title">
-                            <a onclick="showRequest()" data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
                             </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>
                         </h4>
                     </div>  
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table sidebar-submenu">
-                                <tr>
-                                    <td>
-                                    @if(count($files) > 0)
-                                        <p>You have {{ count($files) }} file/s tagged on your Area.</p> 
-                                        <hr>
-                                        <center></center><a href="{{ URL::to('/') }}/pending">See Pending Tags</a></center>
-                                    @else
-                                        <p>No pending files.</p>
-                                    @endif
-                                        
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
                 </div>
-
                 <!-- END OF PENDING REQUESTS -->
-                
                 <!-- BIN MENU -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" onclick="showBin()" >
                         <h4 class="panel-title">
-                            <a onclick="showBin()" data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#bin"><span class="glyphicon glyphicon-trash">
                             </span> Bin</a>
                         </h4>
                     </div>
@@ -186,10 +165,10 @@
                            <center> <table class="table sidebar-submenu">
                                 <tr>
                                     <td>
-                                        <a href="{{ URL::to('/') }}/bin">Deleted files</a>
+                                        <a onclick="window.location.href='{{ route('bin') }}'">Deleted files</a>
                                     </td>
                                     <td>
-                                        <a href="{{ URL::to('/') }}/archive">Archived files</a>
+                                        <a onclick="window.location.href='{{ route('archive') }}'">Archived files</a>
                                     </td>
                                 </tr>
                             </table></center>
