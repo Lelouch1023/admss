@@ -36,7 +36,6 @@
             <!-- ACCORDION MENU -->
             
             <div class="panel-group" id="accordion">
-                <!-- ALL AREAS -->
                 <!-- HOME -->
                 <div class="panel panel-default">
                     <div class="panel-heading home" onclick="window.location.href='{{ route('home') }}'">
@@ -55,6 +54,8 @@
                         </h4>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
                 <div class="panel panel-default" onclick="window.location.href = '{{ URL::to('/').'/all_files' }}'">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -120,6 +121,7 @@
                     </div>
                 </div>
                 <!-- END OF ALL AREAS -->
+>>>>>>> 720276c3c539f8d7ec5304c09deea6023db9c4a6
                 <!-- MY AREA  -->
                 <div class="panel panel-default">
                     <div class="panel-heading  ">

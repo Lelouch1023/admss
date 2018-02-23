@@ -20,10 +20,10 @@
 				  <div class="panel panel-default">
 				    <div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseA">A: Priorities and Relevance</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">A: Priorities and Relevance</a>
 					</h4>
 					</div>
-					<div id="collapseA" class="panel-collapse collapse">
+					<div id="collapse2" class="panel-collapse collapse">
 					  <div class="panel-body parameter-panel">
 		  				<table class="table table-hover">
 		  				<thead>	
@@ -81,14 +81,13 @@
 		  		</div>
 		  	</div><!-- END OF PANEL -->
 		  		  <!-- PARAMETER B -->
-			<div class="panel-group" id="accordion">
-		  		<div class="panel panel-default">
+	  		<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion" href="#collapseB">B. Funding and Other Resources </a>
 					</h4>
 				</div>
-				<div id="collapse3" class="panel-collapse collapse">
+				<div id="collapseB" class="panel-collapse collapse">
 					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
@@ -147,17 +146,15 @@
 		  			</div>
 		  		</div>
 		  		</div>
-		  	</div>
 		  	<!-- End of PARAMETER B	 -->
 		  	<!-- PARAMETER C -->
-			<div class="panel-group" id="accordion">
-		  		<div class="panel panel-default">
+		  	<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion" href="#collapseC">C. Implementation, Monitoring, Evaluation and Utilization of Research Results/Outputs</a>
 					</h4>
 				</div>
-				<div id="collapse3" class="panel-collapse collapse">
+				<div id="collapseC" class="panel-collapse collapse">
 					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
@@ -211,17 +208,15 @@
 		  			</div>
 		  		</div>
 		  		</div>
-		  	</div>
 		  	<!-- End of PARAMETER C	 -->
 		  	<!-- PARAMETER D -->
-			<div class="panel-group" id="accordion">
-		  		<div class="panel panel-default">
+	  		<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion" href="#collapseD">D. Publication and Dissemination </a>
 					</h4>
 				</div>
-				<div id="collapse3" class="panel-collapse collapse">
+				<div id="collapseD" class="panel-collapse collapse">
 					<div class="panel-body parameter-panel">
 		  			<table class="table table-hover">
 		  			<thead>	
@@ -286,7 +281,6 @@
 		  			</div>
 		  		</div>
 		  		</div>
-		  	</div>
 		  	<!-- End of PARAMETER D	 -->
 		  	</div>
 		  </td>
