@@ -18,15 +18,16 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th class="col-xs-8 category-fname">File Name</th>
-							<th class="col-xs-4">Action</th>
+							<th class="col-xs-6">File Name</th>
+							<th class="col-xs-3">Tag/s</th>
+							<th class="col-xs-3">Action</th>
 						</tr>
 					</thead>
 			     @foreach ($files as $file)	
 			     	
 					<tr class="pending-file">
-						<td class="col-xs-8">
-							<img src="{{ URL::to('/images/pdf.png') }}">
+						<td class="col-xs-6">
+							<img src="{{ URL::to('/images/pdf-file.png') }}">
 							<a href="uploads/view/{{ $file->id }}">{{$file->filename}}</a>
 
 							<p>{{$file->created_at}}</p>
@@ -34,7 +35,8 @@
 							<p>Tagged to your area by <strong>{{ $file->username }}</strong><br>
 							<!--View Btn-->
 							
-							<b>Tags:</b>
+							
+						<td class="col-xs-3 file-type">
 								@foreach($filetags as $filetag)
 			     					@if($filetag['filename'] == $file->filename)
 								
@@ -46,7 +48,8 @@
 									@endif
 				  				@endforeach	
 							</p>
-							<td class="col-xs-4 pending">
+						</td>
+							<td class="col-xs-3 pending">
 								<input type="hidden" id = "file_{{ $file->id }}" value="{{ $file->filename }}">
 								{{-- --}}
 				   				<button class="btn btn-primary" data-toggle="modal" data-target="#actionmodal_{{ $file->id }}" >Manage</button>
@@ -76,7 +79,6 @@
 														@foreach($filetags as $filetag)
 			     											@if($filetag['filename'] == $file->filename)
 			     											<option value="{{ $filetag['parameter'] }}"> Parameter {{ $filetag['letter']}}  {{ preg_replace('/[^A-Za-z0-9]/', '.', substr($filetag['parameter'], 2, strlen($filetag['parameter'])))}}
-								
 																</option>
 			     											@endif
 			     										@endforeach
@@ -94,10 +96,7 @@
 							        </table>
 									</div>
 									</div>
-									 <div class="modal-footer">
-									 	<br>
-							            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						            </div>
+									 <div class="modal-footer"></div>
 									
 							    </div><!--end content-->
 							</div><!--end modal-->
