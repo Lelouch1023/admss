@@ -29,8 +29,10 @@
                 <!-- Php code for connection of data -->
 				<!--/comment -->
 	        <div class="form-group">
+	        	<md-button>
                 <label>Select a file</label>
 	                  {{ Form::file('file') }}
+	            </md-button>
            </div>
 	          {{ Form::submit('Submit', ['class'=>'btn login-btn']) }}
 			{!! Form::close() !!}

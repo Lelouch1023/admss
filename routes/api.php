@@ -24,6 +24,7 @@ Route::post('/refresh', 'Api\Auth\LoginController@refresh');
 // Route::get('/auth', 'APIController@auth');
 
 Route::middleware('auth:api')->group(function () {
+	// Route::get('/upload', 'Api\UploadController@create');
     Route::post('/logout', 'Api\Auth\LoginController@logout');
     Route::get('/posts', 'Api\PostController@index');
 
