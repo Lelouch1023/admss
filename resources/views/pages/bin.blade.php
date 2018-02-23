@@ -15,18 +15,18 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th class="col-xs-5 category-fname">File Name</th>
+							<th class="col-xs-6 category-fname">File Name</th>
 							<th class="col-xs-3">Type</th>
 							<th class="col-xs-3">Date Deleted</th>
-							<th class="col-xs-2">Select</th>
 						</tr>
 					</thead>
 			     @foreach ($files as $file)
 
 					<tr class="file">
-						<td class="col-xs-5">
+						<td class="col-xs-6">
 							<img src="{{ URL::to('/images/pdf.png') }}">
-							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a><br/>sdsd<br/>
+							<a href="/uploads/view/{{ $file->id }}">{{$file->name}}</a>
+							<br />
 							<button type="button" class="bin-restore" data-toggle="modal" data-target="#{{ $file->id }}modal">Restore</button>
 							<button type="button" class="bin-delete" data-toggle="modal" data-target="#{{ $file->id }}delete" title="Delete">Delete</button>
 			   				<!-- Delete Modal -->
@@ -50,18 +50,13 @@
 							</div>
 			   				
 						</td>
-						<td class="col-xs-3 type">
+						<td class="col-xs-3 file-type">
 							<!-- Php code for document type -->
-							<p>Memorandum</p>
+								<label>{{ $file->file_type }}</label>
 						</td>
 						<td id="user-date" class="col-xs-3">
 							<label>{{ Auth::user()->name }}</label>
 							<p>{{$file->created_at}}</p>
-						</td>
-						<td class="col-xs-2 select">
-							<label class="form-check-label">
-						    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-						 	</label>
 						</td>
 					</tr>
 					@endforeach

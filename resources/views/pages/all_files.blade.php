@@ -55,7 +55,10 @@
             	</tr>
             	@endforeach
             	@else
-					<tr><td rowspan="4"><center><p>No files.</p></center></td></tr>
+           			<div class="col-xs-12 text-center">
+           				<hr>
+           				<p>No files.</p>
+           			</div>
 				@endif
             </tbody>
         </table>

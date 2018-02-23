@@ -144,7 +144,7 @@
                 <!-- END OF MY AREA -->
                 <!-- PENDING AREA -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" onclick="window.location.href='{{ route('admin') }}'">
+                    <div class="panel-heading" onclick="window.location.href='{{ route('pending') }}'">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#Pending"><span class="glyphicon glyphicon-flag">
                             </span> Pending Requests @if(count($files) > 0)  <span id="pendingCount" class="badge text-right" style="font-size: 12px;" >{{ count($files)}}</span>@endif</a>

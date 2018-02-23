@@ -21,7 +21,6 @@
 						      <tr>
 						        <th>User</th>
 						        <th>Date Registered</th>
-						        <th>Assign an Area</th>
 						        <th>Actions</th>
 						      </tr>
 						    </thead>
@@ -32,20 +31,7 @@
 						      <tr>
 						        <td id="user-data">{{ $request->name }} </td>
 						        <td id="user-data">{{ $request->created_at }}</td>
-						     	<td>
-						        	<select class="form-control" id="area_assign{{ $request->id }}" name="area_assign">
-								        <option value="area1">Area 1</option>
-								        <option value="area2">Area 2</option>
-								        <option value="area3">Area 3</option>
-								        <option value="area4">Area 4</option>
-								        <option value="area5">Area 5</option>
-								        <option value="area6">Area 6</option>
-								        <option value="area7">Area 7</option>
-								        <option value="area8">Area 8</option>
-								        <option value="area9">Area 9</option>
-								        <option value="area10">Area 10</option>
-								    </select>
-						        </td>
+						     	
 						        <td id="user-data-">
 
 									<input type="hidden" name="_tokenadm" id="tokenadm" value="{{ csrf_token() }}">
@@ -69,7 +55,7 @@
 						    <thead>
 						      <tr>
 						        <th>Areas</th>
-						        <th>User Assigned</th>
+						        <th>Assigned User</th>
 						        <th>Action</th>
 						      </tr>
 						    </thead>
@@ -90,20 +76,19 @@
 						        <select class="form-control" id="chairs_{{ $area->id }}" name="chairs_{{ $area->id }}">
 						        	
 						        	@if(count($area->area_handler) != 0)
-						        	<option disabled  selected>Select users</option>
+						        			<option disabled  selected>Select users</option>
 						        	@endif
 						        
 						        @foreach($chairs as $chair)	
-						        	
+						        	@if($chair->area_handled == 0) 
 						        		<option value="{{ $chair->id }}"
 
-						        			@if(count($chair->area_handled) > 0)
-						        				disabled
-						        			@endif
 						        			@if($chair->area_handled == $area->area_id )
 						        				 selected
+
 						        			@endif
 						        			>{{ $chair->name }}</option>
+						        	@endif
 						        
 						        @endforeach
 						    	</select>
